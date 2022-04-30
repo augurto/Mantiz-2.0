@@ -1,5 +1,5 @@
 <?php
-if($action == 'ajax'){
+
      $tp=mysqli_query($con,"SELECT count(*) as tp FROM proyecto");
       $rwp=mysqli_fetch_array($tp);
       $tps=$rwp["tp"];
