@@ -1,3 +1,20 @@
+<?php
+if($action == 'ajax'){
+     $tp=mysqli_query($con,"SELECT count(*) as tp FROM proyecto");
+      $rwp=mysqli_fetch_array($tp);
+      $tps=$rwp["tp"];
+
+      $te=mysqli_query($con,"SELECT count(*) te FROM miembros where rol='estudiante'");
+      $rwe=mysqli_fetch_array($te);
+      $tes=$rwe["te"];
+
+      $ti=mysqli_query($con,"SELECT count(*) ti FROM miembros where rol='investigador'");
+      $rwi=mysqli_fetch_array($ti);
+      $tin=$rwi["ti"];
+
+		$sql="SELECT * FROM  proyecto order by id desc";
+		$query = mysqli_query($con, $sql);         
+			?>
 <div class="container">
 <div class="row">
 
