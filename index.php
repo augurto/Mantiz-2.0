@@ -16,6 +16,8 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
 
     <!-- inicio datatables -->
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- CSS personalizado --> 
     <link rel="stylesheet" href="main.css">  
       
@@ -116,11 +118,10 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
 
     <!-- Inicio de Script para datatables -->
 
-    <!-- jQuery, Popper.js, Bootstrap JS -->
-    <script src="jquery/jquery-3.3.1.min.js"></script>
+      <!-- jQuery, Popper.js, Bootstrap JS -->
+      <script src="jquery/jquery-3.3.1.min.js"></script>
     <script src="popper/popper.min.js"></script>
-    <script src="css/bootstrap/js/bootstrap.min.js"></script>
-    
+    <script src="bootstrap/js/bootstrap.min.js"></script>
       
     <!-- datatables JS -->
     <script type="text/javascript" src="datatables/datatables.min.js"></script>    
@@ -133,7 +134,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
     <script src="datatables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
      
     <!-- código JS propìo-->    
-    <script type="text/javascript" src="main.js"></script>  
+    <script type="text/javascript" src="main.js"></script>   
 
     <!-- Fin de Script para datatables -->
 </body>
