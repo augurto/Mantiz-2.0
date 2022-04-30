@@ -160,6 +160,7 @@ div.dataTables_scrollFoot > .dataTables_scrollFootInner > table {
   div.dataTables_wrapper div.dataTables_info,
   div.dataTables_wrapper div.dataTables_paginate {
     text-align: center;
+    padding-top: 50px;
   }
 }
 table.dataTable.table-sm > thead > tr > th {
