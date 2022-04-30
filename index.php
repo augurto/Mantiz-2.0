@@ -36,7 +36,58 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
 
 
     <?php include 'includes/header.php';?>
-    
+    <!-- Inicio de Graficas -->
+
+    <!-- Content Row -->
+    <div class="row">
+            
+            <!-- Area Chart -->
+            <div class="col-xl-8 col-lg-7">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Estadistica de presupuesto</h6>
+                  
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-area">
+                    <canvas id="myAreaChart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pie Chart -->
+            <div class="col-xl-4 col-lg-5">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Estadistica</h6>
+            
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-pie pt-4 pb-2">
+                    <canvas id="myPieChart"></canvas>
+                  </div>
+                  <div class="mt-4 text-center small">
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-warning"></i> Activo
+                    </span>
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-danger"></i> Inactivo
+                    </span>
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-primary"></i> Terminado
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    <!-- Fin de graficas -->
+
     <!-- Contenido de la tabla -->
     <div style="height:50px"></div>
         <!--Ejemplo tabla con DataTables-->
