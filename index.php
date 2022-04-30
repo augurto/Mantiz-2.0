@@ -42,7 +42,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
     <!-- Fin de graficas -->
 
     <!-- Contenido de la tabla -->
-    <?php include 'include/parts/tabla-inicio.php'; ?>
+    <?php include 'includes/parts/tabla-inicio.php'; ?>
     <!-- Fin del contenido de la tabla -->
 
   
