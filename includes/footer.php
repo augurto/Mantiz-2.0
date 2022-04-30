@@ -1,4 +1,4 @@
-<footer>
+<footer class="footer-nuevo">
   <div class="waves">
     <div class="wave" id="wave1"></div>
     <div class="wave" id="wave2"></div>
