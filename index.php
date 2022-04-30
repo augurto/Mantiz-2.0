@@ -12,12 +12,16 @@
     <title>Mantiz</title>
 </head>
 <body>
-    "Hola esto es mantiz"
+
     <header>
     <?php
     include 'includes/header.php';
     ?>
     
     </header>
+
+    <footer>
+        <?php  include 'includes/footer.php'?>
+    </footer>
 </body>
 </html>
