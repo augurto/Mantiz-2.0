@@ -15,9 +15,9 @@
     "Hola esto es mantiz"
     <header>
     <?php
-    include 'header.php';
+    include 'includes/header.php';
     ?>
     
-        </header>
+    </header>
 </body>
 </html>
