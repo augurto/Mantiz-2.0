@@ -46,7 +46,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
                     <div class="table-responsive">        
                         <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         
-                         <thead>
+                         <thead style="background-color: transparent !important;">
                            <tr>
                            
                            <th>Usuario</th>
