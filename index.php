@@ -119,7 +119,8 @@ require_once ("../config/conexion.php");//Contiene funcion que conecta a la base
     <!-- jQuery, Popper.js, Bootstrap JS -->
     <script src="jquery/jquery-3.3.1.min.js"></script>
     <script src="popper/popper.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="css/bootstrap/js/bootstrap.min.js"></script>
+    
       
     <!-- datatables JS -->
     <script type="text/javascript" src="datatables/datatables.min.js"></script>    
