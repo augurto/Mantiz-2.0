@@ -7,6 +7,7 @@
     <!-- incluyendo bootstrap -->
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
     <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 
 
     <title>Mantiz</title>
