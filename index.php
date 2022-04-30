@@ -36,7 +36,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
     <?php include 'includes/header.php';?>
     
     <!-- Contenido de la tabla -->
-
+    <div style="height:50px"></div>
         <!--Ejemplo tabla con DataTables-->
     <div class="container">
         <div class="row">
