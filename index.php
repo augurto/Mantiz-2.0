@@ -13,9 +13,11 @@
 </head>
 <body>
     "Hola esto es mantiz"
+    <header>
     <?php
     include 'header.php';
     ?>
-
+    
+        </header>
 </body>
 </html>
