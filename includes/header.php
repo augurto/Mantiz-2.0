@@ -10,7 +10,7 @@
           <a class="nav-link active" aria-current="page" href="#">Proyectos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Inventario General</a>
+          <a class="nav-link" href="inventario_general.php">Inventario General</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Actualizar Datos</a>
