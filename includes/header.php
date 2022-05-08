@@ -10,10 +10,20 @@
           <a class="nav-link active" aria-current="page" href="#">Proyectos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Inventario</a>
+          <a class="nav-link" href="#">Inventario General</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Segmentos</a>
+          <a class="nav-link" href="#">Actualizar Datos</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Segmentos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Programas </a></li>
+            <li><a class="dropdown-item" href="#">Grupos</a></li>
+            
+          </ul>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
