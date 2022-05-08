@@ -1,4 +1,7 @@
-
+    <?php 
+    $sql="SELECT * FROM  obras order by id desc";
+    $query = mysqli_query($con, $sql);   
+    ?>
         <!--Ejemplo tabla con DataTables-->
         <div class="container">
         <div class="row">
@@ -6,58 +9,87 @@
 
                     <div class="table-responsive">        
                         <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
-                        <thead>
-                           <tr>
-                           <th>Id</th>
-                           <th>Nombre de la Obra</th>
-                           <th>Estado.</th>
-                              <?php if($_SESSION['prol']=='administrador'|| $_SESSION['prol']=='Inv Principal'){?>
-                           <th>Acciones</th>
-                       <?php }?>
-                           </tr>
-                         </thead>
-                         <tbody>
-                       <?php
-                       $count=1;
-                       while ($row=mysqli_fetch_array($query)){
-                               $id=$row['id'];
-                               $programa=$row['nombre_obra'];
-                                   $estado=$row['estado'];
-                               
-                                   if ($estado=='activo'){$label_class='warning '; $ico='info';}
-                                   elseif ($estado=='terminado'){$label_class='primary'; $ico='check';}
-                                   else{$text_estado="inactivo";$label_class='danger'; $ico='exclamation-triangle';}
-                              
-                               $fecha=$row['fecha_agregada'];
-                               
-                               
-                           ?>
-                           
-                           
-                           
-                           <tr><input type="hidden" value="<?php echo $programa;?>" id="programa<?php echo $id;?>">
-                           <input type="hidden" value="<?php echo $estado;?>" id="estado<?php echo $id;?>">
-                               <td><?php echo $count++;?></td>
-                               <td><?php echo $programa; ?></td>
-                               <td><a href="#" class="btn btn-<?php echo $label_class;?> btn-icon-split">
-                           <span class="icon text-white-50">
-                             <i class="fas fa-<?php echo $ico; ?>"></i>
-                           </span>
-                           <span class="text"><?php echo $estado; ?></span>
-                         </a></td>
-                              <?php if($_SESSION['prol']=='administrador'|| $_SESSION['prol']=='Inv Principal'){?>	
-                           <td ><span class="pull-right">
-                           <a href="#" class='btn btn-success' title='Editar Obra' onclick="obtener_datos('<?php echo $id;?>');" data-toggle="modal" data-target="#myModal2"><i class="fa fa-edit"></i></a>
-                           <a href="#" class='btn btn-success' title='Borrar Obra' onclick="eliminar('<?php echo $id;?>');"><i class="fa fa-trash"></i></a> 
-                           <a href="ver_obra.php?id=<?php echo $id;?>&estado=<?php echo $estado;?>&nom=<?php echo $programa;?>" class='btn btn-success' title='Ver Obra'><i class="fa fa-file" aria-hidden="true"></i></a> 
-                           </span></td>
-                               <?php } ?>
-                           </tr>
-                           <?php
-                       }
-                       ?>
+                                    
+                                    <thead>
+                                <tr>
+                                    <th>ID</th>
+                                <th>Nombre de la Obra</th>
+                                <th>Estado</th>
+                                <th>Presupuesto</th>
+                                <th>Fecha</th>
+                                <th>Estado</th>
+                                <th>Accion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                            $count=1;
+                            while ($row=mysqli_fetch_array($query)){
+                                    $id=$row['id'];
+                                    $nombre=$row['nombre_obra'];
+                                    $codigo_=$row['fecha_agregada'];
+                                    $estado=$row['estado'];
+                                    $fecha=$row['fecha_agregado'];
+
                        
-                   </tbody>
+
+                                    $g=mysqli_query($con,"SELECT count(*) as total FROM obras WHERE codigo_proyecto='".$codigo_."'");
+                        $rw=mysqli_fetch_array($g);
+                        $total=$rw["total"];
+
+                   		$s=mysqli_query($con,"SELECT count(*) as total_seg FROM seguimientos WHERE codigo_proyecto='".$codigo_."'");
+                   		$rws=mysqli_fetch_array($s);
+                   		$total_s=$rws["total_seg"];
+          				
+          				if($total_s!=0){
+          					$r=100/$total;
+          					$rst=$r*$total_s;
+          				}else{
+          					$r=0;
+          					$rst=$r*$total;
+          				}
+          				
+                            ?>
+                
+
+                            <tr>
+                                <td><?php echo $count++; ?></td>
+                            <td><a href="t_entregables.php?id_p=<?php echo $codigo_; ?>"><?php echo $nombre; ?></a></td>
+                            <td width="4%"><?php echo $codigo_; ?></td>
+                            <td width="5%">S/<?php echo number_format($presupuesto); ?></td>
+                            <td><?php echo $fecha; ?></td>
+                            <td><a href="#" class="btn btn-<?php echo $label_class;?> btn-icon-split">
+                            <span class="icon text-white-50">
+                            <i class="fas fa-<?php echo $ico; ?>"></i>
+                            </span>
+                            <span class="text"><?php echo $estado; ?></span>
+                        </a></td>
+                            <td>
+
+                                <!-- <a href="entregables.php?id_p=<?php echo $codigo_; ?>" class="btn btn-primary btn-icon-split">
+                            <span class="icon text-white-50">
+                            <i class="fas fa-check"></i>
+                            </span>
+                            <span class="text">Entregables</span>
+                        </a> -->
+                            <span class="pull-right">
+                                <a href="#" class='btn btn-primary' data-toggle="modal" data-target="#editProyecto" title='Editar proyecto'  onclick="obtener_datos(<?php echo $id;?>);"><i class="fa fa-edit"></i></a>
+                                    <a href="#" class='btn btn-primary' title='Borrar proyectoooo' onclick="eliminar('<?php echo $codigo_;?>');"><i class="fa fa-trash"></i></a> 
+                                </span>
+                                <p></p>
+                            </td>
+                            <input type="hidden" value="<?php echo $nombre;?>" id="nombre<?php echo $id;?>">
+                                <input type="hidden" value="<?php echo $codigo_;?>" id="codigo<?php echo $id;?>">
+                                <input type="hidden" value="<?php echo $estado;?>" id="estado<?php echo $id;?>">
+                                <input type="hidden" value="<?php echo $codigo_;?>" id="cod<?php echo $id;?>">
+                    <input type="hidden" value="<?php echo $descripcion;?>" id="descripcion<?php echo $id;?>">
+                                <input type="hidden" value="<?php echo $presupuesto;?>" id="presupuesto<?php echo $id;?>">
+                                </tr>
+
+                                <?php
+                            }
+                            ?>
+                            </tbody>
                             </table>          
                     </div>
                 </div>
