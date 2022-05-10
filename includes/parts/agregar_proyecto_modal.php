@@ -34,6 +34,20 @@
                           
                         </div>
 
+                      <!--   mostrar el ultimo codigo de todos los proyectos -->
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><span class="fa fa-qrcode"></span></span>
+                            </div>
+                   
+
+                              <?php $rs = mysqli_query($con, "SELECT MAX(codigo) AS id FROM proyecto");
+                              if ($row = mysqli_fetch_row($rs)) {
+                              $codigo_proyecto = trim($row[0]);
+                              } ?>
+
+                             <input type="number" class="form-control" id="codigo"  name="codigo"  value="<?php echo ++$codigo_proyecto ?>" readonly>
+                       </div>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
