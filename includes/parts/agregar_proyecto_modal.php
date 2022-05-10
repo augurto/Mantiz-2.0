@@ -27,13 +27,12 @@
 
                         <div class="input-group mb-3">
                           <label for="inputProyec">Nombre del Proyecto</label>
+                          <br>
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
                           </div>
                           <input type="text" class="form-control" placeholder="Nombre del Proyecto" >
-                          <div class="input-group-append">
-                            <span class="input-group-text">.00</span>
-                          </div>
+                          
                         </div>
 
                         </div>
