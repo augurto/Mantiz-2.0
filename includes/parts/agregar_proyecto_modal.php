@@ -39,13 +39,13 @@
                         <div class="input-group">
 
                                 <select class="form-control" id="grupos" name="grupos" required>
-                                  <option value="0">--Seleccione un grupo--</option>
+                                  <option value="0">--Ext. del codigo--</option>
                                       <?php
-                                        $programas=mysqli_query($con,"select * from grupos");
+                                        $programas=mysqli_query($con,"select * from codigo_generado_proyecto");
                                         while ($rw=mysqli_fetch_array($programas)){
-                                          $id=$rw["id"];
-                                          $grupo=$rw["nombre_grupo"];
-                                          $programa=$rw["nombre_programa"];
+                                          $id=$rw["id_cod_gen_pro "];
+                                          $grupo=$rw["variable"];
+                                          
                                       ?>
                                   <option value="<?php echo $id;?>"><?php echo $grupo;?></option>
                                   <?php
