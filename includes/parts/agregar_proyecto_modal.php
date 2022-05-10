@@ -133,7 +133,10 @@
 
                         
                       </div>
-                      <table class="table table-dark">
+                      
+                    </div>
+                  </div>
+                  <table class="table table-dark">
                         <thead>
                           ...
                         </thead>
@@ -151,9 +154,6 @@
                           </tr>
                         </tbody>
                       </table>
-                    </div>
-                  </div>
-                  
                   </div>
 
                   
