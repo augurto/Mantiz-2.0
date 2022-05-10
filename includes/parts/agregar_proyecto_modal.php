@@ -134,7 +134,7 @@
                           
                           <br>
                           <div class="input-group-prepend">
-                              <?php include 'tabla-inicio.php'; ?>
+                              <?php include './includes/modal/tabla-codigo.php'; ?>
 
                           </div>
                           
