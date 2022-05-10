@@ -130,17 +130,17 @@
 
                         
                         </form>
-                        <div class="input-group mb-3">
+                    <!--     <div class="input-group mb-3">
                           
                           <br>
                           <div class="input-group-prepend">
-                              <?php include './includes/modal/tabla-codigo.php'; ?>
+                        
 
                           </div>
                           
                           
                         </div>
-
+ -->
                         
                        
 
