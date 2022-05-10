@@ -131,7 +131,7 @@
                         
                         </form>
 
-                        <?php include '../parts/tabla_inventario_general.php'; ?>
+                        <?php include '../parts/tabla-inicio'; ?>
                       </div>
                     </div>
                   </div>
