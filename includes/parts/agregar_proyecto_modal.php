@@ -70,7 +70,7 @@
                           
                           <br>
                           <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fa fa-cc-visa" aria-hidden="true"></i></span>
+                            <span class="input-group-text"><i class="fa fa-usd" aria-hidden="true"></i></span>
                           </div>
                           <input type="number" class="form-control" placeholder="Presupuesto" >
                           
