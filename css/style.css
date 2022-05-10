@@ -3,7 +3,17 @@ div.dataTables_wrapper div.dataTables_length, div.dataTables_wrapper div.dataTab
     text-align: center;
     padding-top: 50px !important;
 }
+
+div.dt-buttons {
+    float: none;
+    width: 93%;
+    text-align: center;
+    margin-bottom: 0.5em;
 }
+}
+
+
+
 
 /* #boton_proyecto{
     justify-content: center;
