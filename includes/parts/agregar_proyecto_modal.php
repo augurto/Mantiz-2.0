@@ -65,14 +65,12 @@
                              <input type="number" class="form-control" id="codigo"  name="codigo"  value="<?php echo ++$codigo_proyecto ?>" readonly>
                        </div>
                        <label for="inputProyec">Presupuesto</label>
-                       <div class="input-group-prepend">
-                              <span class="input-group-text"><span class="fa fa-cc-visa"></span></span>
-                            </div>
+                       
                         <div class="input-group mb-3">
                           
                           <br>
                           <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
+                            <span class="input-group-text"><i class="fa fa-cc-visa" aria-hidden="true"></i></span>
                           </div>
                           <input type="number" class="form-control" placeholder="Presupuesto" >
                           
