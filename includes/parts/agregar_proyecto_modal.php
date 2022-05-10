@@ -64,6 +64,7 @@
 
                              <input type="number" class="form-control" id="codigo"  name="codigo"  value="<?php echo ++$codigo_proyecto ?>" readonly>
                        </div>
+                       <br>
                        <label for="inputProyec">Presupuesto</label>
                        
                         <div class="input-group mb-3">
@@ -73,6 +74,19 @@
                             <span class="input-group-text"><i class="fa fa-usd" aria-hidden="true">S/.</i></span>
                           </div>
                           <input type="number" class="form-control" placeholder="Presupuesto" >
+                          
+                        </div>
+                        <br>
+                       
+                       
+                        <div class="input-group mb-3">
+                          
+                          <br>
+                          <div class="input-group-prepend">
+                          <label for="inputProyec">Adelanto</label>
+                            <span class="input-group-text"><i class="fa fa-usd" aria-hidden="true">S/.</i></span>
+                          </div>
+                          <input type="number" class="form-control" placeholder="Platita" >
                           
                         </div>
                               <br>
