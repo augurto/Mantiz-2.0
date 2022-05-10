@@ -76,19 +76,21 @@
                           <input type="number" class="form-control" placeholder="Presupuesto" >
                           
                         </div>
-                        <br>
-                       
+
+                              <!-- para insertar adelanto -->
+
+                        <!-- <br>
+                       <label for="inputProyec">Adelanto</label>
                        
                         <div class="input-group mb-3">
                           
                           <br>
                           <div class="input-group-prepend">
-                          <label for="inputProyec">Adelanto</label>
                             <span class="input-group-text"><i class="fa fa-usd" aria-hidden="true">S/.</i></span>
                           </div>
                           <input type="number" class="form-control" placeholder="Platita" >
                           
-                        </div>
+                        </div> -->
                               <br>
                             <label>Cronograma</label>
                       <div class="row">
@@ -129,7 +131,7 @@
                         
                         </form>
 
-                        
+                        <?php include '../parts/tabla_inventario_general.php'; ?>
                       </div>
                     </div>
                   </div>
