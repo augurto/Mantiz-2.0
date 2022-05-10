@@ -5,9 +5,11 @@
             <div class="table-responsive"> 
                     
                     <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                  Nuevo Proyecto
-                  </button>
+                    <div class="col text-center">
+                      <button type="button" class="btn btn-primary" id="boton_proyecto" data-toggle="modal" data-target="#exampleModalCenter">
+                      Nuevo Proyecto
+                      </button>
+                    </div>
 
                   <!-- Modal -->
                   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
