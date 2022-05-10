@@ -130,13 +130,11 @@
 
                         
                         </form>
-
-                        
-                      </div>
-                      
-                    </div>
-                  </div>
-                  <table class="table table-dark">
+                        <div class="input-group mb-3">
+                          
+                          <br>
+                          <div class="input-group-prepend">
+                          <table class="table table-dark">
                         <thead>
                           ...
                         </thead>
@@ -154,6 +152,21 @@
                           </tr>
                         </tbody>
                       </table>
+
+                          </div>
+                          
+                          
+                        </div>
+
+                        
+                       
+
+
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
                   </div>
 
                   
