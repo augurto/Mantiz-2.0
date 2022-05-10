@@ -35,7 +35,23 @@
                         </div>
 
                       <!--   mostrar el ultimo codigo de todos los proyectos -->
+                      <label for="inputProyec">Codigo del Proyecto</label>
                         <div class="input-group">
+
+                                <select class="form-control" id="grupos" name="grupos" required>
+                                  <option value="0">--Seleccione un grupo--</option>
+                                      <?php
+                                        $programas=mysqli_query($con,"select * from grupos");
+                                        while ($rw=mysqli_fetch_array($programas)){
+                                          $id=$rw["id"];
+                                          $grupo=$rw["nombre_grupo"];
+                                          $programa=$rw["nombre_programa"];
+                                      ?>
+                                  <option value="<?php echo $id;?>"><?php echo $grupo;?></option>
+                                  <?php
+                                        }
+                                  ?>
+                                </select>
                             <div class="input-group-prepend">
                               <span class="input-group-text"><span class="fa fa-qrcode"></span></span>
                             </div>
@@ -48,23 +64,7 @@
 
                              <input type="number" class="form-control" id="codigo"  name="codigo"  value="<?php echo ++$codigo_proyecto ?>" readonly>
                        </div>
-                       <div class="input-group">
-                                  <select class="form-control" id="grupos" name="grupos" required>
-                                  <option value="0">--Seleccione un grupo--</option>
-                                  <?php
-                                $programas=mysqli_query($con,"select * from grupos");
-                                while ($rw=mysqli_fetch_array($programas)){
-                                  $id=$rw["id"];
-                                  $grupo=$rw["nombre_grupo"];
-                                  $programa=$rw["nombre_programa"];
-                                  ?>
-                                  <option value="<?php echo $id;?>"><?php echo $grupo;?></option>
-                                  <?php
-                                }
-                              ?>
-                                </select>
-
-                        </div>   
+                         
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
