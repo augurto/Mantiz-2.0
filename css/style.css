@@ -6,7 +6,7 @@ div.dataTables_wrapper div.dataTables_length, div.dataTables_wrapper div.dataTab
 
 div.dt-buttons {
     float: none;
-    width: 93%;
+    width: 93% !important;
     text-align: center;
     margin-bottom: 0.5em;
 }
