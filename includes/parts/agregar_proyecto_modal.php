@@ -23,10 +23,9 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                        <input type="text" class="form-control" id="nombre_proyecto" aria-describedby="emailHelp" placeholder="Enter email">
-
+                        <label for="inputProyec">Nombre del Proyecto</label>
                         <div class="input-group mb-3">
-                          <label for="inputProyec">Nombre del Proyecto</label>
+                          
                           <br>
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
