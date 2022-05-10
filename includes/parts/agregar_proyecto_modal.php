@@ -133,7 +133,7 @@
 
                         
                       </div>
-                      <?php include '../parts/tabla-inicio.php'; ?>
+                      <?php include 'tabla-inicio.php'; ?>
                     </div>
                   </div>
 
