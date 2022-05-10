@@ -131,8 +131,9 @@
                         
                         </form>
 
-                        <?php include '../parts/tabla-inicio'; ?>
+                        
                       </div>
+                      <?php include '../parts/tabla-inicio.php'; ?>
                     </div>
                   </div>
 
