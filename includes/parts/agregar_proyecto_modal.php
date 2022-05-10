@@ -65,25 +65,44 @@
                              <input type="number" class="form-control" id="codigo"  name="codigo"  value="<?php echo ++$codigo_proyecto ?>" readonly>
                        </div>
                          
+
+                            <label>Cronograma</label>
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><span class="fas fa-calendar"></span></span>
+                            </div>
+                            <input type="date" class="form-control" name="fecha_ini" id="fecha_ini" title="Fecha inicio" required>
+                          </div>
+                          <!-- /input-group -->
+                        </div>
+                        <br>
+                        <!-- /.col-lg-6 -->
+                        <div class="col-lg-6">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><span class="fas fa-calendar"></span></span>
+                            </div>
+                            <input type="date" class="form-control" name="fecha_fin"  id="fecha_fin"  title="Fecha fin" required>
+                          </div>
+                          <!-- /input-group -->
+                        </div>
+                          <br>
+                        <!-- /.col-lg-6 -->
+                      </div>
+
+
+
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                           <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                         
-                        <div class="row g-3">
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" placeholder="City" aria-label="City">
-                        </div>
-                        <div class="col-sm">
-                          <input type="text" class="form-control" placeholder="State" aria-label="State">
-                        </div>
-                        <div class="col-sm">
-                          <input type="text" class="form-control" placeholder="Zip" aria-label="Zip">
-                        </div>
-                      </div>
+                        
 
-
+                        
                         </form>
 
                         
