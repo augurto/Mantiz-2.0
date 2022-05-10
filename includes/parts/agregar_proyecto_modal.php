@@ -133,11 +133,13 @@
 
                         
                       </div>
-                      <?php include 'tabla-inicio.php'; ?>
+                    
                     </div>
                   </div>
 
                   </div>
+
+                  <?php include 'tabla-inicio.php'; ?>
           </div>
       </div>
   </div>
