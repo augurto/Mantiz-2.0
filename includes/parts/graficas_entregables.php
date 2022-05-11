@@ -4,7 +4,7 @@
       $rwp=mysqli_fetch_array($tp);
       $tps=$rwp["tp"];
 
-      $tp2=mysqli_query($con,"SELECT distinc id_seg as tp2 FROM seguimientos where codigo_proyecto= $id_p");
+      $tp2=mysqli_query($con,"SELECT COUNT(DISTINCT id_seg) as tp2 FROM seguimientos where codigo_proyecto= $id_p");
       $rwp2=mysqli_fetch_array($tp2);
       $tps2=$rwp["tp2"];
 
