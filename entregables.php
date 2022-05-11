@@ -51,22 +51,29 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <?php include 'includes/parts/graficas_entregables.php'; ?>
     <!-- Fin de graficas -->
     <!-- Boton agregar proyecto -->
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-entregable">
-        <span class="icon text-white-50">
-                      <i class="fas fa-plus"></i>
-        </span> Agregar Entregables
-        </button>
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-4">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-entregable">
+                <span class="icon text-white-50">
+                            <i class="fas fa-plus"></i>
+                </span> Agregar Entregables
+                </button>
+            </div>    
+            <div class="col-4">
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-subir-archivos">
+                <span class="icon text-white-50">
+                            <i class="fas fa-archive"></i>
+                </span> Subir Archivos
+                </button>
 
-        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-subir-archivos">
-        <span class="icon text-white-50">
-                      <i class="fas fa-archive"></i>
-        </span> Subir Archivos
-        </button>
-
-        <?php include 'includes/modal/modal_entregable.php' ?>
-        <?php include 'includes/modal/modal-subir-archivos.php' ?>
-    <!-- Fin Boton agregar proyecto -->
+                <?php include 'includes/modal/modal_entregable.php' ?>
+                <?php include 'includes/modal/modal-subir-archivos.php' ?>
+            <!-- Fin Boton agregar proyecto -->
+            </div>     
+        </div>    
+    </div>
     <br>
     <!-- Contenido de la tabla -->
     <?php include 'includes/parts/contenido_entregable.php'; ?>
