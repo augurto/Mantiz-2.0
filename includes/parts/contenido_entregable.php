@@ -37,7 +37,8 @@
             $gd=mysqli_query($con,"SELECT * FROM entregables WHERE  id='".$id_seg."' AND codigo_proyecto='".$id_p."'");
             $rwd=mysqli_fetch_array($gd);
             $nom=$rwd["nombre"];
-              $id_ent=$rwd["id"];
+            $estado_entregable=$rwd["estado"];
+            $id_ent=$rwd["id"];
 
             $t=mysqli_query($con,"SELECT count(*) as t , estado FROM comments WHERE codigo_proyecto='".$id_p."' AND id_seguimiento='".$id."' AND id_entregable='".$id_ent."'");
             $rwdt=mysqli_fetch_array($t);
@@ -49,7 +50,7 @@
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom." - ".$estado; ?></h6>
+                  <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom." - ".$estado_entregable; ?></h6>
                  
                 </div>
                 <!-- Card Body -->
