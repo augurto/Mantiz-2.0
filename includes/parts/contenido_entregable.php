@@ -56,7 +56,7 @@
             <!-- caso activo -->
             <?php 
             if ($estado_entregable='Activo') { ?>
-                # code...
+                
 
                 <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4">
@@ -66,7 +66,7 @@
                  
                 </div>
                 <!-- Card Body -->
-                <div class="card-body" style="background-color: blue !important;" >
+                <div class="card-body" style="background-color: #F0F8FF !important;" >
                 <a href="#"  data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
                 <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
                 <!-- Counter - Messages -->
@@ -105,7 +105,7 @@
                  
                 </div>
                 <!-- Card Body -->
-                <div class="card-body" style="background-color: #F0F8FF !important;" >
+                <div class="card-body" style="background-color: #FFF0F5 !important;" >
                 <a href="#"  data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
                 <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
                 <!-- Counter - Messages -->
