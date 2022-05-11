@@ -8,9 +8,9 @@
       $rwp2=mysqli_fetch_array($tp2);
       $tps2=$rwp2["tp2"];
 
-      $tp2=mysqli_query($con,"SELECT COUNT(DISTINCT usuario) as tp3 FROM seguimientos where codigo_proyecto= $id_p");
-      $rwp2=mysqli_fetch_array($tp2);
-      $tps2=$rwp2["tp3"];
+      $tp3=mysqli_query($con,"SELECT COUNT(DISTINCT usuario) as tp3 FROM seguimientos where codigo_proyecto= $id_p");
+      $rwp3=mysqli_fetch_array($tp3);
+      $tps3=$rwp3["tp3"];
 
       $te=mysqli_query($con,"SELECT count(*) te FROM miembros where rol='estudiante'");
       $rwe=mysqli_fetch_array($te);
