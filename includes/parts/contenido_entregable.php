@@ -31,13 +31,14 @@
             $id_seg=$row['id_seg'];
             $descripcion=$row['descripcion'];
             $documento=$row['documento'];
+            $estado_entregable=$rwd["estado_seguimiento"];
             $link=$row['link'];
             $usuario_seguimiento=$row['usuario'];
 
             $gd=mysqli_query($con,"SELECT * FROM entregables WHERE  id='".$id_seg."' AND codigo_proyecto='".$id_p."'");
             $rwd=mysqli_fetch_array($gd);
             $nom=$rwd["nombre"];
-            $estado_entregable=$rwd["estado"];
+            
             $id_ent=$rwd["id"];
 
             $t=mysqli_query($con,"SELECT count(*) as t , estado FROM comments WHERE codigo_proyecto='".$id_p."' AND id_seguimiento='".$id."' AND id_entregable='".$id_ent."'");
