@@ -94,7 +94,7 @@
               </div>
             </div>
 
-            <?php } elseif($estado_entregable=='Inactivo'){ ?>
+            <?php } else if($estado_entregable=='Inactivo'){ ?>
 
 
           <div class="col-xl-4 col-lg-5">
