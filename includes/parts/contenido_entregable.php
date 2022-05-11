@@ -54,8 +54,7 @@
     ?>      
             <!-- condicional para colores dependiendo al estado del entregable -->
             <!-- caso activo -->
-            <?php 
-            if ($estado_entregable=='Activo') { ?>
+            
                 
 
                 <div class="col-xl-4 col-lg-5">
@@ -66,7 +65,14 @@
                  
                 </div>
                 <!-- Card Body -->
+                <?php 
+            if ($estado_entregable=='Activo') { ?>
                 <div class="card-body" style="background-color: #F0F8FF !important;" >
+
+                <?php } if($estado_entregable=='Pendiente'){ ?>
+                    <div class="card-body" style="background-color: #FFF0F5 !important;" >
+
+                    <?php } ?>      
                 <a href="#"  data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
                 <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
                 <!-- Counter - Messages -->
@@ -94,45 +100,11 @@
               </div>
             </div>
 
-            <?php } else if($estado_entregable=='Inactivo'){ ?>
+            
 
 
-          <div class="col-xl-4 col-lg-5">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom." - ".$estado_entregable; ?></h6>
-                 
-                </div>
-                <!-- Card Body -->
-                <div class="card-body" style="background-color: #FFF0F5 !important;" >
-                <a href="#"  data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
-                <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
-                <!-- Counter - Messages -->
-              </a>
-              <a href="#" data-toggle="modal" data-target="#borrar" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
-                <?php echo $ts; ?><i class="fas fa-trash"></i>
-                <!-- Counter - Messages -->
-              </a>
-
-              
-
-                  <div  align="center"><img src="img/file.png" width="00px" height="auto"></div>
-                  <div align="center"><a href="entregables/<?php echo  $id_p  ; ?>/<?php echo  $documento; ?>" download="entregables/<?php echo  $id_p  ; ?>/<?php echo  $documento; ?>"><i class="fa fa-download"></i> <?php echo $documento; ?></a></div>
-
-                  <div align="center"><p>URL: </p> <a href="<?php echo  $link  ; ?>/<?php echo  $link; ?>" download="<?php echo  $link  ; ?>/<?php echo  $link; ?>" target="_blank"><i class="fa fa-cloud-download" ></i>  <?php echo $link; ?></a></div>
-
-                  
-                  
-
-                  <br>
-               <?php echo $descripcion; ?>
-               <br>
-               <?php echo "Usuario : " .$usuario_seguimiento; ?>
-                </div>
-              </div>
-            </div>
-            <?php } ?>
+          
+          
           <?php } ?>
         </div>
 
