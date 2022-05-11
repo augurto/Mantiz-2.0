@@ -53,7 +53,7 @@
 
                     <tr>
                     	<td><?php echo $count++; ?></td>
-                      <td><a href="../../entregables.php?id_p<?php echo $codigo_; ?>"><?php echo $nombre; ?></a></td>
+                      <td><a href="../../entregables.php?id_p=<?php echo $codigo_; ?>"><?php echo $nombre; ?></a></td>
                       <td width="4%"><?php echo $codigo_; ?></td>
                       <td width="5%">S/<?php echo number_format($presupuesto); ?></td>
                       <td><?php echo $fecha; ?></td>
