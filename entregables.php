@@ -53,19 +53,19 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <!-- Boton agregar proyecto -->
     <div class="container">
         <div class="row justify-content-between">
-            <div class="col-8">
+            <div class="col-6">
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-entregable">
                 <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
-                </span> Agregar Entregables
+                </span>Entregables
                 </button>
             </div>    
-            <div class="col-4">
+            <div class="col-6">
                 <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-subir-archivos">
                 <span class="icon text-white-50">
-                            <i class="fas fa-archive"></i>
-                </span> Agregar Archivos
+                            <i class="fas fa-plus"></i>
+                </span>Archivos
                 </button>
 
                 <?php include 'includes/modal/modal_entregable.php' ?>
