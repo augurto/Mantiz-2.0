@@ -31,7 +31,7 @@
             $id_seg=$row['id_seg'];
             $descripcion=$row['descripcion'];
             $documento=$row['documento'];
-            $estado_entregable=$rwd["estado_seguimiento"];
+            $estado_entregable=$row["estado_seguimiento"];
             $link=$row['link'];
             $usuario_seguimiento=$row['usuario'];
 
