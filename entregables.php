@@ -4,6 +4,13 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
 $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where estado='terminado'");
         $rwt=mysqli_fetch_array($sald);
         $saldo=$rwt['saldo'];
+
+
+/* requiere para la extraer la informacion */
+        $id_p=$_GET['id_p'];
+        $sql=mysqli_query($con,"SELECT * FROM proyecto WHERE codigo='".$id_p."'");
+         $rws=mysqli_fetch_array($sql);
+         $nombre=$rws["nombre_proyecto"];
 ?>
 <!DOCTYPE html>
 <html lang="es">
