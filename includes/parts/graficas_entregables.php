@@ -6,7 +6,7 @@
 
       $tp2=mysqli_query($con,"SELECT COUNT(DISTINCT id_seg) as tp2 FROM seguimientos where codigo_proyecto= $id_p");
       $rwp2=mysqli_fetch_array($tp2);
-      $tps2=$rwp["tp2"];
+      $tps2=$rwp2["tp2"];
 
       $te=mysqli_query($con,"SELECT count(*) te FROM miembros where rol='estudiante'");
       $rwe=mysqli_fetch_array($te);
