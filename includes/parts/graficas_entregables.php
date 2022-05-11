@@ -8,6 +8,10 @@
       $rwp2=mysqli_fetch_array($tp2);
       $tps2=$rwp2["tp2"];
 
+      $tp2=mysqli_query($con,"SELECT COUNT(DISTINCT usuario) as tp3 FROM seguimientos where codigo_proyecto= $id_p");
+      $rwp2=mysqli_fetch_array($tp2);
+      $tps2=$rwp2["tp3"];
+
       $te=mysqli_query($con,"SELECT count(*) te FROM miembros where rol='estudiante'");
       $rwe=mysqli_fetch_array($te);
       $tes=$rwe["te"];
@@ -63,10 +67,10 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Colaborador</div>
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Entregables no utilizadas</div>
                       <div class="row no-gutters align-items-center">
                         <div class="col-auto">
-                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?php echo $tes;?></div>
+                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?php echo $tps-$tps2;?></div>
                         </div>
                         <div class="col">
                           
@@ -87,7 +91,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Investigadores</div>
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Usarios activos en este proyecto</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tin;?></div>
                     </div>
                     <div class="col-auto">
