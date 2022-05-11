@@ -55,7 +55,7 @@
             <!-- condicional para colores dependiendo al estado del entregable -->
             <!-- caso activo -->
             <?php 
-            if ($estado_entregable='Activo') { ?>
+            if ($estado_entregable='Pendiente') { ?>
                 
 
                 <div class="col-xl-4 col-lg-5">
