@@ -70,9 +70,12 @@
                 <div class="card-body" style="background-color: #F0F8FF !important;" >
 
                 <?php } if($estado_entregable=='Pendiente'){ ?>
-                    <div class="card-body" style="background-color: #FFF0F5 !important;" >
+                    <div class="card-body" style="background-color: #F0FFF0 !important;" >
 
-                    <?php } ?>      
+                    <?php } else{?>    
+                        <div class="card-body" style="background-color: #FFF0F5 !important;" >
+
+                        <?php }?> 
                 <a href="#"  data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
                 <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
                 <!-- Counter - Messages -->
