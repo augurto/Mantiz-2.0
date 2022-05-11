@@ -51,7 +51,18 @@
             $ts=$rwdt["t"];
             $estado=$rwdt['estado'];
 
-    ?>
+    ?>      
+            <!-- condicional para colores dependiendo al estado del entregable -->
+            <!-- caso activo -->
+            <?php 
+            if ($estado_entregable='Activo') {
+                # code...
+
+                echo 'esta activo';
+
+            }
+            
+            ?>
           <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
@@ -61,7 +72,7 @@
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
-                <a href="#" data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
+                <a href="#" style="background-color: blue !important;"  data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
                 <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
                 <!-- Counter - Messages -->
               </a>
