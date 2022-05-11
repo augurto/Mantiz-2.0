@@ -94,7 +94,9 @@
               </div>
             </div>
 
-            <?php } ?>
+            <?php } elseif($estado_entregable='Inactivo'){ ?>
+
+
           <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
@@ -130,7 +132,7 @@
                 </div>
               </div>
             </div>
-
+            <?php } ?>
           <?php } ?>
         </div>
 
