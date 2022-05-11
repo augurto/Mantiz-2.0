@@ -55,7 +55,7 @@
             <!-- condicional para colores dependiendo al estado del entregable -->
             <!-- caso activo -->
             <?php 
-            if ($estado_entregable='Pendiente') { ?>
+            if ($estado_entregable=='Activo') { ?>
                 
 
                 <div class="col-xl-4 col-lg-5">
@@ -94,7 +94,7 @@
               </div>
             </div>
 
-            <?php } elseif($estado_entregable='Inactivo'){ ?>
+            <?php } elseif($estado_entregable=='Inactivo'){ ?>
 
 
           <div class="col-xl-4 col-lg-5">
