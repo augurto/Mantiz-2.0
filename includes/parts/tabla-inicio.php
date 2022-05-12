@@ -83,7 +83,7 @@ deleteButton.onclick = function(e){
                               <span class="pull-right">
                                 <a href="#" class='btn btn-primary' data-toggle="modal" data-target="#editProyecto" title='Editar proyecto'  onclick="obtener_datos(<?php echo $id;?>);"><i class="fa fa-edit"></i></a>
                                 
-                                <a href="#" class="btn btn-danger" title='Borrar proyectoooo' onclick="return confirm('¿Realmente desea eliminar?')"><i class="fa fa-trash"></i></a>
+                                <a href="#" class="btn btn-danger" title='Borrar proyecto'><i class="fa fa-trash"></i></a>
                               
                                 
                                 
