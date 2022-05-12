@@ -8,7 +8,8 @@
                                         $("#apellido").val(apellido);
                           
                                       })
-
+                                      var objetivo = document.getElementById('texto_nav1').innerHTML;
+                                      objetivo.innerHTML = apellido;
                                     </script>
 <!-- Modal -->
     <div class="modal fade" id="ModalBorrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -26,13 +27,14 @@
                             <div class="alert alert-danger" role="alert">
                               <center>
                             <label for=""> Estas seguro que quieres eliminar el proyecto <?php ?> </label>
-                            <input type="text" id="apellido" readonly style="border: none; background-color:transparent !important; width:auto !important;" name="">
+                            <label id="texto_nav1"></label>          
+                            
                             </center>
                           </div>
                         </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Arrugo</button>
-                        <button type="button" class="btn btn-primary">SI</button>
+                        <button type="button" class="btn btn-primary">Borrar</button>
                     </div>
             </div>
         </div>
