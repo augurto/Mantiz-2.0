@@ -21,9 +21,11 @@
                                     
                                 </tr>
                                 </thead>
-                        <?php foreach ($link->query('SELECT * from proyecto order by codigo desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
-                        <?php
+                        <?php 
                         $count=1;
+                        foreach ($link->query('SELECT * from proyecto order by codigo desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                        <?php
+                        
                         $id_proyecto=$row['id'];
                         $codigo=$row['codigo'];
                         $extencion=$row['extencion'];
