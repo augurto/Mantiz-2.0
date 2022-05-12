@@ -69,7 +69,7 @@
             if ($estado_entregable==0) { ?>
                 <div class="card-body" style="background-color: #F0F8FF !important;" >
 
-                <?php } if($estado_entregable==1){ ?>
+                <?php } elseif($estado_entregable==1){ ?>
                     <div class="card-body" style="background-color: #F0FFF0 !important;" >
 
                     <?php } else{?>    
