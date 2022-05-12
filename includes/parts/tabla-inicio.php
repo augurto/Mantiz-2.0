@@ -71,6 +71,7 @@
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             <i class="fa fa-trash"></i>
                             </button>
+                            <a href="../modal/modal-eliminar/eliminar_proyecto.php?id=<?php echo $codigo ?>"><i class="fa fa-trash"></i></a>
                               <!-- <span class="pull-right">
                                 <a href="#" class='btn btn-primary' data-toggle="modal" data-target="#editProyecto" title='Editar proyecto'  onclick="obtener_datos(<?php echo $id;?>);"><i class="fa fa-edit"></i></a>
                                 
