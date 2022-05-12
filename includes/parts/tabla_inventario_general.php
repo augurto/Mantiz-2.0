@@ -18,9 +18,9 @@
                                 </tr>
                                 </thead>
                         <?php foreach ($link->query('SELECT * from obras') as $row){ // aca se hace la consulta e iterarla con each. ?> 
-                        <tr>
+                        <tr style="background-color: red !important;">
                             
-                            <td style="background-color: red !important;"><?php echo $row['nombre_obra'] ?></td>
+                            <td ><?php echo $row['nombre_obra'] ?></td>
                             <td><?php echo $row['fecha_agregada'] ?></td>
                             <td><?php echo $row['estado'] ?></td>
                             <td>Accion Pendiente</td>
