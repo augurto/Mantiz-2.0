@@ -22,11 +22,11 @@
                     </div>
                         <div class="modal-body">
                             <input type="hidden" id="codigo" name="" ><br>
-                            <input type="text" id="apellido" name="">
-                            <div class="alert alert-warning" role="alert">
-                            <label for=""> Estas seguro que quieres eliminar el proyecto <?php ?> </label>
                             
-                            <p id="apellido"></p>
+                            <div class="alert alert-danger" role="alert">
+                            <label for=""> Estas seguro que quieres eliminar el proyecto <?php ?> </label>
+                            <input type="text" id="apellido" style="border: none;" name="">
+                            
                           </div>
                         </div>
                     <div class="modal-footer">
