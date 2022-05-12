@@ -54,7 +54,7 @@
                              <td><a href="../../entregables.php?id_p=<?php echo $id_proyecto; ?>"><?php echo $codigo.'-'.$extencion.'-'.$nombre_proyecto; ?></a></td>
                              
                              
-                             <td><span id="firstname<?php echo $presupuesto; ?>"><?php echo $presupuesto ?></span></td>
+                             <td><span id="firstname<?php echo $presupuesto; ?>"><?php echo $presupuesto; ?></span></td>
                              <td><span id="lastname<?php echo $fecha_ini; ?>"><?php echo $fecha_ini; ?></span></td>
                              <td><span id="address<?php echo $fecha_fin; ?>"><?php echo $fecha_fin; ?></span></td>
                              <!-- <td><?php echo $fecha_ini ?></td>
