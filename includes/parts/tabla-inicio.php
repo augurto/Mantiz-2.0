@@ -20,7 +20,7 @@
                                     
                                 </tr>
                                 </thead>
-                        <?php foreach ($link->query('SELECT * from proyecto') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                        <?php foreach ($link->query('SELECT * from proyecto order by id desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
                         $id_proyecto=$row['id'];
                         $codigo=$row['codigo'];
