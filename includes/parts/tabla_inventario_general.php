@@ -19,6 +19,7 @@
                                 </thead>
                         <?php foreach ($link->query('SELECT * from obras') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
+                        $id_obra=$row['id'];
                         $nombre_obra=$row['nombre_obra'];
                         $fecha_agregada=$row['fecha_agregada'];
                         $estado=$row['estado'];
@@ -37,7 +38,7 @@
                              <?php }?>   
                             
                             
-                            <td><a href="../../ver_obra.php?id_obra=<?php echo $id; ?>"><?php echo $nombre_obra; ?></a></td>
+                            <td><a href="../../ver_obra.php?id_obra=<?php echo $id_obra; ?>"><?php echo $nombre_obra; ?></a></td>
                             <td><?php echo $fecha_agregada ?></td>
                             <td><?php if ($estado==0) {
                                 # code...
