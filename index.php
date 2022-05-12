@@ -32,6 +32,26 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">  
 
     <!-- fin datatable -->
+
+    <!-- include alertify.css -->
+    <link rel="stylesheet" href="{PATH}/alertify.css">
+
+    <!-- include boostrap theme  -->
+    <link rel="stylesheet" href="{PATH}/themes/bootstrap.css">
+
+    <!-- include alertify script -->
+    <script src="{PATH}/alertify.js"></script>
+
+    <script type="text/javascript">
+    //override defaults
+    alertify.defaults.transition = "slide";
+    alertify.defaults.theme.ok = "btn btn-primary";
+    alertify.defaults.theme.cancel = "btn btn-danger";
+    alertify.defaults.theme.input = "form-control";
+    </script>
+
+
+
     <title>Mantiz</title>
 </head>
 <body>
