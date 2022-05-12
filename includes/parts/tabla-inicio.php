@@ -9,9 +9,9 @@
                         
                         <thead>
                                 <tr>
-                                    
-                                    <th>Proyecto</th>
                                     <th>Codigo</th>
+                                    <th>Proyecto</th>
+                                    
                                     <th>Presupuesto</th>
                                     <th>Fecha inicio</th>
                                     <th>Fecha Fin</th>
@@ -46,10 +46,10 @@
                              <tr style="background-color: #FDF5E6 !important;">
                              <?php }?>   
                             
-                            
+                             <td><?php echo $codigo ?></td>
                              <td><a href="../../entregables.php?id_p=<?php echo $id_proyecto; ?>"><?php echo $nombre_proyecto; ?></a></td>
                              
-                             <td><?php echo $codigo ?></td>
+                             
                              <td><?php echo $presupuesto ?></td>
                              <td><?php echo $fecha_ini ?></td>
                              <td><?php echo $fecha_fin ?></td>
