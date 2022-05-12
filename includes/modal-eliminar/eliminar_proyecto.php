@@ -24,14 +24,15 @@
                             <input type="hidden" id="codigo" name="" ><br>
                             
                             <div class="alert alert-danger" role="alert">
+                              <center>
                             <label for=""> Estas seguro que quieres eliminar el proyecto <?php ?> </label>
                             <input type="text" id="apellido" style="border: none; background-color:transparent !important;" name="">
-                            
+                            </center>
                           </div>
                         </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Arrugo</button>
+                        <button type="button" class="btn btn-primary">SI</button>
                     </div>
             </div>
         </div>
