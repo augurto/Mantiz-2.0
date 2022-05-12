@@ -38,7 +38,7 @@
                       <label for="inputProyec">Codigo del Proyecto</label>
                         <div class="input-group">
 
-                                <select class="form-control" id="extension-codigo" name="extension-codigo" required>
+                                <select class="form-control" id="extension" name="extension" required>
                                   <option value="0">--Ext. del codigo--</option>
                                       <?php
                                         $programas=mysqli_query($con,"select * from codigo_generado_proyecto");

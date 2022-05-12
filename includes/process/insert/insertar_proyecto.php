@@ -8,7 +8,7 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection
 
 $nombre_proyecto=$_GET["nombre-proyecto"];
-$extension=$_GET["extension-codigo"];
+$extension=$_GET["extension"];
 $codigo=$_GET["codigo"];
 $nuevo_nombre=$extension.'-'.$nombre_proyecto;
 $presupuesto=$_GET["presupuesto"];
@@ -26,7 +26,9 @@ $sql = "INSERT INTO proyecto (codigo, nombre_proyecto, presupuesto, estado,usuar
 
 VALUES ('$codigo', '$nuevo_nombre', '$presupuesto', '2','Ego','$fecha','$fecha_ini','$fecha_fin')";
 if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully";
+    echo"<script languaje ='JavaScript'>";
+      echo "location='index.php'";
+    echo "</script>";
 } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
