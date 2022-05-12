@@ -55,8 +55,8 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
                 </span>Registrar Material
                 </button>
 
-                <?php include 'includes/modal/modal_entregable.php' ?>
-                <?php include 'includes/modal/modal-subir-archivos.php' ?>
+                <?php include 'includes/modal/modal_agregar_material_obra.php' ?>
+                <?php include 'includes/modal/modal_agregar_material.php' ?>
             <!-- Fin Boton agregar proyecto -->
             </div>     
         </div>    
