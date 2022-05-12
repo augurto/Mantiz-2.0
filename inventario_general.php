@@ -1,6 +1,6 @@
 <?php
-require_once ("./config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
-require_once ("./config/conexion.php");//Contiene funcion que conecta a la base de datos
+require_once ("config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
+require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
 $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where estado='terminado'");
         $rwt=mysqli_fetch_array($sald);
         $saldo=$rwt['saldo'];
@@ -32,7 +32,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">  
 
     <!-- fin datatable -->
-    <title>Mantiz-Inv-General</title>
+    <title>Mantiz</title>
 </head>
 <body>
 
@@ -41,9 +41,14 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <div style="height:50px"></div>
     <!-- Inicio de Graficas -->
 
-
+    <?php include 'includes/parts/graficas.php'; ?>
+    <!-- Fin de graficas -->
+    <!-- Boton agregar proyecto -->
+    <?php include 'includes/parts/agregar_proyecto_modal.php' ?>
+    <!-- Fin Boton agregar proyecto -->
+    <br>
     <!-- Contenido de la tabla -->
-    <?php include './includes/parts/tabla_inventario_general.php'; ?>
+    <?php include 'includes/parts/tabla_inventario_general.php'; ?>
     <!-- Fin del contenido de la tabla -->
 
   
