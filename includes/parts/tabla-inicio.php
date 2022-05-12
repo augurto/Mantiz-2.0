@@ -10,7 +10,7 @@
                         <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Codigo</th>
+                                    
                                     <th>Proyecto</th>
                                     
                                     <th>Presupuesto</th>
@@ -50,8 +50,8 @@
                              <tr style="background-color: #FDF5E6 !important;">
                              <?php }?>   
                              <td><?php echo $count++; ?></td>
-                             <td><?php echo $codigo ?></td>
-                             <td><a href="../../entregables.php?id_p=<?php echo $id_proyecto; ?>"><?php echo $nombre_proyecto; ?></a></td>
+                           
+                             <td><a href="../../entregables.php?id_p=<?php echo $id_proyecto; ?>"><?php echo $codigo.'-'.$extencion.'-'.$nombre_proyecto; ?></a></td>
                              
                              
                              <td><?php echo $presupuesto ?></td>
