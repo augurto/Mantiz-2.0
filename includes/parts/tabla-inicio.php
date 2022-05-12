@@ -76,29 +76,6 @@
                                       Editar
                                     </button>
 
-                                    <script >
-                                      $(document).on("click", "#btnmodal",function () {
-                                        
-                                              var nombre =$(this).data('nom');
-                                          var apellido =$(this).data('ape');
-
-                                        $("#nombre").val(nombre);
-                                        $("#apellido").val(apellido);
-
-
-                                        
-                                      })
-
-
-
-
-
-                                    </script>
-
-
-                                    
-
-
                             </td>
                             <td>
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminar-proyecto" >
