@@ -33,29 +33,13 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 
     <!-- fin datatable -->
 
-    <!-- include alertify.css -->
-    <link rel="stylesheet" href="{PATH}/alertify.css">
-
-    <!-- include boostrap theme  -->
-    <link rel="stylesheet" href="{PATH}/themes/bootstrap.css">
-
-    <!-- include alertify script -->
-    <script src="{PATH}/alertify.js"></script>
-
-    <script type="text/javascript">
-    //override defaults
-    alertify.defaults.transition = "slide";
-    alertify.defaults.theme.ok = "btn btn-primary";
-    alertify.defaults.theme.cancel = "btn btn-danger";
-    alertify.defaults.theme.input = "form-control";
-    </script>
-
-
-
+    
     <title>Mantiz</title>
 </head>
 <body>
-
+    <!-- procesos de modal -->
+    <?php include 'includes/modal/modal-eliminar/eliminar_proyecto.php'; ?>
+    <!-- fin de procesos de modal -->
 
     <?php include 'includes/header.php';?>
     <div style="height:50px"></div>
