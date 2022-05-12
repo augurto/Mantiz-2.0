@@ -67,7 +67,12 @@
                                 # code...
                                 echo 'Activo';
                             }?></td>
-                            <td>Boton Accion Pendiente</td>
+                            <td>
+                              <span class="pull-right">
+                                <a href="#" class='btn btn-primary' data-toggle="modal" data-target="#editProyecto" title='Editar proyecto'  onclick="obtener_datos(<?php echo $id;?>);"><i class="fa fa-edit"></i></a>
+                                <a href="#" class='btn btn-primary' title='Borrar proyectoooo' onclick="eliminar('<?php echo $codigo_;?>');"><i class="fa fa-trash"></i></a> 
+                              </span>
+                            </td>
                         </tr>
                         <?php
                             }
