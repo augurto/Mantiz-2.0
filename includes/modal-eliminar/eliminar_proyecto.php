@@ -8,7 +8,7 @@
                                         $("#apellido").val(apellido);
                           
                                       })
-                                      var objetivo = document.getElementById('texto_nav1').innerHTML;
+                                      var objetivo = document.getElementById('texto_nav1');
                                       objetivo.innerHTML = apellido;
                                     </script>
 <!-- Modal -->
