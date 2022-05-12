@@ -72,7 +72,7 @@
                             <i class="fa fa-trash"></i>
                             </button>
                             
-                            <a href="../../includes/process/eliminar/eliminar_proyecto.php echo $id_proyecto; ?>" class="btn btn-danger"  title='Borrar proyecto desde a'><i class="fa fa-trash"></i></a>
+                            <a href="../../includes/process/eliminar/eliminar_proyecto.php?id_p=<?php echo $id_proyecto; ?>" class="btn btn-danger"  title='Borrar proyecto desde a'><i class="fa fa-trash"></i></a>
                             <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#eliminar-proyecto"  title='Borrar proyecto'><i class="fa fa-trash"></i></a>
                               <!-- <span class="pull-right">
                                 <a href="#" class='btn btn-primary' data-toggle="modal" data-target="#editProyecto" title='Editar proyecto'  onclick="obtener_datos(<?php echo $id;?>);"><i class="fa fa-edit"></i></a>
