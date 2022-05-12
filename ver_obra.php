@@ -42,14 +42,14 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
         <div class="row justify-content-between">
             <div class="col-6">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-entregable">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#agregar-materiales-obra">
                 <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
                 </span>Agregar Materiales
                 </button>
             </div>    
             <div class="col-6">
-                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-subir-archivos">
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#agregar-nuevo-material">
                 <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
                 </span>Registrar Material
