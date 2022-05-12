@@ -23,6 +23,10 @@
                         <div class="modal-body">
                             <input type="text" id="codigo" name="" ><br>
                             <input type="text" id="apellido" name="">
+                            <div class="alert alert-warning" role="alert">
+                            <label for=""> Estas seguro que quieres eliminar el proyecto <?php ?> </label>
+                            <label for="" id="apellido"></label>
+                          </div>
                         </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
