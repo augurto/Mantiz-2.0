@@ -65,7 +65,12 @@
                 <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom." - "; ?><?php if ($estado_entregable==0) {
                     # code...
                     echo 'Activo';
-                } ?></h6>
+                }elseif ($estado_entregable==1) {
+                    # code...
+                    echo 'Inactivo';
+                } else{
+                    echo 'Pendiente';
+                }?></h6>
                 
                  
                 </div>
