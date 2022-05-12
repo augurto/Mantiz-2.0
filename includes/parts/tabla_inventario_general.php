@@ -38,7 +38,16 @@
                             
                             <td><?php echo $nombre_obra ?></td>
                             <td><?php echo $fecha_agregada ?></td>
-                            <td><?php echo $estado ?></td>
+                            <td><?php if ($estado==0) {
+                                # code...
+                                echo 'Oficina';
+                            } elseif ($estado==1) {
+                                # code...
+                                echo 'Terminado';
+                            } elseif ($estado==2) {
+                                # code...
+                                echo 'Inactivo';
+                            }?></td>
                             <td>Boton Accion Pendiente</td>
                         </tr>
                         <?php
