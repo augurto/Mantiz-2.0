@@ -1,17 +1,17 @@
-                                <script >
+<script >
                                       $(document).on("click", "#btnmodal",function () {
                                         
-                                              var nombre =$(this).data('nom');
+                                              var codigo =$(this).data('cod');
                                           var apellido =$(this).data('ape');
 
-                                        $("#nombre").val(nombre);
+                                        $("#codigo").val(codigo);
                                         $("#apellido").val(apellido);
                           
                                       })
 
                                     </script>
 <!-- Modal -->
-    <div class="modal fade" id="ModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="ModalBorrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -21,7 +21,7 @@
                             </button>
                     </div>
                         <div class="modal-body">
-                            <input type="text" id="nombre" name="" ><br>
+                            <input type="text" id="codigo" name="" ><br>
                             <input type="text" id="apellido" name="">
                         </div>
                     <div class="modal-footer">

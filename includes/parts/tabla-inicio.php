@@ -72,8 +72,11 @@
                             }?></td>
                             <td>
                          <!-- Button trigger modal -->
-                                    <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-nom="<?php echo $codigo; ?>" data-ape="mendez">
-                                      Editar
+                                    <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit" data-nom="<?php echo $codigo; ?>" data-ape="mendez">
+                                    <i class="fa fa-edit"></i>
+                                    </button>
+                                    <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#ModalBorrar" data-nom="<?php echo $codigo; ?>" data-ape="borrar">
+                                    <i class="fa fa-trash"></i>
                                     </button>
 
                             </td>
