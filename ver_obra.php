@@ -38,11 +38,34 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
     <?php include 'includes/header.php';?>
     <div style="height:50px"></div>
     <!-- Inicio de Graficas -->
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-6">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-entregable">
+                <span class="icon text-white-50">
+                            <i class="fas fa-plus"></i>
+                </span>Agregar Materiales
+                </button>
+            </div>    
+            <div class="col-6">
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-subir-archivos">
+                <span class="icon text-white-50">
+                            <i class="fas fa-plus"></i>
+                </span>Registrar Material
+                </button>
 
+                <?php include 'includes/modal/modal_entregable.php' ?>
+                <?php include 'includes/modal/modal-subir-archivos.php' ?>
+            <!-- Fin Boton agregar proyecto -->
+            </div>     
+        </div>    
+    </div>
+    <br>
     
     <!-- Fin de graficas -->
     <!-- Boton agregar proyecto -->
-    <?php include 'includes/parts/agrgar_obras_modal.php' ?>
+    
     <!-- Fin Boton agregar proyecto -->
     <br>
     <!-- Contenido de la tabla -->
