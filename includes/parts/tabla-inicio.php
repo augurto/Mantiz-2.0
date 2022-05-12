@@ -70,7 +70,37 @@
                                 # code...
                                 echo 'Activo';
                             }?></td>
-                            <td><button type="button" class="btn btn-success edit" value="<?php echo $row['id']; ?>"><span class="glyphicon glyphicon-edit"></span> Edit</button></td>
+                            <td>
+                            <!-- Button trigger modal -->
+                              <button type="button" id="btnmodal" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                editt
+                              </button>
+                              <script>
+                                    $(document).on("click","#btnmodal",function(){
+                                      var codigo =$(this).data('cod');
+                                      $("#codigo").val(codigo);
+                                    })
+                                  </script>
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                          <input type="text" id="codigo" name="">
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </td>
                             <td>
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminar-proyecto" >
                             <i class="fa fa-trash"></i>
