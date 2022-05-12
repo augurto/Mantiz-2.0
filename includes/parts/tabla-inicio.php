@@ -1,4 +1,16 @@
-
+<script>
+  deleteButton = document.querySelector('.btn btn-danger');
+deleteButton.onclick = function(e){
+  e.preventDefault()
+  user_confirm = confirm("¿Está seguro que desea eliminar el registro?")
+  if(user_confirm){
+    delete_url = deleteButton.getAttribute('href')
+    window.location.href = delete_url
+  }else{
+    alert('La eliminación se ha cancelado')
+  }
+}
+</script>
         <!--Ejemplo tabla con DataTables-->
         <?php require_once ('./config/conexion_tabla.php') ?>
         <div class="container">
@@ -72,6 +84,7 @@
                                 <a href="#" class='btn btn-primary' data-toggle="modal" data-target="#editProyecto" title='Editar proyecto'  onclick="obtener_datos(<?php echo $id;?>);"><i class="fa fa-edit"></i></a>
                                 
                                 <a href="#" class="btn btn-danger" title='Borrar proyectoooo' onclick="return confirm('¿Realmente desea eliminar?')"><i class="fa fa-trash"></i></a>
+                              
                                 
                                 
                               </span>
