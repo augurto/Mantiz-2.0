@@ -14,10 +14,9 @@
                                 <tr>
                                     <th>ID</th>
                                 <th>Nombre de la Obra</th>
-                                <th>Estado</th>
-                                <th>Presupuesto</th>
                                 <th>Fecha</th>
                                 <th>Estado</th>
+                             
                                 <th>Accion</th>
                                 </tr>
                             </thead>
@@ -27,9 +26,9 @@
                             while ($row=mysqli_fetch_array($query)){
                                     $id=$row['id'];
                                     $nombre=$row['nombre_obra'];
-                                    $codigo_=$row['fecha_agregada'];
-                                    $estado=$row['estado'];
                                     $fecha=$row['fecha_agregado'];
+                                    $estado=$row['estado'];
+                                    
 
                        
 
@@ -55,9 +54,9 @@
                             <tr>
                                 <td><?php echo $count++; ?></td>
                             <td><a href="t_entregables.php?id_p=<?php echo $codigo_; ?>"><?php echo $nombre; ?></a></td>
-                            <td width="4%"><?php echo $codigo_; ?></td>
-                            <td width="5%">S/<?php echo number_format($presupuesto); ?></td>
-                            <td><?php echo $fecha; ?></td>
+                            <td width="4%"><?php echo $fecha; ?></td>
+                           
+                           <!--  <td><?php echo $estado; ?></td> -->
                             <td><a href="#" class="btn btn-<?php echo $label_class;?> btn-icon-split">
                             <span class="icon text-white-50">
                             <i class="fas fa-<?php echo $ico; ?>"></i>
