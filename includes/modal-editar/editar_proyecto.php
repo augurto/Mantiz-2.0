@@ -2,10 +2,12 @@
                                       $(document).on("click", "#btnmodal",function () {
                                         
                                               var nombre =$(this).data('nom');
-                                          var apellido =$(this).data('ape');
+                                              var apellido =$(this).data('ape')
+                                              var estado =$(this).data('estado');
 
                                         $("#nombre").val(nombre);
-                                        $("#apellido").val(apellido);
+                                        $("#apellido").val(apellido);\
+                                        $("#estado").val(estado);
                           
                                       })
 
@@ -30,6 +32,12 @@
                         <span class="input-group-text" id="basic-addon1">Presupuesto</span>
                         <input type="text" class="form-control" id="apellido" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
+
+                        <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Estado</span>
+                        <input type="text" class="form-control" id="estado" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+
                         </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>

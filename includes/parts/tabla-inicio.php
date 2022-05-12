@@ -52,7 +52,7 @@
                              <?php }?>   
                              <td><?php echo $count++; ?></td>
                            
-                             <td><a href="../../entregables.php?id_p=<?php echo $id_proyecto; ?>"><?php echo $codigo.'-'.$extencion.'-'.$nombre_proyecto; ?></a></td>
+                             <td><a href="../../entregables.php?id_p=<?php echo $id; ?>"><?php echo $codigo.'-'.$extencion.'-'.$nombre_proyecto; ?></a></td>
                              
                              
                              <td><span id="firstname<?php echo $presupuesto; ?>"><?php echo $presupuesto; ?></span></td>
@@ -72,7 +72,7 @@
                             }?></td>
                             <td>
                          <!-- Button trigger modal -->
-                                    <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit" data-nom="<?php echo $codigo; ?>" data-ape="<?php echo $presupuesto;  ?>">
+                                    <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit" data-nom="<?php echo $codigo; ?>" data-ape="<?php echo $presupuesto;?>" data-estado="<?php echo $estado;  ?>" >
                                     <i class="fa fa-edit"></i>
                                     </button>
                                     <button type="button" id="btnmodal" class="btn btn-danger" data-toggle="modal" data-target="#ModalBorrar" data-cod="<?php echo $codigo; ?>" data-ape="<?php echo $nombre_proyecto; ?>">
