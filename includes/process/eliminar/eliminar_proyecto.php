@@ -7,7 +7,7 @@ $password = "Mantizb*#17";
 $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection
 
-$codigo=$_POST['codigo'];
+$codigo=$_GET['codigo'];
 
 if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
