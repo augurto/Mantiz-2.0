@@ -1,5 +1,10 @@
 
-
+<script>
+      $(document).on("click","#btneditar",function(){
+        var codigo =$(this).data('cod');
+        $("#codigo").val(codigo);
+      })
+    </script>
 <!-- Modal -->
 <div class="modal fade" id="editProyecto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
