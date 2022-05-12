@@ -25,7 +25,7 @@
                             
                             <div class="alert alert-danger" role="alert">
                             <label for=""> Estas seguro que quieres eliminar el proyecto <?php ?> </label>
-                            <input type="text" id="apellido" style="border: none;" name="">
+                            <input type="text" id="apellido" style="border: none; background-color:transparent !important;" name="">
                             
                           </div>
                         </div>
