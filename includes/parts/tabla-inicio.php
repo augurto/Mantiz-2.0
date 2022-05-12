@@ -69,7 +69,7 @@
                                 # code...
                                 echo 'Activo';
                             }?></td>
-                            <td><button type="button" class="btn btn-success edit" value="<?php echo $row['userid']; ?>"><span class="glyphicon glyphicon-edit"></span> Edit</button></td>
+                            <td><button type="button" class="btn btn-success edit" value="<?php echo $row['id']; ?>"><span class="glyphicon glyphicon-edit"></span> Edit</button></td>
                             <td>
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminar-proyecto">
                             <i class="fa fa-trash"></i>
