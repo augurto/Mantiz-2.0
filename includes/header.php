@@ -7,10 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Proyectos</a>
+          <a class="nav-link active" aria-current="page" href="../index.php">Proyectos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="inventario_general.php">Inventario General</a>
+          <a class="nav-link" href="../inventario_general.php">Inventario General</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Actualizar Datos</a>

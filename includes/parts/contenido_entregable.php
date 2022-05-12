@@ -64,12 +64,12 @@
                 <!-- <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom." - ".$estado_entregable; ?></h6> -->
                 <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom." - "; ?><?php if ($estado_entregable==0) {
                     # code...
-                    echo 'Activo';
+                    echo 'Pendiente';
                 }elseif ($estado_entregable==1) {
                     # code...
-                    echo 'Inactivo';
+                    echo 'Aprobado';
                 } else{
-                    echo 'Pendiente';
+                    echo 'Observado';
                 }?></h6>
                 
                  
