@@ -80,5 +80,6 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <script type="text/javascript" src="main.js"></script>   
 
     <!-- Fin de Script para datatables -->
+    <script src="js/proyecto.js"></script>
 </body>
 </html>
