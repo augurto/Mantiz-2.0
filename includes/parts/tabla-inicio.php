@@ -9,6 +9,7 @@
                         
                         <thead>
                                 <tr>
+                                    <th>Id</th>
                                     <th>Codigo</th>
                                     <th>Proyecto</th>
                                     
@@ -22,6 +23,7 @@
                                 </thead>
                         <?php foreach ($link->query('SELECT * from proyecto order by codigo desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
+                        $count=1;
                         $id_proyecto=$row['id'];
                         $codigo=$row['codigo'];
                         $extencion=$row['extencion'];
@@ -45,7 +47,7 @@
                              <?php } else{?>
                              <tr style="background-color: #FDF5E6 !important;">
                              <?php }?>   
-                            
+                             <td><?php echo $count++; ?></td>
                              <td><?php echo $codigo ?></td>
                              <td><a href="../../entregables.php?id_p=<?php echo $id_proyecto; ?>"><?php echo $nombre_proyecto; ?></a></td>
                              
