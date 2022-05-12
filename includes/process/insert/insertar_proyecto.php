@@ -7,15 +7,15 @@ $password = "Mantizb*#17";
 $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection
 
-$nombre_proyecto=$_POST["nombre-proyecto"];
-$extension=$_POST["extension-codigo"];
-$codigo=$_POST["codigo"];
+$nombre_proyecto=$_GET["nombre-proyecto"];
+$extension=$_GET["extension-codigo"];
+$codigo=$_GET["codigo"];
 $nuevo_codigo=$extension.'-'.$codigo;
-$presupuesto=$_POST["presupuesto"];
+$presupuesto=$_GET["presupuesto"];
 $fecha=date("Y-m-d"); 
-$fecha_ini=$_POST["fecha_ini"];
-$fecha_fin=$_POST["fecha_fin"];
-$usuario=$_POST["usuario"];
+$fecha_ini=$_GET["fecha_ini"];
+$fecha_fin=$_GET["fecha_fin"];
+$usuario=$_GET["usuario"];
 if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
 }
