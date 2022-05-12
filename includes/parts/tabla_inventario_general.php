@@ -9,7 +9,7 @@
                         
                         <thead>
                                 <tr>
-                                    <th>ID</th>
+                                    
                                     <th>Obra</th>
                                     <th>Fecha</th>
                                     <th>Estado</th>
@@ -17,10 +17,10 @@
                                     
                                 </tr>
                                 </thead>
-                        <?php foreach ($link->query('SELECT * from obras') as $row){ // aca puedes hacer la consulta e iterarla con each. ?> 
+                        <?php foreach ($link->query('SELECT * from obras') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <tr>
-                            <td><?php echo $row['id'] // aca te faltaba poner los echo para que se muestre el valor de la variable.  ?></td>
-                            <td><?php echo $row['nombre_obra'] ?></td>
+                            
+                            <td style="background-color: red !important;"><?php echo $row['nombre_obra'] ?></td>
                             <td><?php echo $row['fecha_agregada'] ?></td>
                             <td><?php echo $row['estado'] ?></td>
                             <td>Accion Pendiente</td>
