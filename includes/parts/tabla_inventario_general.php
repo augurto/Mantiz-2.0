@@ -27,7 +27,7 @@
                             while ($row=mysqli_fetch_array($query)){
                                     $id=$row['id'];
                                     $nombre=$row['nombre_obra'];
-                                    $fecha=$row['fecha_agregado'];
+                                    $fecha=$row['fecha_agregada'];
                                     $estado=$row['estado'];
                                     
 
