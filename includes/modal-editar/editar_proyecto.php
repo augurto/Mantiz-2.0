@@ -6,7 +6,7 @@
                                               var estado =$(this).data('estado');
 
                                         $("#nombre").val(nombre);
-                                        $("#apellido").val(apellido);\
+                                        $("#apellido").val(apellido);
                                         $("#estado").val(estado);
                           
                                       })
