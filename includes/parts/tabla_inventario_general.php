@@ -22,9 +22,19 @@
                         $nombre_obra=$row['nombre_obra'];
                         $fecha_agregada=$row['fecha_agregada'];
                         $estado=$row['estado'];
+                         if ($estado==0) { ?>
+                             
+                             <tr style="background-color: #F0FFFF !important;">
 
-                       ?>
-                        <tr style="background-color: blue !important;">
+                             <?php  }elseif ($estado==1) { ?>
+                             <tr style="background-color: #F0FFF0 !important;">
+
+                             <?php  }elseif ($estado==2) { ?>
+                             <tr style="background-color: #FFE4E1 !important;">
+                       
+                             <?php } else{?>
+                             <tr style="background-color: #FDF5E6 !important;">
+                             <?php }?>   
                             
                             <td><?php echo $nombre_obra ?></td>
                             <td><?php echo $fecha_agregada ?></td>
