@@ -46,7 +46,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
     <!-- Fin Boton agregar proyecto -->
     <br>
     <!-- Contenido de la tabla -->
-    <?php include 'includes/parts/tabla_inventario_general.php'; ?>
+    <?php include 'includes/parts/tabla_ver_obras.php'; ?>
     <!-- Fin del contenido de la tabla -->
 
   
