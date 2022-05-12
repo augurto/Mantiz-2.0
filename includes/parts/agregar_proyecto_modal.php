@@ -30,7 +30,7 @@
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
                           </div>
-                          <input type="text" class="form-control" placeholder="Nombre del Proyecto" >
+                          <input type="text" class="form-control" placeholder="Nombre del Proyecto" id="nombre-proyecto" name="nombre-proyecto" >
                           
                         </div>
 
@@ -38,7 +38,7 @@
                       <label for="inputProyec">Codigo del Proyecto</label>
                         <div class="input-group">
 
-                                <select class="form-control" id="grupos" name="grupos" required>
+                                <select class="form-control" id="extension-codigo" name="extension-codigo" required>
                                   <option value="0">--Ext. del codigo--</option>
                                       <?php
                                         $programas=mysqli_query($con,"select * from codigo_generado_proyecto");
@@ -73,7 +73,7 @@
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-usd" aria-hidden="true">S/.</i></span>
                           </div>
-                          <input type="number" class="form-control" placeholder="Presupuesto" >
+                          <input type="number" class="form-control" placeholder="Presupuesto" id="presupuesto" name="presupuesto" >
                           
                         </div>
 
@@ -111,6 +111,7 @@
                               <span class="input-group-text"><span class="fas fa-calendar"></span></span>
                             </div>
                             <input type="date" class="form-control" name="fecha_fin"  id="fecha_fin"  title="Fecha fin" required>
+                            <input type="text" value="Ego" class="form-control" name="usuario"  id="usuario"  title="usuario" required>
                           </div>
                           <!-- /input-group -->
                         </div>
