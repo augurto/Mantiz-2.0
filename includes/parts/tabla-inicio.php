@@ -72,7 +72,7 @@
                             }?></td>
                             <td>
                          <!-- Button trigger modal -->
-                                    <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit" data-nom="<?php echo $codigo; ?>" data-ape="mendez">
+                                    <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit" data-nom="<?php echo $codigo; ?>" data-ape="<?php echo $presupuesto;  ?>">
                                     <i class="fa fa-edit"></i>
                                     </button>
                                     <button type="button" id="btnmodal" class="btn btn-danger" data-toggle="modal" data-target="#ModalBorrar" data-cod="<?php echo $codigo; ?>" data-ape="<?php echo $nombre_proyecto; ?>">

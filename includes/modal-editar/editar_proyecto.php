@@ -22,12 +22,12 @@
                     </div>
                         <div class="modal-body">
                         <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <span class="input-group-text" id="basic-addon1">Proyecto</span>
                         <input type="text" class="form-control" id="nombre" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
 
                         <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <span class="input-group-text" id="basic-addon1">Presupuesto</span>
                         <input type="text" class="form-control" id="apellido" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                         </div>
