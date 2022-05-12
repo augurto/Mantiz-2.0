@@ -18,7 +18,7 @@
                                     <th>Fecha Fin</th>
                                     <th>Estado</th>
                                     <th>Accion</th>
-                                    <th>Accion</th>
+                                    
                                     
                                 </tr>
                                 </thead>
@@ -80,18 +80,10 @@
                                     </button>
 
                             </td>
-                            <td>
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminar-proyecto" >
-                            <i class="fa fa-trash"></i>
-                            </button>
-
-                            <button type="button" id="btneditar" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#editProyecto" data-cod="ego">
-                            <i class="fa fa-edit"></i>
-                            </button>
                             
                             
                               <!-- <a href="../../includes/process/eliminar/eliminar_proyecto.php?id_p=<?php echo $id_proyecto; ?>" class="btn btn-danger"  title='Borrar proyecto desde a'><i class="fa fa-trash"></i></a> -->
-                            </td>
+                          
                         </tr>
                         <?php
                             }
