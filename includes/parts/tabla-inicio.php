@@ -54,9 +54,11 @@
                              <td><a href="../../entregables.php?id_p=<?php echo $id_proyecto; ?>"><?php echo $codigo.'-'.$extencion.'-'.$nombre_proyecto; ?></a></td>
                              
                              
-                             <td><?php echo $presupuesto ?></td>
-                             <td><?php echo $fecha_ini ?></td>
-                             <td><?php echo $fecha_fin ?></td>
+                             <td><span id="firstname<?php echo $presupuesto; ?>"><?php echo $presupuesto ?></span></td>
+                             <td><span id="lastname<?php echo $fecha_ini; ?>"><?php echo $fecha_ini; ?></span></td>
+                             <td><span id="address<?php echo $fecha_fin; ?>"><?php echo $fecha_fin; ?></span></td>
+                             <!-- <td><?php echo $fecha_ini ?></td>
+                             <td><?php echo $fecha_fin ?></td> -->
                             <td><?php if ($estado==0) {
                                 # code...
                                 echo 'Inactivo';
@@ -67,12 +69,15 @@
                                 # code...
                                 echo 'Activo';
                             }?></td>
+                            <td><button type="button" class="btn btn-success edit" value="<?php echo $row['userid']; ?>"><span class="glyphicon glyphicon-edit"></span> Edit</button></td>
                             <td>
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminar-proyecto">
                             <i class="fa fa-trash"></i>
                             </button>
                             
                             <a href="../../includes/process/eliminar/eliminar_proyecto.php?id_p=<?php echo $id_proyecto; ?>" class="btn btn-danger"  title='Borrar proyecto desde a'><i class="fa fa-trash"></i></a>
+                            
+			
                             <!-- <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#eliminar-proyecto"  title='Borrar proyecto'><i class="fa fa-trash"></i></a> -->
                                <span class="pull-right">
                                 <a href="#" class='btn btn-primary' data-toggle="modal" data-target="#editProyecto" title='Editar proyecto'  onclick="obtener_datos(<?php echo $id;?>);"><i class="fa fa-edit"></i></a>
