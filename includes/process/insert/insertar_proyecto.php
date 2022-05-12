@@ -10,7 +10,7 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 $nombre_proyecto=$_GET["nombre-proyecto"];
 $extension=$_GET["extension-codigo"];
 $codigo=$_GET["codigo"];
-$nuevo_codigo=$extension.'-'.$codigo;
+$nuevo_nombre=$extension.'-'.$nombre_proyecto;
 $presupuesto=$_GET["presupuesto"];
 $fecha=date("Y-m-d"); 
 $fecha_ini=$_GET["fecha_ini"];
@@ -24,7 +24,7 @@ echo "Connected successfully";
  
 $sql = "INSERT INTO proyecto (codigo, nombre_proyecto, presupuesto, estado,usuario_maker, fecha_agregado, fecha_ini, fecha_fin) 
 
-VALUES ('$nuevo_codigo', '$nombre_proyecto', '$presupuesto', '2','Ego','$fecha','$fecha_ini','$fecha_fin')";
+VALUES ('$codigo', '$nuevo_nombre', '$presupuesto', '2','Ego','$fecha','$fecha_ini','$fecha_fin')";
 if (mysqli_query($conn, $sql)) {
       echo "New record created successfully";
 } else {
