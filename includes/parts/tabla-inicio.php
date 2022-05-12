@@ -72,7 +72,7 @@
                             }?></td>
                             <td>
                             <!-- Button trigger modal -->
-                              <button type="button" id="btnmodal" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              <button type="button" id="btnmodal" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-cod="Ego">
                                 editt
                               </button>
                               <script>
