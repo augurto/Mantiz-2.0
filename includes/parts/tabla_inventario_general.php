@@ -36,7 +36,8 @@
                              <tr style="background-color: #FDF5E6 !important;">
                              <?php }?>   
                             
-                            <td><?php echo $nombre_obra ?></td>
+                            
+                            <td><a href="../../ver_obra.php?id_obra=<?php echo $id; ?>"><?php echo $nombre_obra; ?></a></td>
                             <td><?php echo $fecha_agregada ?></td>
                             <td><?php if ($estado==0) {
                                 # code...
