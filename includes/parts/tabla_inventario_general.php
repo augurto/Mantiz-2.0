@@ -1,10 +1,6 @@
 
         <!--Ejemplo tabla con DataTables-->
-        <?php
-        // Te recomiendo utilizar esta conección, la que utilizas ya no es la recomendada. 
-        $link = new PDO('mysql:host=localhost;dbname=u415020159_mantizb', 'u415020159_mantizb', 'Mantizb*#17'); // el campo vaciío es para la password. 
-
-        ?>
+       <?php require_once ('./config/conexion_tabla.php') ?>
         <div class="container">
         <div class="row">
                 <div class="col-lg-12">
@@ -14,8 +10,10 @@
                         <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>NOMBRE</th>
-                                    <th>APELLIDO</th>
+                                    <th>Obra</th>
+                                    <th>Fecha</th>
+                                    <th>Estado</th>
+                                    <th>Accion</th>
                                     
                                 </tr>
                                 </thead>
@@ -24,6 +22,8 @@
                             <td><?php echo $row['id'] // aca te faltaba poner los echo para que se muestre el valor de la variable.  ?></td>
                             <td><?php echo $row['nombre_obra'] ?></td>
                             <td><?php echo $row['fecha_agregada'] ?></td>
+                            <td><?php echo $row['estado'] ?></td>
+                            <td>Accion Pendiente</td>
                         </tr>
                         <?php
                             }
