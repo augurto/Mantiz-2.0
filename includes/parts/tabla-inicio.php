@@ -76,7 +76,7 @@
                                 editt
                               </button>
                               <script>
-                                    $(document).on("click","#btnmodal",function(){
+                                    $(document).on("click", "#btnmodal",function(){
                                       var codigo =$(this).data('cod');
                                       $("#codigo").val(codigo);
                                     })
