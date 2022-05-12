@@ -76,7 +76,7 @@
                             <i class="fa fa-trash"></i>
                             </button>
 
-                            <button type="button" id="btneditar" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#editProyecto" data-cod="<?php echo $codigo;?>">
+                            <button type="button" id="btneditar" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#editProyecto" data-cod="ego">
                             <i class="fa fa-edit"></i>
                             </button>
                             
