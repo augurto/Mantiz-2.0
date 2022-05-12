@@ -21,8 +21,15 @@
                             </button>
                     </div>
                         <div class="modal-body">
-                            <input type="text" id="nombre" name="" ><br>
-                            <input type="text" id="apellido" name="">
+                        <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <input type="text" class="form-control" id="nombre" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <input type="text" class="form-control" id="apellido" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
                         </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
