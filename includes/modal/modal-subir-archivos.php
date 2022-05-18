@@ -13,7 +13,7 @@
 </script>
 
 <!-- Modal -->
-<form action="">
+
 
 <div class="modal fade" id="modal-subir-archivos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -22,6 +22,7 @@
         <h5 class="modal-title" id="staticBackdropLabel">Agregar entregable</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <form action="">
       <div class="modal-body">
        <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1">Descripcion</span>
@@ -37,6 +38,8 @@
 
 
       </div>
+
+      </form>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
         <button type="button" class="btn btn-primary">Subir Archivo</button>
@@ -45,4 +48,3 @@
   </div>
 </div>
 
-</form>
