@@ -31,7 +31,7 @@
         <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
       </div>
       <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">Link del Drive</span>
+        <span class="input-group-text" id="basic-addon1">Link Drive</span>
         <input type="text" class="form-control" placeholder="Pegue aqui el link del dirve" aria-label="Username" aria-describedby="basic-addon1">
       </div>
       <!-- <b>Marca la casilla para agregar link</b>
@@ -42,7 +42,7 @@
         <input type="text" class="form-control" placeholder="Pegue aca el link del drive" aria-label="Username" aria-describedby="basic-addon1">
       </div> -->
        
-        <br>
+        
             <div class="input-group mb-3">
               <label class="input-group-text" for="inputGroupSelect01">Entregable</label>
               <select class="form-select" id="inputGroupSelect01">
