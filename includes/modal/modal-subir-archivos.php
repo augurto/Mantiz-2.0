@@ -30,19 +30,16 @@
         <span class="input-group-text" id="basic-addon1">Descripcion</span>
         <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
       </div>
-      <b>Mostrar contenido?</b>
+      <b>Marca la casilla para agregar link</b>
+      <br>
       <input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" />
-        <!-- <div id="content" style="display: none;">
-          contenido del div escondido<br/>
-          contenido del div escondido<br/>
-          contenido del div escondido<br/>
-        </div> -->
+        
         <div class="input-group"  id="content" style="display: none;">
             
-            <span class="input-group-text">Pegue el link del drive</span>
-            <input type="text" aria-label="Last name" class="form-control" id="fecha" name="fecha">
+            
+            <input type="text" aria-label="Last name" class="form-control" id="link" name="link" placeholder="Pegue el link de drive">
         </div>
-
+        <br>
         <select class="form-select" aria-label="Default select example">
           <option selected>Seleccione Entregable</option>
           <option value="1">One</option>
