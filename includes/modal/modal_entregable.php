@@ -10,11 +10,16 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <div class="input-group">
+            <span class="input-group-text"><i class="fa fa-plus" aria-hidden="true"></i></span>
+            <input type="text" aria-label="First name" class="form-control" placeholder="nombre del entregable">
+            <span class="input-group-text"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i></span>
+            <input type="date" aria-label="Last name" class="form-control">
+        </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Agregar Entregable</button>
       </div>
     </div>
   </div>
