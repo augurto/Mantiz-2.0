@@ -30,13 +30,17 @@
         <span class="input-group-text" id="basic-addon1">Descripcion</span>
         <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
       </div>
-      <b>Marca la casilla para agregar link</b>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Link del Drive</span>
+        <input type="text" class="form-control" placeholder="Pegue aqui el link del dirve" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+      <!-- <b>Marca la casilla para agregar link</b>
       <input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" />
       <br>
       <div class="input-group mb-3" id="content" style="display: none;">
         
         <input type="text" class="form-control" placeholder="Pegue aca el link del drive" aria-label="Username" aria-describedby="basic-addon1">
-      </div>
+      </div> -->
        
         <br>
             <div class="input-group mb-3">
