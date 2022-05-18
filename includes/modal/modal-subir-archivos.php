@@ -19,7 +19,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Agregar Entregables</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Agregar Archivos</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -32,12 +32,23 @@
       </div>
       <b>Mostrar contenido?</b>
       <input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" />
-        <div id="content" style="display: none;">
+        <!-- <div id="content" style="display: none;">
           contenido del div escondido<br/>
           contenido del div escondido<br/>
           contenido del div escondido<br/>
+        </div> -->
+        <div class="input-group"  id="content" style="display: none;">
+            
+            <span class="input-group-text">Pegue el link del drive</span>
+            <input type="text" aria-label="Last name" class="form-control" id="fecha" name="fecha">
         </div>
 
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Seleccione Entregable</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
