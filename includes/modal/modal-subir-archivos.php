@@ -33,12 +33,11 @@
       <b>Marca la casilla para agregar link</b>
       <input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" />
       <br>
-        
-        <div class="input-group"  id="content" style="display: none;">
-            
-            
-            <input type="text" aria-label="Last name" class="form-control" id="link" name="link" placeholder="Pegue el link de drive">
-        </div>
+      <div class="input-group mb-3" id="content" style="display: none;">
+        <span class="input-group-text" id="basic-addon1">Link Drive</span>
+        <input type="text" class="form-control" placeholder="Pegue aca el link del drive" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+       
         <br>
             <div class="input-group mb-3">
               <label class="input-group-text" for="inputGroupSelect01">Entregable</label>
