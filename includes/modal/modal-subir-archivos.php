@@ -63,7 +63,7 @@
             </div>
               <div class="input-group mb-3">
         
-                <input type="text" value="<?php echo $f['nombre'];?>" id="nombre_entregable" name="nombre_entregable" class="form-control">
+                <input type="hidden" value="<?php echo $f['nombre'];?>" id="nombre_entregable" name="nombre_entregable" class="form-control">
              </div>
              <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">Link  Drive</span>
