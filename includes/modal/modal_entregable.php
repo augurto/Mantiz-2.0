@@ -1,5 +1,6 @@
 
 <!-- Modal -->
+<form action="../process/insert/insertar_entregable.php" method="post">
 <div class="modal fade" id="modal-entregable" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -12,20 +13,21 @@
       <div class="modal-body">
         <div class="input-group">
             <span class="input-group-text"><i class="fa fa-plus" aria-hidden="true"></i></span>
-            <input type="text" aria-label="First name" class="form-control" placeholder="nombre del entregable">
-            <span class="input-group-text">Fecha entrega</span>
-            <input type="date" aria-label="Last name" class="form-control">
+            <input type="text" aria-label="First name" class="form-control" placeholder="nombre del entregable" id="nombre" name="nombre">
+            
         </div>
         <div class="input-group">
             
             <span class="input-group-text">Fecha de entrega</span>
-            <input type="date" aria-label="Last name" class="form-control">
+            <input type="date" aria-label="Last name" class="form-control" id="fecha" name="fecha">
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Agregar Entregable</button>
+        <button type="submit" class="btn btn-primary">Agregar Entregable</button>
       </div>
     </div>
   </div>
 </div>
+
+</form>
