@@ -13,7 +13,7 @@
         <div class="input-group">
             <span class="input-group-text"><i class="fa fa-plus" aria-hidden="true"></i></span>
             <input type="text" aria-label="First name" class="form-control" placeholder="nombre del entregable">
-            <span class="input-group-text"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i></span>
+            <span class="input-group-text">Fecha entrega</span>
             <input type="date" aria-label="Last name" class="form-control">
         </div>
       </div>
