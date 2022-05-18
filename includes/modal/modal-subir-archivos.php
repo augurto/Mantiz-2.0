@@ -35,7 +35,7 @@
         <input type="text" class="form-control" placeholder="Pegue aqui el link del dirve" aria-label="Username" aria-describedby="basic-addon1">
       </div>
       <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">Link  Drive</span>
+        
         <input type="file" class="form-control" placeholder="Pegue aqui el link del dirve" aria-label="Username" aria-describedby="basic-addon1">
       </div>
       <!-- <b>Marca la casilla para agregar link</b>
@@ -61,7 +61,8 @@
                         }
                         
                         ?>
-                        <input type="text" value="<?php echo $f['nombre'];?>" id="nombre_entregable" name="nombre_entregable" class="form-control">
+              </select>
+                       <!--  <input type="text" value="<?php echo $f['nombre'];?>" id="nombre_entregable" name="nombre_entregable" class="form-control"> -->
             </div>
       </div>
       <div class="modal-footer">
