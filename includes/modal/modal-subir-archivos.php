@@ -34,6 +34,10 @@
         <span class="input-group-text" id="basic-addon1">Link  Drive</span>
         <input type="text" class="form-control" placeholder="Pegue aqui el link del dirve" aria-label="Username" aria-describedby="basic-addon1">
       </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Link  Drive</span>
+        <input type="file" class="form-control" placeholder="Pegue aqui el link del dirve" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
       <!-- <b>Marca la casilla para agregar link</b>
       <input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" />
       <br>
@@ -45,18 +49,19 @@
         
             <div class="input-group mb-3">
               <label class="input-group-text" for="inputGroupSelect01">Entregable</label>
-              <select class="form-select" id="inputGroupSelect01">
-                <option selected>Seleccione...</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
+              <select class="form-control" name="id_entregable" id="id_entregable" required="">
+                        <option disabled="disabled" value="" selected>Seleccionar entregable...</option>
+                        <?php 
+
+                        $sss=mysqli_query($con,"SELECT * FROM entregables where codigo_proyecto=$id_p");
+                                while($f=mysqli_fetch_assoc($sss)){    
+
+                                    echo '<option value="'.$f['id'].'">'.$f['nombre'].'</option>';
+
+                        }
+                        
+                        ?>
+                        <input type="text" value="<?php echo $f['nombre'];?>" id="nombre_entregable" name="nombre_entregable" class="form-control">
             </div>
       </div>
       <div class="modal-footer">
