@@ -16,6 +16,11 @@
             <span class="input-group-text">Fecha entrega</span>
             <input type="date" aria-label="Last name" class="form-control">
         </div>
+        <div class="input-group">
+            
+            <span class="input-group-text">Fecha de entrega</span>
+            <input type="date" aria-label="Last name" class="form-control">
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
