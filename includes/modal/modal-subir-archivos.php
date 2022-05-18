@@ -31,8 +31,8 @@
         <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
       </div>
       <b>Marca la casilla para agregar link</b>
-      <br>
       <input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" />
+      <br>
         
         <div class="input-group"  id="content" style="display: none;">
             
@@ -40,12 +40,21 @@
             <input type="text" aria-label="Last name" class="form-control" id="link" name="link" placeholder="Pegue el link de drive">
         </div>
         <br>
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Seleccione Entregable</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="inputGroupSelect01">Entregable</label>
+              <select class="form-select" id="inputGroupSelect01">
+                <option selected>Seleccione...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
