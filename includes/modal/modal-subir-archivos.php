@@ -26,7 +26,7 @@
       </div>
       <div class="modal-body">
       <div class="input-group mb-3">
-        
+      <input type="text" value="<?php echo $_GET["id_p"]; ?>" id="codigo" name="codigo" >
         <input type="file" class="form-control" placeholder="Pegue aqui el link del dirve" aria-label="Username" aria-describedby="basic-addon1">
       </div>  
       <div class="input-group mb-3">
