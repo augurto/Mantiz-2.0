@@ -13,7 +13,7 @@
       <div class="modal-body">
         <div class="input-group">
             <span class="input-group-text"><i class="fa fa-plus" aria-hidden="true"></i></span>
-            <input type="text" aria-label="First name" class="form-control" placeholder="nombre del entregable" id="nombre" name="nombre">
+            <input type="text" aria-label="First name" class="form-control" placeholder="nombre del entregable" id="nombre" name="nombre" value="<?php echo $_GET["id_p"]; ?>">
             
         </div>
         <br>
