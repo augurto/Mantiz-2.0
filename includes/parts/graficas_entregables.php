@@ -1,14 +1,14 @@
 <?php
 
-     $tp=mysqli_query($con,"SELECT count(*) as tp FROM entregables where codigo_proyecto= $id_p");
+     $tp=mysqli_query($con,"SELECT count(*) as tp FROM archivos where codigo_proyecto= $id_p");
       $rwp=mysqli_fetch_array($tp);
       $tps=$rwp["tp"];
 
-      $tp2=mysqli_query($con,"SELECT COUNT(DISTINCT id_seg) as tp2 FROM seguimientos where codigo_proyecto= $id_p");
+      $tp2=mysqli_query($con,"SELECT COUNT(DISTINCT id_seg) as tp2 FROM archivos where codigo_proyecto= $id_p");
       $rwp2=mysqli_fetch_array($tp2);
       $tps2=$rwp2["tp2"];
 
-      $tp3=mysqli_query($con,"SELECT COUNT(DISTINCT usuario) as tp3 FROM seguimientos where codigo_proyecto= $id_p");
+      $tp3=mysqli_query($con,"SELECT COUNT(DISTINCT usuario) as tp3 FROM archivos where codigo_proyecto= $id_p");
       $rwp3=mysqli_fetch_array($tp3);
       $tps3=$rwp3["tp3"];
 
