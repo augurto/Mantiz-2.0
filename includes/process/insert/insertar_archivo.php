@@ -6,6 +6,14 @@ $password = "Mantizb*#17";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection
+$codigo_proyecto=$_GET["codigo"];
+$id_entregable=$_GET["id_entregable"];
+$descripcion=$_GET["descripcion"];
+$id_miembro=$_GET["id_miembro"];
+$link=$_GET["link"];
+$nombre_entregable=$_GET["nombre_entregable"];
+$usuario_seguimiento=$_GET["nombre_usuario"];
+
 
 $nombre_entregable=$_GET["nombre"];
 $codigo_proyecto2=$_GET["nombre"];
