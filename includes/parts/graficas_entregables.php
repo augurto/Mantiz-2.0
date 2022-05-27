@@ -104,39 +104,97 @@
               </div>
             </div>
           </div>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Entregable</th>
-                  <th scope="col">Progreso</th>
-                  
-                </tr>
-              </thead>
-              <tbody>
-               
-                <?php 
-                        $count=1;
-
-                        foreach ($link->query('SELECT * from entregables where codigo_proyecto=252  order by codigo desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+           <!--  insertando tabla  -->
+            <div class="col-lg-12">
+                    <div class="table-responsive">        
+                        <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         
+                        <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    
+                                    <th>Proyecto</th>
+                                    
+                                    <th>Presupuesto</th>
+                                    <th>Fecha inicio</th>
+                                    <th>Fecha Fin</th>
+                                    <th>Estado</th>
+                                    <th>Accion</th>
+                                    
+                                    
+                                </tr>
+                                </thead>
                         <?php 
-                        $id=$row['id'];
-                        $nombre_entregable=$row['nombre'];
+                        $count=1;
+                        foreach ($link->query('SELECT * from proyecto order by codigo desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                        <?php
                         
-                        ?>
-                <tr>
-                  <th scope="row">2</th>
-                  <td><?php echo $count++; ?></td>
-                  <td><?php echo $nombre_entregable; ?></td>
-                  <td>@<?php echo $id; ?></td>
-                </tr>
-                
-              </tbody>
-              <?php
+                        $id=$row['id'];
+                        $codigo=$row['codigo'];
+                        $extencion=$row['extencion'];
+                        $nombre_proyecto=$row['nombre_proyecto'];
+                        $presupuesto=$row['presupuesto'];
+                        $usuario=$row['usuario_maker'];
+                        $fecha_ini=$row['fecha_ini'];
+                        $fecha_fin=$row['fecha_fin'];
+
+                        $estado=$row['estado'];
+                         if ($estado==0) { ?>
+                             
+                             <tr style="background-color: #F0FFFF !important;">
+
+                             <?php  }elseif ($estado==1) { ?>
+                             <tr style="background-color: #F0FFF0 !important;">
+
+                             <?php  }elseif ($estado==2) { ?>
+                             <tr style="background-color: #FFE4E1 !important;">
+                       
+                             <?php } else{?>
+                             <tr style="background-color: #FDF5E6 !important;">
+                             <?php }?>   
+                             <td><?php echo $count++; ?></td>
+                           
+                             <td><a href="../../entregables.php?id_p=<?php echo $id; ?>"><?php echo $codigo.'-'.$extencion.'-'.$nombre_proyecto; ?></a></td>
+                             
+                             
+                             <td><span id="firstname<?php echo $presupuesto; ?>"><?php echo $presupuesto; ?></span></td>
+                             <td><span id="lastname<?php echo $fecha_ini; ?>"><?php echo $fecha_ini; ?></span></td>
+                             <td><span id="address<?php echo $fecha_fin; ?>"><?php echo $fecha_fin; ?></span></td>
+                             <!-- <td><?php echo $fecha_ini ?></td>
+                             <td><?php echo $fecha_fin ?></td> -->
+                            <td><?php if ($estado==0) {
+                                # code...
+                                echo 'Inactivo';
+                            } elseif ($estado==1) {
+                                # code...
+                                echo 'Terminado';
+                            } elseif ($estado==2) {
+                                # code...
+                                echo 'Activo';
+                            }?></td>
+                            <td>
+                         <!-- Button trigger modal -->
+                                    <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit" data-nom="<?php echo $codigo; ?>" data-ape="<?php echo $presupuesto;?>" data-estado="<?php echo $estado;  ?>" >
+                                    <i class="fa fa-edit"></i>
+                                    </button>
+                                    <button type="button" id="btnmodal" class="btn btn-danger" data-toggle="modal" data-target="#ModalBorrar" data-cod="<?php echo $codigo; ?>" data-ape="<?php echo $nombre_proyecto; ?>">
+                                    <i class="fa fa-trash"></i>
+                                    </button>
+
+                            </td>
+                            
+                            
+                              <!-- <a href="../../includes/process/eliminar/eliminar_proyecto.php?id_p=<?php echo $id_proyecto; ?>" class="btn btn-danger"  title='Borrar proyecto desde a'><i class="fa fa-trash"></i></a> -->
+                          
+                        </tr>
+                        <?php
                             }
                         ?>
-            </table>
+                        </table>
+                </table>          
+                    </div>
+                </div>
+          <!--   fin tabla -->
           <br>
           <div class="progress">
             <div class="progress-bar" role="progressbar" style="width: <?php echo $porcentaje;?>%;" aria-valuenow="<?php echo $porcentaje;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $porcentaje;?>%</div>
