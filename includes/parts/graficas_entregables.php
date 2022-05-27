@@ -129,7 +129,7 @@
 
                     <div class="progress">
                       <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><?php echo $row['id']; ?><?php 
-                      $bar=mysqli_query($con,"SELECT COUNT(DISTINCT id_seg) as tp2 FROM archivos where codigo_proyecto= '".$row['id']."'");
+                      $bar=mysqli_query($con,"SELECT COUNT(DISTINCT id_seg) as tp2 FROM archivos where id_seg= '".$row['id']."'");
                       $rwp21=mysqli_fetch_array($bar);
                       $tps21=$rwp21["tp2"];
                      
