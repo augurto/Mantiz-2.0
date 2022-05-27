@@ -34,7 +34,7 @@ $direccion=$_GET["id_p"]; /* codigo de proyecto */
 $carpeta='../../entregables/'.$codigo_proyecto.'/'.$nombre_entregable;
 
 /* $carpeta='archivos/proyectos/'.$direccion; */
-$sql = "INSERT INTO seguimientos (codigo_proyecto, documento,id_seg,descripcion,id_miembros,link,usuario,estado_seguimiento)
+$sql = "INSERT INTO archivos (codigo_proyecto, documento,id_seg,descripcion,id_miembros,link,usuario,estado_seguimiento)
 VALUES ('$codigo_proyecto', '$nombre_documento','$id_entregable','$descripcion','159','$link','$usuario_seguimiento','0')";
 
 if (mysqli_query($conn, $sql)) {
