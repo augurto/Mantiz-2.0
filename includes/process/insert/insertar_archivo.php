@@ -33,7 +33,8 @@ $nombre_documento=$_FILES['documento']['name'];
 $guardado=$_FILES['documento']['tmp_name'];
  
 $direccion=$_GET["id_p"]; /* codigo de proyecto */
-$carpeta='../entregables/'.$codigo_proyecto.'/'.$nombre_entregable;
+$carpeta='../../entregables/'.$codigo_proyecto.'/'.$nombre_entregable;
+
 /* $carpeta='archivos/proyectos/'.$direccion; */
 $sql = "INSERT INTO seguimientos (codigo_proyecto, documento,id_seg,descripcion,id_miembros,link,usuario,estado_seguimiento)
 VALUES ('$codigo_proyecto', '$nombre_documento','$id_entregable','$descripcion','$id_miembro','$link','$usuario_seguimiento','0')";
