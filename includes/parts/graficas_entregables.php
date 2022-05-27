@@ -116,7 +116,7 @@
                 <?php 
                         $count=1;
 
-                        foreach ($link->query('SELECT * from entregables where codigo_proyecto=152  order by codigo desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                        foreach ($link->query('SELECT * from entregables where codigo_proyecto=252  order by codigo desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         
                         <?php 
                         $id=$row['id'];
