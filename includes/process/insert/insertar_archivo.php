@@ -29,6 +29,7 @@ if (!$conn) {
 echo "Connected successfully";
 $nombre_documento=$_FILES['documento']['name'];
 $guardado=$_FILES['documento']['tmp_name'];
+
  
 $direccion=$_GET["id_p"]; /* codigo de proyecto */
 $carpeta='../../entregables/'.$codigo_proyecto.'/'.$nombre_entregable;
@@ -58,7 +59,7 @@ if (mysqli_query($conn, $sql)) {
         }
     }
     /* header("Location: ver_entregables.php?var1=$direccion"); */
-    header("Location: ../entregables.php?id_p=$codigo_proyecto");
+    header("Location: ../../../entregables.php?id_p=$codigo_proyecto");
     exit;
     
     } else {
