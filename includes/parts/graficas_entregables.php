@@ -115,7 +115,7 @@
                     
                     <thead>
                     <tr>
-                      <th>ID</th>
+                      <th>Cantidad</th>
                       <th>Entregable</th>
                       <th>Progreso</th>
                       
@@ -123,7 +123,10 @@
                     </thead>
                 <?php foreach ($link->query('SELECT * from entregables where codigo_proyecto="'.$cod1.'"') as $row){ // aca puedes hacer la consulta e iterarla con each. ?> 
                 <tr>
-                  <td><?php echo $row['id'] // aca te faltaba poner los echo para que se muestre el valor de la variable.  ?></td>
+                  <td><?php 
+                      $bar=mysqli_query($con,"SELECT COUNT(id_seg) as tp2 FROM archivos where id_seg= '".$row['id']."'");
+                      $rwp21=mysqli_fetch_array($bar);
+                      $tps21=$rwp21["tp2"]; ?><?php echo $tps21;?></td>
                     <td><?php echo $row['nombre'] ?></td>
                     <td>
 
@@ -133,7 +136,7 @@
                       $rwp21=mysqli_fetch_array($bar);
                       $tps21=$rwp21["tp2"];
 
-                      $bar2=mysqli_query($con,"SELECT COUNT(DISTINCT id_seg) as tp22 FROM archivos where id_seg= '".$row['id']."' AND estado_seguimiento=1");
+                      $bar2=mysqli_query($con,"SELECT COUNT(*) as tp22 FROM archivos where id_seg= '".$row['id']."' AND estado_seguimiento=1");
                       $rwp21=mysqli_fetch_array($bar2);
                       $tps211=$rwp211["tp22"];
                      
