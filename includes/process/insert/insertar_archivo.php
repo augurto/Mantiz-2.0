@@ -20,19 +20,17 @@ $guardado=$_FILES['documento']['tmp_name'];
 
 $fecha=$_GET["fecha"];
 
+$direccion=$_GET["id_p"]; /* codigo de proyecto */
+$carpeta='../../../entregables/'.$codigo_proyecto.'/'.$nombre_entregable;
 
 
-$usuario=$_GET["usuario"];
-if (!$conn) {
-      die("Connection failed: " . mysqli_connect_error());
-}
+
  
 echo "Connected successfully";
 
 
  
-$direccion=$_GET["id_p"]; /* codigo de proyecto */
-$carpeta='../../../entregables/'.$codigo_proyecto.'/'.$nombre_entregable;
+
 
 /* $carpeta='archivos/proyectos/'.$direccion; */
 $sql = "INSERT INTO archivos (codigo_proyecto, documento,id_seg,descripcion,id_miembros,link,usuario,estado_seguimiento)
