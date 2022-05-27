@@ -1,6 +1,6 @@
 <?php
 
-     $tp=mysqli_query($con,"SELECT count(*) as tp FROM archivos where codigo_proyecto= $id_p");
+     $tp=mysqli_query($con,"SELECT count(*) as tp FROM entregables where codigo_proyecto= $id_p");
       $rwp=mysqli_fetch_array($tp);
       $tps=$rwp["tp"];
 
