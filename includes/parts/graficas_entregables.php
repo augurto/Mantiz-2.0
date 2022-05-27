@@ -121,7 +121,7 @@
                       
                     </tr>
                     </thead>
-                <?php foreach ($link->query('SELECT * from entregables where codigo_proyecto=252') as $row){ // aca puedes hacer la consulta e iterarla con each. ?> 
+                <?php foreach ($link->query('SELECT * from entregables where codigo_proyecto=$cod1') as $row){ // aca puedes hacer la consulta e iterarla con each. ?> 
                 <tr>
                   <td><?php echo $row['id'] // aca te faltaba poner los echo para que se muestre el valor de la variable.  ?></td>
                     <td><?php echo $row['nombre'] ?></td>
@@ -143,6 +143,6 @@
           <div class="progress">
             <div class="progress-bar" role="progressbar" style="width: <?php echo $porcentaje;?>%;" aria-valuenow="<?php echo $porcentaje;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $porcentaje;?>%</div>
           </div>
-          <input type="text" value="<?php echo $cod1; ?>">
+        
           <br>
 </div>
