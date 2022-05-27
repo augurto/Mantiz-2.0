@@ -1,9 +1,13 @@
 <?php
 
-     $tp=mysqli_query($con,"SELECT count(*) as tp FROM entregables where codigo_proyecto= $id_p");
+      $tp=mysqli_query($con,"SELECT count(*) as tp FROM entregables where codigo_proyecto= $id_p");
       $rwp=mysqli_fetch_array($tp);
       $tps=$rwp["tp"];
+      $aprob=mysqli_query($con,"SELECT count(*) as apro FROM archivos where estado_seguimiento= 1");
+      $apro=mysqli_fetch_array($aprob);
+      $aprobado=$apro["apro"];
       $porcentaje=100/$tps;
+      $aprobados=100/$aprobado;
       $tp2=mysqli_query($con,"SELECT COUNT(DISTINCT id_seg) as tp2 FROM archivos where codigo_proyecto= $id_p");
       $rwp2=mysqli_fetch_array($tp2);
       $tps2=$rwp2["tp2"];
@@ -153,6 +157,10 @@
           <div class="progress">
             <div class="progress-bar" role="progressbar" style="width: <?php echo $porcentaje;?>%;" aria-valuenow="<?php echo $porcentaje;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $porcentaje;?>%</div>
           </div>
-        
+          
+          <br>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: <?php echo $aprobados;?>%;" aria-valuenow="<?php echo $porcentaje;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $aprobados;?>%</div>
+          </div>
           <br>
 </div>
