@@ -104,32 +104,7 @@
               </div>
             </div>
           </div>
-          <?php
-                // Te recomiendo utilizar esta conección, la que utilizas ya no es la recomendada. 
-                $link = new PDO('mysql:host=localhost;dbname=u415020159_mantizb', 'u415020159_mantizb', 'Mantizb*#17'); // el campo vaciío es para la password. 
-
-                ?>
-
-                <table class="table table-striped">
-                    
-                    <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Entregable</th>
-                      <th>otro</th>
-                      
-                    </tr>
-                    </thead>
-                <?php foreach ($link->query('SELECT * from entregables where codigo_proyecto=252') as $row){ // aca puedes hacer la consulta e iterarla con each. ?> 
-                <tr>
-                  <td><?php echo $row['id'] // aca te faltaba poner los echo para que se muestre el valor de la variable.  ?></td>
-                    <td><?php echo $row['nombre'] ?></td>
-                    <td><?php echo $row['nombre'] ?></td>
-                </tr>
-                <?php
-                  }
-                ?>
-                </table>
+         
           <br>
           <div class="progress">
             <div class="progress-bar" role="progressbar" style="width: <?php echo $porcentaje;?>%;" aria-valuenow="<?php echo $porcentaje;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $porcentaje;?>%</div>
