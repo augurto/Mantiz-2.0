@@ -2,14 +2,17 @@
                                       $(document).on("click", "#btnmodal",function () {
                                         
                                               var nombre =$(this).data('nom');
-                                              
+                                              var apellido =$(this).data('ape')
+                                              var estado =$(this).data('estado');
 
                                         $("#nombre").val(nombre);
-                                        
+                                        $("#apellido").val(apellido);
+                                        $("#estado").val(estado);
                           
                                       })
 
                                     </script>
+                              
 <!-- Modal -->
 <form action="../../includes/process/insert/insertar_entregable.php" >
 <div class="modal fade" id="modal-entregable" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
