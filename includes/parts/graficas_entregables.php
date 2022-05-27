@@ -128,7 +128,7 @@
                     <td>
 
                     <div class="progress">
-                      <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><?php 
+                      <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: <?php echo $porcentaje;?>%" aria-valuenow="<?php echo $porcentaje;?>" aria-valuemin="0" aria-valuemax="<?php echo $porcentaje;?>"><?php 
                       $bar=mysqli_query($con,"SELECT COUNT(id_seg) as tp2 FROM archivos where id_seg= '".$row['id']."'");
                       $rwp21=mysqli_fetch_array($bar);
                       $tps21=$rwp21["tp2"];
