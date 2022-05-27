@@ -32,7 +32,7 @@
             
             <span class="input-group-text">Fecha de entrega</span>
             <input type="date" aria-label="Last name" class="form-control" id="fecha" name="fecha">
-            <input type="text" aria-label="Last name" class="form-control" id="nombre" name="codigo">
+            <input type="text" class="form-control" id="nombre" aria-label="Username" aria-describedby="basic-addon1">
         </div>
       </div>
       <div class="modal-footer">
