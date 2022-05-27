@@ -14,7 +14,8 @@ $link=$_GET["link"];
 $nombre_entregable=$_GET["nombre_entregable"];
 $usuario_seguimiento=$_GET["nombre_usuario"];
 
-
+$nombre_documento=$_FILES['documento']['name'];
+$guardado=$_FILES['documento']['tmp_name'];
 
 
 $fecha=$_GET["fecha"];
@@ -27,8 +28,7 @@ if (!$conn) {
 }
  
 echo "Connected successfully";
-$nombre_documento=$_FILES['documento']['name'];
-$guardado=$_FILES['documento']['tmp_name'];
+
 
  
 $direccion=$_GET["id_p"]; /* codigo de proyecto */
