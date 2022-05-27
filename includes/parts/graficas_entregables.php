@@ -115,7 +115,7 @@
                     
                     <thead>
                     <tr>
-                      <th>Cantidad</th>
+                      
                       <th>Entregable</th>
                       <th>Progreso</th>
                       
@@ -123,10 +123,7 @@
                     </thead>
                 <?php foreach ($link->query('SELECT * from entregables where codigo_proyecto="'.$cod1.'"') as $row){ // aca puedes hacer la consulta e iterarla con each. ?> 
                 <tr>
-                  <td><?php 
-                      $bar=mysqli_query($con,"SELECT COUNT(id_seg) as tp2 FROM archivos where id_seg= '".$row['id']."'");
-                      $rwp21=mysqli_fetch_array($bar);
-                      $tps21=$rwp21["tp2"]; ?><?php echo $tps21;?></td>
+                  
                     <td><?php echo $row['nombre'] ?></td>
                     <td>
 
