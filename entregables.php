@@ -11,6 +11,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         $sql=mysqli_query($con,"SELECT * FROM proyecto WHERE codigo='".$id_p."'");
          $rws=mysqli_fetch_array($sql);
          $nombre=$rws["nombre_proyecto"];
+         $codigo=$_GET["id_p"];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -55,7 +56,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         <div class="row justify-content-between">
             <div class="col-6">
                 <!-- Button trigger modal -->
-                <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#modal-entregable" data-nom="<?php echo $_POST["id_p"]; ?>">
+                <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#modal-entregable" data-nom="<?php echo $codigo; ?>">
                     
                 <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
@@ -63,6 +64,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                 </button>
             </div>    
             <input type="text" value="<?php echo $_GET["id_p"];?>">
+            <input type="text" value="<?php echo $codigo;?>">
             <div class="col-6">
                 <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-subir-archivos">
                 <span class="icon text-white-50">
