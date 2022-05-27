@@ -21,6 +21,7 @@
             
             <span class="input-group-text">Fecha de entrega</span>
             <input type="date" aria-label="Last name" class="form-control" id="fecha" name="fecha">
+            <input type="text" aria-label="Last name" class="form-control" id="codigo" name="codigo">
         </div>
       </div>
       <div class="modal-footer">
