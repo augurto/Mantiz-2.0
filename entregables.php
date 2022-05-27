@@ -62,6 +62,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                 </span>Entregables
                 </button>
             </div>    
+            <input type="text" value="<?php echo $_POST["id_p"]; ?>">
             <div class="col-6">
                 <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-subir-archivos">
                 <span class="icon text-white-50">
