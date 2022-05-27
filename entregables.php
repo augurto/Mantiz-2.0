@@ -55,8 +55,8 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         <div class="row justify-content-between">
             <div class="col-6">
                 <!-- Button trigger modal -->
-                <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#modal-entregable" data-nom="<?php echo $_GET["id_p"]; ?>">
-                    <
+                <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#modal-entregable" data-nom="<?php echo $_POST["id_p"]; ?>">
+                    
                 <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
                 </span>Entregables
