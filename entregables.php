@@ -46,6 +46,8 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 
 
     <?php include 'includes/header.php';?>
+    <?php include 'includes/modal/modal_entregable.php' ?>
+    <?php include 'includes/modal/modal-subir-archivos.php' ?>
     <div style="height:50px"></div>
     <!-- Inicio de Graficas -->
 
@@ -69,8 +71,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                 </span>Archivos
                 </button>
 
-                <?php include 'includes/modal/modal_entregable.php' ?>
-                <?php include 'includes/modal/modal-subir-archivos.php' ?>
+                
             <!-- Fin Boton agregar proyecto -->
             </div>     
         </div>    
