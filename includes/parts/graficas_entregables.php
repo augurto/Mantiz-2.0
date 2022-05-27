@@ -24,6 +24,8 @@
 		$query = mysqli_query($con, $sql);       
       
 			?>
+      
+      <?php require_once ('../../config/conexion_tabla.php') ?>
 <div class="container">
 <div class="row">
 
