@@ -111,7 +111,7 @@
 
                 ?>
 
-                <table class="table table-striped">
+                <table class="table">
                     
                     <thead>
                     <tr>
@@ -125,14 +125,20 @@
                 <tr>
                   <td><?php echo $row['id'] // aca te faltaba poner los echo para que se muestre el valor de la variable.  ?></td>
                     <td><?php echo $row['nombre'] ?></td>
-                    <td><?php echo $row['nombre'] ?></td>
+                    <td>
+
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    </td>
                 </tr>
                 <?php
                   }
                 ?>
                 </table>
 
-                
+
           <br>
           <div class="progress">
             <div class="progress-bar" role="progressbar" style="width: <?php echo $porcentaje;?>%;" aria-valuenow="<?php echo $porcentaje;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $porcentaje;?>%</div>
