@@ -11,7 +11,6 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         $sql=mysqli_query($con,"SELECT * FROM proyecto WHERE codigo='".$id_p."'");
          $rws=mysqli_fetch_array($sql);
          $nombre=$rws["nombre_proyecto"];
-         $codigo=$_GET["id_p"];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -46,8 +45,6 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 
 
     <?php include 'includes/header.php';?>
-    <?php include 'includes/modal/modal_entregable.php' ?>
-    <?php include 'includes/modal/modal-subir-archivos.php' ?>
     <div style="height:50px"></div>
     <!-- Inicio de Graficas -->
 
@@ -58,14 +55,12 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         <div class="row justify-content-between">
             <div class="col-6">
                 <!-- Button trigger modal -->
-               
-                <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit" data-nom="<?php echo $codigo; ?>" data-ape="<?php echo $codigo;?>" data-estado="<?php echo $codigo;  ?>" >
-                                
-                                    <i class="fa fa-plus"></i>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-entregable">
+                <span class="icon text-white-50">
+                            <i class="fas fa-plus"></i>
+                </span>Entregables
                 </button>
             </div>    
-            <input type="text" value="<?php echo $_GET["id_p"];?>">
-            <input type="text" value="<?php echo $codigo;?>">
             <div class="col-6">
                 <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-subir-archivos">
                 <span class="icon text-white-50">
@@ -73,7 +68,8 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                 </span>Archivos
                 </button>
 
-                
+                <?php include 'includes/modal/modal_entregable.php' ?>
+                <?php include 'includes/modal/modal-subir-archivos.php' ?>
             <!-- Fin Boton agregar proyecto -->
             </div>     
         </div>    
