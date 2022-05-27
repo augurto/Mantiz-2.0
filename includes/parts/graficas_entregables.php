@@ -3,11 +3,14 @@
       $tp=mysqli_query($con,"SELECT count(*) as tp FROM entregables where codigo_proyecto= $id_p");
       $rwp=mysqli_fetch_array($tp);
       $tps=$rwp["tp"];
+      $tp4=mysqli_query($con,"SELECT count(*) as tp4 FROM archivos where codigo_proyecto= $id_p");
+      $rwp4=mysqli_fetch_array($tp4);
+      $tps4=$rwp4["tp4"];
       $aprob=mysqli_query($con,"SELECT count(*) as apro FROM archivos where estado_seguimiento= 1");
       $apro=mysqli_fetch_array($aprob);
       $aprobado=$apro["apro"];
       $porcentaje=100/$tps;
-      $aprobados=($aprobado/$tps)*100;
+      $aprobados=($aprobado/$tps4)*100;
       $tp2=mysqli_query($con,"SELECT COUNT(DISTINCT id_seg) as tp2 FROM archivos where codigo_proyecto= $id_p");
       $rwp2=mysqli_fetch_array($tp2);
       $tps2=$rwp2["tp2"];
