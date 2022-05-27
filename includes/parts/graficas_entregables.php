@@ -128,7 +128,11 @@
                     <td>
 
                     <div class="progress">
-                      <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><?php echo $row['id']; ?></div>
+                      <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><?php echo $row['id']; ?><?php 
+                      
+                      foreach ( $link->query('SELECT count(codigo_proyecto) from archivos where id_seg="'.$row['id'].'"')as $roww)
+                      
+                      ?></div>
                     </div>
 
                     </td>
