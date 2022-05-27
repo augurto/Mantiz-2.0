@@ -7,7 +7,7 @@
       $tp2=mysqli_query($con,"SELECT COUNT(DISTINCT id_seg) as tp2 FROM archivos where codigo_proyecto= $id_p");
       $rwp2=mysqli_fetch_array($tp2);
       $tps2=$rwp2["tp2"];
-
+      $cod1=$_GET["id_p"];
       $tp3=mysqli_query($con,"SELECT COUNT(DISTINCT usuario) as tp3 FROM archivos where codigo_proyecto= $id_p");
       $rwp3=mysqli_fetch_array($tp3);
       $tps3=$rwp3["tp3"];
@@ -102,8 +102,48 @@
               </div>
             </div>
           </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Entregable</th>
+                  <th scope="col">Progreso</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  
+                </tr>
+                <?php 
+                        $count=1;
+
+                        foreach ($link->query('SELECT * from entregables where codigo_proyecto=152  order by codigo desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                        
+                        <?php 
+                        $id=$row['id'];
+                        $nombre_entregable=$row['nombre'];
+                        
+                        ?>
+                <tr>
+                  <th scope="row">2</th>
+                  <td><?php echo $count++; ?></td>
+                  <td><?php echo $nombre_entregable; ?></td>
+                  <td>@<?php echo $id; ?></td>
+                </tr>
+                
+              </tbody>
+              <?php
+                            }
+                        ?>
+            </table>
+          <br>
           <div class="progress">
             <div class="progress-bar" role="progressbar" style="width: <?php echo $porcentaje;?>%;" aria-valuenow="<?php echo $porcentaje;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $porcentaje;?>%</div>
           </div>
+          <input type="text" value="<?php echo $cod1; ?>">
           <br>
 </div>
