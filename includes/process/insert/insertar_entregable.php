@@ -9,7 +9,7 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 
 $nombre_entregable=$_GET["nombre"];
 $codigo_proyecto2=$_GET["nombre"];
-$codigo_proyecto='183';
+$codigo_proyecto=$_GET["codigo"];
 
 $fecha=$_GET["fecha"];
 
