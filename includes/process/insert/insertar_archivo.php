@@ -15,9 +15,7 @@ $nombre_entregable=$_GET["nombre_entregable"];
 $usuario_seguimiento=$_GET["nombre_usuario"];
 
 
-$nombre_entregable=$_GET["nombre"];
-$codigo_proyecto2=$_GET["nombre"];
-$codigo_proyecto=$_GET["codigo"];
+
 
 $fecha=$_GET["fecha"];
 
