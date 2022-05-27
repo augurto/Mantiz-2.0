@@ -1,4 +1,15 @@
+<script >
+                                      $(document).on("click", "#btnmodal",function () {
+                                        
+                                              var nombre =$(this).data('nom');
+                                              
 
+                                        $("#nombre").val(nombre);
+                                        
+                          
+                                      })
+
+                                    </script>
 <!-- Modal -->
 <form action="../../includes/process/insert/insertar_entregable.php" >
 <div class="modal fade" id="modal-entregable" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -21,7 +32,7 @@
             
             <span class="input-group-text">Fecha de entrega</span>
             <input type="date" aria-label="Last name" class="form-control" id="fecha" name="fecha">
-            <input type="text" aria-label="Last name" class="form-control" id="codigo" name="codigo">
+            <input type="text" aria-label="Last name" class="form-control" id="nombre" name="codigo">
         </div>
       </div>
       <div class="modal-footer">
