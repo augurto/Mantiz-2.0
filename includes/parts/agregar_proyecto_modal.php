@@ -68,7 +68,7 @@
                              <input type="number" class="form-control" id="codigo"  name="codigo"  value="<?php echo ++$codigo_proyecto ?>" readonly>
                              
                        </div>
-                       <br>
+                      
                        <label for="inputProyec">Presupuesto</label>
                        
                         <div class="input-group mb-3">
@@ -103,7 +103,7 @@
                             <div class="input-group-prepend">
                               <span class="input-group-text"><span class="fas fa-calendar"></span></span>
                             </div>
-                            <input type="date" class="form-control" name="fecha_ini" id="fecha_ini" title="Fecha inicio" required>
+                            <input type="date" class="form-control" name="fecha_ini" id="fecha_ini" title="Fecha inicio"  value="<?php echo date('Y-m-d'); ?>" required>
                           </div>
                           <!-- /input-group -->
                         </div>
