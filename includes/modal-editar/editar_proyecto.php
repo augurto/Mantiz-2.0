@@ -12,6 +12,10 @@
                                       })
 
                                     </script>
+<?php
+$datos = "<script>estado</script>";
+echo $datos;
+?>
 <!-- Modal -->
     <div class="modal fade" id="ModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -25,10 +29,26 @@
                     <form action="">
                         <div class="modal-body">
                         <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Proyecto</span>
-                        <input type="text" class="form-control" id="nombre" aria-label="Username" aria-describedby="basic-addon1">
+                        <span class="input-group-text" id="basic-addon1">Cod Proyecto</span>
+                        <input type="text" class="form-control" id="nombre" aria-label="Username" aria-describedby="basic-addon1" readonly>
                         </div>
+                        <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">Extension</label>
+                                <select class="form-control" name="id_entregable" id="id_entregable" required="">
+                                            <option disabled="disabled" value="" selected>Clic para ver</option>
+                                            <?php 
 
+                                            $sss=mysqli_query($con,"SELECT * FROM codigo_generado_proyecto");
+                                                    while($f=mysqli_fetch_assoc($sss)){    
+
+                                                        echo '<option value="'.$f['id_cod_gen_pro'].'">'.$f['variable'].'</option>';
+
+                                            }
+                                            
+                                            ?>
+                                </select>
+                                        
+                        </div>                  
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Presupuesto</span>
                         <input type="text" class="form-control" id="apellido" aria-label="Username" aria-describedby="basic-addon1">
@@ -45,23 +65,7 @@
                             <option value="2">Inactivo</option>
                             </select>
                         </div>
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="inputGroupSelect01">Entregable</label>
-                                <select class="form-control" name="id_entregable" id="id_entregable" required="">
-                                            <option disabled="disabled" value="" selected>Clic para ver extension</option>
-                                            <?php 
-
-                                            $sss=mysqli_query($con,"SELECT * FROM codigo_generado_proyecto");
-                                                    while($f=mysqli_fetch_assoc($sss)){    
-
-                                                        echo '<option value="'.$f['id_cod_gen_pro'].'">'.$f['variable'].'</option>';
-
-                                            }
-                                            
-                                            ?>
-                                </select>
-                                        
-                            </div>                
+                                          
                         </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
