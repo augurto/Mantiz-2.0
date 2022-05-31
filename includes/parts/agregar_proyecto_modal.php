@@ -35,29 +35,13 @@
                         </div>
 
                       <!--   mostrar el ultimo codigo de todos los proyectos -->
-                      <div class="input-group mb-3">
-                        <label class="input-group-text" for="inputGroupSelect01">Entregable</label>
-                        <select class="form-control" name="id_entregable" id="id_entregable" required="">
-                                  <option disabled="disabled" value="" selected>Extension Codigo</option>
-                                  <?php 
-
-                                  $sss=mysqli_query($con,"SELECT * FROM codigo_generado_proyecto");
-                                          while($f=mysqli_fetch_assoc($sss)){    
-
-                                              echo '<option value="'.$f['id_cod_gen_pro '].'">'.$f['variable'].'</option>';
-
-                                  }
-                                  
-                                  ?>
-                        </select>
-                                
-                      </div>
+                      
                        
 
                       <label for="inputProyec">Codigo del Proyecto</label>
                         <div class="input-group">
 
-                                <select class="form-control" id="extension" name="extension" required>
+                                <!-- <select class="form-control" id="extension" name="extension" required>
                                   <option value="0">--Ext. del codigo--</option>
                                       <?php
                                         $programas=mysqli_query($con,"select * from codigo_generado_proyecto");
@@ -70,7 +54,7 @@
                                   <?php
                                         }
                                   ?>
-                                </select>
+                                </select> -->
                             <div class="input-group-prepend">
                               <span class="input-group-text"><span class="fa fa-qrcode"></span></span>
                             </div>
