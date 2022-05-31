@@ -52,7 +52,7 @@
                                             $sss=mysqli_query($con,"SELECT * FROM codigo_generado_proyecto");
                                                     while($f=mysqli_fetch_assoc($sss)){    
 
-                                                        echo '<option value="'.$f['id_cod_gen_pro'].'">'.$f['variable'].'</option>';
+                                                        echo '<option value="'.$f['variable'].'">'.$f['variable'].'</option>';
 
                                             }
                                             
