@@ -7,10 +7,11 @@ $password = "Mantizb*#17";
 $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection
 
-$nombre_entregable=$_GET["nombre"];
+$nombre_proyecto=$_GET["nombre_proyecto"];
 $extension=$_GET["id_entregable"];
 $codigo=$_GET["codigo"];
-
+$presupuesto=$_GET["presupuesto"];
+$estado=$_GET["estado"];
 $fecha=$_GET["fecha"];
 
 
@@ -22,7 +23,7 @@ if (!$conn) {
  
 echo "Connected successfully";
  
-$sql = "UPDATE  proyecto set  extencion = '".$extension."' where codigo = '".$codigo."'";
+$sql = "UPDATE  proyecto set  extencion = '".$extension."',nombre_proyecto = '".$nombre_proyecto."',presupuesto = '".$presupuesto."',estado = '".$estado."' where codigo = '".$codigo."'";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
       echo "location='../../../index.php'";
