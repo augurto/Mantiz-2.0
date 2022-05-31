@@ -10,9 +10,10 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 $nombre_proyecto=$_GET["nombre-proyecto"];
 
 $codigo=$_GET["codigo"];
-$extension=$_GET["id_entregable"];
+
 $nuevo_nombre=$extension.'-'.$nombre_proyecto;
 $presupuesto=$_GET["presupuesto"];
+$ext=$_GET["id_entregable"];
 $fecha=date("Y-m-d"); 
 $fecha_ini=$_GET["fecha_ini"];
 $fecha_fin=$_GET["fecha_fin"];
@@ -25,7 +26,7 @@ echo "Connected successfully";
  
 $sql = "INSERT INTO proyecto (codigo,extencion,nombre_proyecto, presupuesto, estado,usuario_maker, fecha_agregado, fecha_ini, fecha_fin) 
 
-VALUES ('$codigo','11', '$nombre_proyecto', '$presupuesto', '2','Ego','$fecha','$fecha_ini','$fecha_fin')";
+VALUES ('$codigo','$ext', '$nombre_proyecto', '$presupuesto', '2','Ego','$fecha','$fecha_ini','$fecha_fin')";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
       echo "location='../../../index.php'";
