@@ -62,13 +62,13 @@
                              <td><?php echo $fecha_fin ?></td> -->
                             <td><?php if ($estado==0) {
                                 # code...
-                                echo 'Inactivo';
+                                echo 'Pendiente';
                             } elseif ($estado==1) {
                                 # code...
                                 echo 'Terminado';
                             } elseif ($estado==2) {
                                 # code...
-                                echo 'Pendiente';
+                                echo 'Inactivo';
                             }?></td>
                             <td>
                          <!-- Button trigger modal -->
