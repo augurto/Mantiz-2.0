@@ -68,7 +68,7 @@
                                 echo 'Terminado';
                             } elseif ($estado==2) {
                                 # code...
-                                echo 'Activo';
+                                echo 'Pendiente';
                             }?></td>
                             <td>
                          <!-- Button trigger modal -->
