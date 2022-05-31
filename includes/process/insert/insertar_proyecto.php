@@ -8,8 +8,9 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection
 
 $nombre_proyecto=$_GET["nombre-proyecto"];
-$extension=$_GET["'$grupo'"];
+
 $codigo=$_GET["codigo"];
+$extension=$_GET["extension"];
 $nuevo_nombre=$extension.'-'.$nombre_proyecto;
 $presupuesto=$_GET["presupuesto"];
 $fecha=date("Y-m-d"); 

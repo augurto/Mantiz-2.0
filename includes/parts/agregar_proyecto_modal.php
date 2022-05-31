@@ -63,7 +63,7 @@
                               } ?>
 
                              <input type="number" class="form-control" id="codigo"  name="codigo"  value="<?php echo ++$codigo_proyecto ?>" readonly>
-                             <input type="text" class="form-control" id="codigo"  name="codigo"  value="<?php echo $grupo; ?>" readonly>
+                             
                        </div>
                        <br>
                        <label for="inputProyec">Presupuesto</label>
