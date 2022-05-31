@@ -15,7 +15,7 @@ if (!$conn) {
  
 echo "Connected successfully";
  
-$sql = "DELETE from proyecto WHERE codigo='".$codigo."' ";
+$sql = "DELETE from proyecto WHERE codigo='567' ";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
       echo "location='../../../index.php'";
