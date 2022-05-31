@@ -103,7 +103,7 @@
                             <div class="input-group-prepend">
                               <span class="input-group-text"><span class="fas fa-calendar"></span></span>
                             </div>
-                            <input type="date" class="form-control" name="fecha_ini" id="fecha_ini" title="Fecha inicio"  value="<?php echo date('Y-m-d'); ?>" required>
+                            <input type="date" class="form-control" name="fecha_ini" id="fecha_ini" title="Fecha inicio"  value="<?php echo date('d/m/Y'); ?>" required>
                           </div>
                           <!-- /input-group -->
                         </div>
