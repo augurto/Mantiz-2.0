@@ -22,6 +22,7 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                     </div>
+                    <form action="">
                         <div class="modal-body">
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Proyecto</span>
@@ -35,14 +36,38 @@
 
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Estado</span>
+                        <span class="input-group-text" id="estado">Estado</span>
                         <input type="text" class="form-control" id="estado" aria-label="Username" aria-describedby="basic-addon1">
+                            <select class="form-select" aria-label="Default select example">
+                            <option selected>Seleciona Estado</option>
+                            <option value="0">Pendiente</option>
+                            <option value="1">Terminado</option>
+                            <option value="2">Inactivo</option>
+                            </select>
                         </div>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">Entregable</label>
+                                <select class="form-control" name="id_entregable" id="id_entregable" required="">
+                                            <option disabled="disabled" value="" selected>Clic para ver extension</option>
+                                            <?php 
 
+                                            $sss=mysqli_query($con,"SELECT * FROM codigo_generado_proyecto");
+                                                    while($f=mysqli_fetch_assoc($sss)){    
+
+                                                        echo '<option value="'.$f['id_cod_gen_pro'].'">'.$f['variable'].'</option>';
+
+                                            }
+                                            
+                                            ?>
+                                </select>
+                                        
+                            </div>                
                         </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                         <button type="button" class="btn btn-primary">Guardar</button>
                     </div>
+                    </form>
             </div>
         </div>
     </div>
