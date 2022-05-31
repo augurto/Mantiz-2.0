@@ -1,5 +1,10 @@
 <div class="col text-center">
                       <button type="button" class="btn btn-primary" id="boton_proyecto" data-toggle="modal" data-target="#exampleModalCenter2">
+                      Nueva extension
+                      </button>
+                    </div>
+<div class="col text-center">
+                      <button type="button" class="btn btn-primary" id="boton_proyecto" data-toggle="modal" data-target="#exampleModalCenter2">
                       Nueva ectension de  Proyecto
                       </button>
                     </div>
