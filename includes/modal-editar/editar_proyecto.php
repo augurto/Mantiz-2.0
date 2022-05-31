@@ -37,11 +37,11 @@
                         <div class="modal-body">
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Cod Proyecto</span>
-                        <input type="text" class="form-control" id="nombre" aria-label="Username" aria-describedby="basic-addon1" readonly>
+                        <input type="text" class="form-control" id="nombre" name="codigo" aria-label="Username" aria-describedby="basic-addon1" readonly>
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Nombre Proyecto</span>
-                        <input type="text" class="form-control" id="nombre2" aria-label="Username" aria-describedby="basic-addon1" readonly>
+                        <input type="text" class="form-control" id="nombre2" name="nombre_proyecto" aria-label="Username" aria-describedby="basic-addon1" >
                         </div>
                         <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Extension</label>
@@ -62,14 +62,14 @@
                         </div>                  
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Presupuesto</span>
-                        <input type="text" class="form-control" id="apellido" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" id="apellido" name="presupuesto" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
 
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Estado</span>
                         
-                        <input type="text" class="form-control" id="estado" aria-label="Username" aria-describedby="basic-addon1">
-                            <select class="form-select" aria-label="Default select example">
+                        <input type="hidden" class="form-control" id="estado"  aria-label="Username" aria-describedby="basic-addon1">
+                            <select class="form-select" aria-label="Default select example" name="estado">
                             <option selected>Seleciona Estado</option>
                             <option value="0">Pendiente</option>
                             <option value="1">Terminado</option>
@@ -80,7 +80,7 @@
                         </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-primary">Actualizar</button>
                     </div>
                     </form>
             </div>
