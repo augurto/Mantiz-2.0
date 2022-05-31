@@ -36,7 +36,7 @@
 
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Estado</span>
-                        <span class="input-group-text" id="estado">Estado</span>
+                        
                         <input type="text" class="form-control" id="estado" aria-label="Username" aria-describedby="basic-addon1">
                             <select class="form-select" aria-label="Default select example">
                             <option selected>Seleciona Estado</option>
