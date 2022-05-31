@@ -52,11 +52,7 @@
                         </select>
                                 
                       </div>
-                        <div class="input-group mb-3">
-                  
-                          <input type="text" value="<?php echo $f['variable'];?>" id="nombre_entregable" name="nombre_entregable" class="form-control">
-                        </div>
-
+                       
 
                       <label for="inputProyec">Codigo del Proyecto</label>
                         <div class="input-group">

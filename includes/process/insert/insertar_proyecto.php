@@ -23,7 +23,7 @@ if (!$conn) {
  
 echo "Connected successfully";
  
-$sql = "INSERT INTO proyecto (codigo, extencion,nombre_proyecto, presupuesto, estado,usuario_maker, fecha_agregado, fecha_ini, fecha_fin) 
+$sql = "INSERT INTO proyecto (codigo,extencion,nombre_proyecto, presupuesto, estado,usuario_maker, fecha_agregado, fecha_ini, fecha_fin) 
 
 VALUES ('$codigo','$extension', '$nombre_proyecto', '$presupuesto', '2','Ego','$fecha','$fecha_ini','$fecha_fin')";
 if (mysqli_query($conn, $sql)) {
