@@ -12,10 +12,7 @@
                                       })
 
                                     </script>
-<?php
-$datos = "<script>estado</script>";
 
-?>
 <!-- Modal -->
     <div class="modal fade" id="ModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -26,7 +23,13 @@ $datos = "<script>estado</script>";
                                 <span aria-hidden="true">&times;</span>
                             </button>
                     </div>
-                    <?php  echo  $datos;?>
+                    <?php
+                        $var_PHP = "<script> document.writeln(estado); </script>"; // igualar el valor de la variable JavaScript a PHP 
+
+                    echo $var_PHP   // muestra el resultado 
+
+                    ?>
+                    <label for="">asdasd</label>
                     <form action="">
                         <div class="modal-body">
                         <div class="input-group mb-3">
