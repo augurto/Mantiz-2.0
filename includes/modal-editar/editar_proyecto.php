@@ -14,7 +14,7 @@
                                     </script>
 <?php
 $datos = "<script>estado</script>";
-echo $datos;
+
 ?>
 <!-- Modal -->
     <div class="modal fade" id="ModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -26,6 +26,7 @@ echo $datos;
                                 <span aria-hidden="true">&times;</span>
                             </button>
                     </div>
+                    <?php  echo  $datos;?>
                     <form action="">
                         <div class="modal-body">
                         <div class="input-group mb-3">
