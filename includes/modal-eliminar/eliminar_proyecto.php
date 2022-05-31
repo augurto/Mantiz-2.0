@@ -23,7 +23,7 @@
                             </button>
                     </div>
                         <div class="modal-body">
-                            <input type="text" id="codigo" name="codigo" ><br>
+                            <input type="hidden" id="codigo" name="codigo" ><br>
                             
                             <div class="alert alert-danger" role="alert">
                               <center>
