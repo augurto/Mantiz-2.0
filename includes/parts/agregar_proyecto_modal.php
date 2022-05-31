@@ -38,13 +38,13 @@
                       <div class="input-group mb-3">
                         <label class="input-group-text" for="inputGroupSelect01">Entregable</label>
                         <select class="form-control" name="id_entregable" id="id_entregable" required="">
-                                  <option disabled="disabled" value="" selected>Clic para ver entregables</option>
+                                  <option disabled="disabled" value="" selected>Extension</option>
                                   <?php 
 
-                                  $sss=mysqli_query($con,"SELECT * FROM entregables where codigo_proyecto=$id_p");
+                                  $sss=mysqli_query($con,"SELECT * FROM codigo_generado_proyecto");
                                           while($f=mysqli_fetch_assoc($sss)){    
 
-                                              echo '<option value="'.$f['id'].'">'.$f['nombre'].'</option>';
+                                              echo '<option value="'.$f['id_cod_gen_pro '].'">'.$f['variable'].'</option>';
 
                                   }
                                   
@@ -54,10 +54,10 @@
                       </div>
                         <div class="input-group mb-3">
                   
-                          <input type="hidden" value="<?php echo $f['nombre'];?>" id="nombre_entregable" name="nombre_entregable" class="form-control">
+                          <input type="text" value="<?php echo $f['variable'];?>" id="nombre_entregable" name="nombre_entregable" class="form-control">
                         </div>
 
-                        
+
                       <label for="inputProyec">Codigo del Proyecto</label>
                         <div class="input-group">
 
