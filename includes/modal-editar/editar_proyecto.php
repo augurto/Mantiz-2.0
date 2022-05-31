@@ -33,7 +33,7 @@
 
                     ?>
                     <label for="">asdasd2</label>
-                    <form action="">
+                    <form action="../process/actualizar/actualizar_proyecto.php">
                         <div class="modal-body">
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Cod Proyecto</span>
