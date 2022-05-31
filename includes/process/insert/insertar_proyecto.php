@@ -26,7 +26,7 @@ echo "Connected successfully";
  
 $sql = "INSERT INTO proyecto (codigo,extencion,nombre_proyecto, presupuesto, estado,usuario_maker, fecha_agregado, fecha_ini, fecha_fin) 
 
-VALUES ('$codigo','$ext', '$nombre_proyecto', '$presupuesto', '2','Ego','$fecha','$fecha_ini','$fecha_fin')";
+VALUES ('$codigo','$ext', '$nombre_proyecto', '$presupuesto', '0','Ego','$fecha','$fecha_ini','$fecha_fin')";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
       echo "location='../../../index.php'";
