@@ -12,7 +12,7 @@
                                       objetivo.innerHTML = apellido;
                                     </script>
 <!-- Modal -->
-<form action="../../includes/process/eliminar/eliminar_proyecto.php" method="post">
+<form action="../../includes/process/eliminar/eliminar_proyecto.php" method="">
     <div class="modal fade" id="ModalBorrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
                 <div class="modal-content">
