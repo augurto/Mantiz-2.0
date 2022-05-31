@@ -10,7 +10,7 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 $nombre_proyecto=$_GET["nombre-proyecto"];
 
 $codigo=$_GET["codigo"];
-$extension=$_GET["nombre_entregable"];
+$extension=$_GET["id_entregable"];
 $nuevo_nombre=$extension.'-'.$nombre_proyecto;
 $presupuesto=$_GET["presupuesto"];
 $fecha=date("Y-m-d"); 
