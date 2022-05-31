@@ -63,6 +63,7 @@
                               } ?>
 
                              <input type="number" class="form-control" id="codigo"  name="codigo"  value="<?php echo ++$codigo_proyecto ?>" readonly>
+                             <input type="text" class="form-control" id="codigo"  name="codigo"  value="<?php echo $grupo; ?>" readonly>
                        </div>
                        <br>
                        <label for="inputProyec">Presupuesto</label>
@@ -111,7 +112,7 @@
                               <span class="input-group-text"><span class="fas fa-calendar"></span></span>
                             </div>
                             <input type="date" class="form-control" name="fecha_fin"  id="fecha_fin"  title="Fecha fin" required>
-                            <input type="text" value="Ego" class="form-control" name="usuario"  id="usuario"  title="usuario" required>
+                            <input type="hidden" value="Ego" class="form-control" name="usuario"  id="usuario"  title="usuario" required>
                           </div>
                           <!-- /input-group -->
                         </div>
