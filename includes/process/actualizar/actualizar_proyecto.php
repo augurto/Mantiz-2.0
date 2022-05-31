@@ -22,7 +22,7 @@ if (!$conn) {
  
 echo "Connected successfully";
  
-$sql = "UPDATE  proyecto set  extension = '".$extension."' where codigo = '".$codigo."'";
+$sql = "UPDATE  proyecto set  extencion = '".$extension."' where codigo = '".$codigo."'";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
       echo "location='../../../index.php'";
