@@ -24,13 +24,13 @@
                                 </thead>
                         <?php 
                         $count=1;
-                        foreach ($link->query('SELECT * from proyecto inner join codigo_generado_proyecto on proyecto.extencion=codigo_generado_proyecto.id_cod_gen_pro order by codigo desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                        foreach ($link->query('SELECT * from proyecto  order by codigo desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
                         
                         $id=$row['id'];
                         $codigo=$row['codigo'];
                         $extencion=$row['extencion'];
-                        $extencion2=$row['variable'];
+                        
                         $nombre_proyecto=$row['nombre_proyecto'];
                         $presupuesto=$row['presupuesto'];
                         $usuario=$row['usuario_maker'];
@@ -52,7 +52,7 @@
                              <tr style="background-color: #FDF5E6 !important;">
                              <?php }?>   
                              <td><?php echo $count++; ?></td>
-                           
+                             
                              <td><a href="../../entregables.php?id_p=<?php echo $id; ?>"><?php echo $codigo.'-'.$extencion2.'-'.$nombre_proyecto; ?></a></td>
                              
                              
