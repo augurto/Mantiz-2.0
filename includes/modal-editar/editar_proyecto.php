@@ -46,7 +46,7 @@
                         <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Extension</label>
                                 <select class="form-control" name="id_entregable" id="id_entregable" required="">
-                                            <option disabled="disabled" value="" selected>Clic para ver</option>
+                                            <option disabled="disabled" value="" selected>Clic para ver.</option>
                                             <?php 
 
                                             $sss=mysqli_query($con,"SELECT * FROM codigo_generado_proyecto");
