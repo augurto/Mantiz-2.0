@@ -2,10 +2,13 @@
                                       $(document).on("click", "#btnmodal",function () {
                                         
                                               var nombre =$(this).data('nom');
+                                              var nombre_proyecto =$(this).data('nom2');
                                               var apellido =$(this).data('ape')
                                               var estado =$(this).data('estado');
 
                                         $("#nombre").val(nombre);
+                                        $("#nombre2").val(nombre_proyecto);
+
                                         $("#apellido").val(apellido);
                                         $("#estado").val(estado);
                           
@@ -24,17 +27,21 @@
                             </button>
                     </div>
                     <?php
-                        $var_PHP = "<script> document.writeln(estado); </script>"; // igualar el valor de la variable JavaScript a PHP 
+                        $var_PHP = "<script> document.write(estado) </script>"; // igualar el valor de la variable JavaScript a PHP 
 
                     echo $var_PHP   // muestra el resultado 
 
                     ?>
-                    <label for="">asdasd</label>
+                    <label for="">asdasd2</label>
                     <form action="">
                         <div class="modal-body">
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Cod Proyecto</span>
                         <input type="text" class="form-control" id="nombre" aria-label="Username" aria-describedby="basic-addon1" readonly>
+                        </div>
+                        <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Nombre Proyecto</span>
+                        <input type="text" class="form-control" id="nombre2" aria-label="Username" aria-describedby="basic-addon1" readonly>
                         </div>
                         <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Extension</label>
