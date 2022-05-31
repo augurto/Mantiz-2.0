@@ -20,7 +20,7 @@
             Segmentos
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModalCenter2">Extension de Proyectos </a></li>
+            <li><a class="dropdown-item" href="#" >Extension de Proyectos </a></li>
             <li><a class="dropdown-item" href="#">Grupos</a></li>
             
           </ul>

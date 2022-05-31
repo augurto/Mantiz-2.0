@@ -42,17 +42,18 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 </head>
 <body>
     <!-- procesos de modal -->
-    <?php include 'includes/modal/modal_extension_proyecto.php';?>
+    
     <?php include 'includes/modal-eliminar/eliminar_proyecto.php'; ?>
     <?php include 'includes/modal-editar/editar_proyecto.php'; ?>
     <!-- fin de procesos de modal -->
-    
+
     <?php include 'includes/header.php';?>
     <div style="height:50px"></div>
     <!-- Inicio de Graficas -->
 
     <?php include 'includes/parts/graficas.php'; ?>
     <!-- Fin de graficas -->
+    <?php include 'includes/modal/modal_extension_proyecto.php';?>
     <!-- Boton agregar proyecto -->
     <?php include 'includes/parts/agregar_proyecto_modal.php' ?>
     <!-- Fin Boton agregar proyecto -->
