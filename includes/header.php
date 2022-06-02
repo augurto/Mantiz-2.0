@@ -35,6 +35,9 @@
             <li><a class="dropdown-item" href="#">Elemento 3</a></li>
           </ul>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../login/logout.php">Salir</a>
+        </li>
       </ul>
     </div>
   </div>

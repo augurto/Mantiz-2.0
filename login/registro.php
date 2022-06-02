@@ -164,6 +164,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               <input type="submit" class="btn btn-primary" value="Registrar">
                 <!-- <input type="reset" class="btn btn-secondary ml-2" value="Reset"> -->
                 <br>
+                <br>
                 <p>Ya tienes cuenta? que haces aqui XD <a href="login.php">Clic aqui</a>.</p>
 
              <!--  inicio de sesion con redes sociales
