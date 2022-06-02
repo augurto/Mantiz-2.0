@@ -8,6 +8,11 @@ $tipo_user=$dos['tipo_user'];
   <div class="container-fluid">
   <a class="navbar-brand" href="#">Logo Mantiz</a>
   <a class="navbar-brand" href="#">Bienvenido <?php echo $usuario;?></a>
+  <button type="button" class="btn btn btn-info" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Tus datos
+  <?php echo 'Nomre: '.$usuario.'\n'.'Tipo de Usuario: '.$tipo_user; ?>
+  ">
+  <?php echo $usuario; ?>
+  </button>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
