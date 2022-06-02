@@ -17,7 +17,9 @@
                                     <th>Fecha inicio</th>
                                     <th>Fecha Fin</th>
                                     <th>Estado</th>
-                                    <th>Accion</th>
+                                    <?php if ($id_usuario==1) {?>
+                                        <th>Accion</th>
+                                        <?php }?>
                                     
                                     
                                 </tr>
@@ -71,8 +73,10 @@
                                 # code...
                                 echo 'Inactivo';
                             }?></td>
+                            <?php if ($id_usuario==1) {?>
+                              
                             <td>
-                         <!-- Button trigger modal -->
+                         
                                     <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit" data-nom="<?php echo $codigo; ?>" data-nom2="<?php echo $nombre_proyecto; ?>" data-ape="<?php echo $presupuesto;?>" data-estado="<?php echo $estado;  ?>" >
                                     <i class="fa fa-edit"></i>
                                     </button>
@@ -80,8 +84,9 @@
                                     <i class="fa fa-trash"></i>
                                     </button>
 
-                            </td>
-                            
+                            </td>'
+                            <?php }
+                            ?>
                             
                               <!-- <a href="../../includes/process/eliminar/eliminar_proyecto.php?id_p=<?php echo $id_proyecto; ?>" class="btn btn-danger"  title='Borrar proyecto desde a'><i class="fa fa-trash"></i></a> -->
                           
