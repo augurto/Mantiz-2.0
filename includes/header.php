@@ -11,8 +11,22 @@ $tipo_user=$dos['tipo_user'];
   <button type="button" class="btn btn btn-info" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Tus datos
   <?php echo 'Nomre: '.$usuario.'\n'.'Tipo de Usuario: '.$tipo_user; ?>
   ">
-  <?php echo $usuario; ?>
+  
   </button>
+  <button type="button" class="btn btn-primary position-relative">
+  <?php echo $usuario; ?>
+  <?php if ($tipo_user==0) {?>
+    
+  
+  <span class="position-absolute top-0 start-100 translate-middle p-2 bg-primary border border-light rounded-circle">
+    <span class="visually-hidden">Colaborador</span>
+  </span>
+    <?php }elseif ($tipo_user==1) {?>
+      <span class="position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle">
+    <span class="visually-hidden">Administrador</span>
+  </span>
+   <?php }?>
+</button>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
