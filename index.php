@@ -14,6 +14,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
 $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where estado='terminado'");
         $rwt=mysqli_fetch_array($sald);
         $saldo=$rwt['saldo'];
+        $usuario=$_SESSION["username"];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -52,7 +53,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 </head>
 <body>
   <!-- datos de sesion -->
-  <input type="text" value="<?php $_SESSION['username'];?>">
+  <input type="text" value="<?php echo $usuario;?>">
   <!-- fin de datos sesion -->
     <!-- procesos de modal -->
     
