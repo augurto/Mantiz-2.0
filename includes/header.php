@@ -7,7 +7,7 @@ $tipo_user=$dos['tipo_user'];
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
   <a class="navbar-brand" href="#">Logo Mantiz</a>
-  <a class="navbar-brand" href="#">Bienvenido <?php echo $usuario.' '.$tipo_user;?></a>
+  <a class="navbar-brand" href="#">Bienvenido <?php echo $usuario;?></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -34,12 +34,12 @@ $tipo_user=$dos['tipo_user'];
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Links drop
+            Cambiar Rol
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Elemento 1</a></li>
-            <li><a class="dropdown-item" href="#">Elemento 2</a></li>
-            <li><a class="dropdown-item" href="#">Elemento 3</a></li>
+            <li><a class="dropdown-item" href="../includes/process/actualizar/cambiar_rol_0.php">Cambiar a administrador</a></li>
+            <li><a class="dropdown-item" href="#">Cambiar a Colaborador</a></li>
+            <!-- <li><a class="dropdown-item" href="#">Elemento 3</a></li> -->
           </ul>
         </li>
         <li class="nav-item">
