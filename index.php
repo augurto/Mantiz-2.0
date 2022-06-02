@@ -51,6 +51,9 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <title>Mantiz</title>
 </head>
 <body>
+  <!-- datos de sesion -->
+  <input type="text" value="<?php $_SESSION['username'];?>">
+  <!-- fin de datos sesion -->
     <!-- procesos de modal -->
     
     <?php include 'includes/modal-eliminar/eliminar_proyecto.php'; ?>
