@@ -15,7 +15,7 @@
                                     <th>Usuario</th>
                                     
                                     <th>Presupuesto</th>
-                                    <th>Fecha inicio</th>
+                                    <th>Fecha entrega</th>
                                 
                                     <th>Estado</th>
                                     <?php if ($tipo_user==1) {?>
@@ -37,7 +37,7 @@
                         $nombre_entregable=$row['nombre'];
                         $nombre_proyecto=$row['nombre_proyecto'];
                        
-                        $usuario0=$row['usuario'];
+                        $usuario0=$row['usuario_maker'];
                         $fecha_entrega=$row['fecha_entrega'];
                         
 
@@ -60,8 +60,9 @@
                              <!-- <td><a href="../../entregables.php?id_p=<?php echo $id; ?>"><?php echo $codigo.'-'.$extencion.'-'.$nombre_proyecto; ?></a></td> -->
                              
                              
-                             <td><span id="firstname<?php echo $codigo; ?>"><?php echo $codigo; ?></span></td>
+                             
                              <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_proyecto; ?></span></td>
+                             <td><span id="firstname<?php echo $usuario0; ?>"><?php echo $usuario0; ?></span></td>
                              <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_entregable; ?></span></td>
                              <td><span id="address<?php echo $fecha_entrega; ?>"><?php echo $fecha_entrega; ?></span></td>
                              <!-- <td><?php echo $fecha_ini ?></td>
