@@ -14,7 +14,7 @@
                                     <th>Proyecto</th>
                                     <th>Usuario</th>
                                     
-                                    <th>Presupuesto</th>
+                                    <th>Nombre Entregable</th>
                                     <th>Fecha entrega</th>
                                 
                                     <th>Estado</th>
