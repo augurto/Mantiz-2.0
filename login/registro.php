@@ -159,10 +159,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               </div>
               
 
-              <span class="ml-auto"><a href="#" class="forgot-pass">Has olvidado tu contraseña, mejora olvidala a ella </a></span> 
+              
               <br>
-              <input type="submit" class="btn btn-primary" value="Submit">
-                <input type="reset" class="btn btn-secondary ml-2" value="Reset">
+              <input type="submit" class="btn btn-primary" value="Registrar">
+                <!-- <input type="reset" class="btn btn-secondary ml-2" value="Reset"> -->
+                <br>
                 <p>Ya tienes cuenta? que haces aqui XD <a href="login.php">Clic aqui</a>.</p>
 
              <!--  inicio de sesion con redes sociales
