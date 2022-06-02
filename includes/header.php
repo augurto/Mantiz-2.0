@@ -2,19 +2,16 @@
 $uno=mysqli_query($con,"SELECT * FROM users where id='".$id_usuario."'");
 $dos=mysqli_fetch_array($uno);
 $tipo_user=$dos['tipo_user'];
+$username2=$dos['username'];
 
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
   <a class="navbar-brand" href="#">Logo Mantiz</a>
-  <a class="navbar-brand" href="#">Bienvenido </a>
-  <button type="button" class="btn btn btn-info" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Tus datos
-  <?php echo 'Nomre: '.$usuario.'\n'.'Tipo de Usuario: '.$tipo_user; ?>
-  ">
-  
-  </button>
+  <!-- <a class="navbar-brand" href="#">Bienvenido </a> -->
+ 
   <button type="button" class="btn btn-primary position-relative">
-  <?php echo $usuario; ?>
+  <?php echo $username; ?>
   <?php if ($tipo_user==0) {?>
     
   
@@ -43,10 +40,10 @@ $tipo_user=$dos['tipo_user'];
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Segmentos
+            Reportes
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#" >Extension de Proyectos </a></li>
+            <li><a class="dropdown-item" href="#" >Entregables </a></li>
             <li><a class="dropdown-item" href="#">Grupos</a></li>
             
           </ul>
