@@ -37,7 +37,7 @@ $tipo_user=$dos['tipo_user'];
             Cambiar Rol
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="../includes/process/actualizar/cambiar_rol_0.php">Cambiar a administrador</a></li>
+            <li><a class="dropdown-item" href="../includes/process/actualizar/cambiar_rol_1.php?codigo=<?php echo $id_usuario;?>">Cambiar a administrador</a></li>
             <li><a class="dropdown-item" href="#">Cambiar a Colaborador</a></li>
             <!-- <li><a class="dropdown-item" href="#">Elemento 3</a></li> -->
           </ul>
