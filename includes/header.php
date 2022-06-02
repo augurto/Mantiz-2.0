@@ -11,7 +11,7 @@ $username2=$dos['username'];
   <!-- <a class="navbar-brand" href="#">Bienvenido </a> -->
  
   <button type="button" class="btn btn-primary position-relative">
-  <?php echo $username; ?>
+  <?php echo $username2; ?>
   <?php if ($tipo_user==0) {?>
     
   
