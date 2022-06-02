@@ -15,6 +15,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         $rwt=mysqli_fetch_array($sald);
         $saldo=$rwt['saldo'];
         $usuario=$_SESSION["username"];
+        $id_usuario=$_SESSION["id"];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -53,7 +54,8 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 </head>
 <body>
   <!-- datos de sesion -->
-  <input type="text" value="<?php echo $usuario;?>">
+  <input type="hidden" value="<?php echo $usuario;?>">
+  <input type="hidden" value="<?php echo $id_usuario;?>">
   <!-- fin de datos sesion -->
     <!-- procesos de modal -->
     
