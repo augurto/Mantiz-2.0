@@ -12,6 +12,7 @@
                                     <th>Id</th>
                                     
                                     <th>Proyecto</th>
+                                    <th>Usuario</th>
                                     
                                     <th>Presupuesto</th>
                                     <th>Fecha inicio</th>
@@ -26,14 +27,15 @@
                                 </thead>
                         <?php 
                         $count=1;
-                        foreach ($link->query('SELECT * from entregables  order by codigo_proyecto desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                        foreach ($link->query('SELECT * from entregables e inner join proyecto p on e.codigo_proyecto = p.codigo  order by codigo_proyecto desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
                         
-                        $id=$row['id'];
+                        $id=$row['e.id'];
                         $codigo=$row['codigo_proyecto'];
                       
                         
                         $nombre_entregable=$row['nombre'];
+                        $nombre_proyecto=$row['nombre_proyecto'];
                        
                         $usuario0=$row['usuario'];
                         $fecha_entrega=$row['fecha_entrega'];
@@ -59,6 +61,7 @@
                              
                              
                              <td><span id="firstname<?php echo $codigo; ?>"><?php echo $codigo; ?></span></td>
+                             <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_proyecto; ?></span></td>
                              <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_entregable; ?></span></td>
                              <td><span id="address<?php echo $fecha_entrega; ?>"><?php echo $fecha_entrega; ?></span></td>
                              <!-- <td><?php echo $fecha_ini ?></td>
