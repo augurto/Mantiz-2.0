@@ -21,7 +21,7 @@ $tipo_user=$dos['tipo_user'];
   <span class="position-absolute top-0 start-100 translate-middle p-2 bg-primary border border-light rounded-circle">
     <span class="visually-hidden">Colaborador</span>
   </span>
-    <?php }elseif ($tipo_user==1) {?>
+    <?php }else {?>
       <span class="position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle">
     <span class="visually-hidden">Administrador</span>
   </span>
