@@ -1,7 +1,13 @@
+<?php 
+$uno=mysqli_query($con,"SELECT * FROM users where id='".$id_usuario."'");
+$dos=mysqli_fetch_array($uno);
+$tipo_user=$dos['tipo_user'];
+
+?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
   <a class="navbar-brand" href="#">Logo Mantiz</a>
-  <a class="navbar-brand" href="#">Bienvenido <?php echo $usuario.' '.$tipo_usuario;?></a>
+  <a class="navbar-brand" href="#">Bienvenido <?php echo $usuario.' '.$tipo_user;?></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
