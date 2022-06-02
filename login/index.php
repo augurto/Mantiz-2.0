@@ -67,15 +67,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             header("location: ../index.php");
                         } else{
                             // Password is not valid, display a generic error message
-                            $login_err = "Invalid username or password.";
+                            $login_err = "Usuario o Contrasena invalida...";
                         }
                     }
                 } else{
                     // Username doesn't exist, display a generic error message
-                    $login_err = "Invalid username or password.";
+                    $login_err = "Usuario o Contrasena invalida.";
                 }
             } else{
-                echo "Oops! Something went wrong. Please try again later.";
+                echo "¡Ups! Algo salió mal. Por favor, inténtelo de nuevo más tarde.";
             }
 
             // Close statement
@@ -127,8 +127,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <?php 
               if(!empty($login_err)){
                   echo '<div class="alert alert-danger">' . $login_err . '</div>';
-              }        
+              } 
+              echo nl2br("\n");  
+              echo nl2br("\n");       
             ?>
+            
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
               <div class="form-group first">
                 <label for="username">Usuario</label>
