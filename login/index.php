@@ -67,12 +67,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             header("location: ../index.php");
                         } else{
                             // Password is not valid, display a generic error message
-                            $login_err = "Usuario o Contrasena invalida...";
+                            $login_err = "Contrasena incorrecto.";
                         }
                     }
                 } else{
                     // Username doesn't exist, display a generic error message
-                    $login_err = "Usuario o Contrasena invalida.";
+                    $login_err = "Usuario incorrecto.";
                 }
             } else{
                 echo "¡Ups! Algo salió mal. Por favor, inténtelo de nuevo más tarde.";
