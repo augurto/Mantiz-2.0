@@ -43,7 +43,7 @@ $username2=$dos['username'];
             Reportes
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#" >Entregables </a></li>
+            <li><a class="dropdown-item" href="../reporte_entregable.php" >Entregables </a></li>
             <li><a class="dropdown-item" href="#">Grupos</a></li>
             
           </ul>
