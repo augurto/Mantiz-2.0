@@ -7,7 +7,7 @@ $tipo_user=$dos['tipo_user'];
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
   <a class="navbar-brand" href="#">Logo Mantiz</a>
-  <a class="navbar-brand" href="#">Bienvenido <?php echo $usuario;?></a>
+  <a class="navbar-brand" href="#">Bienvenido </a>
   <button type="button" class="btn btn btn-info" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Tus datos
   <?php echo 'Nomre: '.$usuario.'\n'.'Tipo de Usuario: '.$tipo_user; ?>
   ">
