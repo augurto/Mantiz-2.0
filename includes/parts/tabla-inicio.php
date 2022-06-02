@@ -17,7 +17,7 @@
                                     <th>Fecha inicio</th>
                                     <th>Fecha Fin</th>
                                     <th>Estado</th>
-                                    <?php if ($tipo_usuario==1) {?>
+                                    <?php if ($tipo_user==1) {?>
                                         <th>Accion</th>
                                         <?php }?>
                                     
@@ -73,7 +73,7 @@
                                 # code...
                                 echo 'Inactivo';
                             }?></td>
-                            <?php if ($tipo_usuario==1) { ?>
+                            <?php if ($tipo_user==1) { ?>
                               
                             <td>
                          
