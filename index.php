@@ -16,6 +16,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         $saldo=$rwt['saldo'];
         $usuario=$_SESSION["username"];
         $id_usuario=$_SESSION["id"];
+        $tipo_usuario=$_SESSION["tipo_user"];
 ?>
 <!DOCTYPE html>
 <html lang="es">
