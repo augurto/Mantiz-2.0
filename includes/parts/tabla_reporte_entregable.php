@@ -15,7 +15,7 @@
                                     
                                     <th>Presupuesto</th>
                                     <th>Fecha inicio</th>
-                                    <th>Fecha Fin</th>
+                                
                                     <th>Estado</th>
                                     <?php if ($tipo_user==1) {?>
                                         <th>Accion</th>
@@ -26,18 +26,18 @@
                                 </thead>
                         <?php 
                         $count=1;
-                        foreach ($link->query('SELECT * from proyecto  order by codigo desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                        foreach ($link->query('SELECT * from entregables  order by codigo_proyecto desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
                         
                         $id=$row['id'];
-                        $codigo=$row['codigo'];
-                        $extencion=$row['extencion'];
+                        $codigo=$row['codigo_proyecto'];
+                      
                         
-                        $nombre_proyecto=$row['nombre_proyecto'];
-                        $presupuesto=$row['presupuesto'];
-                        $usuario=$row['usuario_maker'];
-                        $fecha_ini=$row['fecha_ini'];
-                        $fecha_fin=$row['fecha_fin'];
+                        $nombre_entregable=$row['nombre'];
+                       
+                        $usuario0=$row['usuario'];
+                        $fecha_entrega=$row['fecha_entrega'];
+                        
 
                         $estado=$row['estado'];
                          if ($estado==0) { ?>
@@ -55,12 +55,12 @@
                              <?php }?>   
                              <td><?php echo $count++; ?></td>
                              
-                             <td><a href="../../entregables.php?id_p=<?php echo $id; ?>"><?php echo $codigo.'-'.$extencion.'-'.$nombre_proyecto; ?></a></td>
+                             <!-- <td><a href="../../entregables.php?id_p=<?php echo $id; ?>"><?php echo $codigo.'-'.$extencion.'-'.$nombre_proyecto; ?></a></td> -->
                              
                              
-                             <td><span id="firstname<?php echo $presupuesto; ?>"><?php echo $presupuesto; ?></span></td>
-                             <td><span id="lastname<?php echo $fecha_ini; ?>"><?php echo $fecha_ini; ?></span></td>
-                             <td><span id="address<?php echo $fecha_fin; ?>"><?php echo $fecha_fin; ?></span></td>
+                             <td><span id="firstname<?php echo $codigo; ?>"><?php echo $codigo; ?></span></td>
+                             <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_entregable; ?></span></td>
+                             <td><span id="address<?php echo $fecha_entrega; ?>"><?php echo $fecha_entrega; ?></span></td>
                              <!-- <td><?php echo $fecha_ini ?></td>
                              <td><?php echo $fecha_fin ?></td> -->
                             <td><?php if ($estado==0) {
