@@ -32,18 +32,18 @@
                         foreach ($link->query('SELECT * from archivos a inner join entregables e on a.codigo_proyecto=e.codigo_proyecto inner join proyecto p on a.codigo_proyecto = p.codigo') as $row){ // aca se hace la consulta e iterarla con each. ?> 
 
                         <?php
-                        
-                        $id=$row['e.id'];
-                        $codigo=$row['a.codigo_proyecto'];
-                      
-                        
-                        $nombre_entregable=$row['nombre'];
-                        $nombre_proyecto=$row['nombre_proyecto'];
-                       
-                        $usuario0=$row['usuario_maker'];
-                        $fecha_entrega=$row['fecha_entrega'];
-                        
+                        $a_codigo_proyecto=$row['a.codigo_proyecto'];
+                        $a_documento=$row['a.documento'];
+                        $a_id_seg=$row['a.id_seg'];
+                        $a_descripcion=$row['a.descripcion'];
+                        $a_estado_seguimiento=$row['a.estado_seguimiento'];
 
+                        $id=$row['e.id'];
+                        $codigo=$row['a.codigo_proyecto'];                                          
+                        $nombre_entregable=$row['nombre'];
+                        $nombre_proyecto=$row['nombre_proyecto'];                       
+                        $usuario0=$row['usuario_maker'];
+                        $fecha_entrega=$row['fecha_entrega'];                     
                         $estado=$row['estado'];
                          if ($estado==0) { ?>
                              
@@ -64,19 +64,19 @@
                              
                              
                              
-                             <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_proyecto; ?></span></td>
-                             <td><span id="firstname<?php echo $usuario0; ?>"><?php echo $usuario0; ?></span></td>
-                             <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_entregable; ?></span></td>
-                             <td><span id="address<?php echo $fecha_entrega; ?>"><?php echo $fecha_entrega; ?></span></td>
+                             <td><span id="lastname<?php echo $a_codigo_proyecto; ?>"><?php echo $a_codigo_proyecto; ?></span></td>
+                             <td><span id="firstname<?php echo $a_documento; ?>"><?php echo $a_documento; ?></span></td>
+                             <td><span id="lastname<?php echo $a_id_seg; ?>"><?php echo $a_id_seg; ?></span></td>
+                             <td><span id="address<?php echo $a_descripcion; ?>"><?php echo $a_descripcion; ?></span></td>
                              <!-- <td><?php echo $fecha_ini ?></td>
                              <td><?php echo $fecha_fin ?></td> -->
-                            <td><?php if ($estado==0) {
+                            <td><?php if ($a_estado_seguimiento==0) {
                                 # code...
                                 echo 'Pendiente';
-                            } elseif ($estado==1) {
+                            } elseif ($a_estado_seguimiento==1) {
                                 # code...
                                 echo 'Terminado';
-                            } elseif ($estado==2) {
+                            } elseif ($a_estado_seguimiento==2) {
                                 # code...
                                 echo 'Inactivo';
                             }?></td>
