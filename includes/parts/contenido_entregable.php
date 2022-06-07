@@ -96,7 +96,7 @@
                
              
               <a href="../../includes/process/eliminar/eliminar_entregable.php?entregable=<?php echo $documento ; ?>&proyecto=<?php echo $a_codigo_proyecto ;?>" >
-                <i class="fas fa-trash"></i>
+                <i class="fas fa-trash" style="color: red;"></i>
                 <!-- Counter - Messages -->
               </a>
               <?php } ?>
