@@ -139,7 +139,7 @@
                       $bar=mysqli_query($con,"SELECT COUNT(id_seg) as tp2 FROM archivos where id_seg= '".$row['id']."'");
                       $rwp21=mysqli_fetch_array($bar);
                       $tps21=$rwp21["tp2"];
-
+                      $porcentaje_entregable=(100/$tps21).'%';
                       $bar2=mysqli_query($con,"SELECT estado_seguimiento as tp22 FROM archivos where id_seg= '".$row['id']."' AND estado_seguimiento=1");
                       $rwp21=mysqli_fetch_array($bar2);
                       $tps211=$rwp211["tp22"];
