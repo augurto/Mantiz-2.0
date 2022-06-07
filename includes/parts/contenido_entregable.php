@@ -32,7 +32,8 @@
           <?php $sql="SELECT * FROM  archivos WHERE a_codigo_proyecto='$id_p' /* AND id_miembros='$est' */ order by id_seg asc";
     $query = mysqli_query($con, $sql);
         while ($row=mysqli_fetch_array($query)){
-           $id=$row['a_id'];
+          $id=$row['a_id'];
+          $a_codigo_proyecto=$row['a_codigo_proyecto'];
             $id_seg=$row['id_seg'];
             $descripcion=$row['a_descripcion'];
             $documento=$row['documento'];
@@ -91,7 +92,7 @@
                 <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
                 <!-- Counter - Messages -->
               </a>
-              <a href="../../includes/process/eliminar/eliminar_entregable.php?entregable=<?php echo $documento ; ?>" >
+              <a href="../../includes/process/eliminar/eliminar_entregable.php?entregable=<?php echo $documento ; ?>&proyecto=<?php echo $a_codigo_proyecto ;?>" >
                 <?php echo $ts; ?><i class="fas fa-trash"></i>
                 <!-- Counter - Messages -->
               </a>

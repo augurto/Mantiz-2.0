@@ -1,6 +1,7 @@
 <?php
 $entregable=$_GET["entregable"];
-If (unlink('../../../archivos/2/'.$entregable.'')) {
+$proyecto=$_GET["proyecto"];
+If (unlink('../../../archivos/'/$proyecto.'/'.$entregable.'')) {
   // file was successfully deleted
   echo 'archivo eliminado';
 } else {
