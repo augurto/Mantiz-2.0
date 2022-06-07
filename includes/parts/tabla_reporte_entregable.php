@@ -27,7 +27,7 @@
                                 </thead>
                         <?php 
                         $count=1;
-                        foreach ($link->query('SELECT * from archivos a inner join proyecto p on a.codigo_proyecto = p.codigo  order by codigo_proyecto desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                        foreach ($link->query('SELECT * from archivos a inner join proyecto p on a.codigo_proyecto = p.codigo inner join entregables e on e.codigo_proyecto=p.codigo_proyecto order by codigo_proyecto desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
                         
                         $id=$row['a.id'];
