@@ -12,14 +12,14 @@
                                     <th>Id</th>
                                     
                                     <th>Proyecto</th>
-                                    <th>Usuario</th>
+                                    <th>Documento</th>
                                     
                                     <th>Nombre Entregable</th>
                                     <th>Fecha entrega</th>
                                 
                                     <th>Estado</th>
                                     <?php if ($tipo_user==1) {?>
-                                        <th>Accion</th>
+                                        <th>Usuario</th>
                                         <?php }?>
                                     
                                     
@@ -63,7 +63,7 @@
                              
                              
                              <td><span id="lastname<?php echo $nombre_proyecto; ?>"><?php echo $nombre_proyecto; ?></span></td>
-                             <td><span id="firstname<?php echo $usuario0; ?>"><?php echo $usuario0; ?></span></td>
+                             <td><span id="firstname<?php echo $a_documento; ?>"><?php echo $a_documento; ?></span></td>
                              <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_entregable; ?></span></td>
                              <td><span id="address<?php echo $fecha_entrega; ?>"><?php echo $fecha_entrega; ?></span></td>
                              
@@ -78,7 +78,7 @@
                                 # code...
                                 echo 'Inactivo';
                             }?></td>
-                            <td><?php echo $a_documento ?></td>
+                            <td><?php echo $usuario0 ?></td>
                             <!-- <?php if ($tipo_user==1) { ?> -->
                               
                             <!-- <td>
