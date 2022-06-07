@@ -73,10 +73,10 @@
                                 echo 'Pendiente';
                             } elseif ($a_estado_seguimiento==1) {
                                 # code...
-                                echo 'Terminado';
+                                echo 'Aprobado';
                             } elseif ($a_estado_seguimiento==2) {
                                 # code...
-                                echo 'Inactivo';
+                                echo 'Observado';
                             }?></td>
                             <td><?php echo $usuario0 ?></td>
                             <!-- <?php if ($tipo_user==1) { ?> -->
