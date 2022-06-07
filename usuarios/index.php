@@ -1,3 +1,23 @@
+<?php
+
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login/");
+    exit;
+}
+
+require_once ("config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
+require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
+$sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where estado='terminado'");
+        $rwt=mysqli_fetch_array($sald);
+        $saldo=$rwt['saldo'];
+        $usuario=$_SESSION["username"];
+        $id_usuario=$_SESSION["id"];
+        
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -87,7 +107,7 @@
             +'<div class="col-md-6">'
               +'<label>Rol</label>'
               +'<select name="ESTADO[]" class="form-control">'
-              +'<option value="">Selecciona un estado</option>'
+              +'<option value="">Selecciona un rol</option>'
               +'<option value="ACTIVO">Colaborador</option>'
               +'<option value="INACTIVO">Jefe de Proyecto</option>'
               +'</select>'
