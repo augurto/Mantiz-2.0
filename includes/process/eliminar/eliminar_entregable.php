@@ -22,7 +22,7 @@ echo "Connected successfully";
  
 $sql = "DELETE from archivos WHERE a_codigo_proyecto='".$proyecto."' and documento='".$entregable."' ";
 if (mysqli_query($conn, $sql)) {
-    unlink('../../../archivos/'.$proyecto.'/'.$entregable.'/'.$id_entregable.'');
+    unlink('../../../archivos/'.$proyecto.'/'.$id_entregable.'/'.$entregable.'');
 
     echo"<script language ='JavaScript'>";
       echo "location='../../../entregables.php?id_p=$proyecto'";
