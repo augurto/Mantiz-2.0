@@ -39,7 +39,7 @@
                         $nombre_proyecto=$row['nombre_proyecto'];
                         $descripcion=$row['a.descripcion'];
                        
-                        $usuario0=$row['usuario'];
+                        $usuario0=$row['a.usuario'];
                         $fecha_entrega=$row['fecha_entrega'];
                         
 
