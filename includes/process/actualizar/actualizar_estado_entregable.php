@@ -23,7 +23,7 @@ echo "Connected successfully";
 $sql = "UPDATE  archivos set  a_estado_seguimiento = '".$estado_entregable."' where a_id = '".$id."'";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
-      echo "location='../../../index.php'";
+      echo "location='../../../entregables.php?id_p=$id_p'";
     echo "</script>";
 } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
