@@ -1,10 +1,10 @@
 <script >
                                       $(document).on("click", "#btnmodal",function () {
                                         
-                                              var nombre =$(this).data('nom');
-                                              var nombre_proyecto =$(this).data('nom2');
-                                              var apellido =$(this).data('ape')
-                                              var estado =$(this).data('estado');
+                                              var nombre =$(this).data('noma');
+                                              var nombre_proyecto =$(this).data('nom2a');
+                                              var apellido =$(this).data('apea')
+                                              var estado =$(this).data('estadoa');
 
                                         $("#nombre").val(nombre);
                                         $("#nombre2").val(nombre_proyecto);

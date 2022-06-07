@@ -80,8 +80,8 @@
                                     <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit" data-nom="<?php echo $codigo; ?>" data-nom2="<?php echo $nombre_proyecto; ?>" data-ape="<?php echo $presupuesto;?>" data-estado="<?php echo $estado;  ?>" >
                                     <i class="fa fa-edit"></i>
                                     </button>
-                                    <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#ModalAgregar" data-nom="<?php echo $codigo; ?>" data-nom2="<?php echo $nombre_proyecto; ?>" data-ape="<?php echo $presupuesto;?>" data-estado="<?php echo $estado;  ?>" >
-                                    <i class="fa fa-edit"></i>
+                                    <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#ModalAgregar" data-noma="<?php echo $codigo; ?>" data-nom2a="<?php echo $nombre_proyecto; ?>" data-apea="<?php echo $presupuesto;?>" data-estadoa="<?php echo $estado;  ?>" >
+                                    <i class="fa fa-plus"></i>
                                     </button>
                                     <button type="button" id="btnmodal" class="btn btn-danger" data-toggle="modal" data-target="#ModalBorrar" data-cod="<?php echo $codigo; ?>" data-ape="<?php echo $nombre_proyecto; ?>">
                                     <i class="fa fa-trash"></i>
