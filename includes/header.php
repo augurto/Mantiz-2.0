@@ -48,7 +48,19 @@ $username2=$dos['username'];
             
           </ul>
         </li>
-        <li class="nav-item dropdown">
+        <?php if ($tipo_user==1) {?>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Usuarios
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="../includes/process/actualizar/cambiar_rol_1.php?codigo=<?php echo $id_usuario;?>">Asignar a Proyectos</a></li>
+            <li><a class="dropdown-item" href="../includes/process/actualizar/cambiar_rol_0.php?codigo=<?php echo $id_usuario;?>">Ver Usuarios</a></li>
+            <!-- <li><a class="dropdown-item" href="#">Elemento 3</a></li> -->
+          </ul>
+        </li>
+          <?php } ?>
+          <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Cambiar Rol
           </a>
