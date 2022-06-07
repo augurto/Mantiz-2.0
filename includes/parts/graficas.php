@@ -8,7 +8,7 @@
       $rwe=mysqli_fetch_array($te);
       $tes=$rwe["te"];
 
-      $ti=mysqli_query($con,"SELECT count(*) ti FROM user /* where rol='investigador' */");
+      $ti=mysqli_query($con,"SELECT count(*) ti FROM users /* where rol='investigador' */");
       $rwi=mysqli_fetch_array($ti);
       $tin=$rwi["ti"];
 
