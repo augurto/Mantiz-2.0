@@ -172,9 +172,9 @@
                     </div> -->
                     
                     <div class="progress">
-                      <div class="progress-bar bg-info" role="progressbar" style="width: <?php echo $a;?>%;" aria-valuenow="<?php echo $a;?>" aria-valuemin="0" aria-valuemax="100"><?php echo round($a,2) ;?>% Aprobado </div>
-                      <div class="progress-bar bg-warning" role="progressbar" style="width: <?php echo $b;?>%;" aria-valuenow="<?php echo $b;?>" aria-valuemin="0" aria-valuemax="100"><?php echo round($b,2) ;?>% Pendiente</div>
-                      <div class="progress-bar bg-danger" role="progressbar" style="width: <?php echo $c;?>%;" aria-valuenow="<?php echo $c;?>" aria-valuemin="0" aria-valuemax="100"><?php echo round($c,2) ;?>% Observado</div>
+                      <div class="progress-bar bg-info" role="progressbar" style="width: <?php echo $a;?>%;" aria-valuenow="<?php echo $a;?>" aria-valuemin="0" aria-valuemax="100"><?php echo round($a,1) ;?>% Aprobado </div>
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: <?php echo $b;?>%;" aria-valuenow="<?php echo $b;?>" aria-valuemin="0" aria-valuemax="100"><?php echo round($b,1) ;?>% Pendiente</div>
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: <?php echo $c;?>%;" aria-valuenow="<?php echo $c;?>" aria-valuemin="0" aria-valuemax="100"><?php echo round($c,1) ;?>% Observado</div>
                     </div>
                     </td>
                 </tr>
