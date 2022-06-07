@@ -8,7 +8,7 @@
       $rwe=mysqli_fetch_array($te);
       $tes=$rwe["te"];
 
-      $ti=mysqli_query($con,"SELECT count(*) ti FROM users  where tipo_user='2' */");
+      $ti=mysqli_query($con,"SELECT count(*) ti FROM users  where tipo_user='2'");
       $rwi=mysqli_fetch_array($ti);
       $tin=$rwi["ti"];
 
