@@ -16,7 +16,7 @@
                                     
                                     <th>Nombre Entregable</th>
                                     <th>Fecha entrega</th>
-                                
+                                    <th>Documento</th>
                                     <th>Estado</th>
                                     <?php if ($tipo_user==1) {?>
                                         <th>Accion</th>
@@ -34,7 +34,8 @@
                         $codigo=$row['codigo_proyecto'];
                       
                         
-                        $nombre_entregable=$row['documento'];
+                        $nombre_entregable=$row['nombre'];
+                        $documento=$row['documento'];
                         $nombre_proyecto=$row['nombre_proyecto'];
                         $descripcion=$row['a.descripcion'];
                        
@@ -62,10 +63,11 @@
                              
                              
                              
-                             <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_proyecto; ?></span></td>
+                             <td><span id="lastname<?php echo $nombre_proyecto; ?>"><?php echo $nombre_proyecto; ?></span></td>
                              <td><span id="firstname<?php echo $usuario0; ?>"><?php echo $usuario0; ?></span></td>
                              <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_entregable; ?></span></td>
-                             <td><span id="address<?php echo $descripcion; ?>"><?php echo $descripcion; ?></span></td>
+                             <td><span id="address<?php echo $fecha_entrega; ?>"><?php echo $fecha_entrega; ?></span></td>
+                             <td><span id="address<?php echo $documento; ?>"><?php echo $documento; ?></span></td>
                              <!-- <td><?php echo $fecha_ini ?></td>
                              <td><?php echo $fecha_fin ?></td> -->
                             <td><?php if ($estado==0) {
