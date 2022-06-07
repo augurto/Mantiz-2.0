@@ -134,24 +134,24 @@
                       $rwp21=mysqli_fetch_array($bar);
                       $tps21=$rwp21["tp2"];
 
-                      $obs0=mysqli_query($con,"SELECT COUNT(id_seg) as obs FROM archivos where id_seg= '".$row['id']."' AND a_estado_seguimiento = 1");
+                      $obs0=mysqli_query($con,"SELECT COUNT(a_estado_seguimiento) as obs FROM archivos where id_seg= '".$row['id']."' AND a_estado_seguimiento = 1");
                       $obs1=mysqli_fetch_array($obs0);
                       $obs2=$obs1["obs"];
                       $porcentaje_entregable=100/$obs2;
                       
-                      $pen0=mysqli_query($con,"SELECT COUNT(id_seg) as pen FROM archivos where id_seg= '".$row['id']."' AND a_estado_seguimiento = 0");
+                      $pen0=mysqli_query($con,"SELECT COUNT(a_estado_seguimiento) as pen FROM archivos where id_seg= '".$row['id']."' AND a_estado_seguimiento = 0");
                       $pen1=mysqli_fetch_array($pen0);
                       $pen2=$pen1["pen"];
                       $porcentaje_entregable_pen=100/$pen2;
 
-                      $red0=mysqli_query($con,"SELECT COUNT(id_seg) as red FROM archivos where id_seg= '".$row['id']."' AND a_estado_seguimiento = 2");
+                      $red0=mysqli_query($con,"SELECT COUNT(a_estado_seguimiento) as red FROM archivos where id_seg= '".$row['id']."' AND a_estado_seguimiento = 2");
                       $red1=mysqli_fetch_array($red0);
                       $red2=$pen1["red"];
                       $porcentaje_entregable_red=100/$red2;
 
 
                       $porcentaje_entregable=100/$tps21;
-                      $bar2=mysqli_query($con,"SELECT estado_seguimiento as tp22 FROM archivos where id_seg= '".$row['id']."' AND estado_seguimiento=1");
+                      $bar2=mysqli_query($con,"SELECT a_estado_seguimiento as tp22 FROM archivos where id_seg= '".$row['id']."' AND estado_seguimiento=1");
                       $rwp21=mysqli_fetch_array($bar2);
                       $tps211=$rwp211["tp22"];
                      
@@ -163,12 +163,18 @@
                   
                     <td><?php echo $row['nombre'] ?></td>
                     <td>
+                      
 
                     <!-- <div class="progress">
                     <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: <?php echo $a;?>%;" aria-valuenow="<?php echo $a;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $a ;?>% </div>
                     <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: <?php echo $b;?>%;" aria-valuenow="<?php echo $b;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $b ;?>% </div>
                     <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: <?php echo $c;?>%;" aria-valuenow="<?php echo $c;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $c ;?>% </div>
                     </div> -->
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" style="width: <?php echo $a;?>%;" aria-valuenow="<?php echo $a;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $a ;?>% </div>
                       <div class="progress-bar bg-success" role="progressbar" style="width: <?php echo $b;?>%;" aria-valuenow="<?php echo $b;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $b ;?>% </div>
