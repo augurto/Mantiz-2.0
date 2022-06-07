@@ -145,7 +145,7 @@
                       $tps211=$rwp211["tp22"];
                      
                       
-                      ?><?php echo $tps21.''.$tps211; ?> </div>
+                      ?><?php echo $porcentaje_entregable.''.$tps211; ?> </div>
                     </div>
 
                     </td>
