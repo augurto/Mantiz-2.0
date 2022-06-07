@@ -146,7 +146,7 @@
 
                       $red0=mysqli_query($con,"SELECT COUNT(a_estado_seguimiento) as red FROM archivos where id_seg= '".$row['id']."' AND a_estado_seguimiento = 2");
                       $red1=mysqli_fetch_array($red0);
-                      $red2=$pen1["red"];
+                      $red2=$red1["red"];
                       $porcentaje_entregable_red=100/$red2;
 
 
