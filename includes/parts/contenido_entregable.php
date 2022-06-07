@@ -72,6 +72,15 @@
                 } else{
                     echo 'Observado';
                 }?></h6>
+                <form action="">
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected>Selecciona Estado</option>
+                <option value="0">Pendiente</option>
+                <option value="1">Aprobado</option>
+                <option value="2">Observado</option>
+              </select>
+              <button type="submit" class="btn btn-primary">Actualizar Estado</button>
+                </form>
                 
                  
                 </div>
