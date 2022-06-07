@@ -1,5 +1,5 @@
 <script >
-                                      $(document).on("click", "#btnmodal",function () {
+                                      $(document).on("click", "#btnmodal2",function () {
                                         
                                               var nombre =$(this).data('nom');
                                               var nombre_proyecto =$(this).data('nom2');
