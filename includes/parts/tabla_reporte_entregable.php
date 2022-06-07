@@ -29,7 +29,7 @@
                         $count=1;
                         /* foreach ($link->query('SELECT * from entregables e inner join proyecto p on e.codigo_proyecto = p.codigo inner join archivos a on e.codigo_proyecto = a.codigo_proyecto order by a.codigo_proyecto desc') as $row){  ?>  */
                         
-                        foreach ($link->query('SELECT a.codigo_proyecto as a_codigo_proyecto,a.documento as a_documento, a.id_seg as a_id_seg , a.descripcion as a_descripcion,a.estado_seguimiento as a_estado_seguimiento   from archivos a /* inner join entregables e on a.codigo_proyecto=e.codigo_proyecto inner join proyecto p on a.codigo_proyecto = p.codigo */') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                        foreach ($link->query('SELECT a.codigo_proyecto as a_codigo_proyecto,a.documento as a_documento, a.id_seg as a_id_seg , a.descripcion as a_descripcion,a.estado_seguimiento as a_estado_seguimiento, e.nombre as e_nombre_entregable   from archivos a inner join entregables e on a.codigo_proyecto=e.codigo_proyecto inner join proyecto p on a.codigo_proyecto = p.codigo') as $row){ // aca se hace la consulta e iterarla con each. ?> 
 
                         <?php
                         $a_codigo_proyecto=$row['a_codigo_proyecto'];
@@ -40,7 +40,7 @@
 
                         $id=$row['e.id'];
                         $codigo=$row['a.codigo_proyecto'];                                          
-                        $nombre_entregable=$row['nombre'];
+                        $nombre_entregable=$row['e_nombre_entregable'];
                         $nombre_proyecto=$row['nombre_proyecto'];                       
                         $usuario0=$row['usuario_maker'];
                         $fecha_entrega=$row['fecha_entrega'];                     
@@ -66,7 +66,7 @@
                              
                              <td><span id="lastname<?php echo $a_codigo_proyecto; ?>"><?php echo $a_codigo_proyecto; ?></span></td>
                              <td><span id="firstname<?php echo $a_documento; ?>"><?php echo $a_documento; ?></span></td>
-                             <td><span id="lastname<?php echo $a_id_seg; ?>"><?php echo $a_id_seg; ?></span></td>
+                             <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_entregable; ?></span></td>
                              <td><span id="address<?php echo $a_descripcion; ?>"><?php echo $a_descripcion; ?></span></td>
                              <!-- <td><?php echo $fecha_ini ?></td>
                              <td><?php echo $fecha_fin ?></td> -->
