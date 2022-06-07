@@ -194,14 +194,6 @@
                 </table>
 
 
-          <br>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: <?php echo $porcentaje;?>%;" aria-valuenow="<?php echo $porcentaje;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $porcentaje;?>%</div>
-          </div>
           
-          <br>
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: <?php echo $aprobados;?>%;" aria-valuenow="<?php echo $porcentaje;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $aprobados;?>%</div>
-          </div>
           <br>
 </div>
