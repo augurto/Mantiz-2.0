@@ -55,7 +55,7 @@
                              <?php }?>   
                              <td><?php echo $count++; ?></td>
                              
-                             <td><a href="../../entregables.php?id_p=<?php echo $id; ?>"><?php echo $codigo.'-'.$extencion.'-'.$nombre_proyecto; ?></a></td>
+                             <td><a href="../../entregables.php?id_p=<?php echo $id; ?>&user=<?php echo $username ?>"><?php echo $codigo.'-'.$extencion.'-'.$nombre_proyecto; ?></a></td>
                              
                              
                              <td><span id="firstname<?php echo $presupuesto; ?>"><?php echo $presupuesto; ?></span></td>
