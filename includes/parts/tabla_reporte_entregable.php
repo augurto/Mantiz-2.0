@@ -66,8 +66,8 @@
                              <td><span id="firstname<?php echo $usuario0; ?>"><?php echo $usuario0; ?></span></td>
                              <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_entregable; ?></span></td>
                              <td><span id="address<?php echo $fecha_entrega; ?>"><?php echo $fecha_entrega; ?></span></td>
-                             <!-- <td><?php echo $fecha_ini ?></td>
-                             <td><?php echo $fecha_fin ?></td> -->
+                             
+                             <!-- <td><?php echo $fecha_fin ?></td> -->
                             <td><?php if ($a_estado_seguimiento==0) {
                                 # code...
                                 echo 'Pendiente';
@@ -78,6 +78,7 @@
                                 # code...
                                 echo 'Inactivo';
                             }?></td>
+                            <td><?php echo $a_documento ?></td>
                             <!-- <?php if ($tipo_user==1) { ?> -->
                               
                             <!-- <td>
