@@ -17,7 +17,6 @@ echo "Connected successfully";
  
 $sql = "DELETE from proyecto WHERE codigo='".$codigo."' ";
 if (mysqli_query($conn, $sql)) {
-      unlink('../../../archivos/'.$codigo);
     echo"<script language ='JavaScript'>";
       echo "location='../../../index.php'";
     echo "</script>";
