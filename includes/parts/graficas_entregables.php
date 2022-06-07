@@ -130,15 +130,34 @@
                     </thead>
                 <?php foreach ($link->query('SELECT * from entregables where codigo_proyecto="'.$cod1.'"') as $row){ // aca puedes hacer la consulta e iterarla con each. ?> 
                   <?php 
-                      $bar=mysqli_query($con,"SELECT COUNT(id_seg) as tp2 FROM archivos where id_seg= '".$row['id']."'");
+                      $bar=mysqli_query($con,"SELECT COUNT(id_seg) as tp2 FROM archivos where id_seg= '".$row['id']."' AND a_estado_seguimiento = 1");
                       $rwp21=mysqli_fetch_array($bar);
                       $tps21=$rwp21["tp2"];
+
+                      $obs0=mysqli_query($con,"SELECT COUNT(id_seg) as obs FROM archivos where id_seg= '".$row['id']."' AND a_estado_seguimiento = 1");
+                      $obs1=mysqli_fetch_array($obs0);
+                      $obs2=$obs1["obs"];
+                      $porcentaje_entregable=100/$obs2;
+                      
+                      $pen0=mysqli_query($con,"SELECT COUNT(id_seg) as pen FROM archivos where id_seg= '".$row['id']."' AND a_estado_seguimiento = 0");
+                      $pen1=mysqli_fetch_array($pen0);
+                      $pen2=$pen1["pen"];
+                      $porcentaje_entregable_pen=100/$pen2;
+
+                      $red0=mysqli_query($con,"SELECT COUNT(id_seg) as red FROM archivos where id_seg= '".$row['id']."' AND a_estado_seguimiento = 2");
+                      $red1=mysqli_fetch_array($red0);
+                      $red2=$pen1["red"];
+                      $porcentaje_entregable_red=100/$red2;
+
+
                       $porcentaje_entregable=100/$tps21;
                       $bar2=mysqli_query($con,"SELECT estado_seguimiento as tp22 FROM archivos where id_seg= '".$row['id']."' AND estado_seguimiento=1");
                       $rwp21=mysqli_fetch_array($bar2);
                       $tps211=$rwp211["tp22"];
                      
-                      
+                      $a=($obs2/($obs2+$pen2+$red2))*100 ;
+                      $b=($pen2/($obs2+$pen2+$red2))*100 ;
+                      $c=($red2/($obs2+$pen2+$red2))*100 ;
                       ?>
                 <tr>
                   
@@ -146,7 +165,9 @@
                     <td>
 
                     <div class="progress">
-                      <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: <?php echo $porcentaje_entregable;?>%;" aria-valuenow="<?php echo $porcentaje_entregable;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $porcentaje_entregable ;?>% </div>
+                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: <?php echo $a;?>%;" aria-valuenow="<?php echo $a;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $a ;?>% </div>
+                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: <?php echo $b;?>%;" aria-valuenow="<?php echo $b;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $b ;?>% </div>
+                    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: <?php echo $c;?>%;" aria-valuenow="<?php echo $c;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $c ;?>% </div>
                     </div>
 
                     </td>
