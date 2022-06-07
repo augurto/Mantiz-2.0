@@ -6,21 +6,21 @@ $password = "Mantizb*#17";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection
-$codigo_proyecto=$_GET["codigo"];
-$id_entregable=$_GET["id_entregable"];
-$descripcion=$_GET["descripcion"];
-$id_miembro=$_GET["id_miembro"];
-$link=$_GET["link"];
-$nombre_entregable=$_GET["nombre_entregable"];
-$usuario_seguimiento=$_GET["nombre_usuario"];
+$codigo_proyecto=$_POST["codigo"];
+$id_entregable=$_POST["id_entregable"];
+$descripcion=$_POST["descripcion"];
+$id_miembro=$_POST["id_miembro"];
+$link=$_POST["link"];
+$nombre_entregable=$_POST["nombre_entregable"];
+$usuario_seguimiento=$_POST["nombre_usuario"];
 
 $nombre_documento=$_FILES['documento']['name'];
 $guardado=$_FILES['documento']['tmp_name'];
 
 
-$fecha=$_GET["fecha"];
+$fecha=$_POST["fecha"];
 
-$direccion=$_GET["id_p"]; /* codigo de proyecto */
+$direccion=$_POST["id_p"]; /* codigo de proyecto */
 $carpeta='../../../archivos/'.$codigo_proyecto.'/'.$nombre_entregable;
 
 
