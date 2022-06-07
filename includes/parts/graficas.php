@@ -4,7 +4,7 @@
       $rwp=mysqli_fetch_array($tp);
       $tps=$rwp["tp"];
 
-      $te=mysqli_query($con,"SELECT count(*) te FROM miembros where rol='estudiante'");
+      $te=mysqli_query($con,"SELECT count(*) te FROM user where tipo_user='0'");
       $rwe=mysqli_fetch_array($te);
       $tes=$rwe["te"];
 
@@ -82,7 +82,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Investigadores</div>
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Jefe de Proyecto</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tin;?></div>
                     </div>
                     <div class="col-auto">
