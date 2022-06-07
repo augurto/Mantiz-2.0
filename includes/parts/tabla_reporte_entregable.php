@@ -16,7 +16,7 @@
                                     
                                     <th>Nombre Entregable</th>
                                     <th>Fecha entrega</th>
-                                    <th>Documento</th>
+                                
                                     <th>Estado</th>
                                     <?php if ($tipo_user==1) {?>
                                         <th>Accion</th>
@@ -27,23 +27,21 @@
                                 </thead>
                         <?php 
                         $count=1;
-                        foreach ($link->query('SELECT * from archivos a inner join proyecto p on a.codigo_proyecto = p.codigo inner join entregables e on p.codigo_proyecto=e.codigo_proyecto order by a.codigo_proyecto desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                        foreach ($link->query('SELECT * from entregables e inner join proyecto p on e.codigo_proyecto = p.codigo  order by codigo_proyecto desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
                         
-                        $id=$row['a.id'];
-                        $codigo=$row['a.codigo_proyecto'];
+                        $id=$row['e.id'];
+                        $codigo=$row['codigo_proyecto'];
                       
                         
                         $nombre_entregable=$row['nombre'];
-                        $documento=$row['documento'];
                         $nombre_proyecto=$row['nombre_proyecto'];
-                        $descripcion=$row['a.descripcion'];
                        
-                        $usuario0=$row['a.usuario'];
-                        $fecha_entrega=$row['e.fecha_entrega'];
+                        $usuario0=$row['usuario_maker'];
+                        $fecha_entrega=$row['fecha_entrega'];
                         
 
-                        $estado=$row['a.estado_seguimiento'];
+                        $estado=$row['estado'];
                          if ($estado==0) { ?>
                              
                              <tr style="background-color: #F0FFFF !important;">
@@ -63,11 +61,10 @@
                              
                              
                              
-                             <td><span id="lastname<?php echo $nombre_proyecto; ?>"><?php echo $nombre_proyecto; ?></span></td>
+                             <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_proyecto; ?></span></td>
                              <td><span id="firstname<?php echo $usuario0; ?>"><?php echo $usuario0; ?></span></td>
                              <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_entregable; ?></span></td>
                              <td><span id="address<?php echo $fecha_entrega; ?>"><?php echo $fecha_entrega; ?></span></td>
-                             <td><span id="address<?php echo $documento; ?>"><?php echo $documento; ?></span></td>
                              <!-- <td><?php echo $fecha_ini ?></td>
                              <td><?php echo $fecha_fin ?></td> -->
                             <td><?php if ($estado==0) {
