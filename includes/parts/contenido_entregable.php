@@ -93,7 +93,7 @@
                 <!-- Card Body -->
                 <?php 
             if ($estado_entregable==0) { ?>
-                <div class="card-body" style="background-color: #F0F8FF !important;" >
+                <div class="card-body" style="background-color: #FCF3CF !important;" >
 
                 <?php } elseif($estado_entregable==1){ ?>
                     <div class="card-body" style="background-color: #F0FFF0 !important;" >
