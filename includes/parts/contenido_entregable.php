@@ -91,7 +91,7 @@
                 <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
                 <!-- Counter - Messages -->
               </a>
-              <a href="#" data-toggle="modal" data-target="#borrar" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
+              <a href="../../includes/process/eliminar/eliminar_entregable.php" >
                 <?php echo $ts; ?><i class="fas fa-trash"></i>
                 <!-- Counter - Messages -->
               </a>
