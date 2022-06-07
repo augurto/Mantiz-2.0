@@ -37,11 +37,10 @@
                         
                         $a_estado_seguimiento=$row['a_estado_seguimiento'];
 
-                        $id=$row['e.id'];
-                        $codigo=$row['a.codigo_proyecto'];                                          
+                                                                 
                         $nombre_entregable=$row['nombre'];
                         $nombre_proyecto=$row['nombre_proyecto'];                       
-                        $usuario0=$row['usuario_maker'];
+                        $usuario0=$row['a_usuario'];
                         $fecha_entrega=$row['fecha_entrega'];                     
                         $estado=$row['estado'];
                          if ($estado==0) { ?>
@@ -63,10 +62,10 @@
                              
                              
                              
-                             <td><span id="lastname<?php echo $a_codigo_proyecto; ?>"><?php echo $nombre_proyecto; ?></span></td>
-                             <td><span id="firstname<?php echo $a_documento; ?>"><?php echo $a_documento; ?></span></td>
+                             <td><span id="lastname<?php echo $nombre_proyecto; ?>"><?php echo $nombre_proyecto; ?></span></td>
+                             <td><span id="firstname<?php echo $usuario0; ?>"><?php echo $usuario0; ?></span></td>
                              <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_entregable; ?></span></td>
-                             <td><span id="address<?php echo $a_descripcion; ?>"><?php echo $a_estado_seguimiento; ?></span></td>
+                             <td><span id="address<?php echo $fecha_entrega; ?>"><?php echo $fecha_entrega; ?></span></td>
                              <!-- <td><?php echo $fecha_ini ?></td>
                              <td><?php echo $fecha_fin ?></td> -->
                             <td><?php if ($a_estado_seguimiento==0) {
