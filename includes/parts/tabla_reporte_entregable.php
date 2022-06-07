@@ -27,21 +27,22 @@
                                 </thead>
                         <?php 
                         $count=1;
-                        foreach ($link->query('SELECT * from entregables e inner join proyecto p on e.codigo_proyecto = p.codigo  order by codigo_proyecto desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                        foreach ($link->query('SELECT * from archivos a inner join proyecto p on a.codigo_proyecto = p.codigo  order by codigo_proyecto desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
                         
-                        $id=$row['e.id'];
+                        $id=$row['a.id'];
                         $codigo=$row['codigo_proyecto'];
                       
                         
-                        $nombre_entregable=$row['nombre'];
+                        $nombre_entregable=$row['documento'];
                         $nombre_proyecto=$row['nombre_proyecto'];
+                        $descripcion=$row['a.descripcion'];
                        
-                        $usuario0=$row['usuario_maker'];
+                        $usuario0=$row['usuario'];
                         $fecha_entrega=$row['fecha_entrega'];
                         
 
-                        $estado=$row['estado'];
+                        $estado=$row['estado_seguimiento'];
                          if ($estado==0) { ?>
                              
                              <tr style="background-color: #F0FFFF !important;">
@@ -64,7 +65,7 @@
                              <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_proyecto; ?></span></td>
                              <td><span id="firstname<?php echo $usuario0; ?>"><?php echo $usuario0; ?></span></td>
                              <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_entregable; ?></span></td>
-                             <td><span id="address<?php echo $fecha_entrega; ?>"><?php echo $fecha_entrega; ?></span></td>
+                             <td><span id="address<?php echo $descripcion; ?>"><?php echo $descripcion; ?></span></td>
                              <!-- <td><?php echo $fecha_ini ?></td>
                              <td><?php echo $fecha_fin ?></td> -->
                             <td><?php if ($estado==0) {
