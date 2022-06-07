@@ -14,7 +14,7 @@
 
 
 <!-- Modal -->
-<form action="../../includes/process/insert/insertar_archivo.php" enctype="multipart/form-data" >
+<form action="../../includes/process/insert/insertar_archivo.php" method="post"  enctype="multipart/form-data" >
 <div class="modal fade" id="modal-subir-archivos" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -45,7 +45,7 @@
        
         
             <div class="input-group mb-3">
-              <label class="input-group-text" for="inputGroupSelect01">Entregable</label>
+              <label class="input-group-text" for="inputGroupSelect01">Entregable...</label>
               <select class="form-control" name="id_entregable" id="id_entregable" required="">
                         <option disabled="disabled" value="" selected>Clic para ver entregables</option>
                         <?php 
