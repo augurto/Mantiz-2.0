@@ -15,7 +15,7 @@
       $rwp2=mysqli_fetch_array($tp2);
       $tps2=$rwp2["tp2"];
       $cod1=$_GET["id_p"];
-      $tp3=mysqli_query($con,"SELECT COUNT(DISTINCT usuario) as tp3 FROM archivos where codigo_proyecto= $id_p");
+      $tp3=mysqli_query($con,"SELECT COUNT(DISTINCT a_usuario) as tp3 FROM archivos where a_codigo_proyecto= $id_p");
       $rwp3=mysqli_fetch_array($tp3);
       $tps3=$rwp3["tp3"];
 
