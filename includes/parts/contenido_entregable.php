@@ -32,13 +32,13 @@
           <?php $sql="SELECT * FROM  archivos WHERE codigo_proyecto='$id_p' /* AND id_miembros='$est' */ order by id_seg asc";
     $query = mysqli_query($con, $sql);
         while ($row=mysqli_fetch_array($query)){
-           $id=$row['id'];
+           $id=$row['a_id'];
             $id_seg=$row['id_seg'];
-            $descripcion=$row['descripcion'];
+            $descripcion=$row['a_descripcion'];
             $documento=$row['documento'];
-            $estado_entregable=$row['estado_seguimiento'];
+            $estado_entregable=$row['a_estado_seguimiento'];
             $link=$row['link'];
-            $usuario_seguimiento=$row['usuario'];
+            $usuario_seguimiento=$row['a_usuario'];
 
             $gd=mysqli_query($con,"SELECT * FROM entregables WHERE  id='".$id_seg."' AND codigo_proyecto='".$id_p."'");
             $rwd=mysqli_fetch_array($gd);
