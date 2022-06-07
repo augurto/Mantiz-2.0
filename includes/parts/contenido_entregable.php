@@ -92,10 +92,14 @@
                 <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
                 <!-- Counter - Messages -->
               </a>
+              <?php if ($tipo_user==1) { ?>
+               
+             
               <a href="../../includes/process/eliminar/eliminar_entregable.php?entregable=<?php echo $documento ; ?>&proyecto=<?php echo $a_codigo_proyecto ;?>" >
-                <?php echo $ts; ?><i class="fas fa-trash"></i>
+                <i class="fas fa-trash"></i>
                 <!-- Counter - Messages -->
               </a>
+              <?php } ?>
 
               
 
