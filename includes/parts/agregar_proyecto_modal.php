@@ -68,23 +68,24 @@
                              <input type="number" class="form-control" id="codigo"  name="codigo"  value="<?php echo ++$codigo_proyecto ?>" readonly>
                              
                        </div>
-                        <div class="input-group mb-3">
-                        <label class="input-group-text" for="inputGroupSelect01">Entregable</label>
-                        <select class="form-control" name="id_entregable" id="id_entregable" required="">
-                                  <option disabled="disabled" value="" selected>Clic para ver entregables</option>
-                                  <?php 
+                       <label for="inputProyec">Extension de Codigo del Proyecto</label>
+                       <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">Extension</label>
+                                <select class="form-control" name="id_extension" id="id_extension" required="">
+                                            <option disabled="disabled" value="" selected>Clic para ver.</option>
+                                            <?php 
 
-                                  $sss=mysqli_query($con,"SELECT * FROM entregables where codigo_proyecto=$id_p");
-                                          while($f=mysqli_fetch_assoc($sss)){    
+                                            $sss=mysqli_query($con,"SELECT * FROM codigo_generado_proyecto");
+                                                    while($f=mysqli_fetch_assoc($sss)){    
 
-                                              echo '<option value="'.$f['id'].'">'.$f['nombre'].'</option>';
+                                                        echo '<option value="'.$f['variable'].'">'.$f['variable'].'</option>';
 
-                                  }
-                                  
-                                  ?>
-                        </select>
-                                
-                      </div>
+                                            }
+                                            
+                                            ?>
+                                </select>
+                                        
+                        </div>
                        <label for="inputProyec">Presupuesto</label>
                        
                         <div class="input-group mb-3">

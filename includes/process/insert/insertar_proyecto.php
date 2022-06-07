@@ -13,7 +13,7 @@ $codigo=$_GET["codigo"];
 
 $nuevo_nombre=$extension.'-'.$nombre_proyecto;
 $presupuesto=$_GET["presupuesto"];
-$ext=$_GET["id_entregable"];
+$ext=$_GET["id_extension"];
 $fecha=date("Y-m-d"); 
 $fecha_ini=$_GET["fecha_ini"];
 $fecha_fin=$_GET["fecha_fin"];
