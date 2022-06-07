@@ -21,7 +21,7 @@ $guardado=$_FILES['documento']['tmp_name'];
 $fecha=$_POST["fecha"];
 
 $direccion=$_POST["id_p"]; /* codigo de proyecto */
-$carpeta='../../../archivos/'.$codigo_proyecto.'/'.$nombre_entregable;
+$carpeta='../../../archivos/'.$codigo_proyecto.'/'.$id_entregable;
 
 
 
