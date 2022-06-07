@@ -72,10 +72,11 @@
                 } else{
                     echo 'Observado';
                 }?></h6>
-                <form action="actualizar_entregable.php">
+                <form action="../../includes/process/actualizar/actualizar_estado_entregable.php">
                 <div class="input-group input-group-sm mb-3">
-                <input type="text" value="<?php echo $id; ?>" id="id" name="id" >
-                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <input type="hidden" value="<?php echo $id; ?>" id="id" name="id" >
+                <input type="text" value="<?php echo $id_p; ?>" id="id_p" name="id_p" >
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="estado_entregable" name="estado_entregable">
                   <option selected>Selecciona Estado</option>
                   <option value="0">Pendiente</option>
                   <option value="1">Aprobado</option>
