@@ -8,7 +8,7 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection
 $id=$_GET["codigo"];
 $id_p=$_GET["id_p"];
-$estado_entregable=$_GET["estado_entregable"];
+$estado_entregable=$_GET["estado_entregable1"];
 
 
 
