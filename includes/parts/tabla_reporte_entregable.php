@@ -29,13 +29,12 @@
                         $count=1;
                         /* foreach ($link->query('SELECT * from entregables e inner join proyecto p on e.codigo_proyecto = p.codigo inner join archivos a on e.codigo_proyecto = a.codigo_proyecto order by a.codigo_proyecto desc') as $row){  ?>  */
                         
-                        foreach ($link->query('SELECT distinct a.documento as a_documento,a.codigo_proyecto as a_codigo_proyecto, a.id_seg as a_id_seg , a.descripcion as a_descripcion,a.estado_seguimiento as a_estado_seguimiento, e.nombre as e_nombre_entregable   from archivos a inner join entregables e on a.codigo_proyecto=e.codigo_proyecto inner join proyecto p on a.codigo_proyecto = p.codigo') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                        foreach ($link->query('SELECT a.documento as a_documento,,a.estado_seguimiento as a_estado_seguimiento, e.nombre as e_nombre_entregable   from archivos a inner join entregables e on a.codigo_proyecto=e.codigo_proyecto inner join proyecto p on a.codigo_proyecto = p.codigo') as $row){ // aca se hace la consulta e iterarla con each. ?> 
 
                         <?php
-                        $a_codigo_proyecto=$row['a_codigo_proyecto'];
+                        
                         $a_documento=$row['a_documento'];
-                        $a_id_seg=$row['a_id_seg'];
-                        $a_descripcion=$row['a_descripcion'];
+                        
                         $a_estado_seguimiento=$row['a_estado_seguimiento'];
 
                         $id=$row['e.id'];
@@ -64,10 +63,10 @@
                              
                              
                              
-                             <td><span id="lastname<?php echo $a_codigo_proyecto; ?>"><?php echo $a_codigo_proyecto; ?></span></td>
+                             <td><span id="lastname<?php echo $a_codigo_proyecto; ?>"><?php echo $a_documento; ?></span></td>
                              <td><span id="firstname<?php echo $a_documento; ?>"><?php echo $a_documento; ?></span></td>
                              <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_entregable; ?></span></td>
-                             <td><span id="address<?php echo $a_descripcion; ?>"><?php echo $a_descripcion; ?></span></td>
+                             <td><span id="address<?php echo $a_descripcion; ?>"><?php echo $a_estado_seguimiento; ?></span></td>
                              <!-- <td><?php echo $fecha_ini ?></td>
                              <td><?php echo $fecha_fin ?></td> -->
                             <td><?php if ($a_estado_seguimiento==0) {
