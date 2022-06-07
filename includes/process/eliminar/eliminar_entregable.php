@@ -1,11 +1,33 @@
+
 <?php
+$servername = "localhost";
+$database = "u415020159_mantizb";
+$username = "u415020159_mantizb";
+$password = "Mantizb*#17";
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $database);
+// Check connection
+
+
 $entregable=$_GET["entregable"];
 $proyecto=$_GET["proyecto"];
-If (unlink('../../../archivos/'.$proyecto.'/'.$entregable.'')) {
-  // file was successfully deleted
-  echo 'archivo eliminado';
-} else {
-  // there was a problem deleting the file
-  echo 'archivo no eliminado';
+
+if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
 }
+ 
+echo "Connected successfully";
+ 
+$sql = "DELETE from archivos WHERE a_codigo_proyecto='".$proyecto."' ";
+if (mysqli_query($conn, $sql)) {
+    unlink('../../../archivos/'.$proyecto.'/'.$entregable.'');
+
+    echo"<script language ='JavaScript'>";
+      echo "location='../../../index.php'";
+    echo "</script>";
+} else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+mysqli_close($conn);
+
 ?>
