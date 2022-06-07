@@ -11,7 +11,7 @@
       $aprobado=$apro["apro"];
       $porcentaje=100/$tps;
       $aprobados=($aprobado/$tps4)*100;
-      $tp2=mysqli_query($con,"SELECT COUNT(DISTINCT id_seg) as tp2 FROM archivos where codigo_proyecto= $id_p");
+      $tp2=mysqli_query($con,"SELECT COUNT(DISTINCT id_seg) as tp2 FROM archivos where a_codigo_proyecto= $id_p");
       $rwp2=mysqli_fetch_array($tp2);
       $tps2=$rwp2["tp2"];
       $cod1=$_GET["id_p"];
