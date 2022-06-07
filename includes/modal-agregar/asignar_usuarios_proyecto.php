@@ -27,12 +27,7 @@
                             </button>
                     </div>
                     
-                    <label for=""><?php
-                        $var_PHP = "<script> document.write(estado) </script>"; // igualar el valor de la variable JavaScript a PHP 
-
-                    echo $var_PHP   // muestra el resultado 
-
-                    ?></label>
+                    
                     <form action="../../includes/process/actualizar/actualizar_proyecto.php">
                         <div class="modal-body">
                         <div class="input-group mb-3">
