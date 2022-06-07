@@ -61,7 +61,7 @@
                 <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
-                <div class="input-group input-group-sm mb-3">
+                <div class="btn-group" role="group" aria-label="Basic example">
                 <!-- <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom." - ".$estado_entregable; ?></h6> -->
                 <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom." - "; ?><?php if ($estado_entregable==0) {
                     # code...
@@ -72,9 +72,6 @@
                 } else{
                     echo 'Observado';
                 }?></h6>
-                
-                 
-                </div>
                 <div class="input-group input-group-sm mb-3">
                 <form action="">
                 
@@ -89,6 +86,8 @@
                 
               
                 </form>
+                </div>
+                 
                 </div>
                 <!-- Card Body -->
                 <?php 
