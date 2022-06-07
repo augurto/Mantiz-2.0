@@ -27,11 +27,11 @@
                                 </thead>
                         <?php 
                         $count=1;
-                        foreach ($link->query('SELECT * from archivos a inner join proyecto p on a.codigo_proyecto = p.codigo inner join entregables e on e.codigo_proyecto=p.codigo_proyecto order by codigo_proyecto desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                        foreach ($link->query('SELECT * from archivos a inner join proyecto p on a.codigo_proyecto = p.codigo inner join entregables e on e.codigo_proyecto=p.codigo_proyecto order by a.codigo_proyecto desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
                         
                         $id=$row['a.id'];
-                        $codigo=$row['codigo_proyecto'];
+                        $codigo=$row['a.codigo_proyecto'];
                       
                         
                         $nombre_entregable=$row['nombre'];
@@ -40,10 +40,10 @@
                         $descripcion=$row['a.descripcion'];
                        
                         $usuario0=$row['a.usuario'];
-                        $fecha_entrega=$row['fecha_entrega'];
+                        $fecha_entrega=$row['e.fecha_entrega'];
                         
 
-                        $estado=$row['estado_seguimiento'];
+                        $estado=$row['a.estado_seguimiento'];
                          if ($estado==0) { ?>
                              
                              <tr style="background-color: #F0FFFF !important;">
