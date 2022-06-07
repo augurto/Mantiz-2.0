@@ -158,6 +158,7 @@
                       $a=($obs2/($obs2+$pen2+$red2))*100 ;
                       $b=($pen2/($obs2+$pen2+$red2))*100 ;
                       $c=($red2/($obs2+$pen2+$red2))*100 ;
+                      $total=$a+$b+$c;
                       ?>
                 <tr>
                   
@@ -170,12 +171,21 @@
                     <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: <?php echo $b;?>%;" aria-valuenow="<?php echo $b;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $b ;?>% </div>
                     <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: <?php echo $c;?>%;" aria-valuenow="<?php echo $c;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $c ;?>% </div>
                     </div> -->
+                    <?php if ($total>0) {?>
+                      # code...
                     
                     <div class="progress">
                       <div class="progress-bar bg-info" role="progressbar" style="width: <?php echo $a;?>%;" aria-valuenow="<?php echo $a;?>" aria-valuemin="0" aria-valuemax="100"><?php echo round($a,1) ;?>% Aprobado </div>
                       <div class="progress-bar bg-warning" role="progressbar" style="width: <?php echo $b;?>%;" aria-valuenow="<?php echo $b;?>" aria-valuemin="0" aria-valuemax="100"><?php echo round($b,1) ;?>% Pendiente</div>
                       <div class="progress-bar bg-danger" role="progressbar" style="width: <?php echo $c;?>%;" aria-valuenow="<?php echo $c;?>" aria-valuemin="0" aria-valuemax="100"><?php echo round($c,1) ;?>% Observado</div>
                     </div>
+                     <?php }else {?>
+
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">No existen entregables</div>
+                      </div>
+                      <?php } ?>
+
                     </td>
                 </tr>
                 <?php
