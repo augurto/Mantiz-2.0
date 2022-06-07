@@ -63,7 +63,7 @@
                              
                              
                              
-                             <td><span id="lastname<?php echo $a_codigo_proyecto; ?>"><?php echo $a_documento; ?></span></td>
+                             <td><span id="lastname<?php echo $a_codigo_proyecto; ?>"><?php echo $nombre_proyecto; ?></span></td>
                              <td><span id="firstname<?php echo $a_documento; ?>"><?php echo $a_documento; ?></span></td>
                              <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_entregable; ?></span></td>
                              <td><span id="address<?php echo $a_descripcion; ?>"><?php echo $a_estado_seguimiento; ?></span></td>
