@@ -11,6 +11,8 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 
 $entregable=$_GET["entregable"];
 $proyecto=$_GET["proyecto"];
+$id_entregable=$_GET["id_entregable"];
+
 
 if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
@@ -20,7 +22,7 @@ echo "Connected successfully";
  
 $sql = "DELETE from archivos WHERE a_codigo_proyecto='".$proyecto."' and documento='".$entregable."' ";
 if (mysqli_query($conn, $sql)) {
-    unlink('../../../archivos/'.$proyecto.'/'.$entregable.'');
+    unlink('../../../archivos/'.$proyecto.'/'.$entregable.'/'.$id_entregable.'');
 
     echo"<script language ='JavaScript'>";
       echo "location='../../../entregables.php?id_p=$proyecto'";

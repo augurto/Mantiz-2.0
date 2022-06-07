@@ -111,7 +111,7 @@
               <?php if ($tipo_user==1) { ?>
                
              
-              <a href="../../includes/process/eliminar/eliminar_entregable.php?entregable=<?php echo $documento ; ?>&proyecto=<?php echo $a_codigo_proyecto ;?>" >
+              <a href="../../includes/process/eliminar/eliminar_entregable.php?entregable=<?php echo $documento ; ?>&proyecto=<?php echo $a_codigo_proyecto ;?>&id_entregable=<?php echo $id_seg ; ?>" >
                 <i class="fas fa-trash" style="color: red;"></i>
                 <!-- Counter - Messages -->
               </a>
