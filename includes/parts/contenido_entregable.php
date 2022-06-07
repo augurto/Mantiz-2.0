@@ -91,7 +91,7 @@
                 <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
                 <!-- Counter - Messages -->
               </a>
-              <a href="../../includes/process/eliminar/eliminar_entregable.php" >
+              <a href="../../includes/process/eliminar/eliminar_entregable.php?entregable=<?php $documento ; ?>" >
                 <?php echo $ts; ?><i class="fas fa-trash"></i>
                 <!-- Counter - Messages -->
               </a>
