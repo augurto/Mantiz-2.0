@@ -4,11 +4,11 @@
       $rwp=mysqli_fetch_array($tp);
       $tps=$rwp["tp"];
 
-      $te=mysqli_query($con,"SELECT count(*) te FROM user where tipo_user='0'");
+      $te=mysqli_query($con,"SELECT count(*) te FROM users where tipo_user='0'");
       $rwe=mysqli_fetch_array($te);
       $tes=$rwe["te"];
 
-      $ti=mysqli_query($con,"SELECT count(*) ti FROM users /* where rol='investigador' */");
+      $ti=mysqli_query($con,"SELECT count(*) ti FROM users  where tipo_user='2' */");
       $rwi=mysqli_fetch_array($ti);
       $tin=$rwi["ti"];
 
