@@ -72,7 +72,7 @@
                 } else{
                     echo 'Observado';
                 }?></h6>
-                <form action="">
+                <form action="actualizar_entregable.php?id=<?php echo $id ;?>">
                 <div class="input-group input-group-sm mb-3">
                 <select class="form-select form-select-sm" aria-label=".form-select-sm example">
                   <option selected>Selecciona Estado</option>
