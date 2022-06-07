@@ -72,6 +72,9 @@
                 } else{
                     echo 'Observado';
                 }?></h6>
+                
+                 
+                </div>
                 <div class="input-group input-group-sm mb-3">
                 <form action="">
                 
@@ -86,8 +89,6 @@
                 
               
                 </form>
-                </div>
-                 
                 </div>
                 <!-- Card Body -->
                 <?php 
