@@ -29,17 +29,17 @@
                         $count=1;
                         /* foreach ($link->query('SELECT * from entregables e inner join proyecto p on e.codigo_proyecto = p.codigo inner join archivos a on e.codigo_proyecto = a.codigo_proyecto order by a.codigo_proyecto desc') as $row){  ?>  */
                         
-                        foreach ($link->query('SELECT a.documento as a_documento,,a.estado_seguimiento as a_estado_seguimiento, e.nombre as e_nombre_entregable a.a_codigo_proyecto , e.codigo_proyecto, p.codigo    from archivos a inner join entregables e on a.a_codigo_proyecto=e.codigo_proyecto inner join proyecto p on a.a_codigo_proyecto = p.codigo') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                        foreach ($link->query('SELECT * from archivos a inner join entregables e on a.a_codigo_proyecto=e.codigo_proyecto inner join proyecto p on a.a_codigo_proyecto = p.codigo') as $row){ // aca se hace la consulta e iterarla con each. ?> 
 
                         <?php
                         
-                        $a_documento=$row['a_documento'];
+                        $a_documento=$row['documento'];
                         
                         $a_estado_seguimiento=$row['a_estado_seguimiento'];
 
                         $id=$row['e.id'];
                         $codigo=$row['a.codigo_proyecto'];                                          
-                        $nombre_entregable=$row['e_nombre_entregable'];
+                        $nombre_entregable=$row['nombre'];
                         $nombre_proyecto=$row['nombre_proyecto'];                       
                         $usuario0=$row['usuario_maker'];
                         $fecha_entrega=$row['fecha_entrega'];                     
