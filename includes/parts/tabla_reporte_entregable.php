@@ -47,13 +47,13 @@
                         $estado=$row['estado'];
                          if ($fecha_actual>$fecha_v) { ?>
                              
-                             <tr style="background-color: #005BF9 !important;">
+                             <tr style="background-color: #FC1900 !important;">
 
                              <?php  }elseif ($fecha_actual==$fecha_v) { ?>
                              <tr style="background-color: #FFE97F !important;">
 
                              <?php  } else{?>
-                             <tr style="background-color: #FC1900 !important;">
+                             <tr style="background-color: #0029F9 !important;">
                              <?php }?>   
                              <td><?php echo $count++; ?></td>
                              
