@@ -12,7 +12,7 @@ $descripcion=$_POST["descripcion"];
 $id_miembro=$_POST["id_miembro"];
 $link=$_POST["link"];
 $nombre_entregable=$_POST["nombre_entregable"];
-$usuario_seguimiento=$_POST["nombre_usuario"];
+$usuario_seguimiento=$_POST["usuario"];
 
 $nombre_documento=$_FILES['documento']['name'];
 $guardado=$_FILES['documento']['tmp_name'];
