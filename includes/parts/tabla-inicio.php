@@ -35,7 +35,7 @@
                         
                         $nombre_proyecto=$row['nombre_proyecto'];
                         $presupuesto=$row['presupuesto'];
-                        $usuario=$row['usuario_maker'];
+                        $usuario2=$row['usuario_maker'];
                         $fecha_ini=$row['fecha_ini'];
                         $fecha_fin=$row['fecha_fin'];
 
@@ -55,7 +55,7 @@
                              <?php }?>   
                              <td><?php echo $count++; ?></td>
                              
-                             <td><a href="../../entregables.php?id_p=<?php echo $id; ?>&user=<?php echo $username ?>"><?php echo $codigo.'-'.$extencion.'-'.$nombre_proyecto; ?></a></td>
+                             <td><a href="../../entregables.php?id_p=<?php echo $id; ?>&user=<?php echo $usuario ?>"><?php echo $codigo.'-'.$extencion.'-'.$nombre_proyecto; ?></a></td>
                              
                              
                              <td><span id="firstname<?php echo $presupuesto; ?>"><?php echo $presupuesto; ?></span></td>
