@@ -172,7 +172,7 @@
                     <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: <?php echo $c;?>%;" aria-valuenow="<?php echo $c;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $c ;?>% </div>
                     </div> -->
                     <?php if ($total>0) {?>
-                      # code...
+                  
                     
                     <div class="progress">
                       <div class="progress-bar bg-info" role="progressbar" style="width: <?php echo $a;?>%;" aria-valuenow="<?php echo $a;?>" aria-valuemin="0" aria-valuemax="100"><?php echo round($a,1) ;?>% Aprobado </div>
@@ -182,7 +182,7 @@
                      <?php }else {?>
 
                       <div class="progress">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">No existen entregables</div>
+                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>No existen entregables
                       </div>
                       <?php } ?>
 
