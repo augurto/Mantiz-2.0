@@ -72,7 +72,7 @@
                 } else{
                     echo 'Observado';
                 }?></h6>
-                <span class="align-middle">
+                <?php if ($tipo_user==1) { ?>
                 <form action="../../includes/process/actualizar/actualizar_estado_entregable.php">
                 <div class="input-group input-group-sm mb-3">
                 <input type="hidden" value="<?php echo $id; ?>" id="id" name="id" >
@@ -88,7 +88,7 @@
                 
               
                 </form>
-                </span>
+                <?php } ?>
                  
                 </div>
                 <!-- Card Body -->
