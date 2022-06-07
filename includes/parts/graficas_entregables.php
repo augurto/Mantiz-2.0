@@ -146,7 +146,7 @@
                     <td>
 
                     <div class="progress">
-                      <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: <?php echo $porcentaje_entregable;?>%" aria-valuenow="<?php echo $porcentaje_entregable;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $porcentaje_entregable ;?>% </div>
+                      <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: <?php echo $porcentaje_entregable;?>%;" aria-valuenow="<?php echo $porcentaje_entregable;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $porcentaje_entregable ;?>% </div>
                     </div>
 
                     </td>
