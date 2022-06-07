@@ -84,6 +84,10 @@
                                     <button type="button" id="btnmodal" class="btn btn-danger" data-toggle="modal" data-target="#ModalBorrar" data-cod="<?php echo $codigo; ?>" data-ape="<?php echo $nombre_proyecto; ?>">
                                     <i class="fa fa-trash"></i>
                                     </button>
+
+                                    <button type="button" id="btnmodal" class="btn btn-danger" data-toggle="modal" data-target="#ModalAgregar" data-cod="<?php echo $codigo; ?>" data-ape="<?php echo $nombre_proyecto; ?>">
+                                    <i class="fa fa-plus"></i>
+                                    </button>
                                    
 
                             </td>
