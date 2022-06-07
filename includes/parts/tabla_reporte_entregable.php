@@ -41,19 +41,18 @@
                         $nombre_entregable=$row['nombre'];
                         $nombre_proyecto=$row['nombre_proyecto'];                       
                         $usuario0=$row['a_usuario'];
-                        $fecha_entrega=$row['fecha_entrega'];                     
+                        $fecha_entrega=$row['fecha_entrega'];
+                        $fecha_actual=strtotime(date("Y-m-d",time()));
+                        $fecha_v=strtotime($fecha_entrega);                     
                         $estado=$row['estado'];
-                         if ($estado==0) { ?>
+                         if ($fecha_actual>$fecha_v) { ?>
                              
                              <tr style="background-color: #F0FFFF !important;">
 
-                             <?php  }elseif ($estado==1) { ?>
+                             <?php  }elseif ($fecha_actual==$fecha_v) { ?>
                              <tr style="background-color: #F0FFF0 !important;">
 
-                             <?php  }elseif ($estado==2) { ?>
-                             <tr style="background-color: #FFE4E1 !important;">
-                       
-                             <?php } else{?>
+                             <?php  } else{?>
                              <tr style="background-color: #FDF5E6 !important;">
                              <?php }?>   
                              <td><?php echo $count++; ?></td>
