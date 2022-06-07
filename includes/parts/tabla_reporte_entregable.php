@@ -29,14 +29,14 @@
                         $count=1;
                         /* foreach ($link->query('SELECT * from entregables e inner join proyecto p on e.codigo_proyecto = p.codigo inner join archivos a on e.codigo_proyecto = a.codigo_proyecto order by a.codigo_proyecto desc') as $row){  ?>  */
                         
-                        foreach ($link->query('SELECT a.codigo_proyecto,a.documento, a.id_seg , a.descripcion,a.estado_seguimiento   from archivos a /* inner join entregables e on a.codigo_proyecto=e.codigo_proyecto inner join proyecto p on a.codigo_proyecto = p.codigo */') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                        foreach ($link->query('SELECT a.codigo_proyecto as a_codigo_proyecto,a.documento as a_documento, a.id_seg as a_id_seg , a.descripcion as a_descripcion,a.estado_seguimiento as a_estado_seguimiento   from archivos a /* inner join entregables e on a.codigo_proyecto=e.codigo_proyecto inner join proyecto p on a.codigo_proyecto = p.codigo */') as $row){ // aca se hace la consulta e iterarla con each. ?> 
 
                         <?php
-                        $a_codigo_proyecto=$row['a.codigo_proyecto'];
-                        $a_documento=$row['a.documento'];
-                        $a_id_seg=$row['a.id_seg'];
-                        $a_descripcion=$row['a.descripcion'];
-                        $a_estado_seguimiento=$row['a.estado_seguimiento'];
+                        $a_codigo_proyecto=$row['a_codigo_proyecto'];
+                        $a_documento=$row['a_documento'];
+                        $a_id_seg=$row['a_id_seg'];
+                        $a_descripcion=$row['a_descripcion'];
+                        $a_estado_seguimiento=$row['a_estado_seguimiento'];
 
                         $id=$row['e.id'];
                         $codigo=$row['a.codigo_proyecto'];                                          
