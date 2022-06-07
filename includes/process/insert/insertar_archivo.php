@@ -21,7 +21,7 @@ $guardado=$_FILES['documento']['tmp_name'];
 $fecha=$_GET["fecha"];
 
 $direccion=$_GET["id_p"]; /* codigo de proyecto */
-$carpeta='../../../entregables/'.$codigo_proyecto.'/'.$nombre_entregable;
+$carpeta='../../../archivos/'.$codigo_proyecto.'/'.$nombre_entregable;
 
 
 
