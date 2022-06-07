@@ -73,13 +73,17 @@
                     echo 'Observado';
                 }?></h6>
                 <form action="">
+                <div class="input-group input-group-sm mb-3">
                 <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                <option selected>Selecciona Estado</option>
-                <option value="0">Pendiente</option>
-                <option value="1">Aprobado</option>
-                <option value="2">Observado</option>
-              </select>
-              <button type="submit" class="btn btn-primary">Actualizar Estado</button>
+                  <option selected>Selecciona Estado</option>
+                  <option value="0">Pendiente</option>
+                  <option value="1">Aprobado</option>
+                  <option value="2">Observado</option>
+                </select>
+                <button type="submit" class="btn btn-outline-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Actualizar Estado</button>
+                </div>
+                
+              
                 </form>
                 
                  
