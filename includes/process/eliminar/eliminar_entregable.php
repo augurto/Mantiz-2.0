@@ -18,12 +18,12 @@ if (!$conn) {
  
 echo "Connected successfully";
  
-$sql = "DELETE from archivos WHERE a_codigo_proyecto='".$proyecto."' ";
+$sql = "DELETE from archivos WHERE a_codigo_proyecto='".$proyecto."' and documento='".$entregable."' ";
 if (mysqli_query($conn, $sql)) {
     unlink('../../../archivos/'.$proyecto.'/'.$entregable.'');
 
     echo"<script language ='JavaScript'>";
-      echo "location='../../../index.php'";
+      echo "location='../../../entregables.php?id_p=$proyecto'";
     echo "</script>";
 } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
