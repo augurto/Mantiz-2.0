@@ -120,7 +120,9 @@
                 $link = new PDO('mysql:host=localhost;dbname=u415020159_mantizb', 'u415020159_mantizb', 'Mantizb*#17'); 
 
                 ?>
-
+  <div class="container">
+        <div class="row">
+              
 
                 <div class="col-lg-12">
                     <div class="table-responsive">        
@@ -229,6 +231,8 @@
           
           <br>
         
-      </div>
+          </div>
+    </div>
+    </div>
     </div>
 
