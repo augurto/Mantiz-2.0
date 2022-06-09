@@ -168,8 +168,12 @@
                       $estado_ent=$row['estado'];
                       ?>
                 <tr>
-                  
+                    <?php  if ($estado_ent==1) { ?>
+                     <td style="color:red"><?php echo $nom_entregable.'-'.$estado_ent; ?></td>
+
+                    <?php } else {?>
                     <td><?php echo $nom_entregable.'-'.$estado_ent; ?></td>
+                    <?php }?>
                     <td>
                       
 
