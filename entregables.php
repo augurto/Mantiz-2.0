@@ -23,7 +23,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
          $rws=mysqli_fetch_array($sql);
          $nombre=$rws["nombre_proyecto"];
 
-         $gd2=mysqli_query($con,"SELECT * FROM entregables WHERE  id='".$id_seg."' AND codigo_proyecto='".$id_p."'");
+         $gd2=mysqli_query($con,"SELECT * FROM entregables WHERE  codigo_proyecto='".$id_p."'");
             $rwd2=mysqli_fetch_array($gd2);
             $nom2=$rwd2["nombre"];
             
