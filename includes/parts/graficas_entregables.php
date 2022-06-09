@@ -165,10 +165,11 @@
                       $total=$a+$b+$c;
                       $nom_entregable=$row['nombre'];
                       $id_entr=$row['id'];
+                      $estado_ent=$row['estado'];
                       ?>
                 <tr>
                   
-                    <td><?php echo $row['nombre'].'-'.$row['id'].'-'.$id_entr ?></td>
+                    <td><?php echo $nom_entregable.'-'.$estado_ent; ?></td>
                     <td>
                       
 
