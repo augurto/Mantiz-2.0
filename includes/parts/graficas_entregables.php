@@ -163,10 +163,12 @@
                       $b=($pen2/($obs2+$pen2+$red2))*100 ;
                       $c=($red2/($obs2+$pen2+$red2))*100 ;
                       $total=$a+$b+$c;
+                      $nom_entregable=$row['nombre'];
+                      $id_entr=$row['id'];
                       ?>
                 <tr>
                   
-                    <td><?php echo $row['nombre'].'-'.$row['id'] ?></td>
+                    <td><?php echo $row['nombre'].'-'.$row['id'].'-'.$id_entr ?></td>
                     <td>
                       
 
@@ -199,7 +201,7 @@
                                       <i class="fa fa-edit"></i>
                                       </button>
                                       
-                                      <button type="button" id="btnmodal" class="btn btn-danger" data-toggle="modal" data-target="#ModalBorrarEntregable" data-cod="<?php echo $id_entregable0; ?>" data-ape="<?php echo $nombre_entregable0; ?>">
+                                      <button type="button" id="btnmodal" class="btn btn-danger" data-toggle="modal" data-target="#ModalBorrarEntregable" data-cod="<?php echo $id_entr; ?>" data-ape="<?php echo $nom_entregable; ?>">
                                       <i class="fa fa-trash"></i>
                                       </button>
   
