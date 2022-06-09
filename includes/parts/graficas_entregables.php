@@ -4,12 +4,13 @@
       $rwp=mysqli_fetch_array($tp);
       $tps=$rwp["tp"];
 
-      $entregable=mysqli_query($con,"SELECT * FROM entregables where codigo_proyecto= $id_p");
-      $entregable1=mysqli_fetch_array($entregable);
-      $ent_id=$entregable1["id"];
-      $ent_nom=$entregable1["nombre"];
+     $sql_ent="SELECT * FROM  entregables WHERE codigo_proyecto='$id_p'";
+    $query_entregable = mysqli_query($con, $sql_ent);
+        while ($row_ent=mysqli_fetch_array($query_entregable)){
+          $id_entregable0=$row_ent['id'];
+          $nombre_entregable0=$row_ent['nombre'];
 
-
+        }
 
       $tp4=mysqli_query($con,"SELECT count(*) as tp4 FROM archivos where codigo_proyecto= $id_p");
       $rwp4=mysqli_fetch_array($tp4);
@@ -204,7 +205,7 @@
                                       <i class="fa fa-edit"></i>
                                       </button>
                                       
-                                      <button type="button" id="btnmodal" class="btn btn-danger" data-toggle="modal" data-target="#ModalBorrarEntregable" data-cod="<?php echo $ent_id; ?>" data-ape="<?php echo $ent_nom; ?>">
+                                      <button type="button" id="btnmodal" class="btn btn-danger" data-toggle="modal" data-target="#ModalBorrarEntregable" data-cod="<?php echo $id_entregable0; ?>" data-ape="<?php echo $nombre_entregable0; ?>">
                                       <i class="fa fa-trash"></i>
                                       </button>
   
