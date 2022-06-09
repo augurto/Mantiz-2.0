@@ -14,7 +14,7 @@
                   <div class="modal fade" id="subTipo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
-                        <form action="../../includes/process/insert/insertar_proyecto.php">
+                        <form action="../../includes/process/insert/insertar_proyecto2.php">
                         <div class="modal-header">
                           <h5 class="modal-title" id="exampleModalLongTitle">Agregar Sub tipo Proyecto</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -33,8 +33,7 @@
                           
                         </div>
 
-                      <!--   mostrar el ultimo codigo de todos los proyectos -->
-                      
+             
                        
 
                      
@@ -48,24 +47,11 @@
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-usd" aria-hidden="true">Nombre</i></span>
                           </div>
-                          <input type="number" class="form-control" placeholder="Nombre del sub tipo a agregar" id="presupuesto" name="presupuesto" >
+                          <input type="text" class="form-control" placeholder="Nombre del sub tipo a agregar" id="presupuesto" name="presupuesto" >
                           
                         </div>
 
-                              <!-- para insertar adelanto -->
-
-                        <!-- <br>
-                       <label for="inputProyec">Adelanto</label>
-                       
-                        <div class="input-group mb-3">
-                          
-                          <br>
-                          <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fa fa-usd" aria-hidden="true">S/.</i></span>
-                          </div>
-                          <input type="number" class="form-control" placeholder="Platita" >
-                          
-                        </div> -->
+                              
                               <br>
                        
                                               
@@ -82,43 +68,6 @@
                         
                         </form>
 
-                       <!--  <table  class="table table-hover" cellspacing="0" width="100%">
-                    
-                    <thead>
-                    <tr>
-                      
-                      <th>ID</th>
-                      <th>Nombre</th>
-                      
-                      
-                    </tr>
-                    </thead>
-                    <?php foreach ($link->query('SELECT * from codigo_generado_proyecto') as $row_code){ // aca puedes hacer la consulta e iterarla con each.
-                        
-                    $nom_entregable=$row_code['varaible'];
-                    $id_entr=$row_code['id_cod_gen_pro'];
-                        
-                        ?> 
-                        
-                        <tr>    
-                        <td><?php echo $estado_ent; ?></td>
-                        <td><?php echo $nom_entregable; ?></td>
-                        </tr>
-                    <?php
-                    }
-                    ?>
-                    </table>  -->  
-                    <!--     <div class="input-group mb-3">
-                          
-                          <br>
-                          <div class="input-group-prepend">
-                        
-
-                          </div>
-                          
-                          
-                        </div>
- -->
                         
                        
 
