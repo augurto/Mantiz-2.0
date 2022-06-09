@@ -5,7 +5,7 @@
                     
 
                     <div class="col text-center">
-                      <button type="button" class="btn btn-primary" id="boton_proyecto" data-toggle="modal" data-target="#subTipo">
+                      <button type="button" class="btn btn-success" id="boton_proyecto" data-toggle="modal" data-target="#subTipo">
                       Nuevo Sub Tipo
                       </button>
                     </div>
@@ -27,7 +27,7 @@
                           
                           <br>
                           <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
+                            <span class="input-group-text"><i class="fa fa-sitemap" aria-hidden="true"></i></span>
                           </div>
                           <input type="text" class="form-control" placeholder="Nombre del Proyecto" id="nombre-tipo" name="nombre-tipo" >
                           
@@ -39,17 +39,7 @@
                      
                        <br>
                        
-                       <label for="inputProyec">Nombre</label>
-                       
-                        <div class="input-group mb-3">
-                          
-                          <br>
-                          <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fa fa-usd" aria-hidden="true">Nombre</i></span>
-                          </div>
-                          <input type="text" class="form-control" placeholder="Nombre del sub tipo a agregar" id="presupuesto" name="presupuesto" >
-                          
-                        </div>
+                      
 
                               
                               <br>
