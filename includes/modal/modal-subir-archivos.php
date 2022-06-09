@@ -37,8 +37,8 @@
                         ?>
       <div class="modal-body">
       <div class="input-group mb-3">
-      <input type="text" value="<?php echo $_GET["id_p"]; ?>" id="codigo" name="codigo" >
-      <input type="text" value="<?php echo $nombre_proyecto; ?>" id="codigop" name="codigop" >
+      <input type="hidden" value="<?php echo $_GET["id_p"]; ?>" id="codigo" name="codigo" >
+      <input type="hidden" value="<?php echo $nombre_proyecto; ?>" id="nombre_proyecto" name="nombre_proyecto" >
       <input type="hidden" value="<?php echo $usuario; ?>" id="usuario" name="usuario" >
         <input type="file" class="form-control"  id="documento" name="documento" aria-label="Username" aria-describedby="basic-addon1">
       </div>  
