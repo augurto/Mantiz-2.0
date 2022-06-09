@@ -4,13 +4,7 @@
       $rwp=mysqli_fetch_array($tp);
       $tps=$rwp["tp"];
 
-     $sql_ent="SELECT * FROM  entregables WHERE codigo_proyecto='$id_p'";
-    $query_entregable = mysqli_query($con, $sql_ent);
-        while ($row_ent=mysqli_fetch_array($query_entregable)){
-          $id_entregable0=$row_ent['id'];
-          $nombre_entregable0=$row_ent['nombre'];
-
-        }
+     
 
       $tp4=mysqli_query($con,"SELECT count(*) as tp4 FROM archivos where codigo_proyecto= $id_p");
       $rwp4=mysqli_fetch_array($tp4);
@@ -172,7 +166,7 @@
                       ?>
                 <tr>
                   
-                    <td><?php echo $row['nombre'] ?></td>
+                    <td><?php echo $row['nombre'].'-'.$row['id'] ?></td>
                     <td>
                       
 
