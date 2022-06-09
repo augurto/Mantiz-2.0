@@ -125,6 +125,7 @@
                       
                       <th>Entregable</th>
                       <th>Progreso</th>
+                      <th>Accion</th>
                       
                     </tr>
                     </thead>
@@ -187,6 +188,24 @@
                       <?php } ?>
 
                     </td>
+                    <?php if ($tipo_user==1) { ?>
+                              
+                              <td>
+                           
+                                      <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#ModalEditEntregable" data-nom="<?php echo $codigo; ?>" data-nom2="<?php echo $nombre_proyecto; ?>" data-ape="<?php echo $presupuesto;?>" data-estado="<?php echo $estado;  ?>" >
+                                      <i class="fa fa-edit"></i>
+                                      </button>
+                                      
+                                      <button type="button" id="btnmodal" class="btn btn-danger" data-toggle="modal" data-target="#ModalBorrarEntregable" data-cod="<?php echo $id_ent; ?>" data-ape="<?php echo $nom; ?>">
+                                      <i class="fa fa-trash"></i>
+                                      </button>
+  
+                                      
+                                     
+  
+                              </td>
+                              <?php }
+                              ?>
                 </tr>
                 <?php
                   }
