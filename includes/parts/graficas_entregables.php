@@ -121,8 +121,7 @@
 
                 ?>
 
-<div class="container">
-        <div class="row">
+
                 <div class="col-lg-12">
                     <div class="table-responsive">        
                         <table id="example" class="table table-hover" cellspacing="0" width="100%">
@@ -229,8 +228,7 @@
 
           
           <br>
-        </div>
+        
       </div>
     </div>
-  </div>
-</div>
+
