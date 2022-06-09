@@ -29,7 +29,8 @@
                         $count=1;
                         /* foreach ($link->query('SELECT * from entregables e inner join proyecto p on e.codigo_proyecto = p.codigo inner join archivos a on e.codigo_proyecto = a.codigo_proyecto order by a.codigo_proyecto desc') as $row){  ?>  */
                         
-                        foreach ($link->query('SELECT DISTINCT * from archivos a inner join entregables e on a.a_codigo_proyecto=e.codigo_proyecto and a.id_seg=e.id inner join proyecto p on a.a_codigo_proyecto = p.codigo order by a_id desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                        foreach ($link->query('SELECT DISTINCT * from archivos a inner join entregables e on a.a_codigo_proyecto=e.codigo_proyecto and a.id_seg=e.id inner join proyecto p on a.a_codigo_proyecto = p.codigo order by a_id desc') as $row){ // aca se hace la consulta e iterarla con each. 
+                        ?> 
 
                         <?php
                         
@@ -45,6 +46,7 @@
                         $fecha_actual=strtotime(date("Y-m-d",time()));
                         $fecha_v=strtotime($fecha_entrega);                     
                         $estado=$row['estado'];
+                        
                          if ($fecha_actual>$fecha_v) { ?>
                              
                              <tr style="background-color: #F93422 !important;">
