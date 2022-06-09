@@ -197,7 +197,7 @@
                               
                               <td>
                            
-                                      <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#ModalEditEntregable" data-nom="<?php echo $codigo; ?>" data-nom2="<?php echo $nombre_proyecto; ?>" data-ape="<?php echo $presupuesto;?>" data-estado="<?php echo $estado;  ?>" >
+                                      <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#ModalEditEntregable" data-nom="<?php echo $id_entr; ?>" data-nom2="<?php echo $nom_entregable; ?>" data-ape="<?php echo $id_entr;?>" data-estado="<?php echo $id_entr;  ?>" >
                                       <i class="fa fa-edit"></i>
                                       </button>
                                       

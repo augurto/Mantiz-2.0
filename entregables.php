@@ -67,7 +67,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 
     <?php include 'includes/parts/graficas_entregables.php'; ?>
     <?php include 'includes/modal-eliminar/eliminar_entregable.php'; ?>
-    <!-- <?php include 'includes/modal-eliminar/eliminar_proyecto.php'; ?> -->
+    <?php include 'includes/modal-editar/editar_entregable.php'; ?>
     <!-- Fin de graficas -->
     <!-- Boton agregar proyecto -->
     <div class="container">
