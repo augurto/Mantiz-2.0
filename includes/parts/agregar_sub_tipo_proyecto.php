@@ -14,7 +14,7 @@
                   <div class="modal fade" id="subTipo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
-                        <form action="../../includes/process/insert/insertar_proyecto2.php">
+                        <form action="../../includes/process/insert/insertar_tipo_codigo_proyecto.php">
                         <div class="modal-header">
                           <h5 class="modal-title" id="exampleModalLongTitle">Agregar Sub tipo Proyecto</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -29,7 +29,7 @@
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
                           </div>
-                          <input type="text" class="form-control" placeholder="Nombre del Proyecto" id="nombre-proyecto" name="nombre-proyecto" >
+                          <input type="text" class="form-control" placeholder="Nombre del Proyecto" id="nombre-tipo" name="nombre-tipo" >
                           
                         </div>
 
