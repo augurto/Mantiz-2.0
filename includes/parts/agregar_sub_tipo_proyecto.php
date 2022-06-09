@@ -1,3 +1,4 @@
+<br>
 <div class="container">
         <div class="row">
           <div class="col-lg-12">
@@ -51,7 +52,7 @@
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-usd" aria-hidden="true">Nombre</i></span>
                           </div>
-                          <input type="number" class="form-control" placeholder="Presupuesto" id="presupuesto" name="presupuesto" >
+                          <input type="number" class="form-control" placeholder="Nombre del sub tipo a agregar" id="presupuesto" name="presupuesto" >
                           
                         </div>
 
@@ -85,7 +86,7 @@
                         
                         </form>
 
-                        <table  class="table table-hover" cellspacing="0" width="100%">
+                       <!--  <table  class="table table-hover" cellspacing="0" width="100%">
                     
                     <thead>
                     <tr>
@@ -110,7 +111,7 @@
                     <?php
                     }
                     ?>
-                    </table>   
+                    </table>  -->  
                     <!--     <div class="input-group mb-3">
                           
                           <br>
