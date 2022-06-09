@@ -196,7 +196,7 @@
                                       <i class="fa fa-edit"></i>
                                       </button>
                                       
-                                      <button type="button" id="btnmodal" class="btn btn-danger" data-toggle="modal" data-target="#ModalBorrarEntregable" data-cod="<?php echo $id_ent; ?>" data-ape="<?php echo $nom; ?>">
+                                      <button type="button" id="btnmodal" class="btn btn-danger" data-toggle="modal" data-target="#ModalBorrarEntregable" data-cod="<?php echo $id_ent2; ?>" data-ape="<?php echo $nom2; ?>">
                                       <i class="fa fa-trash"></i>
                                       </button>
   
