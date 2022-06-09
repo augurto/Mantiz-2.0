@@ -169,7 +169,7 @@
                       ?>
                 <tr>
                     <?php  if ($estado_ent==1) { ?>
-                     <td style="color:red"><?php echo $nom_entregable.'-'.$estado_ent; ?></td>
+                     <td class="table-danger"><?php echo $nom_entregable.'-'.$estado_ent; ?></td>
 
                     <?php } else {?>
                     <td><?php echo $nom_entregable.'-'.$estado_ent; ?></td>
