@@ -1,9 +1,5 @@
 <br>
-<div class="container">
-        <div class="row">
-          <div class="col-lg-12">
 
-            <div class="table-responsive"> 
                     
                     <!-- Button trigger modal -->
                     
@@ -131,10 +127,4 @@
                       
                     </div>
                   </div>
-                  
-                  </div>
-
-                  
-          </div>
-      </div>
-  </div>
+                
