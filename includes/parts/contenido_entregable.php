@@ -92,7 +92,7 @@
                   <option value="2">Two</option>
                   <option value="3">Three</option>
                 </select>
-                <button class="btn btn-outline-secondary" type="button"><i class="fa fa-check" aria-hidden="true"></i></button>
+                <button class="btn btn-outline-secondary" type="button" style="padding: 0px 20px;"><i class="fa fa-check" aria-hidden="true"></i></button>
                 
             
               </div>
