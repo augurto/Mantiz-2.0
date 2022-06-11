@@ -46,17 +46,33 @@
                 } else{
                     echo 'Observado';
                 }?></h6></div>
-                <div class="input-group">
-                  <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                
+                <div class="grid">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <?php if ($tipo_user==1) { ?>
+                        <form action="../../includes/process/actualizar/actualizar_estado_entregable.php">
+                        
+                        <input type="hidden" value="<?php echo $id; ?>" id="id" name="id" >
+                        <input type="hidden" value="<?php echo $id_p; ?>" id="id_p" name="id_p" >
+                        <div class="input-group">
+                        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
                           <option selected>Cambiar Estado</option>
                           <option value="0">Pendiente</option>
                           <option value="1">Aprobado</option>
                           <option value="2">Observado</option>
-                  </select>
-                  <button class="btn btn-outline-secondary" type="submit"><i class="fa fa-check" aria-hidden="true"></i></button>
-                </div>
-
-               
+                        </select>
+                        <button type="submit" class="btn btn-outline-primary"><i class="fa fa-check" aria-hidden="true"></i></button>
+                      
+                        
+                        </div>
+                        </form>
+                        <?php } ?>
+                        
+                        <div class="g-col-6 g-col-md-4"><a href="#"  data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
+                <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
+                <!-- Counter - Messages -->
+              </a></div>
+                        </div>
                
                 <!-- Card Body -->
                 <?php 
