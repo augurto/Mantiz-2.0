@@ -81,7 +81,7 @@
 
                         <?php }?> 
 
-                <div style="background-color: #FFF0F5 !important;" >
+            
 
                 <?php if ($tipo_user==1) { ?>
                 <form action="../../includes/process/actualizar/actualizar_estado_entregable.php">
