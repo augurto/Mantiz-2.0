@@ -1,7 +1,6 @@
  <br>
  <br>
- <div class="container">
-            <div class="row">     
+ <div class="row">       
           <?php $sql="SELECT * FROM  archivos WHERE a_codigo_proyecto='$id_p' /* AND id_miembros='$est' */ order by id_seg asc";
     $query = mysqli_query($con, $sql);
         while ($row=mysqli_fetch_array($query)){
@@ -27,7 +26,29 @@
 
     ?>      
               <div class="col-3">
-                  
+                  <ol class="list-group list-group-numbered">
+                      <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                          <div class="fw-bold">Subheading</div>
+                          Content for list item
+                        </div>
+                        <span class="badge bg-primary rounded-pill">14</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                          <div class="fw-bold">Subheading</div>
+                          Content for list item
+                        </div>
+                        <span class="badge bg-primary rounded-pill">14</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                          <div class="fw-bold">Subheading</div>
+                          Content for list item
+                        </div>
+                        <span class="badge bg-primary rounded-pill">14</span>
+                      </li>
+                    </ol>
               </div>
               </div>
               </div>
@@ -69,11 +90,11 @@
                   </a>
                   <?php if ($tipo_user==1) { ?>
                   
-                    <span class="badge bg-primary rounded-pill">
+                
                   <a href="../../includes/process/eliminar/eliminar_entregable.php?entregable=<?php echo $documento ; ?>&proyecto=<?php echo $a_codigo_proyecto ;?>&id_entregable=<?php echo $id_seg ; ?>" >
                     <i class="fas fa-trash" style="color: red;"></i>
                     <!-- Counter - Messages -->
-                  </a></span>
+                  </a>
                   <?php } ?>
                 </li>
               </ul>
@@ -84,3 +105,4 @@
          
           
           <?php } ?>
+    </div>
