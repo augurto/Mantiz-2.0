@@ -58,7 +58,7 @@
                             </div>
                    
 
-                              <?php $rs = mysqli_query($con, "SELECT MAX(codigo) AS id FROM proyecto");
+                              <?php $rs = mysqli_query($con, "SELECT MAX(id) AS id FROM proyecto");
                               if ($row = mysqli_fetch_row($rs)) {
                               $codigo_proyecto = trim($row[0]);
                               $id_codigo=++$codigo_proyecto;
