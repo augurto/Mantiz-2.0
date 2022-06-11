@@ -27,8 +27,8 @@
     ?>      
            
             
-           <div class="col-6 col-md-3">
-              <ul class="list-group list-group-flush">
+           <div class="col-6 col-md-4">
+              <ul class="list-group list-group-flush" style="background-color: red;">
                 <li class="list-group-item"><?php echo $nom." - "; ?><?php if ($estado_entregable==0) {
                     # code...
                     echo 'Pendiente';
