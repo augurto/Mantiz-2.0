@@ -27,7 +27,7 @@
     ?>      
            
             
-            <div class="card text-bg-primary mb-3" style="width: 24rem;">
+            <div class="card text-bg-primary mb-3" style="width: 18rem;">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item"><?php echo $nom." - "; ?><?php if ($estado_entregable==0) {
                     # code...
