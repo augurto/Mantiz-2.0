@@ -78,8 +78,8 @@
                 
                 </div>
                 <div class="input-group input-group-sm mb-3">
-                <div class="input-group">
-                <div class="col-10">
+                <div class="input-group" style="padding: 0px 20px !important;">
+             
                 <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon" id="estado_entregable1" name="estado_entregable1">
                 <option selected>Selecciona Estado</option>
                   <option value="0">Pendiente</option>
@@ -88,7 +88,7 @@
                 </select>
                 <button class="btn btn-outline-secondary" type="submit" ><i class="fa fa-check" aria-hidden="true"></i></button>
                 
-                </div>
+                
               </div>
               </div>
               
