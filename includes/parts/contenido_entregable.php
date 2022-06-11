@@ -3,6 +3,31 @@
  <!-- Begin Page Content -->
  <div class="container-fluid">
 
+
+
+        <!-- <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800"><b><?php echo $nombre; ?> </b></h1>
+            <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#SubirArchivo"  ><i class="fas fa-folder fa-sm text-white-50"></i> Subir Archivos</a>
+
+            
+          </div>
+
+          <div>
+
+          <a href="#" class="btn btn-primary btn-icon-split" title='Entregables' onclick="segg(<?php echo $id_p;?>);" data-toggle="modal" data-target="#AgregarEntregable">
+                    <span class="icon text-white-50">
+                      <i class="fas fa-check"></i>
+                    </span>
+                    <span class="text"> Agregar Entregables</span>
+                  </a> 
+          </div> -->
+         <!--  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+          <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#AgregarEntregable"><i class="fas fa-user fa-sm text-white-50"></i> Entregables</a>
+          </div> -->
+     
+         <!-- aca va listar_entregables_tabla.php -->
+
+          <!-- DataTales Example -->
           <div class="row">
           <?php $sql="SELECT * FROM  archivos WHERE a_codigo_proyecto='$id_p' /* AND id_miembros='$est' */ order by id_seg asc";
     $query = mysqli_query($con, $sql);
@@ -28,10 +53,6 @@
             $estado=$rwdt['estado'];
 
     ?>      
-            <!-- condicional para colores dependiendo al estado del entregable -->
-            <!-- caso activo -->
-            
-            
                 <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
@@ -45,37 +66,26 @@
                     echo 'Aprobado';
                 } else{
                     echo 'Observado';
-                }?></h6></div>
-                <div class="grid">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <div class="input-group">
-                        <?php if ($tipo_user==1) { ?>
-                        <form action="../../includes/process/actualizar/actualizar_estado_entregable.php">
-                        
-                        <input type="text" value="<?php echo $id; ?>" id="id" name="id" >
-                        <input type="text" value="<?php echo $id_p; ?>" id="id_p" name="id_p" >
-                        
-                          <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                            <option selected>Cambiar estado.</option>
-                          <option value="0">Pendiente</option>
-                          <option value="1">Aprobado</option>
-                          <option value="2">Observado</option>
-                        </select>
-                        <button type="submit" class="btn btn-outline-secondary"><i class="fa fa-check" aria-hidden="true"></i></button>
-                       
-                        </form>
-                        <?php } ?>
-                        
-
-                        </div>
-                        
-                        </div>
-                        <div class="g-col-6 g-col-md-4"><a href="#"  data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
-                <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
-                <!-- Counter - Messages -->
-              </a></div>
-                        </div>
-               
+                }?></h6>
+                <?php if ($tipo_user==1) { ?>
+                <form action="../../includes/process/actualizar/actualizar_estado_entregable.php">
+                <div class="input-group input-group-sm mb-3">
+                <input type="hidden" value="<?php echo $id; ?>" id="id" name="id" >
+                <input type="hidden" value="<?php echo $id_p; ?>" id="id_p" name="id_p" >
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="estado_entregable1" name="estado_entregable1">
+                  <option selected>Selecciona Estado</option>
+                  <option value="0">Pendiente</option>
+                  <option value="1">Aprobado</option>
+                  <option value="2">Observado</option>
+                </select>
+                <button type="submit" class="btn btn-outline-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Actualizar Estado</button>
+                </div>
+                
+              
+                </form>
+                <?php } ?>
+                 
+                </div>
                 <!-- Card Body -->
                 <?php 
             if ($estado_entregable==0) { ?>
