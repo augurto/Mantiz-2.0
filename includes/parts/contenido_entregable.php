@@ -86,7 +86,7 @@
                   <option value="1">Aprobado</option>
                   <option value="2">Observado</option>
                 </select>
-                <button class="btn btn-outline-secondary" type="submit" style="padding: 0px 20px !important;"><i class="fa fa-check" aria-hidden="true"></i></button>
+                <button class="btn btn-outline-secondary" type="submit" ><i class="fa fa-check" aria-hidden="true"></i></button>
                 
                 </div>
               </div>
