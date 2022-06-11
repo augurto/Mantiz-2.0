@@ -56,7 +56,7 @@
             <!-- condicional para colores dependiendo al estado del entregable -->
             <!-- caso activo -->
             
-            <div class="card text-bg-primary mb-3" style="width: 18rem;">
+            <div class="card text-bg-primary mb-3" style="width: 24rem;">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item"><?php echo $nom." - "; ?><?php if ($estado_entregable==0) {
                     # code...
@@ -71,7 +71,7 @@
                 <form action="../../includes/process/actualizar/actualizar_estado_entregable.php">
                 <input type="hidden" value="<?php echo $id; ?>" id="id" name="id" >
                 <input type="hidden" value="<?php echo $id_p; ?>" id="id_p" name="id_p" >
-                <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="estado_entregable1" name="estado_entregable1">
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="estado_entregable1" name="estado_entregable1">
                   <option selected>Cambiar Estado</option>
                   <option value="0">Pendiente</option>
                   <option value="1">Aprobado</option>
