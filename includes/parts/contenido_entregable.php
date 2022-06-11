@@ -1,6 +1,6 @@
  <br>
  <br>
-         
+ <div class="row">       
           <?php $sql="SELECT * FROM  archivos WHERE a_codigo_proyecto='$id_p' /* AND id_miembros='$est' */ order by id_seg asc";
     $query = mysqli_query($con, $sql);
         while ($row=mysqli_fetch_array($query)){
@@ -25,8 +25,7 @@
             $estado=$rwdt['estado'];
 
     ?>      
-            <!-- condicional para colores dependiendo al estado del entregable -->
-            <!-- caso activo -->
+           
             
             <div class="card text-bg-primary mb-3" style="width: 24rem;">
               <ul class="list-group list-group-flush">
@@ -81,4 +80,4 @@
          
           
           <?php } ?>
-    
+    </div>
