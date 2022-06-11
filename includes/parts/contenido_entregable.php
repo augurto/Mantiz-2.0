@@ -68,10 +68,10 @@
                         </form>
                         <?php } ?>
                         
-                        <div class="g-col-6 g-col-md-4"><a href="#"  data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
+                        <a href="#"  data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
                 <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
                 <!-- Counter - Messages -->
-              </a></div>
+              </a>
                         </div>
                
                 <!-- Card Body -->
