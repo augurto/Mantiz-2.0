@@ -56,13 +56,34 @@
             <!-- condicional para colores dependiendo al estado del entregable -->
             <!-- caso activo -->
             
-            <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-              <div class="card-header">Header</div>
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
+            <div class="card text-bg-primary mb-3" style="width: 18rem;">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><?php echo $nom." - "; ?><?php if ($estado_entregable==0) {
+                    # code...
+                    echo 'Pendiente';
+                }elseif ($estado_entregable==1) {
+                    # code...
+                    echo 'Aprobado';
+                } else{
+                    echo 'Observado';
+                }?></li>
+                <li class="list-group-item"><?php if ($tipo_user==1) { ?>
+                <form action="../../includes/process/actualizar/actualizar_estado_entregable.php">
+                <input type="hidden" value="<?php echo $id; ?>" id="id" name="id" >
+                <input type="hidden" value="<?php echo $id_p; ?>" id="id_p" name="id_p" >
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="estado_entregable1" name="estado_entregable1">
+                  <option selected>Selecciona Estado</option>
+                  <option value="0">Pendiente</option>
+                  <option value="1">Aprobado</option>
+                  <option value="2">Observado</option>
+                </select>
+                <button type="submit" class="btn btn-outline-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Actualizar Estado</button>
+                </form>
+                <?php } ?>
+                </li>
+                <li class="list-group-item">A third item</li>
+              </ul>
             </div>
-
                 <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
