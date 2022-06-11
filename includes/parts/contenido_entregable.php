@@ -45,7 +45,7 @@
                     echo 'Aprobado';
                 } else{
                     echo 'Observado';
-                }?></h6><br>
+                }?></h6></div>
                 <?php if ($tipo_user==1) { ?>
                 <form action="../../includes/process/actualizar/actualizar_estado_entregable.php">
                 <div class="input-group input-group-sm mb-3">
@@ -64,7 +64,7 @@
                 </form>
                 <?php } ?>
                  
-                </div>
+               
                 <!-- Card Body -->
                 <?php 
             if ($estado_entregable==0) { ?>
