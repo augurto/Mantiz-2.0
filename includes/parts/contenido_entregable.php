@@ -30,24 +30,7 @@
     ?>      
             <!-- condicional para colores dependiendo al estado del entregable -->
             <!-- caso activo -->
-            <div class="grid" style="--bs-columns: 3;">
-  <div>
-    First auto-column
-    <div class="grid">
-      <div>Auto-column</div>
-      <div>Auto-column</div>
-    </div>
-  </div>
-  <div>
-    Second auto-column
-    <div class="grid" style="--bs-columns: 12;">
-      <div class="g-col-6">6 of 12</div>
-      <div class="g-col-4">4 of 12</div>
-      <div class="g-col-2">2 of 12</div>
-    </div>
-  </div>
-  <div>Third auto-column</div>
-</div>
+            
             
                 <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4">
@@ -63,7 +46,6 @@
                 } else{
                     echo 'Observado';
                 }?></h6></div>
-                
                 <div class="grid">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                         <?php if ($tipo_user==1) { ?>
@@ -71,24 +53,23 @@
                         
                         <input type="hidden" value="<?php echo $id; ?>" id="id" name="id" >
                         <input type="hidden" value="<?php echo $id_p; ?>" id="id_p" name="id_p" >
-                        <div class="input-group">
-                        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="estado_entregable1" name="estado_entregable1">
                           <option selected>Cambiar Estado</option>
                           <option value="0">Pendiente</option>
                           <option value="1">Aprobado</option>
                           <option value="2">Observado</option>
                         </select>
-                        <button type="submit" class="btn btn-outline-primary"><i class="fa fa-check" aria-hidden="true"></i></button>
+                        <button type="submit" class="btn btn-outline-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"><i class="fa fa-check" aria-hidden="true"></i></button>
                       
                         
-                        </div>
+                      </div>
                         </form>
                         <?php } ?>
                         
-                        <a href="#"  data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
+                        <div class="g-col-6 g-col-md-4"><a href="#"  data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
                 <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
                 <!-- Counter - Messages -->
-              </a>
+              </a></div>
                         </div>
                
                 <!-- Card Body -->
