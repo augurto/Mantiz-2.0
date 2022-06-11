@@ -1,6 +1,7 @@
  <br>
  <br>
- <div class="row">       
+ <div class="container">
+            <div class="row">     
           <?php $sql="SELECT * FROM  archivos WHERE a_codigo_proyecto='$id_p' /* AND id_miembros='$est' */ order by id_seg asc";
     $query = mysqli_query($con, $sql);
         while ($row=mysqli_fetch_array($query)){
@@ -24,8 +25,7 @@
             $ts=$rwdt["t"];
             $estado=$rwdt['estado'];
 
-    ?>      <div class="container">
-            <div class="row">
+    ?>      
               <div class="col-3">
                   <ol class="list-group list-group-numbered">
                       <li class="list-group-item d-flex justify-content-between align-items-start">
@@ -106,4 +106,3 @@
          
           
           <?php } ?>
-    </div>
