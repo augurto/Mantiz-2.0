@@ -68,7 +68,7 @@
                     echo 'Observado';
                 }?></h6>
                 </div>
-                <div>
+                <div style="background-color: #FFF0F5 !important;" >
 
                 <?php if ($tipo_user==1) { ?>
                 <form action="../../includes/process/actualizar/actualizar_estado_entregable.php">
@@ -77,10 +77,10 @@
                 <input type="hidden" value="<?php echo $id_p; ?>" id="id_p" name="id_p" >
                 
                 </div>
-                <div class="input-group input-group-sm mb-3" style="background-color: #FFF0F5 !important;" >
+                <div class="input-group input-group-sm mb-3" >
                 <div class="input-group" style="padding: 0px 20px !important;">
              
-                <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon" id="estado_entregable1" name="estado_entregable1">
+                <select class="form-select" style="border-color: #0275d8 !important;" id="inputGroupSelect04" aria-label="Example select with button addon" id="estado_entregable1" name="estado_entregable1">
                 <option selected>Selecciona Estado</option>
                   <option value="0">Pendiente</option>
                   <option value="1">Aprobado</option>
