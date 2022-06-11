@@ -72,7 +72,7 @@
                 <input type="hidden" value="<?php echo $id; ?>" id="id" name="id" >
                 <input type="hidden" value="<?php echo $id_p; ?>" id="id_p" name="id_p" >
                 <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="estado_entregable1" name="estado_entregable1">
-                  <option selected>Selecciona Estado</option>
+                  <option selected>Cambiar Estado</option>
                   <option value="0">Pendiente</option>
                   <option value="1">Aprobado</option>
                   <option value="2">Observado</option>
@@ -86,11 +86,20 @@
                 </li>
                 <li class="list-group-item">
                 <p>URL: </p> <a href="<?php echo  $link  ; ?>/<?php echo  $link; ?>" download="<?php echo  $link  ; ?>/<?php echo  $link; ?>" target="_blank"><i class="fa fa-cloud-download" ></i>  <?php echo $link; ?></a>
-
-
                 <?php echo $descripcion; ?>
-               <br>
-               <?php echo "Usuario : " .$usuario_seguimiento; ?>
+                <?php echo "Usuario : " .$usuario_seguimiento; ?>
+                <a href="#"  data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
+                <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
+                    <!-- Counter - Messages -->
+                  </a>
+                  <?php if ($tipo_user==1) { ?>
+                  
+                
+                  <a href="../../includes/process/eliminar/eliminar_entregable.php?entregable=<?php echo $documento ; ?>&proyecto=<?php echo $a_codigo_proyecto ;?>&id_entregable=<?php echo $id_seg ; ?>" >
+                    <i class="fas fa-trash" style="color: red;"></i>
+                    <!-- Counter - Messages -->
+                  </a>
+                  <?php } ?>
                 </li>
               </ul>
             </div>
