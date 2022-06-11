@@ -61,12 +61,12 @@
                               <?php $rs = mysqli_query($con, "SELECT MAX(codigo) AS id FROM proyecto");
                               if ($row = mysqli_fetch_row($rs)) {
                               $codigo_proyecto = trim($row[0]);
-                              $id_codigo=$codigo_proyecto+1;
+                              $id_codigo=++$codigo_proyecto;
                               } 
                               
                               ?>
 
-                             <input type="number" class="form-control" id="codigo"  name="codigo"  value="<?php echo ++$id_codigo ?>" readonly>
+                             <input type="number" class="form-control" id="codigo"  name="codigo"  value="<?php echo $id_codigo ?>" readonly>
                              
                        </div>
                        <br>
