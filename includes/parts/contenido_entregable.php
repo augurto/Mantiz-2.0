@@ -51,8 +51,8 @@
                         <?php if ($tipo_user==1) { ?>
                         <form action="../../includes/process/actualizar/actualizar_estado_entregable.php">
                         
-                        <input type="hidden" value="<?php echo $id; ?>" id="id" name="id" >
-                        <input type="hidden" value="<?php echo $id_p; ?>" id="id_p" name="id_p" >
+                        <input type="text" value="<?php echo $id; ?>" id="id" name="id" >
+                        <input type="text" value="<?php echo $id_p; ?>" id="id_p" name="id_p" >
                         <div class="input-group">
                           <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
                             <option selected>Cambiar estado.</option>
