@@ -27,7 +27,7 @@
     ?>      
            
             
-           <div class="col-6 col-md-4">
+           <div class="col-6 col-md-3">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item"><?php echo $nom." - "; ?><?php if ($estado_entregable==0) {
                     # code...
