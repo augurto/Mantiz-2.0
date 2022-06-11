@@ -45,19 +45,19 @@
                     echo 'Aprobado';
                 } else{
                     echo 'Observado';
-                }?></h6>
+                }?></h6><br>
                 <?php if ($tipo_user==1) { ?>
                 <form action="../../includes/process/actualizar/actualizar_estado_entregable.php">
                 <div class="input-group input-group-sm mb-3">
                 <input type="hidden" value="<?php echo $id; ?>" id="id" name="id" >
                 <input type="hidden" value="<?php echo $id_p; ?>" id="id_p" name="id_p" >
                 <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="estado_entregable1" name="estado_entregable1">
-                  <option selected>Selecciona Estado</option>
+                  <option selected>Cambiar Estado</option>
                   <option value="0">Pendiente</option>
                   <option value="1">Aprobado</option>
                   <option value="2">Observado</option>
                 </select>
-                <button type="submit" class="btn btn-outline-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Actualizar Estado</button>
+                <button type="submit" class="btn btn-outline-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"><i class="fa fa-check" aria-hidden="true"></i></button>
                 </div>
                 
               
