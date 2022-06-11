@@ -61,13 +61,17 @@
                               <?php $rs = mysqli_query($con, "SELECT MAX(codigo) AS id FROM proyecto");
                               if ($row = mysqli_fetch_row($rs)) {
                               $codigo_proyecto = trim($row[0]);
-                              } ?>
+                              } 
+                              $cod=mysqli_query($con,"select MAX(codigo) from proyecto");
+                                        while ($rw2=mysqli_fetch_array($cod)){
+                                          $id_codigo=$rw2["codigo "];}
+                              ?>
 
-                             <input type="number" class="form-control" id="codigo"  name="codigo"  value="<?php echo ++$codigo_proyecto ?>" readonly>
+                             <input type="number" class="form-control" id="codigo"  name="codigo"  value="<?php echo ++$id_codigo ?>" readonly>
                              
                        </div>
                        <br>
-                       <label for="inputProyec">Extension de Codigo del Proyecto</label>
+                       <label for="inputProyec">Sub tipo del Proyecto</label>
                        <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Extension</label>
                                 <select class="form-control" name="id_extension" id="id_extension" required="">
