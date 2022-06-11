@@ -122,7 +122,7 @@
                 ?>
 
               
-
+          <div class="col-xl-3 col-md-6 mb-4">
                 <div class="col-lg-12">
                     <div class="table-responsive">        
                         <table  class="table table-hover" cellspacing="0" width="100%">
@@ -230,6 +230,7 @@
           
           <br>
         
+          </div>
           </div>
     </div>
     </div>
