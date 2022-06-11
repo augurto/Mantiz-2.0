@@ -84,7 +84,7 @@
                 <button type="submit" class="btn btn-outline-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"><i class="fa fa-check" aria-hidden="true"></i>
 </button>
                 </div>
-                
+                <div class="input-group input-group-sm mb-3">
                 <div class="input-group">
                 <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
                   <option selected>Choose...</option>
@@ -92,11 +92,12 @@
                   <option value="2">Two</option>
                   <option value="3">Three</option>
                 </select>
-                <button class="btn btn-outline-secondary" type="button">Button</button>
+                <button class="btn btn-outline-secondary" type="button"><i class="fa fa-check" aria-hidden="true"></i></button>
                 <a href="#"  data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
                 <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
                 <!-- Counter - Messages -->
               </a>
+              </div>
               </div>
               
                 </form>
