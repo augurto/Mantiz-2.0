@@ -86,13 +86,13 @@
                 </div>
                 <div class="input-group input-group-sm mb-3">
                 <div class="input-group">
-                <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                  <option selected>Choose...</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon" id="estado_entregable1" name="estado_entregable1">
+                <option selected>Selecciona Estado</option>
+                  <option value="0">Pendiente</option>
+                  <option value="1">Aprobado</option>
+                  <option value="2">Observado</option>
                 </select>
-                <button class="btn btn-outline-secondary" type="button" style="padding: 0px 20px;"><i class="fa fa-check" aria-hidden="true"></i></button>
+                <button class="btn btn-outline-secondary" type="submit" style="padding: 0px 20px !important;"><i class="fa fa-check" aria-hidden="true"></i></button>
                 
             
               </div>
