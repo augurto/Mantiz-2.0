@@ -50,7 +50,7 @@
                 <div class="g-col-6 g-col-md-8">
                         <?php if ($tipo_user==1) { ?>
                         <form action="../../includes/process/actualizar/actualizar_estado_entregable.php">
-                        <div class="input-group input-group-sm mb-3">
+                        
                         <input type="hidden" value="<?php echo $id; ?>" id="id" name="id" >
                         <input type="hidden" value="<?php echo $id_p; ?>" id="id_p" name="id_p" >
                         <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="estado_entregable1" name="estado_entregable1">
@@ -60,12 +60,16 @@
                           <option value="2">Observado</option>
                         </select>
                         <button type="submit" class="btn btn-outline-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"><i class="fa fa-check" aria-hidden="true"></i></button>
-                        </div>
+                      
                         
                       
                         </form>
                         <?php } ?>
                         </div>
+                        <div class="g-col-6 g-col-md-4"><a href="#"  data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
+                <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
+                <!-- Counter - Messages -->
+              </a></div>
                         </div>
                
                 <!-- Card Body -->
