@@ -93,6 +93,10 @@
                   <option value="3">Three</option>
                 </select>
                 <button class="btn btn-outline-secondary" type="button">Button</button>
+                <a href="#"  data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
+                <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
+                <!-- Counter - Messages -->
+              </a>
               </div>
               
                 </form>
