@@ -61,10 +61,9 @@
                               <?php $rs = mysqli_query($con, "SELECT MAX(codigo) AS id FROM proyecto");
                               if ($row = mysqli_fetch_row($rs)) {
                               $codigo_proyecto = trim($row[0]);
+                              $id_codigo=$codigo_proyecto+1;
                               } 
-                              $cod=mysqli_query($con,"select MAX(codigo) from proyecto");
-                                        while ($rw2=mysqli_fetch_array($cod)){
-                                          $id_codigo=$rw2["codigo "];}
+                              
                               ?>
 
                              <input type="number" class="form-control" id="codigo"  name="codigo"  value="<?php echo ++$id_codigo ?>" readonly>
