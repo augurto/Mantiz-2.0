@@ -77,11 +77,21 @@
                   <option value="1">Aprobado</option>
                   <option value="2">Observado</option>
                 </select>
-                <button type="submit" class="btn btn-outline-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Actualizar Estado</button>
+                <button type="submit" class="btn btn-outline-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"><i class="fa fa-check" aria-hidden="true"></i></button>
                 </form>
                 <?php } ?>
                 </li>
-                <li class="list-group-item">A third item</li>
+                <li class="list-group-item">
+                <a href="archivos/<?php echo  $id_p  ; ?>/<?php echo  $id_ent; ?>/<?php echo  $documento; ?>" download="archivos/<?php echo  $id_p  ; ?>/<?php echo  $id_ent  ; ?>/<?php echo  $documento; ?>"><i class="fa fa-download"></i> <?php echo $documento.$id_ent; ?></a>
+                </li>
+                <li class="list-group-item">
+                <p>URL: </p> <a href="<?php echo  $link  ; ?>/<?php echo  $link; ?>" download="<?php echo  $link  ; ?>/<?php echo  $link; ?>" target="_blank"><i class="fa fa-cloud-download" ></i>  <?php echo $link; ?></a>
+
+
+                <?php echo $descripcion; ?>
+               <br>
+               <?php echo "Usuario : " .$usuario_seguimiento; ?>
+                </li>
               </ul>
             </div>
                 <div class="col-xl-4 col-lg-5">
