@@ -77,7 +77,7 @@
                 <input type="hidden" value="<?php echo $id_p; ?>" id="id_p" name="id_p" >
                 
                 </div>
-                <div class="input-group input-group-sm mb-3">
+                <div class="input-group input-group-sm mb-3" style="background-color: #FFF0F5 !important;" >
                 <div class="input-group" style="padding: 0px 20px !important;">
              
                 <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon" id="estado_entregable1" name="estado_entregable1">
@@ -86,7 +86,7 @@
                   <option value="1">Aprobado</option>
                   <option value="2">Observado</option>
                 </select>
-                <button class="btn btn-outline-secondary" type="submit" ><i class="fa fa-check" aria-hidden="true"></i></button>
+                <button class="btn btn-outline-primary" type="submit" ><i class="fa fa-check" aria-hidden="true"></i></button>
                 
                 
               </div>
@@ -127,7 +127,7 @@
                   <!-- <div  align="center"><img src="img/file.png" width="00px" height="auto"></div> -->
                   <div align="center"><a href="archivos/<?php echo  $id_p  ; ?>/<?php echo  $id_ent; ?>/<?php echo  $documento; ?>" download="archivos/<?php echo  $id_p  ; ?>/<?php echo  $id_ent  ; ?>/<?php echo  $documento; ?>"><i class="fa fa-download"></i> <?php echo $documento.$id_ent; ?></a></div>
 
-                  <div align="center"><p>URL: </p> <a href="<?php echo  $link  ; ?>/<?php echo  $link; ?>" download="<?php echo  $link  ; ?>/<?php echo  $link; ?>" target="_blank"><i class="fa fa-cloud-download" ></i>  <?php echo $link; ?></a></div>
+                  <div ><p>URL:  <a href="<?php echo  $link  ; ?>/<?php echo  $link; ?>" download="<?php echo  $link  ; ?>/<?php echo  $link; ?>" target="_blank"><i class="fa fa-cloud-download" ></i>  <?php echo $link; ?></a></p></div>
 
                   
                <?php echo $descripcion; ?>
