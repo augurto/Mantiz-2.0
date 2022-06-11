@@ -47,7 +47,7 @@
                     echo 'Observado';
                 }?></h6></div>
                 <div class="grid">
-                <div class="g-col-6 g-col-md-8">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                         <?php if ($tipo_user==1) { ?>
                         <form action="../../includes/process/actualizar/actualizar_estado_entregable.php">
                         
