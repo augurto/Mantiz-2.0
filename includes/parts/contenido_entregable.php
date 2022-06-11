@@ -1,34 +1,6 @@
  <br>
  <br>
- <!-- Begin Page Content -->
- <div class="container-fluid">
-
-
-
-        <!-- <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800"><b><?php echo $nombre; ?> </b></h1>
-            <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#SubirArchivo"  ><i class="fas fa-folder fa-sm text-white-50"></i> Subir Archivos</a>
-
-            
-          </div>
-
-          <div>
-
-          <a href="#" class="btn btn-primary btn-icon-split" title='Entregables' onclick="segg(<?php echo $id_p;?>);" data-toggle="modal" data-target="#AgregarEntregable">
-                    <span class="icon text-white-50">
-                      <i class="fas fa-check"></i>
-                    </span>
-                    <span class="text"> Agregar Entregables</span>
-                  </a> 
-          </div> -->
-         <!--  <div class="d-sm-flex align-items-center justify-content-between mb-4">
-          <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"   data-toggle="modal" data-target="#AgregarEntregable"><i class="fas fa-user fa-sm text-white-50"></i> Entregables</a>
-          </div> -->
-     
-         <!-- aca va listar_entregables_tabla.php -->
-
-          <!-- DataTales Example -->
-          <div class="row">
+         
           <?php $sql="SELECT * FROM  archivos WHERE a_codigo_proyecto='$id_p' /* AND id_miembros='$est' */ order by id_seg asc";
     $query = mysqli_query($con, $sql);
         while ($row=mysqli_fetch_array($query)){
@@ -104,14 +76,9 @@
               </ul>
             </div>
             
-            </div>
+                    
 
-            
-
-
-          
+         
           
           <?php } ?>
-        </div>
-
-        </div>
+    
