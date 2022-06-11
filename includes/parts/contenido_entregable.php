@@ -148,8 +148,9 @@
                               <?php echo $descripcion; ?>
                               <br>
                               <?php echo "Usuario : " .$usuario_seguimiento; ?>
-                      </div> <!-- div de la condicional -->
-                  
+                      </div>
+                    </div>
+                </div>
 
             
 
@@ -157,8 +158,6 @@
                 
                 
                 <?php } ?>
-                </div>
-                </div>
-
         </div>
+
         </div>
