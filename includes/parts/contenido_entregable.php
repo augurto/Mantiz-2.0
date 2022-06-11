@@ -55,7 +55,7 @@
                         <input type="hidden" value="<?php echo $id_p; ?>" id="id_p" name="id_p" >
                         <div class="input-group">
                           <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                            <option selected>Cambiar estado</option>
+                            <option selected>Cambiar estado.</option>
                           <option value="0">Pendiente</option>
                           <option value="1">Aprobado</option>
                           <option value="2">Observado</option>
