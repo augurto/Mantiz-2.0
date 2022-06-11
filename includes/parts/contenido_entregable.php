@@ -71,6 +71,7 @@
                     <!-- Counter - Messages -->
                   </a>
                   <?php } ?>
+                  <span class="badge bg-primary rounded-pill">14</span>
                 </li>
               </ul>
             </div>
