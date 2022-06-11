@@ -62,10 +62,10 @@
                         <button type="submit" class="btn btn-outline-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"><i class="fa fa-check" aria-hidden="true"></i></button>
                       
                         
-                      
+                        </div>
                         </form>
                         <?php } ?>
-                        </div>
+                        
                         <div class="g-col-6 g-col-md-4"><a href="#"  data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
                 <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
                 <!-- Counter - Messages -->
