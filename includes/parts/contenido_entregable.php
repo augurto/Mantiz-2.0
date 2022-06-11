@@ -53,14 +53,15 @@
                         
                         <input type="hidden" value="<?php echo $id; ?>" id="id" name="id" >
                         <input type="hidden" value="<?php echo $id_p; ?>" id="id_p" name="id_p" >
-                        <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="estado_entregable1" name="estado_entregable1">
-                          <option selected>Cambiar Estado</option>
+                        <div class="input-group">
+                          <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                            <option selected>Cambiar estado</option>
                           <option value="0">Pendiente</option>
                           <option value="1">Aprobado</option>
                           <option value="2">Observado</option>
                         </select>
-                        <button type="submit" class="btn btn-outline-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"><i class="fa fa-check" aria-hidden="true"></i></button>
-                      
+                        <button type="submit" class="btn btn-outline-secondary"><i class="fa fa-check" aria-hidden="true"></i></button>
+                        </div>
                         
                       </div>
                         </form>
