@@ -80,7 +80,7 @@
                 <div class="input-group input-group-sm mb-3" >
                 <div class="input-group" style="padding: 0px 20px !important;">
              
-                <select class="form-select" style="border-color: #0275d8 !important;" id="inputGroupSelect04" aria-label="Example select with button addon" id="estado_entregable1" name="estado_entregable1">
+                <select class="form-select .text-primary" style="border-color: #0275d8 !important;" id="inputGroupSelect04" aria-label="Example select with button addon" id="estado_entregable1" name="estado_entregable1">
                 <option selected>Selecciona Estado</option>
                   <option value="0">Pendiente</option>
                   <option value="1">Aprobado</option>
