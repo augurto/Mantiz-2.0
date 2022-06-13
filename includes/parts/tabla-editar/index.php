@@ -22,8 +22,7 @@
         <tr>
          <th>ID</th>
          <th>Nombre personal</th>
-         <th>Edad</th>
-         <th>Salario</th>
+         
         </tr>
        </thead>
        <tbody></tbody>
@@ -37,4 +36,4 @@
  </body>
 </html>
 
-<script type="text/javascript" language="javascript" src="script.js"></script>
+<script type="text/javascript" language="javascript" src="script_tabla.js"></script>
