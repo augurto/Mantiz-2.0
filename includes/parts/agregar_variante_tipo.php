@@ -48,7 +48,7 @@
                         </thead>
                         <?php 
                         $count=1;
-                        foreach ($link->query('SELECT * from codigo_generado_proyecto') as $sub){ // aca se hace la consulta e iterarla con each. ?>
+                        foreach ($link->query('SELECT * from codigo_generado_proyecto order by id_cod_gen_pro desc') as $sub){ // aca se hace la consulta e iterarla con each. ?>
                         <?php
                         
                         $id=$sub['id_cod_gen_pro'];
