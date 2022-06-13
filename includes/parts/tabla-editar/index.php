@@ -14,7 +14,7 @@
    <h3 align="left">Tabledit usando Datatable con PHP Ajax</h3>
    <br />
    <div class="panel panel-primary">
-    <div class="panel-heading">Sample Data</div>
+    <div class="panel-heading">Sub tipo proyecto</div>
     <div class="panel-body">
      <div class="table-responsive">
       <table id="personal" class="table table-bordered table-striped">
