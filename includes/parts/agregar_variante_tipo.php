@@ -8,8 +8,8 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-header">
-                <div class="modal-content">
+
+
                         <form action="../../includes/process/insert/insertar_tipo_codigo_proyecto.php">
                         <div class="modal-header">
                           <h5 class="modal-title" id="exampleModalLongTitle">Agregar Sub tipo Proyecto</h5>
@@ -29,28 +29,11 @@
                           
                         </div>
 
-             
-                       
-
-                     
-                       <br>
-                       
-                      
-
-                              
-                              <br>
-                       
-                                              
-
-
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                           <button type="submit" class="btn btn-primary">Agregar</button>
                         </div>
-                        
-                        
-
                         
                         </form>
 
@@ -58,14 +41,13 @@
                        
 
 
-                      </div>
-                </div>
                 <div class="modal-body">
                     <table id="example2" class="table table-hover" cellspacing="0" width="100%">
                         <thead>
                           <tr>
                               <th>ID</th>
                               <th>Nombre</th>
+                              <th>Accion</th>
                               
                           </tr>
                         </thead>
@@ -81,6 +63,9 @@
                         <tr>    
                         <td><?php echo $count++; ?></td>
                         <td><?php echo $variable;?></td>
+                        <td><button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#subTipo" data-nom="<?php echo $codigo; ?>" data-nom2="<?php echo $nombre_proyecto; ?>" data-ape="<?php echo $presupuesto;?>" data-estado="<?php echo $estado;  ?>" data-sub2="<?php echo $extencion;  ?>" >
+                                    <i class="fa fa-edit"></i>
+                                    </button></td>
                         </tr>
                          <?php } ?>       
                         
