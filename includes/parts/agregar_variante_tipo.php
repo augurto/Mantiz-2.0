@@ -38,18 +38,8 @@
 
                 <div class="modal-body">
                     <table id="example2" class="table table-hover" cellspacing="0" width="100%">
-                    <thead>
-                            <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Accion</th>
-                            
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                        </table>
                       
-                   <!--  <thead>
+                    <thead>
                           <tr>
                               <th>ID</th>
                               <th>Nombre</th>
@@ -81,9 +71,7 @@
                         <tbody>
                         
                         </tbody>
-                    </table> -->
-
-
+                    </table>
                 </div>
                 <script type="text/javascript">
                     $(document).ready(function () {
