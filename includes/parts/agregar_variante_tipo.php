@@ -11,12 +11,7 @@
 
 
                         <form action="../../includes/process/insert/insertar_tipo_codigo_proyecto.php">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Agregar Sub tipo Proyecto</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
+                        
                         <div class="modal-body">
                         <label for="inputProyec">Nombre del Sub Tipo de Proyecto</label>
                         <div class="input-group mb-3">
