@@ -37,13 +37,12 @@
 
 
                 <div class="modal-body">
-                <table id="personal" class="table table-hover" cellspacing="0" width="100%">
-                <!-- <table id="example2" class="table table-hover" cellspacing="0" width="100%"> -->
+                    <table id="example2" class="table table-hover" cellspacing="0" width="100%">
                     <thead>
                             <tr>
                             <th>ID</th>
                             <th>Nombre</th>
-                            
+                            <th>Accion</th>
                             
                             </tr>
                         </thead>
@@ -87,43 +86,50 @@
 
                 </div>
                 <script type="text/javascript">
-
-                        $(document).ready(function(){
-
-                        var dataTable = $('#personal').DataTable({
-                        "language": {
-                        "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Spanish.json"
-                        },
-                        "processing" : true,
-                        "serverSide" : true,
-                        "order" : [],
-                        "ajax" : {
-                        url:"tabla-editar/datos.php",
-                        type:"POST"
-                        }
-                        });
-
-                        $('#personal').on('draw.dt', function(){/*`personal_nombre``personal_edad``personal_salario`*/
-                        $('#personal').Tabledit({
-                        url:'edicion.php',
-                        dataType:'json',
-                        columns:{
-                        identifier : [0, 'idp'],
-                        editable:[[1, 'personal_nombre'], [2, 'personal_edad'], [3, 'personal_salario']]
-                        },
-                        restoreButton:false,
-                        onSuccess:function(data, textStatus, jqXHR)
-                        {
-                        if(data.action == 'delete')
-                        {
-                            $('#' + data.idp).remove();
-                            $('#personal').DataTable().ajax.reload();
-                        }
-                        }
-                        });
-                        });
+                    $(document).ready(function () {
+                        $('#compromisos > .modal-body').css({width:'auto',height:'auto', 'max-height':'100%'});
                         
-                        }); 
+                        $('#example2').DataTable({        
+        language: {
+                "lengthMenu": "Mostrar _MENU_ registros",
+                "zeroRecords": "No se encontraron resultados",
+                "info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+                "sSearch": "Buscar cualquier dato :",
+                "oPaginate": {
+                    "sFirst": "Primero",
+                    "sLast":"Último",
+                    "sNext":"Siguiente",
+                    "sPrevious": "Anterior"
+			     },
+			     "sProcessing":"Procesando...",
+            },
+        //para usar los botones   
+        responsive: "true",
+        dom: 'Bfrtilp',       
+        buttons:[ 
+			{
+				extend:    'excelHtml5',
+				text:      '<i class="fas fa-file-excel"></i> ',
+				titleAttr: 'Exportar a Excel',
+				className: 'btn btn-success'
+			},
+			{
+				extend:    'pdfHtml5',
+				text:      '<i class="fas fa-file-pdf"></i> ',
+				titleAttr: 'Exportar a PDF',
+				className: 'btn btn-danger'
+			},
+			{
+				extend:    'print',
+				text:      '<i class="fa fa-print"></i> ',
+				titleAttr: 'Imprimir',
+				className: 'btn btn-info'
+			},
+		]	        
+    }); 
+                    });
                 </script>
             </div>
         </div>
