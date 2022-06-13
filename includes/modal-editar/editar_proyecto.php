@@ -63,10 +63,11 @@
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Presupuesto</span>
                         <input type="number" class="form-control" id="apellido" name="presupuesto" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="number" class="form-control" id="estado" name="estado" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
 
                         <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Estado</span>
+                        <span class="input-group-text" id="basic-addon1">Estadoxxx</span>
                         
                         <input type="text" class="form-control" id="estado"  aria-label="Username" aria-describedby="basic-addon1">
                             <select class="form-select" aria-label="Default select example" name="estado" id="estado">
