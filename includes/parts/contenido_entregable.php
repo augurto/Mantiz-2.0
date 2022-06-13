@@ -92,7 +92,7 @@
                                           <div class="input-group" style="padding: 0px 20px !important;">
                                   
                                                 <select value="<?php echo $estado_entregable;?>"  class="form-select .text-primary"  aria-label="Example select with button addon" id="estado_entregable1" name="estado_entregable1" >
-                                                <!-- <option selected></option> -->
+                                                <option selected></option>
                                                   <option value="0">Pendiente</option>
                                                   <option value="1">Aprobado</option>
                                                   <option value="2">Observado</option>
