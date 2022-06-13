@@ -8,7 +8,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <table id="example" class="display nowrap table-responsive">
+                    <table id="example2" class="display nowrap table-responsive">
                         <thead>
                           <tr>
                               <th>No hay columnas</th>
@@ -26,7 +26,7 @@
                 <script type="text/javascript">
                     $(document).ready(function () {
                         $('#compromisos > .modal-body').css({width:'auto',height:'auto', 'max-height':'100%'});
-                        $("#example").dataTable();
+                        $("#example2").dataTable();
                     });
                 </script>
             </div>
