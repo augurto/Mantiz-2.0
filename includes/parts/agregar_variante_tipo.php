@@ -3,13 +3,65 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Compromisos</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar Sub tipo Proyecto</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <div class="modal-header">
+                <div class="modal-content">
+                        <form action="../../includes/process/insert/insertar_tipo_codigo_proyecto.php">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Agregar Sub tipo Proyecto</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                        <label for="inputProyec">Nombre del Sub Tipo de Proyecto</label>
+                        <div class="input-group mb-3">
+                          
+                          <br>
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-sitemap" aria-hidden="true"></i></span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="Nombre del Proyecto" id="nombre-tipo" name="nombre-tipo" >
+                          
+                        </div>
+
+             
+                       
+
+                     
+                       <br>
+                       
+                      
+
+                              
+                              <br>
+                       
+                                              
+
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                          <button type="submit" class="btn btn-primary">Agregar</button>
+                        </div>
+                        
+                        
+
+                        
+                        </form>
+
+                        
+                       
+
+
+                      </div>
+                </div>
                 <div class="modal-body">
-                    <table id="example2" class="display nowrap table-responsive">
+                    <table id="example2" class="table table-hover" cellspacing="0" width="100%">
                         <thead>
                           <tr>
                               <th>ID</th>
