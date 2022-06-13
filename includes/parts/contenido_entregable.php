@@ -56,10 +56,10 @@
                         <!-- Card Header - Dropdown -->
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                               <!-- <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom." - "; ?></h6> -->
-                              <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom." - "; ?></h6>
+                              <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom; ?></h6>
                               <!-- Button trigger modal -->
                               <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                eliminar
+                              <i class="fas fa-trash" style="color: red;"></i>
                              </button>
                              <!-- Modal -->
                                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -73,8 +73,8 @@
                                             ...
                                           </div>
                                           <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                            <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="button" class="btn btn-danger">eliminar</button>
                                           </div>
                                         </div>
                                       </div>
