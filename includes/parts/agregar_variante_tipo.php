@@ -52,19 +52,26 @@
                         foreach ($link->query('SELECT * from codigo_generado_proyecto order by id_cod_gen_pro desc') as $sub){  ?>
                         <?php
                         
-                        $id=$sub['id_cod_gen_pro'];
+                        $id_codgen=$sub['id_cod_gen_pro'];
                         $variable=$sub['variable'];
                         
                         ?>
                         <tr>    
                         <td><?php echo $count++; ?></td>
                         <td><?php echo $variable;?></td>
+                        <?php if ($tipo_user==1) { ?>
                         <td>
-                            <button type="button" id="btnmodal" class="btn btn-danger" data-toggle="modal" data-target="#subTipo" data-cod="<?php echo $id; ?>" data-ape="<?php echo $nombre_proyecto; ?>">
-                                    <i class="fa fa-trash"></i>
-                            </button>
+                       
+                                
+                              
+                                <a href="../../includes/process/eliminar/eliminar_subtipo.php?id=<?php echo $id_codgen ; ?>&variable=<?php echo $variable ;?>" >
+                                  <i class="fas fa-trash" style="color: red;"></i>
+                                  <!-- Counter - Messages -->
+                                </a>
+                               
 
                         </td>
+                        <?php } ?>
                         </tr>
                          <?php } ?>       
                         

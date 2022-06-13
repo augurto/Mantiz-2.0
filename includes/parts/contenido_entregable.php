@@ -146,10 +146,10 @@
 
                                 <?php }?> 
                 
-                                <a href="#"  data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
+                                <!-- <a href="#"  data-toggle="modal" data-target="#comments" onclick="comments(<?php echo $id_ent; ?>, <?php echo $id; ?>);">
                                     <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
                                     <!-- conteo de mensajes-->
-                                </a>
+                                </a> -->
                                <!--  <?php if ($tipo_user==1) { ?>
                                 
                               
