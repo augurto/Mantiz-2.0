@@ -6,7 +6,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <form action="../../includes/process/insert/insertar_tipo_codigo_proyecto.php">
+         <form action="../../includes/process/insert/insertar_tipo_codigo_proyecto.php">
                         
                         <div class="modal-body">
                         <label for="inputProyec">Nombre del Sub Tipo de Proyecto</label>
@@ -28,8 +28,48 @@
                         
                         </form>
       </div>
+                    <div class="modal-body">
+                            <table id="example2" class="table table-hover" cellspacing="0" width="100%">
+                            
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Accion</th>
+                                    
+                                </tr>
+                                </thead>
+                                <?php 
+                                $count=1;
+                                foreach ($link->query('SELECT * from codigo_generado_proyecto order by id_cod_gen_pro desc') as $sub){  ?>
+                                <?php
+                                
+                                $id=$sub['id_cod_gen_pro'];
+                                $variable=$sub['variable'];
+                                
+                                ?>
+                                <tr>    
+                                <td><?php echo $count++; ?></td>
+                                <td><?php echo $variable;?></td>
+                                <td>
+                                    <button type="button" id="btnmodal" class="btn btn-danger" data-toggle="modal" data-target="#subTipo" data-cod="<?php echo $id; ?>" data-ape="<?php echo $nombre_proyecto; ?>">
+                                            <i class="fa fa-trash"></i>
+                                    </button>
+
+                                </td>
+                                </tr>
+                                <?php } ?>       
+                                
+                                <tbody>
+                                
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
       <div class="modal-footer">
-        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button>
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Aca ira editar</button>
       </div>
     </div>
   </div>
