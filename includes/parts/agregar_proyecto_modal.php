@@ -29,7 +29,7 @@
                             <span class="input-group-text"><i class="fa fa-archive" aria-hidden="true"></i></span>
                           </div>
                           <input type="text" class="form-control" placeholder="Nombre del Proyecto" id="nombre-proyecto" name="nombre-proyecto" >
-                          <input type="text" class="form-control" value="<?php $usuario ;?>" id="maker" name="maker" >
+                          <input type="text" class="form-control" value="<?php $_SESSION["username"]; ;?>" id="maker" name="maker" >
                           
                         </div>
 
