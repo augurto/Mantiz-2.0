@@ -93,7 +93,7 @@
                                   
                                                 <select class="form-select .text-primary" style="border-color: #0275d8 !important;color: #0275d8 !important; background-color: 
                                                 <?php if ($estado_entregable==0) {echo '#FCF3CF';}elseif ($estado_entregable==1) {echo '#F0FFF0'; }else {echo '#FFF0F5';}?> !important;"  aria-label="Example select with button addon" id="estado_entregable1" name="estado_entregable1">
-                                                <option selected>Selecciona Estado</option>
+                                                <option selected><?php echo $estado_entregable;?></option>
                                                   <option value="0">Pendiente</option>
                                                   <option value="1">Aprobado</option>
                                                   <option value="2">Observado</option>
@@ -141,7 +141,7 @@
                            <div align="center"><a href="archivos/<?php echo  $id_p  ; ?>/<?php echo  $id_ent; ?>/<?php echo  $documento; ?>" download="archivos/<?php echo  $id_p  ; ?>/<?php echo  $id_ent  ; ?>/<?php echo  $documento; ?>"><i class="fa fa-download"></i> <?php echo $documento.$id_ent; ?></a></div>
 
                             <?php  if (empty($link)) {
-                              echo 'No hay URL';
+                              
                             }else{?>
 
                                           
