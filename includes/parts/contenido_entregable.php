@@ -56,10 +56,10 @@
                         <!-- Card Header - Dropdown -->
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between" style="height: 15px;">
                               <!-- <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom." - "; ?></h6> -->
-                              <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom.$documento; ?></h6>
+                              <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom; ?></h6>
                               <!-- Button trigger modal -->
                               <?php if ($tipo_user==1) { ?>
-                              <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
                               <i class="fas fa-trash" style="color: red;"></i>
                              </button>
                              <?php } ?>
@@ -72,6 +72,8 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                           </div>
                                           <div class="modal-body">
+                                          <input type="text" class="form-control" id="recipient-name">
+                                          <input type="text" class="form-control" id="bs-whatever">
                                             <center>
                                           <p class="text-primary"> Seguro que quiere eliminar el archivo </p><p class="text-danger"><?php echo $documento;?></p> <p class="text-primary">una ves eliminado no se podra recuperar el archivo </p>
                                           </center>
