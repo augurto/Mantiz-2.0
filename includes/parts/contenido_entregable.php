@@ -54,60 +54,19 @@
             <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4"> 
                         <!-- Card Header - Dropdown -->
-                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between" style="height: 15px;">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between" style="height: 17px;">
                               <!-- <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom." - "; ?></h6> -->
                               <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom; ?></h6>
                               <!-- Button trigger modal -->
                               <?php if ($tipo_user==1) { ?>
-                              <button type="button" id="btnmodal" class="btn btn-link" data-toggle="modal"  data-target="#eliminarArchivo" data-whatever="<?php echo $documento;?>">
-                              <i class="fas fa-trash" style="color: red;"></i>
-                             </button>
-                             <?php } ?>
-                             <script >
-                                      $(document).on("click", "#btnmodal",function () {
-                                        
-                                              var whatever =$(this).data('whatever');
-                                              var nombre_proyecto =$(this).data('nom2');
-                                              var apellido =$(this).data('ape')
-                                              var estado =$(this).data('estado');
-                                              var sub2 =$(this).data('sub2');
+                                
+                              
+                                <a href="../../includes/process/eliminar/eliminar_entregable.php?entregable=<?php echo $documento ; ?>&proyecto=<?php echo $a_codigo_proyecto ;?>&id_entregable=<?php echo $id_seg ; ?>" >
+                                  <i class="fas fa-trash" style="color: red;"></i>
+                                  <!-- Counter - Messages -->
+                                </a>
+                                <?php } ?>
 
-                                        $("#whatever").val(whatever);
-                                        $("#nombre2").val(nombre_proyecto);
-
-                                        $("#apellido").val(apellido);
-                                        $("#estado").val(estado);
-                                        $("#sub2").val(sub2);
-                          
-                                      })
-
-                                    </script>
-
-                             <!-- Modal -->
-                                    <div class="modal fade" id="eliminarArchivo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Eliminar archivoo</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                          </div>
-                                          <div class="modal-body">
-                                          <input type="text" class="form-control" id="recipient-name">
-                                          <input type="text" class="form-control" id="whatever">
-                                            <center>
-                                          <p class="text-primary"> Seguro que quiere eliminar el archivo </p><p class="text-danger"><?php echo $documento;?></p> <p class="text-primary">una ves eliminado no se podra recuperar el archivo </p>
-                                          </center>
-                                          </div>
-                                          <div class="modal-footer">
-                                            <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cancelar</button>
-                                            <a href="../../includes/process/eliminar/eliminar_entregable.php?entregable=<?php echo $documento ; ?>&proyecto=<?php echo $a_codigo_proyecto ;?>&id_entregable=<?php echo $id_seg ; ?>" >
-                                             Eliminar
-                                            </a>
-                                                                                        
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
                         </div>
                  <!--  condicional para colorear el div de arriba -->
                               <?php 
@@ -191,14 +150,14 @@
                                     <?php echo $ts; ?> <i class="fas fa-comments fa-fw"></i>
                                     <!-- conteo de mensajes-->
                                 </a>
-                                <?php if ($tipo_user==1) { ?>
+                               <!--  <?php if ($tipo_user==1) { ?>
                                 
                               
                                 <a href="../../includes/process/eliminar/eliminar_entregable.php?entregable=<?php echo $documento ; ?>&proyecto=<?php echo $a_codigo_proyecto ;?>&id_entregable=<?php echo $id_seg ; ?>" >
                                   <i class="fas fa-trash" style="color: red;"></i>
-                                  <!-- Counter - Messages -->
+                                  
                                 </a>
-                                <?php } ?>
+                                <?php } ?> -->
 
               
 
