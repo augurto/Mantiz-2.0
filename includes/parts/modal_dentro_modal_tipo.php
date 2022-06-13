@@ -55,6 +55,9 @@
                                     <button type="button" id="btnmodal" class="btn btn-danger" data-toggle="modal" data-target="#subTipo" data-cod="<?php echo $id; ?>" data-ape="<?php echo $nombre_proyecto; ?>">
                                             <i class="fa fa-trash"></i>
                                     </button>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Editar</button>
+                                    </div>
 
                                 </td>
                                 </tr>
@@ -65,12 +68,55 @@
                                 </tbody>
                             </table>
                         </div>
+                        <script type="text/javascript">
+                                                $(document).ready(function () {
+                                                    $('#compromisos > .modal-body').css({width:'auto',height:'auto', 'max-height':'100%'});
+                                                    
+                                                    $('#example2').DataTable({        
+                                    language: {
+                                            "lengthMenu": "Mostrar _MENU_ registros",
+                                            "zeroRecords": "No se encontraron resultados",
+                                            "info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                                            "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                                            "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+                                            "sSearch": "Buscar cualquier dato :",
+                                            "oPaginate": {
+                                                "sFirst": "Primero",
+                                                "sLast":"Último",
+                                                "sNext":"Siguiente",
+                                                "sPrevious": "Anterior"
+                                            },
+                                            "sProcessing":"Procesando...",
+                                        },
+                                    //para usar los botones   
+                                    responsive: "true",
+                                    dom: 'Bfrtilp',       
+                                    buttons:[ 
+                                        {
+                                            extend:    'excelHtml5',
+                                            text:      '<i class="fas fa-file-excel"></i> ',
+                                            titleAttr: 'Exportar a Excel',
+                                            className: 'btn btn-success'
+                                        },
+                                        {
+                                            extend:    'pdfHtml5',
+                                            text:      '<i class="fas fa-file-pdf"></i> ',
+                                            titleAttr: 'Exportar a PDF',
+                                            className: 'btn btn-danger'
+                                        },
+                                        {
+                                            extend:    'print',
+                                            text:      '<i class="fa fa-print"></i> ',
+                                            titleAttr: 'Imprimir',
+                                            className: 'btn btn-info'
+                                        },
+                                    ]	        
+                                }); 
+                                                });
+                                            </script>
 
 
-
-      <div class="modal-footer">
-        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Aca ira editar</button>
-      </div>
+      
     </div>
   </div>
 </div>
