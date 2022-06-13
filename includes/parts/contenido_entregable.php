@@ -54,7 +54,7 @@
             <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4"> 
                         <!-- Card Header - Dropdown -->
-                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between" style="height: 10px;">
                               <!-- <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom." - "; ?></h6> -->
                               <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom; ?></h6>
                               <!-- Button trigger modal -->
@@ -70,7 +70,7 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                           </div>
                                           <div class="modal-body">
-                                          <p class="text-primary"> Al eliminar </p><p class="text-danger"><?php echo $documento;?></p> <p class="text-primary">no se podra recuperar el archivo </p>
+                                          <p class="text-primary"> Seguro que quiere eliminar el archivo </p><p class="text-danger"><?php echo $documento;?></p> <p class="text-primary">una ves eliminado no se podra recuperar el archivo </p>
                                           </div>
                                           <div class="modal-footer">
                                             <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cancelar</button>
