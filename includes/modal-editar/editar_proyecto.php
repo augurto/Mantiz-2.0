@@ -5,12 +5,14 @@
                                               var nombre_proyecto =$(this).data('nom2');
                                               var apellido =$(this).data('ape')
                                               var estado =$(this).data('estado');
+                                              var sub2 =$(this).data('sub2');
 
                                         $("#nombre").val(nombre);
                                         $("#nombre2").val(nombre_proyecto);
 
                                         $("#apellido").val(apellido);
                                         $("#estado").val(estado);
+                                        $("#sub2").val(sub2);
                           
                                       })
 
@@ -45,7 +47,7 @@
                         </div>
                         <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01">Extension</label>
-                                <select class="form-control" name="id_entregable" id="id_entregable" required="">
+                                <select class="form-control" name="id_entregable" id="sub2" required="">
                                             <option disabled="disabled" value="" selected>Clic para ver.</option>
                                             <?php 
 
@@ -63,7 +65,7 @@
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Presupuesto</span>
                         <input type="number" class="form-control" id="apellido" name="presupuesto" aria-label="Username" aria-describedby="basic-addon1">
-                        <input type="number" class="form-control" id="" name="estado" aria-label="Username" aria-describedby="basic-addon1">
+                        
                         </div>
 
                         <div class="input-group mb-3">
