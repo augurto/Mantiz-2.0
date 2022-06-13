@@ -129,7 +129,8 @@
             </div>
         </div>
     </div>
-    
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#compromisos">
+    <center>
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#compromisos">
  Mostrar
 </button>
+</center>

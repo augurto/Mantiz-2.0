@@ -3,12 +3,12 @@
                     
                     <!-- Button trigger modal -->
                     
-
+<!-- 
                     <div class="col text-center">
                       <button type="button" class="btn btn-success" id="boton_proyecto" data-toggle="modal" data-target="#subTipo">
                       Nuevo Sub Tipo
                       </button>
-                    </div>
+                    </div> -->
 
                   <!-- Modal -->
                   <div class="modal fade" id="subTipo" tabindex="0" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
