@@ -58,9 +58,12 @@
                         <tr>    
                         <td><?php echo $count++; ?></td>
                         <td><?php echo $variable;?></td>
-                        <td><button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#subTipo" data-nom="<?php echo $codigo; ?>" data-nom2="<?php echo $nombre_proyecto; ?>" data-ape="<?php echo $presupuesto;?>" data-estado="<?php echo $estado;  ?>" data-sub2="<?php echo $extencion;  ?>" >
-                                    <i class="fa fa-edit"></i>
-                                    </button></td>
+                        <td>
+                            <button type="button" id="btnmodal" class="btn btn-danger" data-toggle="modal" data-target="#subTipo" data-cod="<?php echo $id; ?>" data-ape="<?php echo $nombre_proyecto; ?>">
+                                    <i class="fa fa-trash"></i>
+                            </button>
+
+                        </td>
                         </tr>
                          <?php } ?>       
                         
