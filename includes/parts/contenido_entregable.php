@@ -59,7 +59,7 @@
                               <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom; ?></h6>
                               <!-- Button trigger modal -->
                               <?php if ($tipo_user==1) { ?>
-                              <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal" data-whatever="@mdo">
+                              <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
                               <i class="fas fa-trash" style="color: red;"></i>
                              </button>
                              <?php } ?>
