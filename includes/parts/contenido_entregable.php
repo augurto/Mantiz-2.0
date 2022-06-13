@@ -70,11 +70,11 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                           </div>
                                           <div class="modal-body">
-                                          Seguro que quieres eliminar el archivo <?php echo $documento;?> del entregable <?php echo $nom;?>
+                                          <p class="text-primary"> Al eliminar </p><p class="text-danger"><?php echo $documento;?></p> <p class="text-primary">no se podra recuperar el archivo </p>
                                           </div>
                                           <div class="modal-footer">
                                             <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cancelar</button>
-                                            <button type="button" class="btn btn-danger">eliminar</button>
+                                            <button type="button" class="btn btn-danger">Eliminar</button>
                                           </div>
                                         </div>
                                       </div>
