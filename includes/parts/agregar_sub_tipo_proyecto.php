@@ -11,7 +11,7 @@
                     </div>
 
                   <!-- Modal -->
-                  <div class="modal fade" id="subTipo" tabindex="2" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal fade" id="subTipo" tabindex="0" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
                         <form action="../../includes/process/insert/insertar_tipo_codigo_proyecto.php">

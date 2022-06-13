@@ -37,8 +37,20 @@
 
 
                 <div class="modal-body">
-                    <table id="example2" class="table table-hover" cellspacing="0" width="100%">
-                        <thead>
+                <table id="personal" class="table table-hover" cellspacing="0" width="100%">
+                <!-- <table id="example2" class="table table-hover" cellspacing="0" width="100%"> -->
+                    <thead>
+                            <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            
+                            
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                        </table>
+                      
+                   <!--  <thead>
                           <tr>
                               <th>ID</th>
                               <th>Nombre</th>
@@ -48,7 +60,7 @@
                         </thead>
                         <?php 
                         $count=1;
-                        foreach ($link->query('SELECT * from codigo_generado_proyecto order by id_cod_gen_pro desc') as $sub){ // aca se hace la consulta e iterarla con each. ?>
+                        foreach ($link->query('SELECT * from codigo_generado_proyecto order by id_cod_gen_pro desc') as $sub){  ?>
                         <?php
                         
                         $id=$sub['id_cod_gen_pro'];
@@ -70,7 +82,9 @@
                         <tbody>
                         
                         </tbody>
-                    </table>
+                    </table> -->
+
+
                 </div>
                 <script type="text/javascript">
                     $(document).ready(function () {

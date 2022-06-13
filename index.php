@@ -24,6 +24,11 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- incluyendo script para editar en tiempo realpat -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://markcell.github.io/jquery-tabledit/assets/js/tabledit.min.js"></script>
+    
+    <!-- fin -->
     <!-- incluyendo bootstrap -->
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
     <script src="js/bootstrap.min.js"></script>
@@ -109,5 +114,6 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 
     <!-- Fin de Script para datatables -->
     <script src="js/proyecto.js"></script>
+    <script src="includes/parts/tabla-editar/script.js"></script>
 </body>
 </html>
