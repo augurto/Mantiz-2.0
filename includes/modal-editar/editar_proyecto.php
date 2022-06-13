@@ -68,8 +68,8 @@
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Estado</span>
                         
-                        <input type="hidden" class="form-control" id="estado"  aria-label="Username" aria-describedby="basic-addon1">
-                            <select class="form-select" aria-label="Default select example" name="estado">
+                        <input type="text" class="form-control" id="estado"  aria-label="Username" aria-describedby="basic-addon1">
+                            <select class="form-select" aria-label="Default select example" name="estado" id="estado">
                             <option selected>Seleciona Estado</option>
                             <option value="0">Pendiente</option>
                             <option value="1">Terminado</option>
