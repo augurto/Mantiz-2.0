@@ -1,5 +1,5 @@
 <?php require_once ('./config/conexion_tabla.php') ?>
-<div class="modal fade" id="compromisos" tabindex="-1">
+<div class="modal fade" id="compromisos" >
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
