@@ -59,7 +59,7 @@
                               <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom; ?></h6>
                               <!-- Button trigger modal -->
                               <?php if ($tipo_user==1) { ?>
-                              <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+                              <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal" data-whatever="@mdo">
                               <i class="fas fa-trash" style="color: red;"></i>
                              </button>
                              <?php } ?>
@@ -73,7 +73,7 @@
                                           </div>
                                           <div class="modal-body">
                                           <input type="text" class="form-control" id="recipient-name">
-                                          <input type="text" class="form-control" id="bs-whatever">
+                                          <input type="text" class="form-control" id="whatever">
                                             <center>
                                           <p class="text-primary"> Seguro que quiere eliminar el archivo </p><p class="text-danger"><?php echo $documento;?></p> <p class="text-primary">una ves eliminado no se podra recuperar el archivo </p>
                                           </center>
