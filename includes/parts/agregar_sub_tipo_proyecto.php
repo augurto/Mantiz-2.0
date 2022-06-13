@@ -94,7 +94,7 @@
                               </div>
                               <script type="text/javascript">
                                   $(document).ready(function () {
-                                      $('#compromisos > .modal-body').css({width:'auto',height:'auto', 'max-height':'100%'});
+                                      $('#subTipo > .modal-body').css({width:'auto',height:'auto', 'max-height':'100%'});
                                       $("#compromiso_ejecutivo").dataTable();
                                   });
                               </script>
