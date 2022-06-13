@@ -92,8 +92,8 @@
                                           <div class="input-group" style="padding: 0px 20px !important;">
                                   
                                                 <select class="form-select .text-primary" style="border-color: #0275d8 !important;color: #0275d8 !important; background-color: 
-                                                <?php if ($estado_entregable==0) {echo '#FCF3CF';}elseif ($estado_entregable==1) {echo '#F0FFF0'; }else {echo '#FFF0F5';}?> !important;"  aria-label="Example select with button addon" id="estado_entregable1" name="estado_entregable1">
-                                                <option selected><?php echo $estado_entregable;?></option>
+                                                <?php if ($estado_entregable==0) {echo '#FCF3CF';}elseif ($estado_entregable==1) {echo '#F0FFF0'; }else {echo '#FFF0F5';}?> !important;"  aria-label="Example select with button addon" id="estado_entregable1" name="estado_entregable1" value="<?php echo $estado_entregable;?>">
+                                                <!-- <option selected></option> -->
                                                   <option value="0">Pendiente</option>
                                                   <option value="1">Aprobado</option>
                                                   <option value="2">Observado</option>
