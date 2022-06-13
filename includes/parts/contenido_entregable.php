@@ -56,7 +56,7 @@
                         <!-- Card Header - Dropdown -->
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between" style="height: 15px;">
                               <!-- <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom." - "; ?></h6> -->
-                              <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom; ?></h6>
+                              <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom.$documento; ?></h6>
                               <!-- Button trigger modal -->
                               <?php if ($tipo_user==1) { ?>
                               <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
