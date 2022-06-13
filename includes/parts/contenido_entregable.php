@@ -59,7 +59,7 @@
                               <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom; ?></h6>
                               <!-- Button trigger modal -->
                               <?php if ($tipo_user==1) { ?>
-                              <button type="button" id="btnmodal" class="btn btn-link" data-toggle="modal"  data-target="#eliminarArchivo" data-whatever="@mdo">
+                              <button type="button" id="btnmodal" class="btn btn-link" data-toggle="modal"  data-target="#eliminarArchivo" data-whatever="<?php echo $documento;?>">
                               <i class="fas fa-trash" style="color: red;"></i>
                              </button>
                              <?php } ?>
@@ -88,7 +88,7 @@
                                       <div class="modal-dialog">
                                         <div class="modal-content">
                                           <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Eliminar archivo</h5>
+                                            <h5 class="modal-title" id="exampleModalLabel">Eliminar archivoo</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                           </div>
                                           <div class="modal-body">
