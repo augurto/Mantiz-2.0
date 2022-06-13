@@ -63,6 +63,26 @@
                               <i class="fas fa-trash" style="color: red;"></i>
                              </button>
                              <?php } ?>
+                             <script >
+                                      $(document).on("click", "#btnmodal",function () {
+                                        
+                                              var whatever =$(this).data('whatever');
+                                              var nombre_proyecto =$(this).data('nom2');
+                                              var apellido =$(this).data('ape')
+                                              var estado =$(this).data('estado');
+                                              var sub2 =$(this).data('sub2');
+
+                                        $("#whatever").val(whatever);
+                                        $("#nombre2").val(nombre_proyecto);
+
+                                        $("#apellido").val(apellido);
+                                        $("#estado").val(estado);
+                                        $("#sub2").val(sub2);
+                          
+                                      })
+
+                                    </script>
+
                              <!-- Modal -->
                                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                       <div class="modal-dialog">
