@@ -55,16 +55,30 @@
               <div class="card shadow mb-4"> 
                         <!-- Card Header - Dropdown -->
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                              <!-- <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom." - ".$estado_entregable; ?></h6> -->
-                              <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom." - "; ?><?php if ($estado_entregable==0) {
-                                  # code...
-                                  echo 'Pendiente';
-                              }elseif ($estado_entregable==1) {
-                                  # code...
-                                  echo 'Aprobado';
-                              } else{
-                                  echo 'Observado';
-                              }?></h6>
+                              <!-- <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom." - "; ?></h6> -->
+                              <h6 class="m-0 font-weight-bold text-primary"><?php echo $nom." - "; ?></h6>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                eliminar
+                             </button>
+                             <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                          </div>
+                                          <div class="modal-body">
+                                            ...
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
                         </div>
                  <!--  condicional para colorear el div de arriba -->
                               <?php 
