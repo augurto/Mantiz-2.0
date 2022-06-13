@@ -1,3 +1,4 @@
+<?php require_once ('./config/conexion_tabla.php') ?>
 <div class="modal fade" id="compromisos" tabindex="-1">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -11,13 +12,26 @@
                     <table id="example2" class="display nowrap table-responsive">
                         <thead>
                           <tr>
-                              <th>No hay columnas</th>
-                              <th>No hay columnas</th>
-                              <th>No hay columnas</th>
-                              <th>No hay columnas</th>
-                              <th>No hay columnas</th>
+                              <th>ID</th>
+                              <th>Nombre</th>
+                              
                           </tr>
                         </thead>
+                        <?php 
+                        $count=1;
+                        foreach ($link->query('SELECT * from codigo_generado_proyecto') as $sub){ // aca se hace la consulta e iterarla con each. ?>
+                        <?php
+                        
+                        $id=$sub['id_cod_gen_pro'];
+                        $variable=$sub['variable'];
+                        
+                        ?>
+                        <tr>    
+                        <td><?php echo $count++; ?></td>
+                        <td><?php echo $variable;?></td>
+                        </tr>
+                         <?php } ?>       
+                        
                         <tbody>
                         
                         </tbody>
