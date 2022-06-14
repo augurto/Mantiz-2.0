@@ -8,7 +8,8 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection
 
 $nombre_proyecto=$_GET["nuevo_nombre"];
-$extension=$_GET["id_entregable"];
+$id_entregable=$_GET["id_entregable"];
+$id_p=$_GET["id_p"];
 
 $usuario=$_GET["usuario"];
 if (!$conn) {
@@ -17,10 +18,10 @@ if (!$conn) {
  
 echo "Connected successfully";
  
-$sql = "UPDATE  proyecto set  extencion = '".$extension."',nombre_proyecto = '".$nombre_proyecto."',presupuesto = '".$presupuesto."',estado = '".$estado."' where codigo = '".$codigo."'";
+$sql = "UPDATE  entregables set  nombre = '".$nombre_proyecto."',usuario = '".$usuario."' where id = '".$id_p."'";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
-      echo "location='../../../index.php'";
+      echo "location='../../../entregables.php?id_p=$id_p'";
     echo "</script>";
 } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
