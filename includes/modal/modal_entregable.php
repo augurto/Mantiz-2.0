@@ -26,8 +26,8 @@
             <input type="text" aria-label="First name" class="form-control" placeholder="nombre del entregable" id="nombre" name="nombre" required>
             <input type="hidden" value="<?php echo $_GET["id_p"]; ?>" id="codigo" name="codigo" >
             <input type="hidden" value="<?php echo $usuario; ?>" id="usuario" name="usuario" >
-            <input type="text" value="<?php echo $nombre_proyecto; ?>" id="nombre_proyecto" name="nombre_proyecto" >
-            <
+            <input type="hidden" value="<?php echo $nombre_proyecto; ?>" id="nombre_proyecto" name="nombre_proyecto" >
+            
             
         </div>
         <br>
