@@ -212,9 +212,9 @@
                                             
                                             <td>
                                         
-                                                    <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#ModalEditEntregable" data-nom="<?php echo $nom_entregable; ?>" data-nom2="<?php echo $estado_ent; ?>" data-ape="<?php echo $id_entr;?>" data-estado="<?php echo $id_entr;  ?>" >
-                                                    <i class="fa fa-edit"></i>
-                                                    </button>
+                                            <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit" data-nom="<?php echo '1'; ?>" data-nom2="<?php echo '2'; ?>" data-ape="<?php echo '3';?>" data-estado="<?php echo '4';  ?>" data-sub2="<?php echo '5';  ?>" >
+                                            <i class="fa fa-edit"></i>
+                                            </button>
                                                     
                                                     <!-- <button type="button" id="btnmodal" class="btn btn-danger" data-toggle="modal" data-target="#ModalBorrarEntregable" data-cod="<?php echo $id_entr; ?>" data-ape="<?php echo $nom_entregable; ?>">
                                                     <i class="fa fa-trash"></i>
