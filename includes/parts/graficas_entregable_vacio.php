@@ -1,6 +1,6 @@
 <?php
 
-      $tp=mysqli_query($con,"SELECT count(*) as tp FROM entregables where codigo_proyecto= $id_p");
+      $tp=mysqli_query($con,"SELECT count(*) as tp FROM entregables ");
       $rwp=mysqli_fetch_array($tp);
       $tps=$rwp["tp"];
 
@@ -14,7 +14,7 @@
       $aprobado=$apro["apro"];
       $porcentaje=100/$tps;
       $aprobados=($aprobado/$tps4)*100;
-      $tp2=mysqli_query($con,"SELECT COUNT(DISTINCT id_seg) as tp2 FROM archivos where a_codigo_proyecto= $id_p");
+      $tp2=mysqli_query($con,"SELECT COUNT(DISTINCT id_seg) as tp2 FROM archivos ");
       $rwp2=mysqli_fetch_array($tp2);
       $tps2=$rwp2["tp2"];
       $cod1=$_GET["id_p"];
@@ -62,8 +62,8 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total de proyectos</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tps;?></div>
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Entregables vacios</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tps2;?></div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
