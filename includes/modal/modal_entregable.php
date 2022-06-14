@@ -1,5 +1,10 @@
 
 <!-- Modal -->
+<?php foreach ($link->query('SELECT * from entregables where codigo_proyecto="'.$id_p.'"') as $rowpp){
+$id_pp=$rowpp['id_p'];
+$nombrepp=$rowpp['nombre'];
+}
+?>
 <form action="../../includes/process/insert/insertar_entregable.php" >
 <div class="modal fade" id="modal-entregable" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -15,7 +20,8 @@
             <span class="input-group-text"><i class="fa fa-plus" aria-hidden="true"></i></span>
             <input type="text" aria-label="First name" class="form-control" placeholder="nombre del entregable" id="nombre" name="nombre" required>
             <input type="hidden" value="<?php echo $_GET["id_p"]; ?>" id="codigo" name="codigo" >
-            <input type="text" value="<?php echo $usuario; ?>" id="usuario" name="usuario" >
+            <input type="hidden" value="<?php echo $usuario; ?>" id="usuario" name="usuario" >
+            <input type="text" value="<?php echo $nombrepp; ?>" id="nombre_proyecto" name="nombre_proyecto" >
             
         </div>
         <br>

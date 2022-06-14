@@ -49,7 +49,7 @@ $username2=$dos['username'];
             
           </ul>
         </li>
-        <?php if ($tipo_user==1) {?>
+        <?php if ($tipo_user==4) {?>
           <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Usuarios
