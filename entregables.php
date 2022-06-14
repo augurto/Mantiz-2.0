@@ -81,7 +81,9 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <!-- Boton agregar proyecto -->
 
     
-    
+    <?php if ($_GET['mensaje']==1) {
+        echo 'Ya existe un entregable con ese nombre';
+    }?>
           <br>
    
           <div class="container">
