@@ -10,7 +10,7 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 $nombre_proyecto=$_GET["nuevo_nombre"];
 $id_entregable=$_GET["id_entregable"];
 $id_p=$_GET["id_p"];
-
+$id_p2=trim($id_p);
 $usuario=$_GET["usuario"];
 if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
@@ -18,10 +18,10 @@ if (!$conn) {
  
 echo "Connected successfully";
  
-$sql = "UPDATE  entregables set  nombre = '".$nombre_proyecto."',usuario = '".$usuario."' where id = '".$id_p."'";
+$sql = "UPDATE  entregables set  nombre = '".$nombre_proyecto."',usuario = '".$usuario."' where id = '".$id_entregable."'";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
-      echo "location='../../../entregables.php?id_p=.$id_p'";
+      echo "location='../../../entregables.php?id_p='.$id_p2";
     echo "</script>";
 } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
