@@ -31,7 +31,9 @@ if (mysqli_query($conn, $sql)) {
       echo "location='../../../entregables.php?id_p=$codigo_proyecto'";
     echo "</script>";
 } else {
-      echo "Error - PROB: " . $sql . "<br>" . mysqli_error($conn);
+      echo"<script language ='JavaScript'>";
+      echo "location='../../../entregables.php?id_p=$codigo_proyecto&mensaje=1'";
+    echo "</script>";
 }
 mysqli_close($conn);
 ?>
