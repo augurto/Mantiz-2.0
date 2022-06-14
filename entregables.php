@@ -11,6 +11,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 require_once ("config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
 require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
+
+foreach ($link->query('SELECT * from proyecto  order by codigo desc') as $rowp){ // aca se hace la consulta e iterarla con each. ?> 
+ <?php  
+    
+    $id=$rowp['id'];
+    $estado_proyecto=$rowp['estado'];
+
+ }
 $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where estado='terminado'");
         $rwt=mysqli_fetch_array($sald);
         $saldo=$rwt['saldo'];
@@ -22,7 +30,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         $sql=mysqli_query($con,"SELECT * FROM proyecto WHERE codigo='".$id_p."'");
          $rws=mysqli_fetch_array($sql);
          $nombre=$rws["nombre_proyecto"];
-         $estado_proyecto=$rws["estado"];
+        
 
          $gd2=mysqli_query($con,"SELECT * FROM entregables WHERE  codigo_proyecto='".$id_p."'");
             $rwd2=mysqli_fetch_array($gd2);
