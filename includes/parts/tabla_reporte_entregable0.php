@@ -41,7 +41,7 @@
                                                                  
                         $nombre_entregable=$row['nombre'];
                         $nombre_proyecto=$row['nombre_proyecto'];                       
-                        $usuario0=$row['a_usuario'];
+                        $usuario0=$row['usuario'];
                         $fecha_entrega=$row['fecha_entrega'];
                         $fecha_actual=strtotime(date("Y-m-d",time()));
                         $fecha_v=strtotime($fecha_entrega);                     
