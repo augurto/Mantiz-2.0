@@ -182,7 +182,12 @@
                                   <td class="table-danger"><?php echo $nom_entregable.'-'.$estado_ent; ?></td>
 
                                   <?php } else {?>
-                                  <td><input type="text" value=" <?php echo $nom_entregable.'-'.$estado_ent; ?>"></td>
+                                  <td>
+                                     <form action="../process/actualizar/editar_nombre_entregable.php"><input type="text" value=" <?php echo $nom_entregable ?>" name="nuevo_nombre">
+                                     <button class="btn btn-outline-primary" type="submit" ><i class="fa fa-check" aria-hidden="true"></i></button>
+                                     </form>
+                                  
+                                  </td>
                                   <?php }?>
                                   <td>
                                     
