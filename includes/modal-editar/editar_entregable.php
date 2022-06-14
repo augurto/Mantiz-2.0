@@ -3,14 +3,14 @@
                                         
                                               var nombre =$(this).data('nom');
                                               var nombre_proyecto =$(this).data('nom2');
-                                              var apellido =$(this).data('ape')
-                                              var estado =$(this).data('estado');
+                                             /*  var apellido =$(this).data('ape')
+                                              var estado =$(this).data('estado'); */
 
                                         $("#nombre").val(nombre);
                                         $("#nombre2").val(nombre_proyecto);
 
-                                        $("#apellido").val(apellido);
-                                        $("#estado").val(estado);
+                                      /*   $("#apellido").val(apellido);
+                                        $("#estado").val(estado); */
                           
                                       })
 
@@ -38,11 +38,11 @@
                         <div class="modal-body">
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Id Entregable</span>
-                        <input type="text" class="form-control" id="nombre" name="codigo" aria-label="Username" aria-describedby="basic-addon1" readonly>
+                        <input type="text" class="form-control" id="" name="codigo" aria-label="Username" aria-describedby="basic-addon1" readonly>
                         </div>
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Nombre Entregable</span>
-                        <input type="text" class="form-control" id="nombre2" name="nombre_proyecto" aria-label="Username" aria-describedby="basic-addon1" >
+                        <input type="text" class="form-control" id="nombre" name="nombre_proyecto" aria-label="Username" aria-describedby="basic-addon1" >
                         </div>
                                          
                         
@@ -50,7 +50,7 @@
                         <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Estado</span>
                         
-                        <input type="hidden" class="form-control" id="estado"  aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="hidden" class="form-control" id="nombre2"  aria-label="Username" aria-describedby="basic-addon1">
                             <select class="form-select" aria-label="Default select example" name="estado">
                             <option selected>Seleciona Estado</option>
                             <option value="0">Pendiente</option>

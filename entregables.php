@@ -104,10 +104,10 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                                   <i class="fas fa-plus"></i>
                       </span>Archivos
                       </button>
-                      <?php if ($estado_proyecto==1) { ?>
+                    
                             <?php include 'includes/modal/modal_entregable.php' ?>
                             <?php include 'includes/modal/modal-subir-archivos.php' ?>
-                      <?php } ?>  
+                       
                   <!-- Fin Boton agregar proyecto -->
                   </div>     
               </div>    
