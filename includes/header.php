@@ -32,9 +32,9 @@ $username2=$dos['username'];
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="../index.php">Proyectos</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="../inventario_general.php">Inventario General</a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link" href="#">Actualizar Datos</a>
         </li>
