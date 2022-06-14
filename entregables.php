@@ -80,6 +80,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <!-- Fin de graficas -->
     <!-- Boton agregar proyecto -->
     <br>
+    <?php echo $estado_proyecto; ?>
     <?php if ($estado_proyecto==2) {
       echo "Proyecto inactivo";
     }else { ?>
