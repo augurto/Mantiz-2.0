@@ -27,7 +27,7 @@
                                 </thead>
                         <?php 
                         $count=1;
-                        foreach ($link->query('SELECT * from proyectos p inner join archivos a on p.codigo=a.a_codigo_proyecto right join entregables e on a.id_seg=e.id where a.id_seg IS NULL order by a_id desc') as $row){  ?> 
+                        foreach ($link->query('SELECT * from archivos a right join entregables e on a.id_seg=e.id  where a.id_seg IS NULL order by a_id desc') as $row){  ?> 
                         
                     
 
