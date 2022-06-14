@@ -1,19 +1,38 @@
 <?php
 
-     $tp=mysqli_query($con,"SELECT count(*) as tp FROM proyecto");
+      $tp=mysqli_query($con,"SELECT count(*) as tp FROM entregables where codigo_proyecto= $id_p");
       $rwp=mysqli_fetch_array($tp);
       $tps=$rwp["tp"];
 
-      $te=mysqli_query($con,"SELECT count(*) te FROM users where tipo_user='0'");
+     
+
+      $tp4=mysqli_query($con,"SELECT count(*) as tp4 FROM archivos where codigo_proyecto= $id_p");
+      $rwp4=mysqli_fetch_array($tp4);
+      $tps4=$rwp4["tp4"];
+      $aprob=mysqli_query($con,"SELECT count(*) as apro FROM archivos where estado_seguimiento= 1");
+      $apro=mysqli_fetch_array($aprob);
+      $aprobado=$apro["apro"];
+      $porcentaje=100/$tps;
+      $aprobados=($aprobado/$tps4)*100;
+      $tp2=mysqli_query($con,"SELECT COUNT(DISTINCT id_seg) as tp2 FROM archivos where a_codigo_proyecto= $id_p");
+      $rwp2=mysqli_fetch_array($tp2);
+      $tps2=$rwp2["tp2"];
+      $cod1=$_GET["id_p"];
+      $tp3=mysqli_query($con,"SELECT COUNT(DISTINCT a_usuario) as tp3 FROM archivos where a_codigo_proyecto= $id_p");
+      $rwp3=mysqli_fetch_array($tp3);
+      $tps3=$rwp3["tp3"];
+
+      $te=mysqli_query($con,"SELECT count(*) te FROM miembros where rol='estudiante'");
       $rwe=mysqli_fetch_array($te);
       $tes=$rwe["te"];
 
-      $ti=mysqli_query($con,"SELECT count(*) ti FROM users  where tipo_user='2'");
+      $ti=mysqli_query($con,"SELECT count(*) ti FROM miembros where rol='investigador'");
       $rwi=mysqli_fetch_array($ti);
       $tin=$rwi["ti"];
 
 		$sql="SELECT * FROM  proyecto order by id desc";
-		$query = mysqli_query($con, $sql);         
+		$query = mysqli_query($con, $sql);       
+      
 			?>
 <div class="container">
 <div class="row">
@@ -25,8 +44,8 @@
                         <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Saldo</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">S/<?php echo number_format($saldo,2);?></div>
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total de entregables</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tps;?></div>
                             </div>
                             <div class="col-auto">
                             <i class="fas fa-dollar-sign  fa-2x text-gray-300"></i>
