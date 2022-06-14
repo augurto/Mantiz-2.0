@@ -185,7 +185,8 @@
                                   <td>
                                      <form action="../process/actualizar/editar_nombre_entregable.php">
                                        <input type="text" value=" <?php echo $nom_entregable ?>" name="nuevo_nombre">
-                                       <input type="text" value=" <?php echo $id_entr ?>" name="nuevo_nombre" >
+                                       <input type="hidden" value=" <?php echo $id_entr ?>" name="id_entregable" >
+                                       <input type="text" value=" <?php echo $$_SESSION["username"] ?>" name="usuario" >
                                      <button class="btn btn-outline-primary" type="submit" ><i class="fa fa-check" aria-hidden="true"></i></button>
                                      </form>
                                   

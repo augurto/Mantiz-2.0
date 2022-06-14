@@ -7,14 +7,8 @@ $password = "Mantizb*#17";
 $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection
 
-$nombre_proyecto=$_GET["nombre_proyecto"];
+$nombre_proyecto=$_GET["nuevo_nombre"];
 $extension=$_GET["id_entregable"];
-$codigo=$_GET["codigo"];
-$presupuesto=$_GET["presupuesto"];
-$estado=$_GET["estado"];
-$fecha=$_GET["fecha"];
-
-
 
 $usuario=$_GET["usuario"];
 if (!$conn) {
