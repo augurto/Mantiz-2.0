@@ -73,13 +73,18 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <?php include 'includes/header.php';?>
     <div style="height:50px"></div>
     <!-- Inicio de Graficas -->
-    <?php echo $estado_proyecto.'sdfsd';?>
+   
     <?php include 'includes/parts/graficas_entregables.php'; ?>
     <?php include 'includes/modal-eliminar/eliminar_entregable.php'; ?>
     <?php include 'includes/modal-editar/editar_entregable.php'; ?>
     <!-- Fin de graficas -->
     <!-- Boton agregar proyecto -->
     <br>
+    <?php if ($estado_proyecto==2) {
+      
+    }else { ?>
+        
+   
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-6">
@@ -91,7 +96,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                 </span>Entregables
                 </button>
 
-                <input type="text" value="<?php echo $estado_proyecto;?>">
+              
             </div>    
             <div class="col-6">
                 <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-subir-archivos">
@@ -106,6 +111,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
             </div>     
         </div>    
     </div>
+    <?php }?>
     <br>
     <!-- Contenido de la tabla -->
     <?php include 'includes/parts/contenido_entregable.php'; ?>
