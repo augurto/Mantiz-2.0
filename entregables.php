@@ -22,6 +22,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         $sql=mysqli_query($con,"SELECT * FROM proyecto WHERE codigo='".$id_p."'");
          $rws=mysqli_fetch_array($sql);
          $nombre=$rws["nombre_proyecto"];
+         $estado_proyecto=$rws["estado"];
 
          $gd2=mysqli_query($con,"SELECT * FROM entregables WHERE  codigo_proyecto='".$id_p."'");
             $rwd2=mysqli_fetch_array($gd2);
@@ -78,6 +79,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-entregable">
                 <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
+                            <input type="text" value="<?php $estado_proyecto;?>">
                 </span>Entregables
                 </button>
             </div>    
