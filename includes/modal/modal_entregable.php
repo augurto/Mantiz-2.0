@@ -1,6 +1,6 @@
 
 <!-- Modal -->
-<?php foreach ($link->query('SELECT * from proyectos where codigo="'.$id_p.'"') as $rowpp){
+<?php foreach ($link->query('SELECT * from proyecto where codigo="'.$id_p.'"') as $rowpp){
 $id_pp=$rowpp['id_p'];
 $nombrepp=$rowpp['nombre'];
 }
