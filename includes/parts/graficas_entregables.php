@@ -195,19 +195,19 @@
                                         
                                       }
                                     </style>
-                                    <div class="input-group input-group-sm mb-3" >
-                                     <div class="input-group">
+                                    
                                         <form action="../../includes/process/actualizar/editar_nombre_entregable.php">
-                                        
+                                        <div class="input-group input-group-sm mb-3" >
+                                     <div class="input-group">
                                           <input id="editar_entregable" type="text" value=" <?php echo $nom_entregable ?>" name="nuevo_nombre">
                                           <input type="hidden" value=" <?php echo $id_entr ?>" name="id_entregable" >
                                           <input type="hidden" value=" <?php echo $usuario ?>" name="usuario" >
                                           <input type="hidden" value=" <?php echo $id_p ?>" name="id_p" >
                                         <button class="btn btn-outline-primary" type="submit" ><i class="fa fa-check" aria-hidden="true"></i></button>
-                                        
-                                        </form>
-                                     </div>
+                                        </div>
                                     </div>
+                                        </form>
+                                     
                                   </td>
                                   <?php }?>
                                   <td>
@@ -234,24 +234,57 @@
                                     <?php } ?>
 
                                   </td>
+                                  
                                   <?php if ($tipo_user==1) { ?>
-                                            
-                                            <td>
-                                        
-                                            <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit" data-nom="<?php echo '1'; ?>" data-nom2="<?php echo '2'; ?>" data-ape="<?php echo '3';?>" data-estado="<?php echo '4';  ?>" data-sub2="<?php echo '5';  ?>" >
-                                            <i class="fa fa-edit"></i>
-                                            </button>
-                                                    
-                                                    <!-- <button type="button" id="btnmodal" class="btn btn-danger" data-toggle="modal" data-target="#ModalBorrarEntregable" data-cod="<?php echo $id_entr; ?>" data-ape="<?php echo $nom_entregable; ?>">
-                                                    <i class="fa fa-trash"></i>
-                                                    </button> -->
-                
-                                                    
-                                                  
-                
-                                            </td>
-                                            <?php }
-                                            ?>
+                                    <td>
+                                      <form action="../../includes/process/actualizar/actualizar_estado_entregable.php">
+                                            <div class="input-group input-group-sm mb-3">
+                                              <input type="hidden" value="<?php echo $id; ?>" id="id" name="id" >
+                                              <input type="hidden" value="<?php echo $id_p; ?>" id="id_p" name="id_p" >
+                                              
+                                            </div>
+                                              <div class="input-group input-group-sm mb-3" >
+                                                  <div class="input-group" style="padding: 0px 20px !important;">
+
+                                                      <?php if ($estado_entregable==0) { ?>
+                                                        <select class="form-select .text-primary" style="border-color: #0275d8 !important;color: #0275d8 !important; background-color: 
+                                                        #FCF3CF !important;"  aria-label="Example select with button addon" id="estado_entregable1" name="estado_entregable1">
+                                                        <!-- <option selected></option> -->
+                                                          <option selected="selected" value="0">Pendiente</option>
+                                                          <option value="1">Aprobado</option>
+                                                          <option value="2">Observado</option>
+                                                        </select>
+                                                      <?php } elseif ($estado_entregable==1) { ?>
+                                                        <select class="form-select .text-primary" style="border-color: #0275d8 !important;color: #0275d8 !important; background-color: 
+                                                        #F0FFF0 !important;"  aria-label="Example select with button addon" id="estado_entregable1" name="estado_entregable1">
+                                                        <!-- <option selected></option> -->
+                                                          <option  value="0">Pendiente</option>
+                                                          <option selected="selected" value="1">Aprobado</option>
+                                                          <option value="2">Observado</option>
+                                                        </select>
+                                                      <?php }else { ?>
+                                                        <select class="form-select .text-primary" style="border-color: #0275d8 !important;color: #0275d8 !important; background-color: 
+                                                          #FFF0F5 !important;"  aria-label="Example select with button addon" id="estado_entregable1" name="estado_entregable1">
+                                                          <!-- <option selected></option> -->
+                                                            <option  value="0">Pendiente</option>
+                                                            <option value="1">Aprobado</option>
+                                                            <option selected="selected"  value="2">Observado</option>
+                                                          </select>
+                                                      <?php } ?>
+
+
+
+                                                      
+                                                      <button class="btn btn-outline-primary" type="submit" ><i class="fa fa-check" aria-hidden="true"></i></button>
+                                              
+                                              
+                                                  </div>
+                                              </div>
+                                    
+                                      </form>
+                                      </td>                  
+                                  <?php } ?>
+                                  
                               </tr>
                               <?php
                                 }
