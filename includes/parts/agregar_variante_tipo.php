@@ -131,6 +131,6 @@
     </div>
     <center>
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#compromisos">
- Mostrar
+ Agregar sub tipo de Proyecto
 </button>
 </center>
