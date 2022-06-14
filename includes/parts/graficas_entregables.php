@@ -137,6 +137,7 @@
                                   <tr>
                                     
                                     <th>Entregable</th>
+                                    <th><i class="fa fa-floppy-o" aria-hidden="true"></i></th>
                                     <th>Progreso</th>
                                     <th>Accion</th>
                                     
@@ -178,7 +179,7 @@
                                     $estado_ent=$row['estado'];
                                     ?>
                               <tr>
-                                  <?php  if ($estado_ent==1) { ?>
+                                  <?php  if ($estado_ent==2) { ?>
                                   <td class="table-danger"><?php echo $nom_entregable.'-'.$estado_ent; ?></td>
 
                                   <?php } else {?>
@@ -211,6 +212,7 @@
                                   </td>
                                   <?php }?>
                                   <td>
+                                    <td><button class="btn btn-outline-primary" type="submit" ><i class="fa fa-check" aria-hidden="true"></i></button></td>
                                     
 
                                   <!-- <div class="progress">
