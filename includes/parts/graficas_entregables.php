@@ -187,9 +187,11 @@
                                       #editar_entregable{
                                         border-color: transparent !important;
                                         border-radius: 2px !important;
+                                        width: 80%;
                                       }
                                       #editar_entregable:focus {
-                                        border-bottom: 1px solid #C00 !important;
+                                        border-bottom: 1px solid red !important;
+                                        width: 80%;
                                         
                                       }
                                     </style>
