@@ -63,6 +63,7 @@ if (mysqli_query($conn, $sql)) {
     
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        header("Location: ../../../entregables.php?id_p=$codigo_proyecto&a_mensaje=1");
     }
     mysqli_close($conn);
     ?>
