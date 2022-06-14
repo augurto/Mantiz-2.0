@@ -183,8 +183,14 @@
 
                                   <?php } else {?>
                                   <td>
+                                    <style>
+                                      .editar_entregable{
+                                        border-color: transparent !important;
+                                      }
+                                    </style>
                                      <form action="../../includes/process/actualizar/editar_nombre_entregable.php">
-                                       <input type="text" value=" <?php echo $nom_entregable ?>" name="nuevo_nombre">
+                                       <input class="editar_entregable" type="text" value=" <?php echo $nom_entregable ?>" name="nuevo_nombre" 
+                                     >
                                        <input type="hidden" value=" <?php echo $id_entr ?>" name="id_entregable" >
                                        <input type="hidden" value=" <?php echo $usuario ?>" name="usuario" >
                                        <input type="hidden" value=" <?php echo $id_p ?>" name="id_p" >
