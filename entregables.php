@@ -81,20 +81,21 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <!-- Boton agregar proyecto -->
 
     
-    <?php if ($estado_proyecto==1) { ?>
+    
           <br>
    
           <div class="container">
               <div class="row justify-content-between">
                   <div class="col-6">
                       <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-entregable">
-                      <span class="icon text-white-50">
-                                  <i class="fas fa-plus"></i>
-                                  
-                      </span>Entregables
-                      </button>
-      
+                      <?php if ($estado_proyecto==1) { ?>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-entregable">
+                            <span class="icon text-white-50">
+                                        <i class="fas fa-plus"></i>
+                                        
+                            </span>Entregables
+                            </button>
+                      <?php } ?>  
                     
                   </div>    
                   <div class="col-6">
@@ -111,9 +112,9 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
               </div>    
           </div>
   
-        <?php }elseif($estado_proyecto==0){ echo'proyecto terminado'; ?>
+       
           
-    <?php }?>
+    <
     <br>
     <!-- Contenido de la tabla -->
     <?php include 'includes/parts/contenido_entregable.php'; ?>
