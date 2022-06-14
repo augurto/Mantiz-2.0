@@ -186,6 +186,11 @@
                                     <style>
                                       .editar_entregable{
                                         border-color: transparent !important;
+                                        border-radius: 2px !important;
+                                      }
+                                      .editar_entregable:focus {
+                                        border-color: blue !important;
+                                        border-radius: 2px !important;
                                       }
                                     </style>
                                      <form action="../../includes/process/actualizar/editar_nombre_entregable.php">
