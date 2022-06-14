@@ -189,19 +189,20 @@
                                         border-radius: 2px !important;
                                       }
                                       .editar_entregable:focus {
-                                        border-color: #0275d8 !important;
-                                        border-width: 1px !important;
-                                        color: #0275d8 !important;
-                                        border-radius: 10px !important;
+                                        
+                                        border-bottom-width: 2px !important;
+                                        border-bottom-style: solid !important;
+                                        border-bottom-color: #0275d8 !important;
                                       }
                                     </style>
                                      <form action="../../includes/process/actualizar/editar_nombre_entregable.php">
-                                       <input class="editar_entregable" type="text" value=" <?php echo $nom_entregable ?>" name="nuevo_nombre" 
-                                     >
+                                     <div class="input-group">
+                                       <input class="editar_entregable" type="text" value=" <?php echo $nom_entregable ?>" name="nuevo_nombre">
                                        <input type="hidden" value=" <?php echo $id_entr ?>" name="id_entregable" >
                                        <input type="hidden" value=" <?php echo $usuario ?>" name="usuario" >
                                        <input type="hidden" value=" <?php echo $id_p ?>" name="id_p" >
                                      <button class="btn btn-outline-primary" type="submit" ><i class="fa fa-check" aria-hidden="true"></i></button>
+                                     </div>
                                      </form>
                                   
                                   </td>
