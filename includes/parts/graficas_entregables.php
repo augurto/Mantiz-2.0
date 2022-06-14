@@ -187,11 +187,11 @@
                                       #editar_entregable{
                                         border-color: transparent !important;
                                         border-radius: 2px !important;
-                                        width: 80%;
+                                        
                                       }
                                       #editar_entregable:focus {
                                         border-bottom: 1px solid red !important;
-                                        width: 80%;
+                                        
                                         
                                       }
                                     </style>
@@ -246,7 +246,7 @@
                                               <div class="input-group input-group-sm mb-3" >
                                                   <div class="input-group" style="padding: 0px 20px !important;">
 
-                                                      <?php if ($estado_entregable==0) { ?>
+                                                      <?php if ($estado_ent==0) { ?>
                                                         <select class="form-select .text-primary" style="border-color: #0275d8 !important;color: #0275d8 !important; background-color: 
                                                         #FCF3CF !important;"  aria-label="Example select with button addon" id="estado_entregable1" name="estado_entregable1">
                                                         <!-- <option selected></option> -->
@@ -254,7 +254,7 @@
                                                           <option value="1">Aprobado</option>
                                                           <option value="2">Observado</option>
                                                         </select>
-                                                      <?php } elseif ($estado_entregable==1) { ?>
+                                                      <?php } elseif ($estado_ent==1) { ?>
                                                         <select class="form-select .text-primary" style="border-color: #0275d8 !important;color: #0275d8 !important; background-color: 
                                                         #F0FFF0 !important;"  aria-label="Example select with button addon" id="estado_entregable1" name="estado_entregable1">
                                                         <!-- <option selected></option> -->
