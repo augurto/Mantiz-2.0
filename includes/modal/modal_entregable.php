@@ -2,7 +2,7 @@
 <!-- Modal -->
 <?php foreach ($link->query('SELECT * from proyecto where codigo="'.$id_p.'"') as $rowpp){
 $id_pp=$rowpp['id_p'];
-$nombrepp=$rowpp['nombre'];
+$nombrepp=$rowpp['nombre_proyecto'];
 }
 ?>
 <form action="../../includes/process/insert/insertar_entregable.php" >
