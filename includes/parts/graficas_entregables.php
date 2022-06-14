@@ -189,10 +189,8 @@
                                         border-radius: 2px !important;
                                       }
                                       .editar_entregable:focus {
+                                        border-bottom: 1px solid #C00 !important;
                                         
-                                        border-bottom-width: 2px !important;
-                                        border-bottom-style: solid !important;
-                                        border-bottom-color: #0275d8 !important;
                                       }
                                     </style>
                                      <form action="../../includes/process/actualizar/editar_nombre_entregable.php">
