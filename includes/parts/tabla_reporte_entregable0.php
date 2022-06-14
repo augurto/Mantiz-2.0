@@ -34,6 +34,7 @@
                         <?php
                         
                         $a_documento=$row['documento'];
+                        $proyecto=$row['nombre_proyecto'];
                         
                         $a_estado_seguimiento=$row['a_estado_seguimiento'];
 
@@ -62,7 +63,7 @@
                              
                              
                              
-                             <td><span id="lastname<?php echo $nombre_proyecto; ?>"><?php echo $nombre_proyecto; ?></span></td>
+                             <td><span id="lastname<?php echo $proyecto; ?>"><?php echo $proyecto; ?></span></td>
                              
                              <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_entregable; ?></span></td>
                              <td><span id="address<?php echo $fecha_entrega; ?>"><?php echo $fecha_entrega; ?></span></td>
