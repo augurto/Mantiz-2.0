@@ -84,6 +84,9 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <?php if ($_GET['mensaje']==1) {
         echo 'Ya existe un entregable con ese nombre';
     }?>
+    <?php if ($_GET['a_mensaje']==1) {
+            echo 'Ya existe un archivo con ese nombre';
+          }?>
           <br>
    
           <div class="container">
