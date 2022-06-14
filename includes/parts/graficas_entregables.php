@@ -182,7 +182,7 @@
                                   <td class="table-danger"><?php echo $nom_entregable.'-'.$estado_ent; ?></td>
 
                                   <?php } else {?>
-                                  <td><?php echo $nom_entregable.'-'.$estado_ent; ?></td>
+                                  <td><input type="text" value=" <?php echo $nom_entregable.'-'.$estado_ent; ?>"></td>
                                   <?php }?>
                                   <td>
                                     
