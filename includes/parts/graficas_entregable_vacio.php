@@ -22,7 +22,7 @@
       $rwp3=mysqli_fetch_array($tp3);
       $tps3=$rwp3["tp3"];
 
-      $te=mysqli_query($con,"SELECT count(*) te FROM miembros where rol='estudiante'");
+      $te=mysqli_query($con,"SELECT count(*) te from archivos a inner join entregables e on a.id_seg=e.id");
       $rwe=mysqli_fetch_array($te);
       $tes=$rwe["te"];
 
@@ -45,7 +45,7 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> Entregables</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tps;?></div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tes;?></div>
                             </div>
                             <div class="col-auto">
                             <i class="fas fa-dollar-sign  fa-2x text-gray-300"></i>
