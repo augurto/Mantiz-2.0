@@ -83,7 +83,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     
     <?php if ($estado_proyecto==2) {
   
-    }else { ?>
+    }elseif($estado_proyecto==1){ ?>
             <br>
    
     <div class="container">
