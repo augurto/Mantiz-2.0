@@ -131,6 +131,6 @@
     </div>
     <center>
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#compromisos">
- Agregar sub tipo de Proyecto
+    <i class="fa fa-plus" aria-hidden="true"></i> sub tipo de Proyecto
 </button>
 </center>

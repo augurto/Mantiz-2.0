@@ -46,7 +46,7 @@
                         <input type="text" class="form-control" id="nombre2" name="nombre_proyecto" aria-label="Username" aria-describedby="basic-addon1" >
                         </div>
                         <div class="input-group mb-3">
-                                <label class="input-group-text" for="inputGroupSelect01">Extension</label>
+                                <label class="input-group-text" for="inputGroupSelect01">Sub Tipo Proyecto</label>
                                 <select class="form-control" name="id_entregable" id="sub2" required="">
                                             <option disabled="disabled" value="" selected>Clic para ver.</option>
                                             <?php 
