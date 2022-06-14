@@ -183,7 +183,9 @@
 
                                   <?php } else {?>
                                   <td>
-                                     <form action="../process/actualizar/editar_nombre_entregable.php"><input type="text" value=" <?php echo $nom_entregable ?>" name="nuevo_nombre">
+                                     <form action="../process/actualizar/editar_nombre_entregable.php">
+                                       <input type="text" value=" <?php echo $nom_entregable ?>" name="nuevo_nombre">
+                                       <input type="text" value=" <?php echo $id_entr ?>" name="nuevo_nombre" >
                                      <button class="btn btn-outline-primary" type="submit" ><i class="fa fa-check" aria-hidden="true"></i></button>
                                      </form>
                                   
