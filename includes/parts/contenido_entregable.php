@@ -26,7 +26,9 @@
          <!-- aca va listar_entregables_tabla.php -->
 
           <!-- DataTales Example -->
-          
+          <?php if ($_GET['a_mensaje']==1) {
+            echo 'Ya existe un archivo con ese nombre';
+          }?>
           <div class="row">
                     <?php $sql="SELECT * FROM  archivos WHERE a_codigo_proyecto='$id_p' /* AND id_miembros='$est' */ order by id_seg asc";
                       $query = mysqli_query($con, $sql);
