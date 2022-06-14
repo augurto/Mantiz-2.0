@@ -12,7 +12,7 @@ require_once ('config/conexion_tabla.php');
 require_once ("config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
 require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
 
-foreach ($link->query('SELECT * from proyecto  order by codigo desc') as $rowp){ // aca se hace la consulta e iterarla con each. ?> 
+foreach ($link->query('SELECT * from proyecto') as $rowp){ // aca se hace la consulta e iterarla con each. ?> 
  <?php  
     
     $id=$rowp['id'];
