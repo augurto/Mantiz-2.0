@@ -1,6 +1,15 @@
 
 <!-- Modal -->
+<?php 
 
+                        $sss2=mysqli_query($con,"SELECT * FROM proyecto where id=$id_p");
+                                while($f2=mysqli_fetch_assoc($sss2)){    
+
+                                  $nombre_proyecto=$f2['nombre_proyecto'];
+
+                        }
+                        
+                        ?>
 <form action="../../includes/process/insert/insertar_entregable.php" >
 <div class="modal fade" id="modal-entregable" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
