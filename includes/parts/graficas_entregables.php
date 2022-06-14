@@ -131,7 +131,7 @@
                 <div class="row">
                         <div class="col-lg-12">
                     <div class="table-responsive">        
-                        <table  class="table table-hover" cellspacing="0" width="100%">
+                        <table  class="table table-sm" cellspacing="0" width="100%">
                     
                                   <thead>
                                   <tr>
