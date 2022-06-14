@@ -190,7 +190,7 @@
                                       }
                                       .editar_entregable:focus {
                                         border-color: #0275d8 !important;
-                                        border-width: thin !important;
+                                        border-width: 1px !important;
                                         color: #0275d8 !important;
                                         border-radius: 10px !important;
                                       }
