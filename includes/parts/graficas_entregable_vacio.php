@@ -26,7 +26,7 @@
       $rwe=mysqli_fetch_array($te);
       $tes=$rwe["te"];
 
-      $ti=mysqli_query($con,"SELECT count(*) ti FROM miembros where rol='investigador'");
+      $ti=mysqli_query($con,"SELECT count(*) ti from archivos a right join entregables e on a.id_seg=e.id where a.id_seg IS NULL");
       $rwi=mysqli_fetch_array($ti);
       $tin=$rwi["ti"];
 
@@ -64,7 +64,7 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Entregables vacios</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tps2;?></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tin;?></div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>

@@ -30,6 +30,8 @@
       $rwi=mysqli_fetch_array($ti);
       $tin=$rwi["ti"];
 
+   
+
 		$sql="SELECT * FROM  proyecto order by id desc";
 		$query = mysqli_query($con, $sql);       
       
