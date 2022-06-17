@@ -165,7 +165,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <!-- <input type="reset" class="btn btn-secondary ml-2" value="Reset"> -->
                 <br>
                 <br>
-                <p>Ya tienes cuenta? que haces aqui XD <a href="login.php">Clic aqui</a>.</p>
+                <p>Ya tienes cuenta?  <a href="index.php">Clic aqui</a>.</p>
 
              <!--  inicio de sesion con redes sociales
               <span class="d-block text-left my-4 text-muted"> or sign in with</span>
