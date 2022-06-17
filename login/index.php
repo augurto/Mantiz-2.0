@@ -122,7 +122,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="col-md-8">
               <div class="mb-4">
               <h3>Iniciar Sesion en  <strong>Mantiz</strong></h3>
-              <p class="mb-4">Floro para nuestro sensual software.</p>
+              <p class="mb-4">Mide la produccion de tu equipo de una manera simple y eficiente</p>
             </div>
             <?php 
               if(!empty($login_err)){
