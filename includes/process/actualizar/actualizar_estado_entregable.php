@@ -21,9 +21,10 @@ if (!$conn) {
 echo "Connected successfully";
  
 $sql = "UPDATE  archivos set  a_estado_seguimiento = '".$estado_entregable."' where a_id = '".$id."'";
+$sql2 = "INSERT  auditoria (valor1, valor2, valor3, fecha_modificacion, tipo_dato, usuario, proyecto) VALUES ('$id','$id_p','$estado_entregable', '$hoy', 'Actualizacion de entregables','Ego Preuba', 'Proyecto prueba' ) ";
 /* $sql = "UPDATE  users set  tipo_user = '1' where id = '".$id_users."'"; */
 if (mysqli_query($conn, $sql)) {
-      $sql2 = "INSERT  auditoria (valor1, valor2, valor3, fecha_modificacion, tipo_dato, usuario, proyecto) VALUES ('$id','$id_p','$estado_entregable', '$hoy', 'Actualizacion de entregables','Ego Preuba', 'Proyecto prueba' ) ";
+    
     echo"<script language ='JavaScript'>";
       echo "location='../../../entregables.php?id_p=$id_p'";
     echo "</script>";
