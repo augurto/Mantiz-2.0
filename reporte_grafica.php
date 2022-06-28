@@ -152,9 +152,12 @@ function toggleDataSeries(e){
 
   
    
-
-<div id="chartContainer" style="height: 370px; width: 100%;"></div>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<div class="container">
+  <div class="row">
+        <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+  </div>
+</div>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 <?php  include 'includes/footer.php'?>
 </body>
 </html>  
