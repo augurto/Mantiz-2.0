@@ -37,6 +37,15 @@ $dataPoints2 = array(
 	array("label"=> "PROYECTO6", "y"=> 69.38),
 	array("label"=> "PROYECTO7", "y"=> 98.70)
 );
+$dataPoints3 = array(
+	array("label"=> "PROYECTO1", "y"=> 64),
+	array("label"=> "PROYECTO2", "y"=> 70),
+	array("label"=> "PROYECTO3", "y"=> 72),
+	array("label"=> "PROYECTO4", "y"=> 81),
+	array("label"=> "PROYECTO5", "y"=> 63),
+	array("label"=> "PROYECTO6", "y"=> 69),
+	array("label"=> "PROYECTO7", "y"=> 98)
+);
 	
 ?>
 <!DOCTYPE html>
@@ -113,7 +122,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		indexLabel: "{y}",
 		yValueFormatString: "#0.##",
 		showInLegend: true,
-		dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
+		dataPoints: <?php echo json_encode($dataPoints3, JSON_NUMERIC_CHECK); ?>
 	}]
 });
 chart.render();
