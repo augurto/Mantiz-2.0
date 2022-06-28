@@ -10,13 +10,13 @@ $dataPoints1 = array(
 	array("label"=> "2016", "y"=> 74.70)
 );
 $dataPoints2 = array(
-	array("label"=> "2010", "y"=> 64.61),
-	array("label"=> "2011", "y"=> 70.55),
-	array("label"=> "2012", "y"=> 72.50),
-	array("label"=> "2013", "y"=> 81.30),
-	array("label"=> "2014", "y"=> 63.60),
-	array("label"=> "2015", "y"=> 69.38),
-	array("label"=> "2016", "y"=> 98.70)
+	array("label"=> "PROYECTO1", "y"=> 64.61),
+	array("label"=> "PROYECTO2", "y"=> 70.55),
+	array("label"=> "PROYECTO3", "y"=> 72.50),
+	array("label"=> "PROYECTO4", "y"=> 81.30),
+	array("label"=> "PROYECTO5", "y"=> 63.60),
+	array("label"=> "PROYECTO6", "y"=> 69.38),
+	array("label"=> "PROYECTO7", "y"=> 98.70)
 );
 	
 ?>
@@ -50,7 +50,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		dataPoints: <?php echo json_encode($dataPoints1, JSON_NUMERIC_CHECK); ?>
 	},{
 		type: "column",
-		name: "Pendiente",
+		name: "Aprobado",
 		indexLabel: "{y}",
 		yValueFormatString: "S/ #0.##",
 		showInLegend: true,
