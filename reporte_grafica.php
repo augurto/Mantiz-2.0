@@ -30,7 +30,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	theme: "light2",
 	title:{
-		text: "Average Amount Spent on Real and Artificial X-Mas Trees in U.S."
+		text: "Reporte por usuarios"
 	},
 	axisY:{
 		includeZero: true
