@@ -45,14 +45,14 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		type: "column",
 		name: "Real Trees",
 		indexLabel: "{y}",
-		yValueFormatString: "$#0.##",
+		yValueFormatString: "S/#0.##",
 		showInLegend: true,
 		dataPoints: <?php echo json_encode($dataPoints1, JSON_NUMERIC_CHECK); ?>
 	},{
 		type: "column",
 		name: "Artificial Trees",
 		indexLabel: "{y}",
-		yValueFormatString: "$#0.##",
+		yValueFormatString: "S/ #0.##",
 		showInLegend: true,
 		dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
 	}]
