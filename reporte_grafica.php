@@ -37,7 +37,7 @@ try{
     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 		
     foreach($result as $row){
-        array_push($dataPoints1, array("x"=> $row->x, "y"=> $row->y));
+        array_push($dataPoints1, array("proyecto"=> $row->x, "valor3"=> $row->y));
     }
 	$link = null;
 }
