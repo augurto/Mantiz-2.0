@@ -18,7 +18,8 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         $id_usuario=$_SESSION["id"];
 
 /* array para la grafica */
-$dataPoints = array();
+
+$dataPoints1 = array();
 //Best practice is to create a separate file for handling connection to database
 try{
      // Creating a new connection.
