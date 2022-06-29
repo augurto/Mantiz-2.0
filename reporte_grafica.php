@@ -33,7 +33,7 @@ try{
                         )
                     );
 	
-    $handle = $link->prepare('SELECT  proyecto, valor3 from auditoria'); 
+    $handle = $link->prepare('SELECT  proyecto, valor3 from auditoria where valor3=0 group by proyecto'); 
     $handle->execute(); 
     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 		
