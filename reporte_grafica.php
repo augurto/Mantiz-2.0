@@ -18,8 +18,35 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         $id_usuario=$_SESSION["id"];
 
 /* array para la grafica */
+$dataPoints = array();
+//Best practice is to create a separate file for handling connection to database
+try{
+     // Creating a new connection.
+    // Replace your-hostname, your-db, your-username, your-password according to your database
+    $link = new \PDO(   'mysql:host=localhost;dbname=u415020159_mantizb;charset=utf8mb4', //'mysql:host=localhost;dbname=canvasjs_db;charset=utf8mb4',
+                        'u415020159_mantizb', //'root',
+                        'Mantizb*#17', //'',
+                        array(
+                            \PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                            \PDO::ATTR_PERSISTENT => false
+                        )
+                    );
+	
+    $handle = $link->prepare('SELECT  proyecto, valor3 from auditoria'); 
+    $handle->execute(); 
+    $result = $handle->fetchAll(\PDO::FETCH_OBJ);
+		
+    foreach($result as $row){
+        array_push($dataPoints1, array("x"=> $row->x, "y"=> $row->y));
+    }
+	$link = null;
+}
+catch(\PDOException $ex){
+    print($ex->getMessage());
+}
+
  
-$dataPoints1 = array(
+/* $dataPoints1 = array(
 	array("label"=> "2010", "y"=> 36.12),
 	array("label"=> "2011", "y"=> 34.87),
 	array("label"=> "2012", "y"=> 40.30),
@@ -27,7 +54,7 @@ $dataPoints1 = array(
 	array("label"=> "2014", "y"=> 39.50),
 	array("label"=> "2015", "y"=> 50.82),
 	array("label"=> "2016", "y"=> 74.70)
-);
+); */
 $dataPoints2 = array(
 	array("label"=> "PROYECTO1", "y"=> 64.61),
 	array("label"=> "PROYECTO2", "y"=> 70.55),
@@ -46,7 +73,7 @@ $dataPoints3 = array(
 	array("label"=> "PROYECTO6", "y"=> 69),
 	array("label"=> "PROYECTO7", "y"=> 98)
 );
-	
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
