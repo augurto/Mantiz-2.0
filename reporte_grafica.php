@@ -44,7 +44,7 @@ try{
                         array_push($dataPoints1, array("label"=> $row->proyecto, "y"=> $row->VAL));
                     }
 
-                    $handle1 = $link->prepare('SELECT  proyecto, COUNT(valor3) AS VAL from auditoria where valor3=1 GROUP BY proyecto'); 
+                    $handle1 = $link->prepare('SELECT   usuario,proyecto, COUNT(valor3) AS VAL from auditoria where valor3=1 GROUP BY proyecto ,usuario'); 
                     $handle1->execute(); 
                     $result1 = $handle1->fetchAll(\PDO::FETCH_OBJ);
                         
@@ -53,7 +53,7 @@ try{
                         array_push($dataPoints2, array("label"=> $row1->proyecto, "y"=> $row1->VAL));
                     }
 
-                    $handle2 = $link->prepare('SELECT  proyecto, COUNT(valor3) AS VAL from auditoria where valor3=2 GROUP BY proyecto'); 
+                    $handle2 = $link->prepare('SELECT  usuario, proyecto, COUNT(valor3) AS VAL from auditoria where valor3=2 GROUP BY proyecto, usuario'); 
                     $handle2->execute(); 
                     $result2 = $handle2->fetchAll(\PDO::FETCH_OBJ);
                         
