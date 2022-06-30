@@ -195,12 +195,13 @@ $dataPoints3 = array(
     <!-- Fin del contenido de la tabla -->
 
   
-   
+    <div class="overflow-hidden"> 
 <div class="container">
   <div class="row">
         <div id="chartContainer" style="height: 370px; width: 100%;"></div>
   </div>
 </div>
+    </div>
         <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 <?php  include 'includes/footer.php'?>
 </body>
