@@ -234,7 +234,7 @@ function toggleDataSeries(e){
   </div>
 </form>
 
-        <div class="w-auto p-3" id="chartContainer" style="height: 370px;"></div>
+        <div class="h-auto d-inline-block" id="chartContainer" style="height: 370px;width: 100%;"></div>
   </div>
 </div>
     </div>
