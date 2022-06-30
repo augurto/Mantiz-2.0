@@ -33,12 +33,12 @@ try{
                         )
                     );
 	
-    $handle = $link->prepare('SELECT  proyecto, COUNT(valor3) from auditoria where valor3=2 GROUP BY proyecto'); 
+    $handle = $link->prepare('SELECT  proyecto, COUNT(valor3) AS VAL from auditoria where valor3=2 GROUP BY proyecto'); 
     $handle->execute(); 
     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 		
     foreach($result as $row){
-        array_push($dataPoints1, array("label"=> $row->proyecto, "y"=> $row->valor3));
+        array_push($dataPoints1, array("label"=> $row->proyecto, "y"=> $row->VAL));
     }
 	$link = null;
 }
