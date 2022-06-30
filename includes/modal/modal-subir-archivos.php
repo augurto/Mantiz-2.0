@@ -64,7 +64,7 @@ $hoy = date("Y-m-d H:i:s");
        
         
             <div class="input-group mb-3">
-              <label class="input-group-text" for="inputGroupSelect01">Entregable...</label>
+              <label class="input-group-text" for="inputGroupSelect01">Entregable</label>
               <select class="form-control" name="id_entregable" id="id_entregable" required="">
                         <option disabled="disabled" value="" selected>Clic para ver entregables</option>
                         <?php 
