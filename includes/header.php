@@ -47,6 +47,7 @@ $username2=$dos['username'];
           <li><a class="dropdown-item" href="../reporte_entregable.php" >Entregables </a></li>
           <li><a class="dropdown-item" href="../reporte_entregable0.php" >Entregables vacios </a></li>
           <li><a class="dropdown-item" href="../reporte_grafica.php" >Reporte de Proyectos </a></li>
+          <li><a class="dropdown-item" href="../reporte_usuario.php" >Reporte de Proyectos </a></li>
             <li><a class="dropdown-item" href="#">Grupos</a></li>
             
           </ul>
