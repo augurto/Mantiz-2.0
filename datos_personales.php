@@ -58,8 +58,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <title>Mantiz</title>
 </head>
 <body>
-<div class="container">
-<div class="row">
+
       <!-- datos de sesion -->
   <input type="hidden" value="<?php echo $usuario;?>">
   <input type="hidden" value="<?php echo $id_usuario;?>">
@@ -72,7 +71,8 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <?php include 'includes/header.php';?>
     <div style="height:50px"></div>
     <!-- Inicio de Graficas -->
-
+    <div class="container">
+<div class="row">
 <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
