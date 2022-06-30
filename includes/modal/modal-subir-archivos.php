@@ -12,7 +12,9 @@
     }
 </script>
 
-
+<?php 
+$hoy = date("Y-m-d H:i:s");   
+?>
 <!-- Modal -->
 <form action="../../includes/process/insert/insertar_archivo.php" method="post"  enctype="multipart/form-data" >
 <div class="modal fade" id="modal-subir-archivos" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -40,6 +42,7 @@
       <input type="hidden" value="<?php echo $_GET["id_p"]; ?>" id="codigo" name="codigo" >
       <input type="hidden" value="<?php echo $nombre_proyecto; ?>" id="nombre_proyecto" name="nombre_proyecto" >
       <input type="hidden" value="<?php echo $usuario; ?>" id="usuario" name="usuario" >
+      <input type="text" value="<?php echo $hoy; ?>" id="hoy_dia" name="hoy_dia" >
         <input type="file" class="form-control"  id="documento" name="documento" aria-label="Username" aria-describedby="basic-addon1">
       </div>  
       <div class="input-group mb-3">
