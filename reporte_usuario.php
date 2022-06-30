@@ -16,7 +16,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         $saldo=$rwt['saldo'];
         $usuario=$_SESSION["username"];
         $id_usuario=$_SESSION["id"];
-        $hydra='ego';
+        $hydra=$_GET['usuario'];
 
 /* array para la grafica */
 
@@ -214,9 +214,9 @@ function toggleDataSeries(e){
 <div class="container">
   <div class="row">
   
-<form action="/reporte_usuario.php?usuario=<?php echo $_GET['usuario2'] ;?>">
+<form action="/reporte_usuario.php?usuario=<?php echo $_GET['usuario'] ;?>">
 <div class="input-group mb-3">
-                                <select class="form-control" name="usuario2" id="usuario2" required="">
+                                <select class="form-control" name="usuario" id="usuario" required="">
                                             <option disabled="disabled" value="" selected>Clic para ver Usuarios</option>
                                             <?php 
 
