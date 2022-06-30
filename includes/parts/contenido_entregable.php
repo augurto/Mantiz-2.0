@@ -91,7 +91,7 @@
                                     <div class="input-group input-group-sm mb-3">
                                       <input type="hidden" value="<?php echo $id; ?>" id="id" name="id" >
                                       <input type="hidden" value="<?php echo $id_p; ?>" id="id_p" name="id_p" >
-                                      <input type="text" value="<?php echo $usuario;?>" id="usuario" name="usuario">
+                                      <input type="hidden" value="<?php echo $usuario;?>" id="usuario" name="usuario">
                                       
                                     </div>
                                       <div class="input-group input-group-sm mb-3" >
