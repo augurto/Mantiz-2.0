@@ -154,15 +154,15 @@ $dataPoints3 = array(
                     },
                     data: [{
                         type: "stackedBar",
-                        name: "Test",
+                        name: "Aprobado",
                         dataPoints: <?php echo json_encode($dataPoints1, JSON_NUMERIC_CHECK); ?>
                     },{
                         type: "stackedBar",
-                        name: "ODI",
+                        name: "Observado",
                         dataPoints: <?php echo json_encode($dataPoints3, JSON_NUMERIC_CHECK); ?>
                     },{
                         type: "stackedBar",
-                        name: "T20",
+                        name: "Pendiente",
                         indexLabel: "#total",
                         indexLabelPlacement: "outside",
                         indexLabelFontSize: 15,
