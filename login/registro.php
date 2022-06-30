@@ -96,7 +96,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -143,7 +143,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
               <div class="form-group first">
                 <label for="username">Usuario</label>
-                <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+                <input type="text" name="username" autofocus class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
                 <span class="invalid-feedback"><?php echo $username_err; ?></span>
               </div>
               <div class="form-group last mb-4">

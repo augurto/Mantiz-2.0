@@ -88,7 +88,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -154,7 +154,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               <!--   <span class="ml-auto"><a href="#" class="forgot-pass">Has olvidado tu contraseña, mejora olvidala a ella </a></span>  -->
               </div>
 
-              <span class="ml-auto"><a href="#" class="forgot-pass">Has olvidado tu contraseña, mejora olvidala a ella </a></span> 
+              <span class="ml-auto"><a href="#" class="forgot-pass">Has olvidado tu contraseña </a></span> 
               <br>
               <input type="submit" class="btn btn-primary" value="Login">
               <p>No tienes cuenta? <a href="registro.php">Registrate</a>.</p>
