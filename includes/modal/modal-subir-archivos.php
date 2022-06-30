@@ -86,7 +86,7 @@ $hoy = date("Y-m-d H:i:s");
                         <option disabled="disabled" value="" selected>Clic para ver usuarios</option>
                         <?php 
 
-                        $sss2=mysqli_query($con,"SELECT * FROM users ");
+                        $sss2=mysqli_query($con,"SELECT * FROM users");
                                 while($f2=mysqli_fetch_assoc($sss2)){    
 
                                     echo '<option value="'.$f2['id'].'">'.$f2['username'].'</option>';
