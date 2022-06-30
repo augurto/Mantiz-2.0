@@ -41,7 +41,7 @@ try{
                         
                     foreach($result as $row){
                         
-                        array_push($dataPoints1, array("label"=> $row->nom_usuario, "y"=> $row->VAL));
+                        array_push($dataPoints1, array("label"=> $row->nom_proyecto, "y"=> $row->VAL));
                     }
 
                     $handle1 = $link->prepare('SELECT  p.nombre_proyecto as nom_proyecto, a.usuario as nom_usuario,a.proyecto, valor3,COUNT(valor3) AS VAL from auditoria a inner join proyecto p on a.proyecto=p.codigo where valor3=1 GROUP BY proyecto,valor3'); 
@@ -50,7 +50,7 @@ try{
                         
                     foreach($result1 as $row1){
                       
-                        array_push($dataPoints2, array("label"=> $row1->nom_usuario, "y"=> $row1->VAL));
+                        array_push($dataPoints2, array("label"=> $row1->nom_proyecto, "y"=> $row1->VAL));
                     }
 
                     $handle2 = $link->prepare('SELECT  p.nombre_proyecto as nom_proyecto, a.usuario as nom_usuario,a.proyecto, valor3,COUNT(valor3) AS VAL from auditoria a inner join proyecto p on a.proyecto=p.codigo where valor3=2 GROUP BY proyecto,valor3'); 
@@ -59,7 +59,7 @@ try{
                         
                     foreach($result2 as $row2){
                       
-                        array_push($dataPoints3, array("label"=> $row2->nom_usuario, "y"=> $row2->VAL));
+                        array_push($dataPoints3, array("label"=> $row2->nom_proyecto, "y"=> $row2->VAL));
                     }
 	$link = null;
 }
