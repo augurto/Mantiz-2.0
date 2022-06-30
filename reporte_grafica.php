@@ -133,61 +133,47 @@ $dataPoints3 = array(
 
 
 
-<script>
-window.onload = function () {
- 
-var chart = new CanvasJS.Chart("chartContainer", {
-	animationEnabled: true,
-	theme: "light2",
-	title:{
-		text: "Reporte por usuarios"
-	},
-	axisY:{
-		includeZero: true
-	},
-	legend:{
-		cursor: "pointer",
-		verticalAlign: "center",
-		horizontalAlign: "right",
-		itemclick: toggleDataSeries
-	},
-	data: [{
-		type: "column",
-		name: "Observado",
-		indexLabel: "{y}",
-		yValueFormatString: "#0.##",
-		showInLegend: true,
-		dataPoints: <?php echo json_encode($dataPoints1, JSON_NUMERIC_CHECK); ?>
-	},{
-		type: "column",
-		name: "Aprobado",
-		indexLabel: "{y}",
-		yValueFormatString: "#0.##",
-		showInLegend: true,
-		dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
-	},{
-		type: "column",
-		name: "Pendiente",
-		indexLabel: "{y}",
-		yValueFormatString: "#0.##",
-		showInLegend: true,
-		dataPoints: <?php echo json_encode($dataPoints3, JSON_NUMERIC_CHECK); ?>
-	}]
-});
-chart.render();
- 
-function toggleDataSeries(e){
-	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-		e.dataSeries.visible = false;
-	}
-	else{
-		e.dataSeries.visible = true;
-	}
-	chart.render();
-}
- 
-}
-</script>
+    <script>
+    window.onload = function () {
+    
+                var chart = new CanvasJS.Chart("chartContainer", {
+                    animationEnabled: true,
+                    exportEnabled: true,
+                    theme: "light1", // "light1", "light2", "dark1", "dark2"
+                    title:{
+                        text: "Most Number of Centuries across all Formats till 2017"
+                    },
+                    axisX:{
+                        reversed: true
+                    },
+                    axisY:{
+                        includeZero: true
+                    },
+                    toolTip:{
+                        shared: true
+                    },
+                    data: [{
+                        type: "stackedBar",
+                        name: "Test",
+                        dataPoints: <?php echo json_encode($test, JSON_NUMERIC_CHECK); ?>
+                    },{
+                        type: "stackedBar",
+                        name: "ODI",
+                        dataPoints: <?php echo json_encode($odi, JSON_NUMERIC_CHECK); ?>
+                    },{
+                        type: "stackedBar",
+                        name: "T20",
+                        indexLabel: "#total",
+                        indexLabelPlacement: "outside",
+                        indexLabelFontSize: 15,
+                        indexLabelFontWeight: "bold",
+                        dataPoints: <?php echo json_encode($t20, JSON_NUMERIC_CHECK); ?>
+                    }]
+                });
+                chart.render();
+                
+                }
+    </script>
 </head>
 <title>Mantiz-Grafica</title>
 <body>
