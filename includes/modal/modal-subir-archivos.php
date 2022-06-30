@@ -13,8 +13,9 @@
 </script>
 
 <?php 
+date_default_timezone_set("America/Lima");
 $hoy = date("Y-m-d H:i:s");
-$NuevaFecha = strtotime ( '-5 hour' , strtotime ($hoy) ) ; 
+ 
 
 ?>
 <!-- Modal -->
@@ -44,7 +45,7 @@ $NuevaFecha = strtotime ( '-5 hour' , strtotime ($hoy) ) ;
       <input type="hidden" value="<?php echo $_GET["id_p"]; ?>" id="codigo" name="codigo" >
       <input type="hidden" value="<?php echo $nombre_proyecto; ?>" id="nombre_proyecto" name="nombre_proyecto" >
       <input type="hidden" value="<?php echo $usuario; ?>" id="usuario" name="usuario" >
-      <input type="text" value="<?php echo $NuevaFecha; ?>" id="hoy_dia" name="hoy_dia" >
+      <input type="text" value="<?php echo $hoy; ?>" id="hoy_dia" name="hoy_dia" >
         <input type="file" class="form-control"  id="documento" name="documento" aria-label="Username" aria-describedby="basic-addon1">
       </div>  
       <div class="input-group mb-3">
