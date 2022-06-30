@@ -141,7 +141,7 @@ $dataPoints3 = array(
                     exportEnabled: true,
                     theme: "light1", // "light1", "light2", "dark1", "dark2"
                     title:{
-                        text: "Most Number of Centuries across all Formats till 2017"
+                        text: "Reporte de Entregables por Proyecto"
                     },
                     axisX:{
                         reversed: true
