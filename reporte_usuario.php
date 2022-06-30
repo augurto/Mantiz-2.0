@@ -211,9 +211,7 @@ function toggleDataSeries(e){
 
   
    
-<div class="container">
-  <div class="row">
-  <div class="col-lg-12">
+    <div class="list-group">
                     <div class="table-responsive">    
 <form action="/reporte_usuario.php?usuario=<?php echo $_GET['usuario'] ;?>">
 <div class="input-group mb-3">
@@ -235,10 +233,9 @@ function toggleDataSeries(e){
   </div>
 </form>
                     </div>
-  </div>
+ 
         <div id="chartContainer" style="height: 370px; width: 100%;"></div>
-  </div>
-</div>
+  
         <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 <?php  include 'includes/footer.php'?>
 </body>
