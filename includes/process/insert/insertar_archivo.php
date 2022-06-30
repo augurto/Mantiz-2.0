@@ -23,7 +23,7 @@ $fecha=$_POST["fecha"];
 
 $direccion=$_POST["id_p"]; /* codigo de proyecto */
 $carpeta='../../../archivos/'.$codigo_proyecto.'/'.$id_entregable;
-
+$hoy = date("Y-m-d H:i:s");
 
 
  
@@ -34,8 +34,8 @@ echo "Connected successfully";
 
 
 /* $carpeta='archivos/proyectos/'.$direccion; */
-$sql = "INSERT INTO archivos (a_codigo_proyecto, documento,id_seg,a_descripcion,id_miembros,link,a_usuario,a_estado_seguimiento, nombre_proyecto)
-VALUES ('$codigo_proyecto', '$nombre_documento','$id_entregable','$descripcion','159','$link','$usuario_seguimiento','0','$nombre_proyecto')";
+$sql = "INSERT INTO archivos (a_codigo_proyecto, documento,id_seg,a_descripcion,id_miembros,link,a_usuario,a_estado_seguimiento, nombre_proyecto,fecha_subida)
+VALUES ('$codigo_proyecto', '$nombre_documento','$id_entregable','$descripcion','159','$link','$usuario_seguimiento','0','$nombre_proyecto'.'$hoy')";
 
 if (mysqli_query($conn, $sql)) {
 
