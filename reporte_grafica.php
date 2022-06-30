@@ -44,7 +44,7 @@ try{
                         array_push($dataPoints1, array("label"=> $row->nom_proyecto, "y"=> $row->VAL));
                     }
 
-                    $handle1 = $link->prepare('SELECT  p.nombre_proyecto as nom_proyecto, a.usuario,a.proyecto, valor3,COUNT(valor3) AS VAL from auditoria a inner join proyecto p on a.proyecto=p.codigo where valor2=1 GROUP BY proyecto,valor3'); 
+                    $handle1 = $link->prepare('SELECT  p.nombre_proyecto as nom_proyecto, a.usuario,a.proyecto, valor3,COUNT(valor3) AS VAL from auditoria a inner join proyecto p on a.proyecto=p.codigo where valor3=1 GROUP BY proyecto,valor3'); 
                     $handle1->execute(); 
                     $result1 = $handle1->fetchAll(\PDO::FETCH_OBJ);
                         
