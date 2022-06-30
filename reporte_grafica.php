@@ -159,7 +159,7 @@ $dataPoints3 = array(
                     },{
                         type: "stackedBar",
                         name: "ODI",
-                        dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
+                        dataPoints: <?php echo json_encode($dataPoints3, JSON_NUMERIC_CHECK); ?>
                     },{
                         type: "stackedBar",
                         name: "T20",
@@ -167,7 +167,7 @@ $dataPoints3 = array(
                         indexLabelPlacement: "outside",
                         indexLabelFontSize: 15,
                         indexLabelFontWeight: "bold",
-                        dataPoints: <?php echo json_encode($dataPoints3, JSON_NUMERIC_CHECK); ?>
+                        dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
                     }]
                 });
                 chart.render();
