@@ -35,7 +35,7 @@ try{
                         )
                     );
 	
-                    $handle = $link->prepare('SELECT  usuario,proyecto, COUNT(valor3) AS VAL from auditoria where valor3=0 GROUP BY proyecto, usuario'); 
+                    $handle = $link->prepare('SELECT  usuario,proyecto, COUNT(valor3) AS VAL from auditoria where valor3=2 GROUP BY proyecto, usuario'); 
                     $handle->execute(); 
                     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
                         
@@ -53,13 +53,13 @@ try{
                         array_push($dataPoints2, array("label"=> $row1->proyecto, "y"=> $row1->VAL));
                     }
 
-                    $handle2 = $link->prepare('SELECT  usuario, proyecto, COUNT(valor3) AS VAL from auditoria where valor3=2 GROUP BY proyecto, usuario'); 
+                    $handle2 = $link->prepare('SELECT  usuario, proyecto, COUNT(valor3) AS VAL from auditoria where valor3=0 GROUP BY proyecto, usuario'); 
                     $handle2->execute(); 
                     $result2 = $handle2->fetchAll(\PDO::FETCH_OBJ);
                         
                     foreach($result2 as $row2){
                       
-                        array_push($dataPoints3, array("label"=> $row2->usuario, "y"=> $row2->VAL));
+                        array_push($dataPoints3, array("label"=> $row2->proyecto, "y"=> $row2->VAL));
                     }
 	$link = null;
 }
@@ -153,7 +153,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	},
 	data: [{
 		type: "column",
-		name: "Pendiente",
+		name: "Observado",
 		indexLabel: "{y}",
 		yValueFormatString: "#0.##",
 		showInLegend: true,
@@ -167,7 +167,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
 	},{
 		type: "column",
-		name: "Observado",
+		name: "Pendiente",
 		indexLabel: "{y}",
 		yValueFormatString: "#0.##",
 		showInLegend: true,
