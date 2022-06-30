@@ -59,16 +59,16 @@ if ($insertarUno==true)// SI LA QUERY ANTERIOR SE EJECUTA CON EXITO, SE EJECUTA 
                         /* header("Location: ver_entregables.php?var1=$direccion"); */
                         header("Location: ../../../entregables.php?id_p=$codigo_proyecto");
                         exit;
+                        
 } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    header("Location: ../../../entregables.php?id_p=$codigo_proyecto&a_mensaje=1");
+ 
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      header("Location: ../../../entregables.php?id_p=$codigo_proyecto&a_mensaje=1");
 }
 mysqli_close($conn);
-
  
 
 
-/* $carpeta='archivos/proyectos/'.$direccion; */
 
     ?>
 
