@@ -30,7 +30,7 @@
             echo 'Ya existe un archivo con ese nombre';
           }?>
           <div class="row">
-                    <?php $sql="SELECT * FROM  archivos WHERE a_codigo_proyecto='$id_p' /* AND id_miembros='$est' */ order by a_id desc";
+                    <?php $sql="SELECT * FROM  archivos a inner join users u on a.usuario_asignado_archivo=u.id WHERE a_codigo_proyecto='$id_p' /* AND id_miembros='$est' */ order by a_id desc";
                       $query = mysqli_query($con, $sql);
                       while ($row=mysqli_fetch_array($query)){
                             $id=$row['a_id'];
@@ -41,7 +41,7 @@
                             $estado_entregable=$row['a_estado_seguimiento'];
                             $link=$row['link'];
                             $usuario_seguimiento=$row['a_usuario'];
-                            $usuario_asignado=$row['usuario_asignado_archivo'];
+                            $usuario_asignado=$row['username'];
                             $hora_subida=$row['fecha_subida'];
 
                             $gd=mysqli_query($con,"SELECT * FROM entregables WHERE  id='".$id_seg."' AND codigo_proyecto='".$id_p."'");
