@@ -30,7 +30,7 @@
             echo 'Ya existe un archivo con ese nombre';
           }?>
           <div class="row">
-                    <?php $sql="SELECT * FROM  archivos WHERE a_codigo_proyecto='$id_p' /* AND id_miembros='$est' */ order by a_id asc";
+                    <?php $sql="SELECT * FROM  archivos WHERE a_codigo_proyecto='$id_p' /* AND id_miembros='$est' */ order by a_id desc";
                       $query = mysqli_query($con, $sql);
                       while ($row=mysqli_fetch_array($query)){
                             $id=$row['a_id'];
