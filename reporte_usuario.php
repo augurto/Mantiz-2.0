@@ -216,7 +216,7 @@ function toggleDataSeries(e){
   
 <form action="/reporte_usuario.php?usuario=<?php echo $_GET['usuario'] ;?>">
 <div class="input-group mb-3">
-                                <select class="form-control" name="usuario" id="usuario" required="">
+                                <select class="form-select" name="usuario" id="usuario" required="">
                                             <option disabled="disabled" value="" selected>Clic para ver Usuarios</option>
                                             <?php 
 

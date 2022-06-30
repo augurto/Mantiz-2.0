@@ -1,12 +1,13 @@
 
                     
                     <!-- Button trigger modal -->
+                    <div class="col-sm-12 text-center">
                     <div class="col text-center">
                       <button type="button" class="btn btn-primary" id="boton_proyecto" data-toggle="modal" data-target="#exampleModalCenter">
                       Nuevo Proyecto
                       </button>
                     </div>
-
+                    </div>
                     
 
                   <!-- Modal -->

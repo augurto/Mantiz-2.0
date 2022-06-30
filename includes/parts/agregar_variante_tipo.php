@@ -129,8 +129,8 @@
             </div>
         </div>
     </div>
-    <center>
+    <div class="col-sm-12 text-center">
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#compromisos">
     <i class="fa fa-plus" aria-hidden="true"></i> sub tipo de Proyecto
-</button>
-</center>
+    </button>
+    </div>
