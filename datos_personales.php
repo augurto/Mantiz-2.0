@@ -73,8 +73,11 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <!-- Inicio de Graficas -->
     <div class="container">
 <div class="row">
+<div class="text-center">
+  <img src="..." class="rounded" alt="...">
+</div>
 <div class="mb-3">
-  <label for="formFile" class="form-label">Default file input example</label>
+  <label for="formFile" class="form-label">Subir imagen </label>
   <input class="form-control" type="file" id="formFile">
 </div>
 
