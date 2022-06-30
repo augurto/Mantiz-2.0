@@ -135,7 +135,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
               <div class="form-group first">
                 <label for="username">Usuario</label>
-                <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+                <input type="text" name="username" autofocus class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
                 <span class="invalid-feedback"><?php echo $username_err; ?></span>
               </div>
               <div class="form-group last mb-4">
@@ -146,9 +146,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               </div>
               
               <div class="d-flex mb-5 align-items-center">
-                <label class="control control--checkbox mb-0"><span class="caption">Recuérdame, aunque tenga que emigrar
-                  Recuérdame, si mi guitarra oyes llorar
-                  Ella con su triste canto te acompañará</span>
+                <label class="control control--checkbox mb-0"><span class="caption">Recuérdame</span>
                   <input type="checkbox" checked="checked"/>
                   <div class="control__indicator"></div>
                 </label>
