@@ -213,6 +213,24 @@ function toggleDataSeries(e){
    
 <div class="container">
   <div class="row">
+        <label for="inputProyec">Elegir Usuario</label>
+                       <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">Usuario</label>
+                                <select class="form-control" name="id_extension" id="id_extension" required="">
+                                            <option disabled="disabled" value="" selected>Clic para ver Usuarios</option>
+                                            <?php 
+
+                                            $sss=mysqli_query($con,"SELECT * FROM users");
+                                                    while($f=mysqli_fetch_assoc($sss)){    
+
+                                                        echo '<option value="'.$f['username'].'">'.$f['username'].'</option>';
+
+                                            }
+                                            
+                                            ?>
+                                </select>
+                                        
+                        </div>
         <div id="chartContainer" style="height: 370px; width: 100%;"></div>
   </div>
 </div>
