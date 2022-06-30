@@ -214,8 +214,8 @@ function toggleDataSeries(e){
 <div class="container">
   <div class="row">
   <div class="input-group mb-3">
-
-  <select class="form-control" name="id_extension" id="id_extension" required="">
+<form action="reporte_usuario?usuario=<?php echo $_GET['usuario2'] ;?>">
+                                <select class="form-control" name="usuario2" id="usuario2" required="">
                                             <option disabled="disabled" value="" selected>Clic para ver Usuarios</option>
                                             <?php 
 
@@ -228,6 +228,7 @@ function toggleDataSeries(e){
                                             
                                             ?>
                                 </select>
+</form>
   <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar usuario</button>
 </div>
         <div id="chartContainer" style="height: 370px; width: 100%;"></div>
