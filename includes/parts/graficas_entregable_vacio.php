@@ -77,11 +77,12 @@
 
             <!-- Earnings (Monthly) Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
+            <a href="../../reporte_grafica.php">
               <div class="card border-left-info shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Colaborador</div>
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Reporte Proyectos</div>
                       <div class="row no-gutters align-items-center">
                         <div class="col-auto">
                           <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?php echo $tes;?></div>
@@ -97,15 +98,17 @@
                   </div>
                 </div>
               </div>
+              </a>
             </div>
 
             <!-- Pending Requests Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
+            <a href="../../reporte_usuario.php">
               <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Jefe de Proyecto</div>
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Resporte Usuarios</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tin;?></div>
                     </div>
                     <div class="col-auto">
@@ -115,5 +118,6 @@
                 </div>
               </div>
             </div>
+            </a>
           </div>
 </div>
