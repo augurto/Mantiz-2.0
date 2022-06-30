@@ -35,13 +35,13 @@ try{
                         )
                     );
 	
-                    $handle = $link->prepare('SELECT  proyecto, COUNT(valor3) AS VAL from auditoria where valor3=0 GROUP BY proyecto'); 
+                    $handle = $link->prepare('SELECT  usuario,proyecto, COUNT(valor3) AS VAL from auditoria where valor3=0 GROUP BY proyecto, usuario'); 
                     $handle->execute(); 
                     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
                         
                     foreach($result as $row){
                         
-                        array_push($dataPoints1, array("label"=> $row->proyecto, "y"=> $row->VAL));
+                        array_push($dataPoints1, array("label"=> $row->usuario, "y"=> $row->VAL));
                     }
 
                     $handle1 = $link->prepare('SELECT  proyecto, COUNT(valor3) AS VAL from auditoria where valor3=1 GROUP BY proyecto'); 
