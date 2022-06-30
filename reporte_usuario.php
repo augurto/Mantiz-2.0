@@ -36,7 +36,7 @@ try{
                         )
                     );
 	
-                    $handle = $link->prepare('SELECT  p.nombre_proyecto as nom_proyecto, a.usuario as nom_usuario,a.proyecto, valor3,COUNT(valor3) AS VAL from auditoria a inner join proyecto p on a.proyecto=p.codigo where a.usuario="ego2" AND valor3=0 GROUP BY proyecto,valor3'); 
+                    $handle = $link->prepare('SELECT  p.nombre_proyecto as nom_proyecto, a.usuario as nom_usuario,a.proyecto, valor3,COUNT(valor3) AS VAL from auditoria a inner join proyecto p on a.proyecto=p.codigo where a.usuario="'.$hydra.'" AND valor3=0 GROUP BY proyecto,valor3'); 
                     $handle->execute(); 
                     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
                         
@@ -45,7 +45,7 @@ try{
                         array_push($dataPoints1, array("label"=> $row->nom_proyecto, "y"=> $row->VAL));
                     }
 
-                    $handle1 = $link->prepare('SELECT  p.nombre_proyecto as nom_proyecto, a.usuario as nom_usuario,a.proyecto, valor3,COUNT(valor3) AS VAL from auditoria a inner join proyecto p on a.proyecto=p.codigo  where a.usuario="ego2" AND valor3=1 GROUP BY proyecto,valor3'); 
+                    $handle1 = $link->prepare('SELECT  p.nombre_proyecto as nom_proyecto, a.usuario as nom_usuario,a.proyecto, valor3,COUNT(valor3) AS VAL from auditoria a inner join proyecto p on a.proyecto=p.codigo  where a.usuario="'.$hydra.'" AND valor3=1 GROUP BY proyecto,valor3'); 
                     $handle1->execute(); 
                     $result1 = $handle1->fetchAll(\PDO::FETCH_OBJ);
                         
@@ -54,7 +54,7 @@ try{
                         array_push($dataPoints2, array("label"=> $row1->nom_proyecto, "y"=> $row1->VAL));
                     }
 
-                    $handle2 = $link->prepare('SELECT  p.nombre_proyecto as nom_proyecto, a.usuario as nom_usuario,a.proyecto, valor3,COUNT(valor3) AS VAL from auditoria a inner join proyecto p on a.proyecto=p.codigo where a.usuario="ego2" AND  valor3=2 GROUP BY proyecto,valor3'); 
+                    $handle2 = $link->prepare('SELECT  p.nombre_proyecto as nom_proyecto, a.usuario as nom_usuario,a.proyecto, valor3,COUNT(valor3) AS VAL from auditoria a inner join proyecto p on a.proyecto=p.codigo where a.usuario="'.$hydra.'" AND  valor3=2 GROUP BY proyecto,valor3'); 
                     $handle2->execute(); 
                     $result2 = $handle2->fetchAll(\PDO::FETCH_OBJ);
                         
