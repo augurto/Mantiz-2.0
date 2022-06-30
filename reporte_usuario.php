@@ -165,7 +165,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		yValueFormatString: "$#0",
 		showInLegend: true,
 		dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
-	}
+	},
     {
 		type: "column",
 		name: "Artificial fpour",
