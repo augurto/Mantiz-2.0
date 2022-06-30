@@ -35,7 +35,7 @@ try{
                         )
                     );
 	
-                    $handle = $link->prepare('SELECT  p.nombre_proyecto as nom_proyecto, a.usuario as nom_usuario,a.proyecto, valor3,COUNT(valor3) AS VAL from auditoria a inner join proyecto p on a.proyecto=p.codigo where valor3=0 GROUP BY proyecto,valor3'); 
+                    $handle = $link->prepare('SELECT  p.nombre_proyecto as nom_proyecto, a.usuario as nom_usuario,a.proyecto, valor3,COUNT(valor3) AS VAL from auditoria a inner join proyecto p on a.proyecto=p.codigo where nom_usuario='".$hydra."' AND valor3=0  GROUP BY proyecto,valor3'); 
                     $handle->execute(); 
                     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
                         
@@ -44,7 +44,7 @@ try{
                         array_push($dataPoints1, array("label"=> $row->nom_proyecto, "y"=> $row->VAL));
                     }
 
-                    $handle1 = $link->prepare('SELECT  p.nombre_proyecto as nom_proyecto, a.usuario as nom_usuario,a.proyecto, valor3,COUNT(valor3) AS VAL from auditoria a inner join proyecto p on a.proyecto=p.codigo where valor3=1 GROUP BY proyecto,valor3'); 
+                    $handle1 = $link->prepare('SELECT  p.nombre_proyecto as nom_proyecto, a.usuario as nom_usuario,a.proyecto, valor3,COUNT(valor3) AS VAL from auditoria a inner join proyecto p on a.proyecto=p.codigo  where nom_usuario='".$hydra."'  AND valor3=1 GROUP BY proyecto,valor3'); 
                     $handle1->execute(); 
                     $result1 = $handle1->fetchAll(\PDO::FETCH_OBJ);
                         
@@ -53,7 +53,7 @@ try{
                         array_push($dataPoints2, array("label"=> $row1->nom_proyecto, "y"=> $row1->VAL));
                     }
 
-                    $handle2 = $link->prepare('SELECT  p.nombre_proyecto as nom_proyecto, a.usuario as nom_usuario,a.proyecto, valor3,COUNT(valor3) AS VAL from auditoria a inner join proyecto p on a.proyecto=p.codigo where valor3=2 GROUP BY proyecto,valor3'); 
+                    $handle2 = $link->prepare('SELECT  p.nombre_proyecto as nom_proyecto, a.usuario as nom_usuario,a.proyecto, valor3,COUNT(valor3) AS VAL from auditoria a inner join proyecto p on a.proyecto=p.codigo where nom_usuario='".$hydra."'  AND  valor3=2 GROUP BY proyecto,valor3'); 
                     $handle2->execute(); 
                     $result2 = $handle2->fetchAll(\PDO::FETCH_OBJ);
                         
@@ -155,14 +155,14 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		type: "column",
 		name: "Real Trees",
 		indexLabel: "{y}",
-		yValueFormatString: "$#0",
+		yValueFormatString: "#0",
 		showInLegend: true,
 		dataPoints: <?php echo json_encode($dataPoints1, JSON_NUMERIC_CHECK); ?>
 	},{
 		type: "column",
 		name: "Artificial Trees",
 		indexLabel: "{y}",
-		yValueFormatString: "$#0",
+		yValueFormatString: "#0",
 		showInLegend: true,
 		dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
 	},
@@ -170,7 +170,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		type: "column",
 		name: "Artificial fpour",
 		indexLabel: "{y}",
-		yValueFormatString: "$#0",
+		yValueFormatString: "#0",
 		showInLegend: true,
 		dataPoints: <?php echo json_encode($dataPoints3, JSON_NUMERIC_CHECK); ?>
 	}]
