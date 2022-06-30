@@ -14,6 +14,8 @@ $id_miembro=$_POST["id_miembro"];
 $link=$_POST["link"];
 $nombre_entregable=$_POST["nombre_entregable"];
 $usuario_seguimiento=$_POST["usuario"];
+$usuario_asignado=$_POST["usuario_asignado"];
+
 $hora=$_POST["hoy_dia"];
 
 $nombre_documento=$_FILES['documento']['name'];
@@ -35,8 +37,8 @@ echo "Connected successfully";
 
 
 /* $carpeta='archivos/proyectos/'.$direccion; */
-$sql = "INSERT INTO archivos (a_codigo_proyecto, documento,id_seg,a_descripcion,id_miembros,link,a_usuario,a_estado_seguimiento, nombre_proyecto,fecha_subida)
-VALUES ('$codigo_proyecto', '$nombre_documento','$id_entregable','$descripcion','159','$link','$usuario_seguimiento','0','$nombre_proyecto','$hora')";
+$sql = "INSERT INTO archivos (a_codigo_proyecto, documento,id_seg,a_descripcion,id_miembros,link,a_usuario,a_estado_seguimiento, nombre_proyecto,fecha_subida,usuario_asignado_archivo)
+VALUES ('$codigo_proyecto', '$nombre_documento','$id_entregable','$descripcion','159','$link','$usuario_seguimiento','0','$nombre_proyecto','$hora','$usuario_asignado')";
 
 if (mysqli_query($conn, $sql)) {
 

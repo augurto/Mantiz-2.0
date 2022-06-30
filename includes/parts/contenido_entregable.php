@@ -41,6 +41,7 @@
                             $estado_entregable=$row['a_estado_seguimiento'];
                             $link=$row['link'];
                             $usuario_seguimiento=$row['a_usuario'];
+                            $usuario_asignado=$row['usuario_asignado_archivo'];
                             $hora_subida=$row['fecha_subida'];
 
                             $gd=mysqli_query($con,"SELECT * FROM entregables WHERE  id='".$id_seg."' AND codigo_proyecto='".$id_p."'");
@@ -179,7 +180,7 @@
                   
                               <?php echo $descripcion; ?>
                               <br>
-                              <?php echo "Usuario : " .$usuario_seguimiento ; ?>
+                              <?php echo "Usuario Asignado : " .$usuario_asignado ; ?>
                               <br>
                               <?php echo "Hora : ".$hora_subida ; ?>
                       </div>

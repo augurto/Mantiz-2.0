@@ -82,7 +82,7 @@ $hoy = date("Y-m-d H:i:s");
             </div>
             <div class="input-group mb-3">
               <label class="input-group-text" for="inputGroupSelect01">Asignar a Usuario</label>
-              <select class="form-control" name="id_entregable" id="id_entregable" required="">
+              <select class="form-control" name="usuario_asignado" id="usuario_asignado" required="">
                         <option disabled="disabled" value="" selected>Clic para ver usuarios</option>
                         <?php 
 
