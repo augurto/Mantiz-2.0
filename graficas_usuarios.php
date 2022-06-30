@@ -22,6 +22,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 $dataPoints1 = array();
 $dataPoints2 = array();
 $dataPoints3 = array();
+
 //Best practice is to create a separate file for handling connection to database
 try{
      // Creating a new connection.
@@ -134,32 +135,47 @@ $dataPoints3 = array(
 
 
     <script>
-window.onload = function () {
- 
-var chart = new CanvasJS.Chart("chartContainer", {
-	animationEnabled: true,
-	exportEnabled: true,
-	theme: "light1", // "light1", "light2", "dark1", "dark2"
-	title:{
-		text: "Reporte de grafica por Usuario"
-	},
-	data: [{
-		type: "column", //change type to bar, line, area, pie, etc  
-		dataPoints: <?php echo json_encode($dataPoints1, JSON_NUMERIC_CHECK); ?>
-	}
-    {
-		type: "column", //change type to bar, line, area, pie, etc  
-		dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
-	}
-    {
-		type: "column", //change type to bar, line, area, pie, etc  
-		dataPoints: <?php echo json_encode($dataPoints3, JSON_NUMERIC_CHECK); ?>
-	}]
-});
-chart.render();
- 
-}
-</script>
+            window.onload = function () {
+            
+                    var chart = new CanvasJS.Chart("chartContainer", {
+                        animationEnabled: true,
+                        exportEnabled: true,
+                        theme: "light1", // "light1", "light2", "dark1", "dark2"
+                        title:{
+                            text: "Most Number of Centuries across all Formats till 2017"
+                        },
+                        axisX:{
+                            reversed: true
+                        },
+                        axisY:{
+                            includeZero: true
+                        },
+                        toolTip:{
+                            shared: true
+                        },
+                        data: [{
+                            type: "stackedBar",
+                            name: "Test",
+                            dataPoints: <?php echo json_encode($dataPoints1, JSON_NUMERIC_CHECK); ?>
+                        },{
+                            type: "stackedBar",
+                            name: "ODI",
+                            dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
+                        },{
+                            type: "stackedBar",
+                            name: "T20",
+                            indexLabel: "#total",
+                            indexLabelPlacement: "outside",
+                            indexLabelFontSize: 15,
+                            indexLabelFontWeight: "bold",
+                            dataPoints: <?php echo json_encode($dataPoints3, JSON_NUMERIC_CHECK); ?>
+                        }]
+                    });
+
+                chart.render();
+            
+            }
+    </script>
 </head>
 <title>Mantiz-Grafica</title>
 <body>
