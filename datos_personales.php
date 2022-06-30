@@ -58,6 +58,8 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <title>Mantiz</title>
 </head>
 <body>
+<div class="container">
+<div class="row">
       <!-- datos de sesion -->
   <input type="hidden" value="<?php echo $usuario;?>">
   <input type="hidden" value="<?php echo $id_usuario;?>">
@@ -80,7 +82,8 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
   </div>
 </div>
 
-  
+</div>
+</div>
 <?php  include 'includes/footer.php'?>
 
 
