@@ -179,7 +179,9 @@
                   
                               <?php echo $descripcion; ?>
                               <br>
-                              <?php echo "Usuario : " .$usuario_seguimiento. "Hora :".$hora_subida ; ?>
+                              <?php echo "Usuario : " .$usuario_seguimiento ; ?>
+                              <br>
+                              <?php echo "Hora : ".$hora_subida ; ?>
                       </div>
                     </div>
                 </div>

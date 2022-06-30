@@ -14,7 +14,7 @@
 
 <?php 
 $hoy = date("Y-m-d H:i:s");
-/* $hoy1 = date_sub("Y-m-d H:i:s", INTERVAL 5 HOUR);    */
+$NuevaFecha = strtotime ( '-5 hour' , strtotime ($hoy) ) ; 
 
 ?>
 <!-- Modal -->
@@ -44,7 +44,7 @@ $hoy = date("Y-m-d H:i:s");
       <input type="hidden" value="<?php echo $_GET["id_p"]; ?>" id="codigo" name="codigo" >
       <input type="hidden" value="<?php echo $nombre_proyecto; ?>" id="nombre_proyecto" name="nombre_proyecto" >
       <input type="hidden" value="<?php echo $usuario; ?>" id="usuario" name="usuario" >
-      <input type="hidden" value="<?php echo $hoy; ?>" id="hoy_dia" name="hoy_dia" >
+      <input type="text" value="<?php echo $NuevaFecha; ?>" id="hoy_dia" name="hoy_dia" >
         <input type="file" class="form-control"  id="documento" name="documento" aria-label="Username" aria-describedby="basic-addon1">
       </div>  
       <div class="input-group mb-3">
