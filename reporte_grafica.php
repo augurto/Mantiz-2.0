@@ -33,7 +33,7 @@ try{
                         )
                     );
 	
-    $handle = $link->prepare('SELECT  proyecto, valor3 from auditoria where valor3=0 group by proyecto'); 
+    $handle = $link->prepare('SELECT  proyecto, COUNT(valor3) from auditoria where valor3=2 GROUP BY proyecto'); 
     $handle->execute(); 
     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 		
