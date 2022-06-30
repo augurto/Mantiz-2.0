@@ -41,7 +41,7 @@ try{
                         
                     foreach($result as $row){
                         
-                        array_push($dataPoints1, array("label"=> $row->proyecto, "y"=> $row->VAL));
+                        array_push($dataPoints1, array("label"=> $row->VAL, "y"=> $row->proyecto));
                     }
 
                     $handle1 = $link->prepare('SELECT   usuario,proyecto, COUNT(valor3) AS VAL from auditoria where valor3=1 GROUP BY proyecto '); 
@@ -50,7 +50,7 @@ try{
                         
                     foreach($result1 as $row1){
                       
-                        array_push($dataPoints2, array("label"=> $row1->proyecto, "y"=> $row1->VAL));
+                        array_push($dataPoints2, array("label"=> $row1->VAL, "y"=> $row1->proyecto));
                     }
 
                     $handle2 = $link->prepare('SELECT  usuario, proyecto, COUNT(valor3) AS VAL from auditoria where valor3=0 GROUP BY proyecto'); 
@@ -59,7 +59,7 @@ try{
                         
                     foreach($result2 as $row2){
                       
-                        array_push($dataPoints3, array("label"=> $row2->proyecto, "y"=> $row2->VAL));
+                        array_push($dataPoints3, array("label"=> $row2->VAL, "y"=> $row2->proyecto));
                     }
 	$link = null;
 }
