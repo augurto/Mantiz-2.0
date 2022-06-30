@@ -30,7 +30,7 @@
             echo 'Ya existe un archivo con ese nombre';
           }?>
           <div class="row">
-                    <?php $sql="SELECT * FROM  archivos a inner join users u on a.usuario_asignado_archivo=u.id WHERE a_codigo_proyecto='$id_p' /* AND id_miembros='$est' */GROUP BY  a_codigo_proyecto order by a_id desc";
+                    <?php $sql="SELECT * FROM archivos a INNER JOIN users u on a.usuario_asignado_archivo=u.id  WHERE a_codigo_proyecto='$id_p' /* AND id_miembros='$est' */GROUP BY  a_codigo_proyecto, usuario_asignado_archivo, documento order by a_id desc";
                       $query = mysqli_query($con, $sql);
                       while ($row=mysqli_fetch_array($query)){
                             $id=$row['a_id'];
