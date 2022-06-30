@@ -22,7 +22,8 @@
       $rwp3=mysqli_fetch_array($tp3);
       $tps3=$rwp3["tp3"];
 
-      $te=mysqli_query($con,"SELECT count(*) te from archivos a inner join entregables e on a.id_seg=e.id");
+      $te=mysqli_query($con,"SELECT count(*) te from proyecto order by nombre_proyecto");
+      /* $te=mysqli_query($con,"SELECT count(*) te from archivos a inner join entregables e on a.id_seg=e.id"); */
       $rwe=mysqli_fetch_array($te);
       $tes=$rwe["te"];
 
