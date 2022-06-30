@@ -35,31 +35,31 @@ try{
                         )
                     );
 	
-                    $handle = $link->prepare('SELECT  usuario,proyecto, COUNT(valor3) AS VAL from auditoria where valor3=1 GROUP BY proyecto'); 
+                    $handle = $link->prepare('SELECT  p.nombre_proyecto as nom_proyecto, a.usuario,a.proyecto, COUNT(a.valor3) AS VAL from auditoria a inner join proyecto p on a.proyecto=p.codigo where valor3=1 GROUP BY a.proyecto,p.nombre_proyecto'); 
                     $handle->execute(); 
                     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
                         
                     foreach($result as $row){
                         
-                        array_push($dataPoints1, array("label"=> $row->proyecto, "y"=> $row->VAL));
+                        array_push($dataPoints1, array("label"=> $row->nom_proyecto, "y"=> $row->VAL));
                     }
 
-                    $handle1 = $link->prepare('SELECT   usuario,proyecto, COUNT(valor3) AS VAL from auditoria where valor3=1 GROUP BY proyecto '); 
+                    $handle1 = $link->prepare('SELECT  p.nombre_proyecto as nom_proyecto, a.usuario,a.proyecto, COUNT(a.valor3) AS VAL from auditoria a inner join proyecto p on a.proyecto=p.codigo  where valor3=1 GROUP BY a.proyecto,p.nombre_proyecto '); 
                     $handle1->execute(); 
                     $result1 = $handle1->fetchAll(\PDO::FETCH_OBJ);
                         
                     foreach($result1 as $row1){
                       
-                        array_push($dataPoints2, array("label"=> $row1->proyecto, "y"=> $row1->VAL));
+                        array_push($dataPoints2, array("label"=> $row1->nom_proyecto, "y"=> $row1->VAL));
                     }
 
-                    $handle2 = $link->prepare('SELECT  usuario, proyecto, COUNT(valor3) AS VAL from auditoria where valor3=2 GROUP BY proyecto'); 
+                    $handle2 = $link->prepare('SELECT  p.nombre_proyecto as nom_proyecto, a.usuario,a.proyecto, COUNT(a.valor3) AS VAL from auditoria a inner join proyecto p on a.proyecto=p.codigo where valor3=2 GROUP BY a.proyecto,p.nombre_proyecto'); 
                     $handle2->execute(); 
                     $result2 = $handle2->fetchAll(\PDO::FETCH_OBJ);
                         
                     foreach($result2 as $row2){
                       
-                        array_push($dataPoints3, array("label"=> $row2->proyecto, "y"=> $row2->VAL));
+                        array_push($dataPoints3, array("label"=> $row2->nom_proyecto, "y"=> $row2->VAL));
                     }
 	$link = null;
 }
