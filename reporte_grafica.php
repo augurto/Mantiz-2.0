@@ -33,13 +33,32 @@ try{
                         )
                     );
 	
-    $handle = $link->prepare('SELECT  proyecto, COUNT(valor3) AS VAL from auditoria where valor3=2 GROUP BY proyecto'); 
-    $handle->execute(); 
-    $result = $handle->fetchAll(\PDO::FETCH_OBJ);
-		
-    foreach($result as $row){
-        array_push($dataPoints1, array("label"=> $row->proyecto, "y"=> $row->VAL));
-    }
+                    $handle = $link->prepare('SELECT  proyecto, COUNT(valor3) AS VAL from auditoria where valor3=0 GROUP BY proyecto'); 
+                    $handle->execute(); 
+                    $result = $handle->fetchAll(\PDO::FETCH_OBJ);
+                        
+                    foreach($result as $row){
+                        
+                        array_push($dataPoints3, array("label"=> $row->proyecto, "y"=> $row->VAL));
+                    }
+
+                    $handle1 = $link->prepare('SELECT  proyecto, COUNT(valor3) AS VAL from auditoria where valor3=1 GROUP BY proyecto'); 
+                    $handle1->execute(); 
+                    $result1 = $handle1->fetchAll(\PDO::FETCH_OBJ);
+                        
+                    foreach($result1 as $row1){
+                      
+                        array_push($dataPoints3, array("label"=> $row1->proyecto, "y"=> $row1->VAL));
+                    }
+
+                    $handle2 = $link->prepare('SELECT  proyecto, COUNT(valor3) AS VAL from auditoria where valor3=2 GROUP BY proyecto'); 
+                    $handle2->execute(); 
+                    $result2 = $handle2->fetchAll(\PDO::FETCH_OBJ);
+                        
+                    foreach($result2 as $row2){
+                      
+                        array_push($dataPoints3, array("label"=> $row2->proyecto, "y"=> $row2->VAL));
+                    }
 	$link = null;
 }
 catch(\PDOException $ex){
@@ -55,7 +74,7 @@ catch(\PDOException $ex){
 	array("label"=> "2014", "y"=> 39.50),
 	array("label"=> "2015", "y"=> 50.82),
 	array("label"=> "2016", "y"=> 74.70)
-); */
+); 
 $dataPoints2 = array(
 	array("label"=> "PROYECTO1", "y"=> 64.61),
 	array("label"=> "PROYECTO2", "y"=> 70.55),
@@ -74,7 +93,7 @@ $dataPoints3 = array(
 	array("label"=> "PROYECTO6", "y"=> 69),
 	array("label"=> "PROYECTO7", "y"=> 98)
 );
-
+*/
 ?>
 <!DOCTYPE html>
 <html lang="es">
