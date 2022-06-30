@@ -26,7 +26,8 @@
       $rwe=mysqli_fetch_array($te);
       $tes=$rwe["te"];
 
-      $ti=mysqli_query($con,"SELECT count(*) ti from archivos a right join entregables e on a.id_seg=e.id where a.id_seg IS NULL");
+    /*   $ti=mysqli_query($con,"SELECT count(*) ti from archivos a right join entregables e on a.id_seg=e.id where a.id_seg IS NULL"); */
+      $ti=mysqli_query($con,"SELECT count(*) ti from users ");
       $rwi=mysqli_fetch_array($ti);
       $tin=$rwi["ti"];
 
