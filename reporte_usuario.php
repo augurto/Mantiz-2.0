@@ -229,7 +229,7 @@ function toggleDataSeries(e){
                                             ?>
                                 </select>
 </form>
-  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar usuario</button>
+  <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Buscar usuario</button>
 </div>
         <div id="chartContainer" style="height: 370px; width: 100%;"></div>
   </div>
