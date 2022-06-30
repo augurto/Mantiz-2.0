@@ -173,7 +173,7 @@
                             }else{?>
 
                                           
-                                    <div ><p>URL:  <a href="<?php echo  $link  ; ?>/<?php echo  $link; ?>"  target="_blank"><i class="fa fa-cloud-download" ></i>  <?php echo $link; ?></a></p></div>
+                                    <div ><p>URL:  <a href="<?php echo  $link  ; ?> target="_blank"><i class="fa fa-cloud-download" ></i>  <?php echo $link; ?></a></p></div>
                              <?php } ?>
                   
                               <?php echo $descripcion; ?>
