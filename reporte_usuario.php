@@ -154,14 +154,14 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	},
 	data: [{
 		type: "column",
-		name: "Real Trees",
+		name: "Pendiente",
 		indexLabel: "{y}",
 		yValueFormatString: "#0",
 		showInLegend: true,
 		dataPoints: <?php echo json_encode($dataPoints1, JSON_NUMERIC_CHECK); ?>
 	},{
 		type: "column",
-		name: "Artificial Trees",
+		name: "Aprobado",
 		indexLabel: "{y}",
 		yValueFormatString: "#0",
 		showInLegend: true,
@@ -169,7 +169,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	},
     {
 		type: "column",
-		name: "Artificial fpour",
+		name: "Observados",
 		indexLabel: "{y}",
 		yValueFormatString: "#0",
 		showInLegend: true,
