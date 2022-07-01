@@ -30,7 +30,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">  
 
     <!-- fin datatable -->
-    <title>Mantiz-Ver obra</title>
+    <title>Mantiz-Operaciones</title>
 </head>
 <body>
 
@@ -63,6 +63,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
     </div>
     <br>
     
+    <input type="text" value="<?php echo $_GET['codigo_operacion']?>">
     <!-- Fin de graficas -->
     <!-- Boton agregar proyecto -->
     
