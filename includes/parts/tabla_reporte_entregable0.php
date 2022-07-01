@@ -15,8 +15,9 @@
                                     
                                     
                                     <th>Nombre Entregable</th>
-                                    <th>Fecha de creacion</th>
                                     <th>Fecha entrega</th>
+                                    <th>Fecha de creacion</th>
+                                    
                                 
                                     <th>Estado</th>
                                     <?php if ($tipo_user==1) {?>
@@ -28,7 +29,7 @@
                                 </thead>
                         <?php 
                         $count=1;
-                        foreach ($link->query('SELECT * from archivos a right join entregables e on a.id_seg=e.id  where a.id_seg IS NULL order by a_id desc') as $row){  ?> 
+                        foreach ($link->query('SELECT * from archivos a right join entregables e on a.id_seg=e.id inner join users u on a.usuario_asignado_entregable=e.id where a.id_seg IS NULL order by a_id desc') as $row){  ?> 
                         
                     
 
@@ -36,6 +37,7 @@
                         
                         $a_documento=$row['documento'];
                         $proyecto=$row['nombre_proyecto'];
+                        $nombre_usuario_entregable=$row['username'];
                         
                         $a_estado_seguimiento=$row['a_estado_seguimiento'];
 
@@ -83,7 +85,7 @@
                                 # code...
                                 echo 'Observado';
                             }?></td>
-                            <td><?php echo $usuario0 ?></td>
+                            <td><?php echo $nombre_usuario_entregable ?></td>
                             <!-- <?php if ($tipo_user==1) { ?> -->
                               
                             <!-- <td>
