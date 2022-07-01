@@ -15,6 +15,10 @@ $usuario_asignado=$_GET["usuario_asignado"];
 
 $fecha=$_GET["fecha"];
 
+ 
+date_default_timezone_set("America/Lima");
+$hoy = date("Y-m-d H:i:s");
+ 
 
 
 $usuario=$_GET["usuario"];
@@ -24,9 +28,9 @@ if (!$conn) {
  
 echo "Connected successfully";
  
-$sql = "INSERT INTO entregables (codigo_proyecto, nombre, fecha_entrega, estado, usuario,nombre_proyecto,usuario_asignado_entregable) 
+$sql = "INSERT INTO entregables (codigo_proyecto, nombre, fecha_entrega, estado, usuario,nombre_proyecto,usuario_asignado_entregable,fecha_subida_entregable) 
 
-VALUES ('$codigo_proyecto','$nombre_entregable', '$fecha', '0','$usuario', '$nombre_proyecto', '$usuario_asignado')";
+VALUES ('$codigo_proyecto','$nombre_entregable', '$fecha', '0','$usuario', '$nombre_proyecto', '$usuario_asignado', '$hoy')";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
       echo "location='../../../entregables.php?id_p=$codigo_proyecto'";
