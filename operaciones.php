@@ -12,6 +12,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
         $usuario=$_SESSION["username"];
         $id_usuario=$_SESSION["id"];
         $codigo_operacion=$_POST['codigo_operacion'];
+        $valor1='Material';
 ?>
 <!DOCTYPE html>
 <html lang="es">
