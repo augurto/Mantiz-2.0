@@ -30,7 +30,7 @@
                         <?php 
                         $count=1;
                        /*  foreach ($link->query('SELECT * from archivos a right join entregables e on a.id_seg=e.id inner join users u on e.usuario_asignado_entregable=u.id where a.id_seg IS NULL order by a_id desc') as $row){  ?>  */
-                        foreach ($link->query(' SELECT  p.nombre_proyecto as nom_proyecto , e.nombre as nom_entregable, e.fecha_subida_entregable as f_subida,e.fecha_entrega as f_entrega, u.username as nom_usuario FROM entregables e  INNER JOIN proyecto p on e.codigo_proyecto = p.id INNER JOIN users u ON u.id=e.usuario_asignado_entregable   WHERE e.id NOT IN ( SELECT archivos.id_seg FROM archivos) ') as $row){  ?> 
+                        foreach ($link->query(' SELECT  p.nombre_proyecto as nom_proyecto , e.nombre as nom_entregable, e.fecha_subida_entregable as f_subida,e.fecha_entrega as f_entrega, u.username as nom_usuario FROM entregables e  INNER JOIN proyecto p on e.codigo_proyecto = p.id INNER JOIN users u ON u.id=e.usuario_asignado_entregable   WHERE e.id NOT IN ( SELECT archivos.id_seg FROM archivos) ORDER BY e.fecha_subida_entregable DESC ') as $row){  ?> 
                         
                        
 
