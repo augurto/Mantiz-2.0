@@ -11,6 +11,7 @@ $nombre_entregable=$_GET["nombre"];
 $codigo_proyecto2=$_GET["nombre"];
 $codigo_proyecto=$_GET["codigo"];
 $nombre_proyecto=$_GET["nombre_proyecto"];
+$usuario_asignado=$_GET["usuario_asignado"];
 
 $fecha=$_GET["fecha"];
 
@@ -23,9 +24,9 @@ if (!$conn) {
  
 echo "Connected successfully";
  
-$sql = "INSERT INTO entregables (codigo_proyecto, nombre, fecha_entrega, estado, usuario,nombre_proyecto) 
+$sql = "INSERT INTO entregables (codigo_proyecto, nombre, fecha_entrega, estado, usuario,nombre_proyecto,usuario_asignado_archivo) 
 
-VALUES ('$codigo_proyecto','$nombre_entregable', '$fecha', '0','$usuario', '$nombre_proyecto')";
+VALUES ('$codigo_proyecto','$nombre_entregable', '$fecha', '0','$usuario', '$nombre_proyecto', '$usuario_asignado')";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
       echo "location='../../../entregables.php?id_p=$codigo_proyecto'";

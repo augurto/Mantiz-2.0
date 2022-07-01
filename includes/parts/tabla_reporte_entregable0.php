@@ -15,6 +15,7 @@
                                     
                                     
                                     <th>Nombre Entregable</th>
+                                    <th>Fecha de creacion</th>
                                     <th>Fecha entrega</th>
                                 
                                     <th>Estado</th>
@@ -42,7 +43,9 @@
                         $nombre_entregable=$row['nombre'];
                         $nombre_proyecto=$row['nombre_proyecto'];                       
                         $usuario0=$row['usuario'];
+                        $usuario0=$row['usuario_asignado_entregable'];
                         $fecha_entrega=$row['fecha_entrega'];
+                        $fecha_subida_entregable=$row['fecha_subida_entregable'];
                         $fecha_actual=strtotime(date("Y-m-d",time()));
                         $fecha_v=strtotime($fecha_entrega);                     
                         $estado=$row['estado'];
@@ -67,6 +70,7 @@
                              
                              <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_entregable; ?></span></td>
                              <td><span id="address<?php echo $fecha_entrega; ?>"><?php echo $fecha_entrega; ?></span></td>
+                             <td><?php echo $fecha_subida_entregable;?></td>
                              
                              <!-- <td><?php echo $fecha_fin ?></td> -->
                             <td><?php if ($a_estado_seguimiento==0) {
