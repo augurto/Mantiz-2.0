@@ -13,21 +13,33 @@
       <div class="modal-body">
       <input type="hidden" value="<?php echo $id_usuario; ?>">
       <input type="hidden" value="<?php echo $codigo_operacion; ?>">
-
       <div class="input-group">
-        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-          <option selected>Tipo Operacion</option>
-          <option value="1">Ingreso</option>
-          <option value="2">Egreso</option>
-          <option value="3">Otro</option>
-        </select>
-        <button class="btn btn-outline-secondary" type="button">Button</button>
-      </div>
+        <span class="input-group-text">Descripcion</span>
+        <input type="text" aria-label="First name" class="form-control">
+        <input type="date" aria-label="Last name" class="form-control">
+      </div>   
+      <div class="input-group mb-3">
+              <label class="input-group-text" for="inputGroupSelect01">Asignar a Usuario</label>
+              <select class="form-control" name="usuario_asignado" id="usuario_asignado" required="">
+                        <option disabled="disabled" value="" selected>Clic para ver usuarios</option>
+                        <?php 
+
+                        $sss2=mysqli_query($con,"SELECT * FROM users");
+                                while($f2=mysqli_fetch_assoc($sss2)){    
+
+                                    echo '<option value="'.$f2['id'].'">'.$f2['username'].'</option>';
+
+                        }
+                        
+                        ?>
+              </select>
+                       
+            </div>
       <select class="form-select" aria-label="Default select example">
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option selected>Tipo de Operacion</option>
+        <option value="1">Ingreso</option>
+        <option value="2">Egreso</option>
+        <option value="3">Otro</option>
       </select>
       </div>
 
