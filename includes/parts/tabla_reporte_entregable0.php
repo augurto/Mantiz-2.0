@@ -29,7 +29,7 @@
                                 </thead>
                         <?php 
                         $count=1;
-                        foreach ($link->query('SELECT * from archivos a right join entregables e on a.id_seg=e.id inner join users u on a.usuario_asignado_entregable=e.id where a.id_seg IS NULL order by a_id desc') as $row){  ?> 
+                        foreach ($link->query('SELECT * from archivos a right join entregables e on a.id_seg=e.id inner join users u on e.usuario_asignado_entregable=u.id where a.id_seg IS NULL order by a_id desc') as $row){  ?> 
                         
                     
 
