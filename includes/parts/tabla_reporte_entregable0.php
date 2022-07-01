@@ -19,7 +19,7 @@
                                     <th>Fecha de creacion</th>
                                     
                                 
-                                    <th>Estado</th>
+                                 
                                     <?php if ($tipo_user==1) {?>
                                         <th>Usuario</th>
                                         <?php }?>
@@ -30,7 +30,7 @@
                         <?php 
                         $count=1;
                        /*  foreach ($link->query('SELECT * from archivos a right join entregables e on a.id_seg=e.id inner join users u on e.usuario_asignado_entregable=u.id where a.id_seg IS NULL order by a_id desc') as $row){  ?>  */
-                        foreach ($link->query(' SELECT  p.nombre_proyecto as nom_proyecto , e.nombre as nom_entregable, e.fecha_subida_entregable as f_subida,e.fecha_entrega as f_entrega, u.username FROM entregables e  INNER JOIN proyecto p on e.codigo_proyecto = p.id INNER JOIN users u ON u.id=e.usuario_asignado_entregable   WHERE e.id NOT IN ( SELECT archivos.id_seg FROM archivos) ') as $row){  ?> 
+                        foreach ($link->query(' SELECT  p.nombre_proyecto as nom_proyecto , e.nombre as nom_entregable, e.fecha_subida_entregable as f_subida,e.fecha_entrega as f_entrega, u.username as nom_usuario FROM entregables e  INNER JOIN proyecto p on e.codigo_proyecto = p.id INNER JOIN users u ON u.id=e.usuario_asignado_entregable   WHERE e.id NOT IN ( SELECT archivos.id_seg FROM archivos) ') as $row){  ?> 
                         
                        
 
@@ -44,15 +44,9 @@
                         $nombre_entregable=$row['nom_entregable'];
                         $fecha_subida_entregable=$row['f_subida'];
                         $fecha_entrega=$row['f_entrega'];
-                        $a_estado_seguimiento=$row['a_estado_seguimiento'];
+                        $nombre_usuario_entregable=$row['nom_usuario'];
 
-                                                                 
-                        
-                                             
-                       
-                       
-                        
-                        
+                                                   
                         $fecha_actual=strtotime(date("Y-m-d",time()));
                         $fecha_v=strtotime($fecha_entrega);                     
                         $estado=$row['estado'];
@@ -80,16 +74,7 @@
                              <td><?php echo $fecha_subida_entregable;?></td>
                              
                              <!-- <td><?php echo $fecha_fin ?></td> -->
-                            <td><?php if ($a_estado_seguimiento==0) {
-                                # code...
-                                echo 'Pendiente';
-                            } elseif ($a_estado_seguimiento==1) {
-                                # code...
-                                echo 'Aprobado';
-                            } elseif ($a_estado_seguimiento==2) {
-                                # code...
-                                echo 'Observado';
-                            }?></td>
+                            
                             <td><?php echo $nombre_usuario_entregable ?></td>
                             <!-- <?php if ($tipo_user==1) { ?> -->
                               
