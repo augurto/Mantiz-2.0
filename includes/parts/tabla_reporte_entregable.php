@@ -43,7 +43,7 @@
                                                                     
                             
                                                    
-                            $usuario0=$row['a_usuario'];
+                            $usuario0=$row['username'];
                             
                             $fecha_actual=strtotime(date("Y-m-d",time()));
                             $fecha_v=strtotime($fecha_entrega);                     
