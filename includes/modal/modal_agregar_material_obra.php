@@ -9,10 +9,29 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+
       <div class="modal-body">
-      <input type="text" value="<?php echo $id_usuario; ?>">
-      <input type="text" value="<?php echo $codigo_operacion; ?>">
+      <input type="hidden" value="<?php echo $id_usuario; ?>">
+      <input type="hidden" value="<?php echo $codigo_operacion; ?>">
+
+      <div class="input-group">
+        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+          <option selected>Tipo Operacion</option>
+          <option value="1">Ingreso</option>
+          <option value="2">Egreso</option>
+          <option value="3">Otro</option>
+        </select>
+        <button class="btn btn-outline-secondary" type="button">Button</button>
       </div>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      </div>
+
+
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
         <button type="button" class="btn btn-primary">Guardar</button>
