@@ -15,7 +15,7 @@
                                     <th>Documento</th>
                                     
                                     <th>Nombre Entregable</th>
-                                    th>Fecha creacion</th>
+                                    <th>Fecha creacion</th>
                                     <th>Fecha entrega</th>
                                 
                                     <th>Estado</th>
