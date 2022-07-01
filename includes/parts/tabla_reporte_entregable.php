@@ -15,6 +15,7 @@
                                     <th>Documento</th>
                                     
                                     <th>Nombre Entregable</th>
+                                    th>Fecha creacion</th>
                                     <th>Fecha entrega</th>
                                 
                                     <th>Estado</th>
@@ -27,24 +28,26 @@
                                 </thead>
                         <?php 
                         $count=1;
-                        foreach ($link->query('SELECT * from archivos a inner join entregables e on a.id_seg=e.id order by a_id desc') as $row){  ?> 
+                        foreach ($link->query('SELECT p.nombre_proyecto,e.nombre, a.documento, e.fecha_subida_entregable, e.fecha_entrega, a.a_estado_seguimiento, u.username from archivos a inner join entregables e on a.id_seg=e.id  INNER JOIN proyecto p ON a.a_codigo_proyecto=p.codigo INNER JOIN users u ON e.usuario_asignado_entregable=u.id') as $row){  ?> 
                         
                     
 
                         <?php
-                        
-                        $a_documento=$row['documento'];
-                        
-                        $a_estado_seguimiento=$row['a_estado_seguimiento'];
+                            $nombre_proyecto=$row['nombre_proyecto'];
+                            $a_documento=$row['documento'];
+                            $nombre_entregable=$row['nombre'];
+                            $fecha_entrega=$row['fecha_entrega'];
+                            $fecha_subida_entregable=$row['fecha_subida_entregable'];
+                            $a_estado_seguimiento=$row['a_estado_seguimiento'];
 
-                                                                 
-                        $nombre_entregable=$row['nombre'];
-                        $nombre_proyecto=$row['nombre_proyecto'];                       
-                        $usuario0=$row['a_usuario'];
-                        $fecha_entrega=$row['fecha_entrega'];
-                        $fecha_actual=strtotime(date("Y-m-d",time()));
-                        $fecha_v=strtotime($fecha_entrega);                     
-                        $estado=$row['estado'];
+                                                                    
+                            
+                                                   
+                            $usuario0=$row['a_usuario'];
+                            
+                            $fecha_actual=strtotime(date("Y-m-d",time()));
+                            $fecha_v=strtotime($fecha_entrega);                     
+                            $estado=$row['estado'];
                         
                          if ($fecha_actual>$fecha_v) { ?>
                              
@@ -65,6 +68,7 @@
                              <td><span id="lastname<?php echo $nombre_proyecto; ?>"><?php echo $nombre_proyecto; ?></span></td>
                              <td><span id="firstname<?php echo $a_documento; ?>"><?php echo $a_documento; ?></span></td>
                              <td><span id="lastname<?php echo $nombre_entregable; ?>"><?php echo $nombre_entregable; ?></span></td>
+                             <td><span id="address<?php echo $fecha_subida_entregable; ?>"><?php echo $fecha_subida_entregable; ?></span></td>
                              <td><span id="address<?php echo $fecha_entrega; ?>"><?php echo $fecha_entrega; ?></span></td>
                              
                              <!-- <td><?php echo $fecha_fin ?></td> -->
