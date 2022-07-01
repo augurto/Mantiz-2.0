@@ -63,7 +63,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
     </div>
     <br>
     
-    <input type="text" value="<?php echo $_GET['codigo_operacion']?>">
+    <input type="text" value="<?php echo $_POST['codigo_operacion']?>">
     <!-- Fin de graficas -->
     <!-- Boton agregar proyecto -->
     
