@@ -80,23 +80,7 @@ $hoy = date("Y-m-d H:i:s");
               </select>
                        
             </div>
-            <div class="input-group mb-3">
-              <label class="input-group-text" for="inputGroupSelect01">Asignar a Usuario</label>
-              <select class="form-control" name="usuario_asignado" id="usuario_asignado" required="">
-                        <option disabled="disabled" value="" selected>Clic para ver usuarios</option>
-                        <?php 
-
-                        $sss2=mysqli_query($con,"SELECT * FROM users");
-                                while($f2=mysqli_fetch_assoc($sss2)){    
-
-                                    echo '<option value="'.$f2['id'].'">'.$f2['username'].'</option>';
-
-                        }
-                        
-                        ?>
-              </select>
-                       
-            </div>
+           
               <div class="input-group mb-3">
         
                 <input type="hidden" value="<?php echo $f['nombre'];?>" id="nombre_entregable" name="nombre_entregable" class="form-control">

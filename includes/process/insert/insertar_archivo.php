@@ -37,8 +37,8 @@ echo "Connected successfully";
 
 
 /* $carpeta='archivos/proyectos/'.$direccion; */
-$sql = "INSERT INTO archivos (a_codigo_proyecto, documento,id_seg,a_descripcion,id_miembros,link,a_usuario,a_estado_seguimiento, nombre_proyecto,fecha_subida,usuario_asignado_archivo)
-VALUES ('$codigo_proyecto', '$nombre_documento','$id_entregable','$descripcion','159','$link','$usuario_seguimiento','0','$nombre_proyecto','$hora','$usuario_asignado')";
+$sql = "INSERT INTO archivos (a_codigo_proyecto, documento,id_seg,a_descripcion,id_miembros,link,a_usuario,a_estado_seguimiento, nombre_proyecto,fecha_subida)
+VALUES ('$codigo_proyecto', '$nombre_documento','$id_entregable','$descripcion','159','$link','$usuario_seguimiento','0','$nombre_proyecto','$hora')";
 
 if (mysqli_query($conn, $sql)) {
 
