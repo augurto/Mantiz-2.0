@@ -23,7 +23,7 @@
       <div class="modal-body">
         <div class="input-group">
             <span class="input-group-text"><i class="fa fa-plus" aria-hidden="true"></i></span>
-            <input type="text" aria-label="First name" class="form-control" placeholder="nombre del entregable" id="nombre" name="nombre" required>
+            <input type="text" aria-label="First name" class="form-control" placeholder="Nombre del entregable" id="nombre" name="nombre" required>
             <input type="hidden" value="<?php echo $_GET["id_p"]; ?>" id="codigo" name="codigo" >
             <input type="hidden" value="<?php echo $usuario; ?>" id="usuario" name="usuario" >
             <input type="hidden" value="<?php echo $nombre_proyecto; ?>" id="nombre_proyecto" name="nombre_proyecto" >

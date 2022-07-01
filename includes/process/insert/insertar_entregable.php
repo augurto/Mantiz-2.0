@@ -24,7 +24,7 @@ if (!$conn) {
  
 echo "Connected successfully";
  
-$sql = "INSERT INTO entregables (codigo_proyecto, nombre, fecha_entrega, estado, usuario,nombre_proyecto,usuario_asignado_archivo) 
+$sql = "INSERT INTO entregables (codigo_proyecto, nombre, fecha_entrega, estado, usuario,nombre_proyecto,usuario_asignado_entregable) 
 
 VALUES ('$codigo_proyecto','$nombre_entregable', '$fecha', '0','$usuario', '$nombre_proyecto', '$usuario_asignado')";
 if (mysqli_query($conn, $sql)) {
