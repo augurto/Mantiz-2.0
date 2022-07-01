@@ -76,7 +76,8 @@
                             <?php if ($tipo_user==1) { ?>
                               
                             <td>
-                         
+                                <div class="row">
+                                <div class="col-sm-12 text-center">
                                     <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit" data-nom="<?php echo $codigo; ?>" data-nom2="<?php echo $nombre_proyecto; ?>" data-ape="<?php echo $presupuesto;?>" data-estado="<?php echo $estado;  ?>" data-sub2="<?php echo $extencion;  ?>" >
                                     <i class="fa fa-edit"></i>
                                     </button>
@@ -90,6 +91,8 @@
                                             
                                         </button>
                                 </form>
+                                </div>
+                                </div>
                                     <!-- <button type="button" id="btnmodal" class="btn btn-danger" data-toggle="modal" data-target="#ModalBorrar" data-cod="<?php echo $codigo; ?>" data-ape="<?php echo $nombre_proyecto; ?>">
                                     <i class="fa fa-trash"></i>
                                     </button> -->
