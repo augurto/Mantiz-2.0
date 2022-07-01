@@ -86,8 +86,23 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     }?>
     
           <br>
+          <div class="row">
+        <div class="col-sm-12 text-center">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-entregable">
+                            <span class="icon text-white-50">
+                                        <i class="fas fa-plus"></i>
+                                        
+                            </span>Entregables
+                            </button>
+                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-subir-archivos">
+                            <span class="icon text-white-50">
+                                        <i class="fas fa-plus"></i>
+                            </span>Archivos
+                            </button>
+        </div>
+    </div>
    
-        
+          <div class="container">
           <div class="row">
         <div class="col-sm-12 text-center">
                       <!-- Button trigger modal -->
@@ -114,7 +129,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                   <!-- Fin Boton agregar proyecto -->
                   </div>     
               </div>    
-    
+          </div>
   
        
           
