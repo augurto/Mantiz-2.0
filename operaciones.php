@@ -1,7 +1,17 @@
 <?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login/");
+    exit;
+}
 require_once ("config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
 require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
-
+        $usuario=$_SESSION["username"];
+        $id_usuario=$_SESSION["id"];
+        $codigo_operacion=$_POST['codigo_operacion'];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -52,7 +62,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
                 <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#agregar-nuevo-material">
                 <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
-                </span>Registrar Material
+                </span>Registrar Operacion
                 </button>
 
                 <?php include 'includes/modal/modal_agregar_material_obra.php' ?>
