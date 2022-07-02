@@ -15,6 +15,7 @@
                                 <th>Usuario</th>
                                 <th>Fecha</th>
                                     <th>Tipo</th>
+                                    <th>Unidad</th>
                                     <th>Cant</th>
                                    <th>pu</th>
                                     <th>SubTotal</th>
@@ -30,6 +31,8 @@
                         $usuario_maker_operacion=$row['username'];
                         $fecha_agregada=$row['fecha_agregada'];
                         $cantidad=$row['cantidad'];
+                        $unidad=$row['unidad'];
+                        
                         $monto=$row['monto'];
                         $cant_monto=$row['cant_monto'];
                         $tipo_operacion=$row['tipo_operacion'];
@@ -65,6 +68,7 @@
                                         echo 'Otro';
                                     }?></td>
                              <td><?php echo 'S/ '.$cantidad;?> </td>
+                             <td><?php echo 'S/ '.$unidad;?> </td>
                              <td><?php echo $monto;?> </td>
                              <td><?php echo 'S/ '.$cant_monto;?> </td>
                              
