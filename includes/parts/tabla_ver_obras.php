@@ -49,7 +49,7 @@
                              
                              <td><?php echo $fecha_agregada;?> </td>
                         
-                            <td><!-- <?php if ($tipo_operacion==0) {
+                            <td><?php if ($tipo_operacion==0) {
                          
                                 echo 'Ingreso';
                             } elseif ($tipo_operacion==1) {
@@ -58,7 +58,7 @@
                             } elseif ($tipo_operacion==2) {
                                 
                                 echo 'Otro';
-                            }?> --> <?php echo $tipo_operacion;?></td>
+                            }?> <?php echo $tipo_operacion;?></td>
                             
                         </tr>
                         <?php
