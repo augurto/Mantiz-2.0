@@ -104,6 +104,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
     <br>
                 <?php include 'includes/modal/modal_agregar_operacion.php' ?>
                 <?php include 'includes/modal/modal_agregar_material.php' ?>
+                <?php include 'includes/modal/modal_agregar_unidad_material.php' ?>
     <input type="hidden" value="<?php echo $_POST['codigo_operacion']?>">
     <!-- Fin de graficas -->
     <!-- Boton agregar proyecto -->
