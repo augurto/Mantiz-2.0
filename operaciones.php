@@ -59,7 +59,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
                 </button>
     </div>
       <div class="col">
-                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#material">
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#compromisos">
                     <span class="icon text-white-50">
                                 <i class="fas fa-plus"></i>
                     </span><?php echo $valor1;?>
