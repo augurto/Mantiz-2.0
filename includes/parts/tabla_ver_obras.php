@@ -49,16 +49,16 @@
                              
                              <td><?php echo $fecha_agregada;?> </td>
                         
-                            <td><?php if ($tipo_operacion==0) {
-                                # code...
+                            <td><!-- <?php if ($tipo_operacion==0) {
+                         
                                 echo 'Ingreso';
                             } elseif ($tipo_operacion==1) {
-                                # code...
+                          
                                 echo 'Egreso';
                             } elseif ($tipo_operacion==2) {
-                                # code...
+                                
                                 echo 'Otro';
-                            }?></td>
+                            }?> --> <?php echo $tipo_operacion;?></td>
                             
                         </tr>
                         <?php
