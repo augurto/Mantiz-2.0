@@ -59,7 +59,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
                 </button>
     </div>
       <div class="col">
-                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#agregar-nuevo-material">
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#material">
                     <span class="icon text-white-50">
                                 <i class="fas fa-plus"></i>
                     </span><?php echo $valor1;?>
@@ -103,7 +103,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
     </div>
     <br>
                 <?php include 'includes/modal/modal_agregar_operacion.php' ?>
-                <?php include 'includes/modal/modal_agregar_material.php' ?>
+                <?php include 'includes/parts/agregar_material.php' ?>
                 <?php include 'includes/parts/agregar_unidad.php' ?>
     <input type="hidden" value="<?php echo $_POST['codigo_operacion']?>">
     <!-- Fin de graficas -->
