@@ -21,7 +21,7 @@
                             <span class="input-group-text"><i class="fa fa-sitemap" aria-hidden="true"></i></span>
                           </div>
                           <input type="text" class="form-control" placeholder="Nombre de la Unidad" id="nombre-tipo" name="nombre-tipo" >
-                          <input type="text" class="form-control" value="<?php echo $codigo_operacion;?>" id="nombre-tipo" name="nombre-tipo" >
+                          <input type="hidden" class="form-control" value="<?php echo $codigo_operacion;?>" id="nombre-tipo" name="nombre-tipo" >
                           
                         </div>
 
