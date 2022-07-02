@@ -72,9 +72,9 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
                     </span><?php echo 'Unidad '.$valor1;?>
                 </button>
     </div>
-      <div class="col">
+     <!--  <div class="col">
         <button id="btnSubmit" class="btn btn-primary form-control btn-block" type="submit" (click)="onSubmit()">Submit</button>
-    </div>
+    </div> -->
     </div>
     
   </div>
@@ -82,7 +82,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
  <!--    <div class="container">
         <div class="row justify-content-between">
             <div class="col-3">
-                <!-- Button trigger modal -->
+        
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#agregar-materiales-obra">
                 <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
@@ -97,7 +97,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
                 </button>
 
                
-            <!-- Fin Boton agregar proyecto -->
+       Fin Boton agregar proyecto -->
             </div>     
         </div>    
     </div> -->
