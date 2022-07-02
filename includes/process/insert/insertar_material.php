@@ -22,7 +22,7 @@ $sql = "INSERT INTO materiales (nombre_material, id_unidad, estado_material) VAL
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
       /* echo "window.history.go(-2);"; */
-      echo "location='../../../operaciones.php?cod_operacion=$cod_operacion'";
+      echo "location='../../../operaciones.php?codigo_operacion=$cod_operacion'";
     echo "</script>";
 } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
