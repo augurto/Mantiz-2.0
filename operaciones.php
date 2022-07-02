@@ -66,7 +66,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
                 </button>
     </div>
         <div class="col">
-                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#agregar-nuevo-material">
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#unidad_material">
                     <span class="icon text-white-50">
                                 <i class="fas fa-plus"></i>
                     </span><?php echo 'Unidad '.$valor1;?>

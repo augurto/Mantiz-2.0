@@ -44,6 +44,10 @@
         <label for="floatingInput">Monto :</label>
       </div>
       <div class="form-floating mb-3">
+        <input type="number" class="form-control" id="floatingInput" placeholder="precio o monot de operacion">
+        <label for="floatingInput">Cantidad :</label>
+      </div>
+      <div class="form-floating mb-3">
           <select class="form-select" aria-label="Default select example">
             <option selected>Clic para seleccionar</option>
             <option value="1">Ingreso</option>
