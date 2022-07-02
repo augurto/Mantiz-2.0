@@ -1,5 +1,5 @@
 <?php require_once ('./config/conexion_tabla.php') ?>
-<div class="modal fade" id="unidad_material" >
+<div class="modal fade" id="unidad" >
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -50,11 +50,11 @@
                         </thead>
                         <?php 
                         $count=1;
-                        foreach ($link->query('SELECT * from undad order by nombre_unidad asc') as $sub){  ?>
+                        foreach ($link->query('SELECT * from undad order by nombre_unidad asc') as $sub2){  ?>
                         <?php
                         
-                        $id_codgen=$sub['id_uni'];
-                        $variable=$sub['unidad'];
+                        $id_codgen=$sub2['id_uni'];
+                        $variable=$sub2['unidad'];
                         
                         ?>
                         <tr>    
@@ -65,7 +65,7 @@
                        
                                 
                               
-                                <a href="../../includes/process/eliminar/eliminar_subtipo.php?id=<?php echo $id_codgen ; ?>&variable=<?php echo $variable ;?>&codigo_operacion=<?php echo $codigo_operacion ;?>" >
+                                <a href="../../includes/process/eliminar/eliminar_unidad_material.php?id=<?php echo $id_codgen ; ?>&variable=<?php echo $variable ;?>&codigo_operacion=<?php echo $codigo_operacion ;?>" >
                                   <i class="fas fa-trash" style="color: red;"></i>
                                   <!-- Counter - Messages -->
                                 </a>
@@ -83,7 +83,7 @@
                 </div>
                 <script type="text/javascript">
                     $(document).ready(function () {
-                        $('#unidad_material > .modal-body').css({width:'auto',height:'auto', 'max-height':'100%'});
+                        $('#unidad> .modal-body').css({width:'auto',height:'auto', 'max-height':'100%'});
                         
                         $('#example3').DataTable({        
         language: {
