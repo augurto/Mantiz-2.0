@@ -52,10 +52,18 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
     <div class="container">
     <div class="row">
       <div class="col">
-        <button class="btn btn-danger form-control  btn-block" routerLink='/login'>Cancel</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#agregar-materiales-obra">
+                    <span class="icon text-white-50">
+                                <i class="fas fa-plus"></i>
+                    </span>Operacion
+                </button>
     </div>
       <div class="col">
-        <button id="btnSubmit" class="btn btn-primary form-control btn-block" type="submit" (click)="onSubmit()">Submit</button>
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#agregar-nuevo-material">
+                    <span class="icon text-white-50">
+                                <i class="fas fa-plus"></i>
+                    </span><?php echo $valor1;?>
+                </button>
     </div>
         <div class="col">
         <button class="btn btn-danger form-control  btn-block" routerLink='/login'>Cancel</button>
@@ -84,7 +92,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
                 </span>Registrar Operacion
                 </button>
 
-                <?php include 'includes/modal/modal_agregar_material_obra.php' ?>
+                <?php include 'includes/modal/modal_agregar_operacion.php' ?>
                 <?php include 'includes/modal/modal_agregar_material.php' ?>
             <!-- Fin Boton agregar proyecto -->
             </div>     
