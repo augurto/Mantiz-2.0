@@ -56,6 +56,11 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
       <div class="col">
         <button id="btnSubmit" class="btn btn-primary form-control btn-block" type="submit" (click)="onSubmit()">Submit</button></div>
     </div>
+    <div class="col">
+        <button class="btn btn-danger form-control  btn-block" routerLink='/login'>Cancel</button></div>
+      <div class="col">
+        <button id="btnSubmit" class="btn btn-primary form-control btn-block" type="submit" (click)="onSubmit()">Submit</button></div>
+    </div>
   </div>
 
     <div class="container">
