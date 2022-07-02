@@ -11,7 +11,14 @@ require_once ("config/db.php");//Contiene las variables de configuracion para co
 require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
         $usuario=$_SESSION["username"];
         $id_usuario=$_SESSION["id"];
-        $codigo_operacion=$_POST['codigo_operacion'];
+        if (empty($codigo_operacion)) {
+            # code...
+            $codigo_operacion=$_GET['codigo_operacion'];
+        }else {
+            # code...
+            $codigo_operacion=$_POST['codigo_operacion'];
+        }
+        
         $valor1='Material';
 ?>
 <!DOCTYPE html>
