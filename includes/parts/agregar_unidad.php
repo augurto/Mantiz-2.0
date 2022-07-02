@@ -10,7 +10,7 @@
                 </div>
 
 
-                        <form action="../../includes/process/insert/insertar_tipo_codigo_proyecto.php">
+                        <form action="../../includes/process/insert/insertar_unidad.php">
                         
                         <div class="modal-body">
                         <label for="inputProyec">Nombre de la Unidad.</label>
@@ -46,7 +46,7 @@
 
 
                 <div class="modal-body">
-                    <table id="example3" class="table table-hover" cellspacing="0" width="100%">
+                    <table id="example3" class="table table-striped" cellspacing="0" width="100%">
                       
                     <thead>
                           <tr>
