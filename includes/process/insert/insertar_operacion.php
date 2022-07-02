@@ -11,7 +11,7 @@ $nombre_tipo=$_GET["descripcion"];
 $material=$_GET["material"];
 $monto=$_GET["monto"];
 $cantidad=$_GET["cantidad"];
-$cant_monto=$monto*$cant;
+$cant_monto=$monto*$cantidad;
 $tipo_operacion=$_GET["tipo_operacion"];
 $fecha_operacion=$_GET["fecha_operacion"];
 $observacion=$_GET["observacion"];
@@ -28,8 +28,8 @@ if (!$conn) {
  
 echo "Connected successfully";
  
-$sql = "INSERT INTO operaciones (descripcion,nombre_operacion, fecha_agregada, fecha_operacion, usuario_maker_operacion, tipo_operacion, cantidad, monto, cant_monto, proyecto_operacion, observaciones) 
-VALUES ('$nombre_tipo','$material','$hoy','$fecha_operacion','$usuario','$tipo_operacion','$cantidad','$monto','$cant_monto','$cod_operacion','$observacion')";
+$sql = "INSERT INTO operaciones (descripcion,nombre_operacion, fecha_agregada, fecha_operacion, usuario_maker_operacion, tipo_operacion, cantidad, monto, cant_monto, proyecto_operacion, observaciones. estado_operacion) 
+VALUES ('$nombre_tipo','$material','$hoy','$fecha_operacion','$usuario','$tipo_operacion','$cantidad','$monto','$cant_monto','$cod_operacion','$observacion','0')";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
       echo "location='../../../operaciones.php?codigo_operacion=$cod_operacion'";

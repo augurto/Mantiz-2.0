@@ -10,19 +10,24 @@
                         <thead>
                                 <tr>
                                     
-                                    <th>Obra</th>
+                                    <th>Proyecto</th>
                                     <th>Material</th>
                                     <th>Usuario</th>
-                                    <th>Estado</th>
+                                    <th>Fecha</th>
+                                    <th>Tipo</th>
+                                   
                                     
                                 </tr>
                                 </thead>
-                        <?php foreach ($link->query('SELECT * from seguimiento_obra') as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                        <?php foreach ($link->query('SELECT * from operaciones') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
-                        $id_obra=$row['id'];
-                        $nombre_obra=$row['obra'];
-                        $fecha_agregada=$row['material'];
-                        $estado=$row['usuario'];
+                        $proyecto_operacion=$row['proyecto_operacion'];
+                        $nombre_operacion=$row['nombre_operacion'];
+                        $usuario_maker_operacion=$row['usuario_maker_operacion'];
+                        $fecha_agregada=$row['fecha_agregada'];
+                        $tipo_operacion=$row['tipo_operacion'];
+
+                        $estado=$row['estado_operacion'];
                          if ($estado==0) { ?>
                              
                              <tr style="background-color: #F0FFFF !important;">
@@ -38,19 +43,23 @@
                              <?php }?>   
                             
                             
-                            <td><a href="../../ver_obra.php?id_obra=<?php echo $id_obra; ?>"><?php echo $nombre_obra; ?></a></td>
-                            <td><?php echo $fecha_agregada ?></td>
-                            <td><?php if ($estado==0) {
+                             <td><?php echo $proyecto_operacion;?> </td>
+                             <td><?php echo $nombre_operacion;?> </td>
+                             <td><?php echo $usuario_maker_operacion;?> </td>
+                             
+                             <td><?php echo $fecha_agregada;?> </td>
+                        
+                            <td><?php if ($tipo_operacion==0) {
                                 # code...
-                                echo 'Oficina';
-                            } elseif ($estado==1) {
+                                echo 'Ingreso';
+                            } elseif ($tipo_operacion==1) {
                                 # code...
-                                echo 'Terminado';
-                            } elseif ($estado==2) {
+                                echo 'Egreso';
+                            } elseif ($tipo_operacion==2) {
                                 # code...
-                                echo 'Inactivo';
+                                echo 'Otro';
                             }?></td>
-                            <td>Boton Accion Pendiente</td>
+                            
                         </tr>
                         <?php
                             }
