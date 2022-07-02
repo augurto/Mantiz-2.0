@@ -14,6 +14,7 @@
                                     <th>Material</th>
                                     <th>Usuario</th>
                                     <th>Fecha</th>
+                                    <th>Monto</th>
                                     <th>Tipo</th>
                                    
                                     
@@ -27,6 +28,7 @@
                         $nombre_operacion=$row['nombre_material'];
                         $usuario_maker_operacion=$row['username'];
                         $fecha_agregada=$row['fecha_agregada'];
+                        $cant_monto=$row['cant_monto'];
                         $tipo_operacion=$row['tipo_operacion'];
 
                         $estado=$row['estado_operacion'];
@@ -48,6 +50,7 @@
                              <td><?php echo $proyecto_operacion;?> </td>
                              <td><?php echo $nombre_operacion;?> </td>
                              <td><?php echo $usuario_maker_operacion;?> </td>
+                             <td><?php echo $cant_monto;?> </td>
                              
                              <td><?php echo $fecha_agregada;?> </td>
                         
@@ -60,7 +63,7 @@
                             } elseif ($tipo_operacion==2) {
                                 
                                 echo 'Otro';
-                            }?> <?php echo $tipo_operacion;?></td>
+                            }?></td>
                             
                         </tr>
                         <?php
