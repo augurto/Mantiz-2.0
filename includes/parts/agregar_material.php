@@ -54,6 +54,7 @@
                           <tr>
                               <th>ID</th>
                               <th>Nombre</th>
+                              <th>Unidad</th>
                               <th>Accion</th>
                               
                           </tr>
@@ -63,8 +64,9 @@
                         foreach ($link->query('SELECT * from materiales order by nombre_material asc ') as $sub){  ?>
                         <?php
                         
-                        $id_codgen=$sub['id_cod_gen_pro'];
-                        $variable=$sub['variable'];
+                        $id_codgen=$sub['id_mat'];
+                        $variable=$sub['nombre_material'];
+                        $unidad=$sub['id_unidad'];
                         
                         ?>
                         <tr>    
