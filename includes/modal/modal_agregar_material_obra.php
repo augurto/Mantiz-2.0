@@ -17,11 +17,11 @@
         <input type="text" class="form-control" id="floatingInput" placeholder="Ingrese descripcion">
         <label for="floatingInput">Descripcion</label>
       </div>
-      <div class="input-group">
+   <!--    <div class="input-group">
         <span class="input-group-text">Fecha Operacion</span>
         
         <input type="date" aria-label="Last name" class="form-control">
-      </div> 
+      </div>  -->
       <br>  
       <div class="form-floating mb-3">
                <select class="form-control" name="usuario_asignado" id="usuario_asignado" required="">
@@ -49,7 +49,10 @@
           </select>
         <label for="floatingInput">Tipo de Operacion :</label>
       </div>
-      
+      <div class="form-floating mb-3">
+        <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Fecha de Operacion:</label>
+      </div>
                         
                         <div class="form-floating">
                           <textarea class="form-control" placeholder="Existe alguna  observacion?" id="floatingTextarea2" style="height: 100px"></textarea>
