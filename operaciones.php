@@ -68,7 +68,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
                 </span>Agregar Materiales
                 </button>
             </div>    
-            <div class="col-3">
+            <div class="col-3" text-rigth>
                 <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#agregar-nuevo-material">
                 <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
