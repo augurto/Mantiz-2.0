@@ -13,17 +13,11 @@
                         <form action="../../includes/process/insert/insertar_tipo_codigo_proyecto.php">
                         
                         <div class="modal-body">
-                        <label for="inputProyec">Nombre del Sub Tipo de Proyecto</label>
-                        <div class="input-group mb-3">
-                          
-                          <br>
-                          <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fa fa-sitemap" aria-hidden="true"></i></span>
-                          </div>
-                          <input type="text" class="form-control" placeholder="Nombre del Proyecto" id="nombre-tipo" name="nombre-tipo" >
-                          
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" id="floatingInput" placeholder="Ingrese descripcion" name="nombre_material" required>
+                          <label for="floatingInput">Nombre <?php $variable1; ?></label>
                         </div>
-
+              
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
