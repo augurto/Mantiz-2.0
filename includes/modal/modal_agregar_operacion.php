@@ -11,6 +11,7 @@
       </div>
 
       <div class="modal-body">
+        <form action="../process/insert/insertar_operacion.php"></form>
       <input type="hidden" value="<?php echo $id_usuario; ?>" name="id_usuario">
       <input type="hidden" value="<?php echo $codigo_operacion; ?>" name="cod_operacion">
       <div class="form-floating mb-3">
@@ -65,6 +66,8 @@
                           <textarea class="form-control" placeholder="Existe alguna  observacion?" id="floatingTextarea2" style="height: 100px" name="observacion"></textarea>
                           <label for="floatingTextarea2">Observaciones</label>
                         </div> 
+
+
       </div>
                          
       <div class="modal-footer">
