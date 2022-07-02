@@ -19,14 +19,14 @@
                         </div>
                         <br>  
                             <div class="form-floating mb-3">
-                                    <select class="form-control" name="usuario_asignado" id="usuario_asignado" required="">
+                                    <select class="form-control" name="usuario_asignado" id="usuario_asignado" required="" name="unidad" >
                                               <option disabled="disabled" value="" selected>Clic para seleccionar </option>
                                               <?php 
 
-                                              $sss2=mysqli_query($con,"SELECT * FROM undad");
+                                              $sss2=mysqli_query($con,"SELECT * FROM undad where estado_unidad=0 order by nombre_unidad");
                                                       while($f2=mysqli_fetch_assoc($sss2)){    
 
-                                                          echo '<option value="'.$f2['id_unidad'].'">'.$f2['nombre_unidad'].'-'.$f2['unidad'].'</option>';
+                                                          echo '<option value="'.$f2['id_unidad'].'">'.$f2['nombre_unidad'].' - '.$f2['unidad'].'</option>';
 
                                               }
                                               
@@ -60,7 +60,7 @@
                         </thead>
                         <?php 
                         $count=1;
-                        foreach ($link->query('SELECT * from codigo_generado_proyecto order by id_cod_gen_pro desc') as $sub){  ?>
+                        foreach ($link->query('SELECT * from materiales order by nombre_material asc ') as $sub){  ?>
                         <?php
                         
                         $id_codgen=$sub['id_cod_gen_pro'];
