@@ -10,15 +10,15 @@
                         <thead>
                                 <tr>
                                     
-                                    <th>Proyecto</th>
+                                    <th>Descripcion</th>
                                     <th>Material</th>
                                     <th>Usuario</th>
+                                    
+                                    <th>Fecha</th>
+                                    <th>Tipo</th>
                                     <th>Cant</th>
                                    <th>pu</th>
                                     <th>SubTotal</th>
-                                    <th>Fecha</th>
-                                    <th>Tipo</th>
-                                   
                                     
                                 </tr>
                                 </thead>
