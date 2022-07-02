@@ -28,7 +28,7 @@ if (!$conn) {
  
 echo "Connected successfully";
  
-$sql = "INSERT INTO operaciones (descripcion,nombre_operacion, fecha_agregada, fecha_operacion, usuario_maker_operacion, tipo_operacion, cantidad, monto, cant_monto, proyecto_operacion, observaciones. estado_operacion) 
+$sql = "INSERT INTO operaciones (descripcion,nombre_operacion, fecha_agregada, fecha_operacion, usuario_maker_operacion, tipo_operacion, cantidad, monto, cant_monto, proyecto_operacion, observaciones, estado_operacion) 
 VALUES ('$nombre_tipo','$material','$hoy','$fecha_operacion','$usuario','$tipo_operacion','$cantidad','$monto','$cant_monto','$cod_operacion','$observacion','0')";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
