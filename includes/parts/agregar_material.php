@@ -1,5 +1,5 @@
 <?php require_once ('./config/conexion_tabla.php') ?>
-<div class="modal fade" id="material" >
+<div class="modal fade" id="compromisos" >
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -82,7 +82,7 @@
                 </div>
                 <script type="text/javascript">
                     $(document).ready(function () {
-                        $('#material > .modal-body').css({width:'auto',height:'auto', 'max-height':'100%'});
+                        $('#compromisos > .modal-body').css({width:'auto',height:'auto', 'max-height':'100%'});
                         
                         $('#example2').DataTable({        
         language: {
