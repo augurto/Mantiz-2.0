@@ -61,17 +61,18 @@
                         </thead>
                         <?php 
                         $count=1;
-                        foreach ($link->query('SELECT * from materiales order by nombre_material asc ') as $sub){  ?>
+                        foreach ($link->query('SELECT * from materiales m inner join undad u on m.id_unidad = u.id_uni  order by nombre_material asc ') as $sub){  ?>
                         <?php
                         
                         $id_codgen=$sub['id_mat'];
                         $variable=$sub['nombre_material'];
-                        $unidad=$sub['id_unidad'];
+                        $unidad=$sub['unidad'];
                         
                         ?>
                         <tr>    
                         <td><?php echo $count++; ?></td>
                         <td><?php echo $variable;?></td>
+                        <td><?php echo $unidad;?></td>
                         <?php if ($tipo_user==1) { ?>
                         <td>
                        
