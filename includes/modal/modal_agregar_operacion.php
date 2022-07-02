@@ -9,9 +9,9 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-
+      <form action="../process/insert/insertar_operacion.php">
       <div class="modal-body">
-        <form action="../process/insert/insertar_operacion.php"></form>
+        
       <input type="hidden" value="<?php echo $id_usuario; ?>" name="id_usuario">
       <input type="hidden" value="<?php echo $codigo_operacion; ?>" name="cod_operacion">
       <div class="form-floating mb-3">
@@ -72,8 +72,9 @@
                          
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Guardar</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
       </div>
+      </form>
     </div>
   </div>
 </div>
