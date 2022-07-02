@@ -14,7 +14,7 @@
       <input type="hidden" value="<?php echo $id_usuario; ?>">
       <input type="hidden" value="<?php echo $codigo_operacion; ?>">
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" placeholder="Ingrese descripcion">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Ingrese descripcion" required>
         <label for="floatingInput">Descripcion</label>
       </div>
    <!--    <div class="input-group">
@@ -25,7 +25,7 @@
       <br>  
       <div class="form-floating mb-3">
                <select class="form-control" name="usuario_asignado" id="usuario_asignado" required="">
-                        <option disabled="disabled" value="" selected>Clic para ver </option>
+                        <option disabled="disabled" value="" selected>Clic para seleccionar </option>
                         <?php 
 
                         $sss2=mysqli_query($con,"SELECT * FROM materiales");
@@ -50,7 +50,7 @@
         <label for="floatingInput">Tipo de Operacion :</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <input type="date" class="form-control" id="floatingInput" placeholder="" required>
         <label for="floatingInput">Fecha de Operacion:</label>
       </div>
                         
