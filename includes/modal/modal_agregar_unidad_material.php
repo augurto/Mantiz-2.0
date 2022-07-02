@@ -38,7 +38,7 @@
 
 
                 <div class="modal-body">
-                    <table id="example2" class="table table-hover" cellspacing="0" width="100%">
+                    <table id="example3" class="table table-hover" cellspacing="0" width="100%">
                       
                     <thead>
                           <tr>
@@ -85,7 +85,7 @@
                     $(document).ready(function () {
                         $('#unidad_material > .modal-body').css({width:'auto',height:'auto', 'max-height':'100%'});
                         
-                        $('#example2').DataTable({        
+                        $('#example3').DataTable({        
         language: {
                 "lengthMenu": "Mostrar _MENU_ registros",
                 "zeroRecords": "No se encontraron resultados",
