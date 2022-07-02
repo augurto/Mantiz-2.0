@@ -21,7 +21,7 @@ echo "Connected successfully";
 $sql = "INSERT INTO undad (nombre_unidad, unidad, estado_unidad) VALUES ('$nombre_tipo','$codigo_tipo', '0')";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
-      echo "location='../../../operaciones.php?$cod_operacion'";
+      echo "location='../../../operaciones.php?cod_operacion=$cod_operacion'";
     echo "</script>";
 } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);

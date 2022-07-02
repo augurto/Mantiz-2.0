@@ -22,9 +22,7 @@
                           </div>
                           <input type="text" class="form-control" placeholder="Nombre de la Unidad" id="nombre-tipo" name="nombre-tipo" >
                           <br>
-                          <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fa fa-sitemap" aria-hidden="true"></i></span>
-                          </div>
+                          
                           <input type="text" class="form-control" placeholder="Codigo de la Unidad" id="codigo-tipo" name="codigo-tipo" >
                           <input type="hidden" class="form-control" value="<?php echo $codigo_operacion;?>" id="codigo-operacion" name="codigo-operacion" >
                           
@@ -49,6 +47,7 @@
                           <tr>
                               <th>ID</th>
                               <th>Nombre</th>
+                              <th>Unidad</th>
                               <th>Accion</th>
                               
                           </tr>
@@ -60,10 +59,17 @@
                         
                         $id_codgen=$sub2['id_uni'];
                         $variable=$sub2['unidad'];
+                        $nombre=$sub2['nombre_unidad'];
                         
                         ?>
                         <tr>    
                         <td><?php echo $count++; ?></td>
+                        <?php if ($estado==1) { ?>
+                          <td><del><?php echo $nombre;?></del></td>
+                        <?php }else { ?>
+                          <td><?php echo $nombre;?></td>
+                        <?php } ?>
+                        
                         <td><?php echo $variable;?></td>
                         <?php if ($tipo_user==1) { ?>
                         <td>
