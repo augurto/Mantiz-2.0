@@ -13,8 +13,10 @@
                                     <th>Proyecto</th>
                                     <th>Material</th>
                                     <th>Usuario</th>
+                                    <th>Cant</th>
+                                   <th>pu</th>
+                                    <th>SubTotal</th>
                                     <th>Fecha</th>
-                                    <th>Monto</th>
                                     <th>Tipo</th>
                                    
                                     
@@ -28,6 +30,8 @@
                         $nombre_operacion=$row['nombre_material'];
                         $usuario_maker_operacion=$row['username'];
                         $fecha_agregada=$row['fecha_agregada'];
+                        $cantidad=$row['cantidad'];
+                        $monto=$row['monto'];
                         $cant_monto=$row['cant_monto'];
                         $tipo_operacion=$row['tipo_operacion'];
 
@@ -50,8 +54,10 @@
                              <td><?php echo $proyecto_operacion;?> </td>
                              <td><?php echo $nombre_operacion;?> </td>
                              <td><?php echo $usuario_maker_operacion;?> </td>
-                             <td><?php echo $cant_monto;?> </td>
                              
+                             <td><?php echo $cantidad;?> </td>
+                             <td><?php echo $monto;?> </td>
+                             <td><?php echo 'S/ '.$cant_monto;?> </td>
                              <td><?php echo $fecha_agregada;?> </td>
                         
                             <td><?php if ($tipo_operacion==0) {
