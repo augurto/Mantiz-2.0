@@ -13,15 +13,19 @@
       <div class="modal-body">
       <input type="hidden" value="<?php echo $id_usuario; ?>">
       <input type="hidden" value="<?php echo $codigo_operacion; ?>">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Ingrese descripcion">
+        <label for="floatingInput">Descripcion</label>
+      </div>
       <div class="input-group">
-        <span class="input-group-text">Descripcion</span>
-        <input type="text" aria-label="First name" class="form-control">
+        <span class="input-group-text">Fecha Operacion</span>
+        
         <input type="date" aria-label="Last name" class="form-control">
       </div> 
       <br>  
       <div class="form-floating mb-3">
                <select class="form-control" name="usuario_asignado" id="usuario_asignado" required="">
-                        <!-- <option disabled="disabled" value="" selected>Clic para ver usuarios</option> -->
+                        <option disabled="disabled" value="" selected>Clic para ver </option>
                         <?php 
 
                         $sss2=mysqli_query($con,"SELECT * FROM materiales");
@@ -33,33 +37,19 @@
                         
                         ?>
               </select>
-        <label for="floatingInput">Selecciona <?php echo $valor1; ?></label>
+        <label for="floatingInput">Selecciona <?php echo $valor1.': '; ?></label>
       </div>
 
-      <div class="input-group mb-3">
-              <label class="input-group-text" for="inputGroupSelect01">Seleccionar <?php echo $valor1; ?></label>
-              <select class="form-control" name="usuario_asignado" id="usuario_asignado" required="">
-                        <option disabled="disabled" value="" selected>Clic para ver usuarios</option>
-                        <?php 
-
-                        $sss2=mysqli_query($con,"SELECT * FROM materiales");
-                                while($f2=mysqli_fetch_assoc($sss2)){    
-
-                                    echo '<option value="'.$f2['id_mat'].'">'.$f2['nombre_material'].'</option>';
-
-                        }
-                        
-                        ?>
-              </select>
-                       
-            </div>
-      <select class="form-select" aria-label="Default select example">
-        <option selected>Tipo de Operacion</option>
-        <option value="1">Ingreso</option>
-        <option value="2">Egreso</option>
-        <option value="3">Otro</option>
-      </select>
-      <br>
+      <div class="form-floating mb-3">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Clic para seleccionar</option>
+            <option value="1">Ingreso</option>
+            <option value="2">Egreso</option>
+            <option value="3">Otro</option>
+          </select>
+        <label for="floatingInput">Tipo de Operacion :</label>
+      </div>
+      
                         
                         <div class="form-floating">
                           <textarea class="form-control" placeholder="Existe alguna  observacion?" id="floatingTextarea2" style="height: 100px"></textarea>
