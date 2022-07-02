@@ -10,12 +10,12 @@
                 </div>
 
 
-                        <form action="../../includes/process/insert/insertar_tipo_codigo_proyecto.php">
+                        <form action="../../includes/process/insert/insertar_material.php">
                         
                         <div class="modal-body">
                         <div class="form-floating mb-3">
                           <input type="text" class="form-control" id="floatingInput" placeholder="Ingrese descripcion" name="nombre_material" required>
-                          <label for="floatingInput">Nombre <?php $valor1.':'; ?></label>
+                          <label for="floatingInput">Nombre <?php echo $valor1.' : '; ?></label>
                         </div>
                         <br>  
                             <div class="form-floating mb-3">
