@@ -24,7 +24,7 @@
                           <br>
                           
                           <input type="text" class="form-control" placeholder="Codigo de la Unidad" id="codigo-tipo" name="codigo-tipo" >
-                          <input type="text" value="<?php echo $codigo_operacion;?>" name="cod_operacion">
+                          <input type="hidden" value="<?php echo $codigo_operacion;?>" name="cod_operacion">
                           
                         </div>
 

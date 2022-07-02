@@ -11,10 +11,10 @@
       </div>
 
       <div class="modal-body">
-      <input type="hidden" value="<?php echo $id_usuario; ?>">
-      <input type="hidden" value="<?php echo $codigo_operacion; ?>">
+      <input type="hidden" value="<?php echo $id_usuario; ?>" name="id_usuario">
+      <input type="hidden" value="<?php echo $codigo_operacion; ?>" name="cod_operacion">
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" placeholder="Ingrese descripcion" required>
+        <input type="text" class="form-control" id="floatingInput" placeholder="Ingrese descripcion" required name="descripcion">
         <label for="floatingInput">Descripcion</label>
       </div>
    <!--    <div class="input-group">
@@ -24,7 +24,7 @@
       </div>  -->
       <br>  
       <div class="form-floating mb-3">
-               <select class="form-control" name="usuario_asignado" id="usuario_asignado" required="">
+               <select class="form-control" name="material" id="material" required="">
                         <option disabled="disabled" value="" selected>Clic para seleccionar </option>
                         <?php 
 
@@ -40,15 +40,15 @@
         <label for="floatingInput">Selecciona <?php echo $valor1.': '; ?></label>
       </div>
       <div class="form-floating mb-3">
-        <input type="number" class="form-control" id="floatingInput" placeholder="precio o monot de operacion">
+        <input type="number" class="form-control" id="floatingInput" placeholder="precio o monot de operacion" name="monto">
         <label for="floatingInput">Monto :</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="number" class="form-control" id="floatingInput" placeholder="precio o monot de operacion">
+        <input type="number" class="form-control" id="floatingInput" placeholder="precio o monot de operacion" name="cantidad">
         <label for="floatingInput">Cantidad :</label>
       </div>
       <div class="form-floating mb-3">
-          <select class="form-select" aria-label="Default select example">
+          <select class="form-select" aria-label="Default select example" name="tipo_operacion">
             <option selected>Clic para seleccionar</option>
             <option value="1">Ingreso</option>
             <option value="2">Egreso</option>
@@ -57,12 +57,12 @@
         <label for="floatingInput">Tipo de Operacion :</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="date" class="form-control" id="floatingInput" placeholder="" required>
+        <input type="date" class="form-control" id="floatingInput" placeholder="" required name="fecha_operacion">
         <label for="floatingInput">Fecha de Operacion:</label>
       </div>
                         
                         <div class="form-floating">
-                          <textarea class="form-control" placeholder="Existe alguna  observacion?" id="floatingTextarea2" style="height: 100px"></textarea>
+                          <textarea class="form-control" placeholder="Existe alguna  observacion?" id="floatingTextarea2" style="height: 100px" name="observacion"></textarea>
                           <label for="floatingTextarea2">Observaciones</label>
                         </div> 
       </div>
