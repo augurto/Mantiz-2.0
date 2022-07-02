@@ -13,10 +13,11 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
         $id_usuario=$_SESSION["id"];
         if (empty($codigo_operacion)) {
             # code...
-            $codigo_operacion=$_GET['codigo_operacion'];
+            
+            $codigo_operacion=$_POST['codigo_operacion'];
         }else {
             # code...
-            $codigo_operacion=$_POST['codigo_operacion'];
+            $codigo_operacion=$_GET['codigo_operacion'];
         }
         
         $valor1='Material';
