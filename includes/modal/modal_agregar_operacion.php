@@ -51,9 +51,9 @@
       <div class="form-floating mb-3">
           <select class="form-select" aria-label="Default select example" name="tipo_operacion">
             <option selected>Clic para seleccionar</option>
-            <option value="1">Ingreso</option>
-            <option value="2">Egreso</option>
-            <option value="3">Otro</option>
+            <option value="0">Ingreso</option>
+            <option value="1">Egreso</option>
+            <option value="2">Otro</option>
           </select>
         <label for="floatingInput">Tipo de Operacion :</label>
       </div>
