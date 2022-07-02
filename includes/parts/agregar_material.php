@@ -15,11 +15,12 @@
                         <div class="modal-body">
                         <div class="form-floating mb-3">
                           <input type="text" class="form-control" id="floatingInput" placeholder="Ingrese descripcion" name="nombre_material" required>
+                          <input type="text" value="<?php echo $codigo_operacion;?>" name="cod_operacion">
                           <label for="floatingInput">Nombre <?php echo $valor1.' : '; ?></label>
                         </div>
                         <br>  
                             <div class="form-floating mb-3">
-                                    <select class="form-control" name="usuario_asignado" id="usuario_asignado" required="" name="unidad" >
+                                    <select class="form-control" required="" name="unidad" >
                                               <option disabled="disabled" value="" selected>Clic para seleccionar </option>
                                               <?php 
 
