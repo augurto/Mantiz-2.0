@@ -49,11 +49,11 @@
                         </thead>
                         <?php 
                         $count=1;
-                        foreach ($link->query('SELECT * from codigo_generado_proyecto order by id_cod_gen_pro desc') as $sub){  ?>
+                        foreach ($link->query('SELECT * from undad order by nombre_unidad asc') as $sub){  ?>
                         <?php
                         
-                        $id_codgen=$sub['id_cod_gen_pro'];
-                        $variable=$sub['variable'];
+                        $id_codgen=$sub['id_uni'];
+                        $variable=$sub['unidad'];
                         
                         ?>
                         <tr>    
