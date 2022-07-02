@@ -15,9 +15,26 @@
                         <div class="modal-body">
                         <div class="form-floating mb-3">
                           <input type="text" class="form-control" id="floatingInput" placeholder="Ingrese descripcion" name="nombre_material" required>
-                          <label for="floatingInput">Nombre <?php $variable1; ?></label>
+                          <label for="floatingInput">Nombre <?php $valor1.':'; ?></label>
                         </div>
-              
+                        <br>  
+                            <div class="form-floating mb-3">
+                                    <select class="form-control" name="usuario_asignado" id="usuario_asignado" required="">
+                                              <option disabled="disabled" value="" selected>Clic para seleccionar </option>
+                                              <?php 
+
+                                              $sss2=mysqli_query($con,"SELECT * FROM undad");
+                                                      while($f2=mysqli_fetch_assoc($sss2)){    
+
+                                                          echo '<option value="'.$f2['id_unidad'].'">'.$f2['nombre_unidad'].'</option>';
+
+                                              }
+                                              
+                                              ?>
+                                    </select>
+                              <label for="floatingInput">Selecciona <?php echo $valor1.': '; ?></label>
+                            </div>
+                                              <!-- fin de contenido -->
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
