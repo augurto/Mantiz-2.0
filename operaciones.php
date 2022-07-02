@@ -15,7 +15,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
             # code...
             
             $codigo_operacion=$_POST['codigo_operacion'];
-        }else {
+        }elseif(!empty($codigo_operacion)) {
             # code...
             $codigo_operacion=$_GET['codigo_operacion'];
         }
