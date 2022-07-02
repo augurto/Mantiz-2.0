@@ -100,7 +100,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
        Fin Boton agregar proyecto -->
             </div>     
         </div>    
-    </div> -->
+    </div>
     <br>
                 <?php include 'includes/modal/modal_agregar_operacion.php' ?>
                 <?php include 'includes/modal/modal_agregar_material.php' ?>
