@@ -66,7 +66,11 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
                 </button>
     </div>
         <div class="col">
-        <button class="btn btn-danger form-control  btn-block" routerLink='/login'>Cancel</button>
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#agregar-nuevo-material">
+                    <span class="icon text-white-50">
+                                <i class="fas fa-plus"></i>
+                    </span><?php echo 'Unidad '.$valor1;?>
+                </button>
     </div>
       <div class="col">
         <button id="btnSubmit" class="btn btn-primary form-control btn-block" type="submit" (click)="onSubmit()">Submit</button>
@@ -75,7 +79,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
     
   </div>
 
-    <div class="container">
+ <!--    <div class="container">
         <div class="row justify-content-between">
             <div class="col-3">
                 <!-- Button trigger modal -->
@@ -92,15 +96,15 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
                 </span>Registrar Operacion
                 </button>
 
-                <?php include 'includes/modal/modal_agregar_operacion.php' ?>
-                <?php include 'includes/modal/modal_agregar_material.php' ?>
+               
             <!-- Fin Boton agregar proyecto -->
             </div>     
         </div>    
-    </div>
+    </div> -->
     <br>
-    
-    <input type="text" value="<?php echo $_POST['codigo_operacion']?>">
+                <?php include 'includes/modal/modal_agregar_operacion.php' ?>
+                <?php include 'includes/modal/modal_agregar_material.php' ?>
+    <input type="hidden" value="<?php echo $_POST['codigo_operacion']?>">
     <!-- Fin de graficas -->
     <!-- Boton agregar proyecto -->
     
