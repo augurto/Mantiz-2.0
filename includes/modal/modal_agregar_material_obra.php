@@ -43,8 +43,12 @@
         <option value="3">Otro</option>
       </select>
       </div>
-
-
+                        <br>
+                        
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Existe alguna  observacion?" id="floatingTextarea2" style="height: 100px"></textarea>
+        <label for="floatingTextarea2">Observaciones</label>
+      </div>                   
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
         <button type="button" class="btn btn-primary">Guardar</button>
