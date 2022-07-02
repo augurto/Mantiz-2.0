@@ -57,10 +57,10 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
         <button id="btnSubmit" class="btn btn-primary form-control btn-block" type="submit" (click)="onSubmit()">Submit</button></div>
     </div>
   </div>
-  
+
     <div class="container">
         <div class="row justify-content-between">
-            <div class="col-6">
+            <div class="col-3">
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#agregar-materiales-obra">
                 <span class="icon text-white-50">
@@ -68,7 +68,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
                 </span>Agregar Materiales
                 </button>
             </div>    
-            <div class="col-6">
+            <div class="col-3">
                 <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#agregar-nuevo-material">
                 <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
