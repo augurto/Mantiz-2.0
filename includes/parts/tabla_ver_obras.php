@@ -67,8 +67,8 @@
                                         
                                         echo 'Otro';
                                     }?></td>
-                             <td><?php echo 'S/ '.$cantidad;?> </td>
                              <td><?php echo 'S/ '.$unidad;?> </td>
+                             <td><?php echo 'S/ '.$cantidad;?> </td>
                              <td><?php echo $monto;?> </td>
                              <td><?php echo 'S/ '.$cant_monto;?> </td>
                              
