@@ -21,15 +21,12 @@
                             <span class="input-group-text"><i class="fa fa-sitemap" aria-hidden="true"></i></span>
                           </div>
                           <input type="text" class="form-control" placeholder="Nombre de la Unidad" id="nombre-tipo" name="nombre-tipo" >
-                          <input type="hidden" class="form-control" value="<?php echo $codigo_operacion;?>" id="codigo-operacion" name="codigo-operacion" >
-                          
-                        </div>
-                        <br>
-                        <div class="input-group-prepend">
+                          <br>
+                          <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-sitemap" aria-hidden="true"></i></span>
                           </div>
-                          <input type="text" class="form-control" placeholder="Codigo de la unidad" id="codigo-tipo" name="codigo-tipo" >
-                       
+                          <input type="text" class="form-control" placeholder="Codigo de la Unidad" id="codigo-tipo" name="codigo-tipo" >
+                          <input type="hidden" class="form-control" value="<?php echo $codigo_operacion;?>" id="codigo-operacion" name="codigo-operacion" >
                           
                         </div>
 
@@ -46,7 +43,7 @@
 
 
                 <div class="modal-body">
-                    <table id="example3" class="table table-striped" cellspacing="0" width="100%">
+                    <table id="example3" class="table table-hover" cellspacing="0" width="100%">
                       
                     <thead>
                           <tr>
