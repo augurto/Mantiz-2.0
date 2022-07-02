@@ -21,7 +21,7 @@
       <br>  
       <div class="form-floating mb-3">
                <select class="form-control" name="usuario_asignado" id="usuario_asignado" required="">
-                        <option disabled="disabled" value="" selected>Clic para ver usuarios</option>
+                        <!-- <option disabled="disabled" value="" selected>Clic para ver usuarios</option> -->
                         <?php 
 
                         $sss2=mysqli_query($con,"SELECT * FROM materiales");
@@ -33,7 +33,7 @@
                         
                         ?>
               </select>
-        <label for="floatingInput">Selecciona ---</label>
+        <label for="floatingInput">Selecciona <?php echo $valor1; ?></label>
       </div>
 
       <div class="input-group mb-3">
