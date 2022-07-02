@@ -26,7 +26,7 @@
                                               $sss2=mysqli_query($con,"SELECT * FROM undad");
                                                       while($f2=mysqli_fetch_assoc($sss2)){    
 
-                                                          echo '<option value="'.$f2['id_unidad'].'">'.$f2['nombre_unidad'].'</option>';
+                                                          echo '<option value="'.$f2['id_unidad'].'">'.$f2['nombre_unidad'].'-'.$f2['unidad'].'</option>';
 
                                               }
                                               
