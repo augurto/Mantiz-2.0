@@ -21,7 +21,15 @@
                             <span class="input-group-text"><i class="fa fa-sitemap" aria-hidden="true"></i></span>
                           </div>
                           <input type="text" class="form-control" placeholder="Nombre de la Unidad" id="nombre-tipo" name="nombre-tipo" >
-                          <input type="hidden" class="form-control" value="<?php echo $codigo_operacion;?>" id="nombre-tipo" name="nombre-tipo" >
+                          <input type="hidden" class="form-control" value="<?php echo $codigo_operacion;?>" id="codigo-operacion" name="codigo-operacion" >
+                          
+                        </div>
+                        <br>
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-sitemap" aria-hidden="true"></i></span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="Codigo de la unidad" id="codigo-tipo" name="codigo-tipo" >
+                       
                           
                         </div>
 
