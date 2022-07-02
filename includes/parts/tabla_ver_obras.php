@@ -10,11 +10,10 @@
                         <thead>
                                 <tr>
                                     
-                                    <th>Descripcion</th>
-                                    <th>Material</th>
-                                    <th>Usuario</th>
-                                    
-                                    <th>Fecha</th>
+                                <th>Material</th>    
+                                <th>Descripcion</th>
+                                <th>Usuario</th>
+                                <th>Fecha</th>
                                     <th>Tipo</th>
                                     <th>Cant</th>
                                    <th>pu</th>
@@ -26,7 +25,7 @@
                          inner join materiales m on o.nombre_operacion = m.id_mat
                          inner join users u on o.usuario_maker_operacion = u.id WHERE proyecto_operacion ="'.$codigo_operacion.'"' ) as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
-                        $proyecto_operacion=$row['nombre_proyecto'];
+                        $proyecto_operacion=$row['descripcion'];
                         $nombre_operacion=$row['nombre_material'];
                         $usuario_maker_operacion=$row['username'];
                         $fecha_agregada=$row['fecha_agregada'];
@@ -50,26 +49,27 @@
                              <tr style="background-color: #FDF5E6 !important;">
                              <?php }?>   
                             
-                            
-                             <td><?php echo $proyecto_operacion;?> </td>
                              <td><?php echo $nombre_operacion;?> </td>
-                             <td><?php echo $usuario_maker_operacion;?> </td>
+                             <td><?php echo $proyecto_operacion;?> </td>
                              
-                             <td><?php echo $cantidad;?> </td>
+                             <td><?php echo $usuario_maker_operacion;?> </td>
+                             <td><?php echo $fecha_agregada;?> </td>
+                             <td><?php if ($tipo_operacion==0) {
+                         
+                                        echo 'Ingreso';
+                                    } elseif ($tipo_operacion==1) {
+                                
+                                        echo 'Egreso';
+                                    } elseif ($tipo_operacion==2) {
+                                        
+                                        echo 'Otro';
+                                    }?></td>
+                             <td><?php echo 'S/ '.$cantidad;?> </td>
                              <td><?php echo $monto;?> </td>
                              <td><?php echo 'S/ '.$cant_monto;?> </td>
-                             <td><?php echo $fecha_agregada;?> </td>
+                             
                         
-                            <td><?php if ($tipo_operacion==0) {
-                         
-                                echo 'Ingreso';
-                            } elseif ($tipo_operacion==1) {
-                          
-                                echo 'Egreso';
-                            } elseif ($tipo_operacion==2) {
-                                
-                                echo 'Otro';
-                            }?></td>
+                            
                             
                         </tr>
                         <?php
