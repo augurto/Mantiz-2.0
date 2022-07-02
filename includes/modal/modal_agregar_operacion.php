@@ -9,7 +9,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form action="../../process/insert/insertar_operacion.php">
+      <form action="../../includes/process/insert/insertar_operacion.php">
       <div class="modal-body">
         
       <input type="hidden" value="<?php echo $id_usuario; ?>" name="id_usuario">
