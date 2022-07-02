@@ -3,7 +3,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Agregar Sub tipo Proyecto</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar Unidad de <?php echo $valor1;?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -13,14 +13,15 @@
                         <form action="../../includes/process/insert/insertar_tipo_codigo_proyecto.php">
                         
                         <div class="modal-body">
-                        <label for="inputProyec">Nombre del Sub Tipo de Proyecto</label>
+                        <label for="inputProyec">Nombre de la Unidad</label>
                         <div class="input-group mb-3">
                           
                           <br>
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-sitemap" aria-hidden="true"></i></span>
                           </div>
-                          <input type="text" class="form-control" placeholder="Nombre del Proyecto" id="nombre-tipo" name="nombre-tipo" >
+                          <input type="text" class="form-control" placeholder="Nombre de la Unidad" id="nombre-tipo" name="nombre-tipo" >
+                          <input type="text" class="form-control" value="<?php echo $codigo_operacion;?>" id="nombre-tipo" name="nombre-tipo" >
                           
                         </div>
 
@@ -64,7 +65,7 @@
                        
                                 
                               
-                                <a href="../../includes/process/eliminar/eliminar_subtipo.php?id=<?php echo $id_codgen ; ?>&variable=<?php echo $variable ;?>" >
+                                <a href="../../includes/process/eliminar/eliminar_subtipo.php?id=<?php echo $id_codgen ; ?>&variable=<?php echo $variable ;?>&codigo_operacion=<?php echo $codigo_operacion ;?>" >
                                   <i class="fas fa-trash" style="color: red;"></i>
                                   <!-- Counter - Messages -->
                                 </a>
@@ -82,7 +83,7 @@
                 </div>
                 <script type="text/javascript">
                     $(document).ready(function () {
-                        $('#compromisos > .modal-body').css({width:'auto',height:'auto', 'max-height':'100%'});
+                        $('#unidad_material > .modal-body').css({width:'auto',height:'auto', 'max-height':'100%'});
                         
                         $('#example2').DataTable({        
         language: {
