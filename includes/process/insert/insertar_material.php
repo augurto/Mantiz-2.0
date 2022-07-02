@@ -20,7 +20,7 @@ echo "Connected successfully";
 $sql = "INSERT INTO materiales (nombre_material, id_unidad, estado_material) VALUES ('$nombre_tipo', '$unidad', '0')";
 if (mysqli_query($conn, $sql)) {
     echo"<script language ='JavaScript'>";
-      echo "window.history.go(-1);";
+      echo "window.history.go(-2);";
     echo "</script>";
 } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
