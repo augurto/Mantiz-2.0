@@ -60,6 +60,7 @@
                         $id_codgen=$sub2['id_uni'];
                         $variable=$sub2['unidad'];
                         $nombre=$sub2['nombre_unidad'];
+                        $estado=$sub2['estado_unidad'];
                         
                         ?>
                         <tr>    
