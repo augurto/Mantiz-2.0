@@ -1,3 +1,5 @@
+<div class="col-4">
+
 <nav id="navbar-example3" class="navbar bg-light flex-column align-items-stretch p-3">
   <a class="navbar-brand" href="#">Navbar</a>
   <nav class="nav nav-pills flex-column">
@@ -15,6 +17,10 @@
   </nav>
 </nav>
 
+
+
+</div>
+<div class="col-8">
 <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" tabindex="0">
   <div id="item-1">
     <h4>Item 1</h4>
@@ -44,4 +50,5 @@
     <h5>Item 3-2</h5>
     <p>...</p>
   </div>
+</div>
 </div>
