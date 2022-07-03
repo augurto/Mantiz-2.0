@@ -1,3 +1,4 @@
+<div class="row">
 <div class="col-4">
 <nav id="navbar-example3" class="navbar bg-light flex-column align-items-stretch p-3">
   <a class="navbar-brand" href="#">Navbar</a>
@@ -47,5 +48,6 @@
     <h5>Item 3-2</h5>
     <p>...</p>
   </div>
+</div>
 </div>
 </div>
