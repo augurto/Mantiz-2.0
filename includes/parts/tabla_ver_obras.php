@@ -22,11 +22,13 @@
                                     
                                 </tr>
                                 </thead>
-                        <?php foreach ($link->query('SELECT * from operaciones o inner join proyecto p on o.proyecto_operacion=p.codigo
+                        <?php foreach ($link->query('SELECT nombre_material, username,fecha_agregada,cantidad,unidad,monto,cant_monto,tipo_operacion,estado_operacion,o.descripcion as des_op 
+                         from operaciones o 
+                         inner join proyecto p on o.proyecto_operacion=p.codigo
                          inner join materiales m on o.nombre_operacion = m.id_mat
                          inner join users u on o.usuario_maker_operacion = u.id WHERE proyecto_operacion ="'.$codigo_operacion.'"' ) as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
-                        $proyecto_operacion=$row['descripcion'];
+                        $proyecto_operacion=$row['des_op'];
                         $nombre_operacion=$row['nombre_material'];
                         $usuario_maker_operacion=$row['username'];
                         $fecha_agregada=$row['fecha_agregada'];
