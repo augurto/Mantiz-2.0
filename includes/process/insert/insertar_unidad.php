@@ -9,7 +9,7 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 
 $nombre_tipo=$_GET["nombre-tipo"];
 $codigo_tipo=$_GET["codigo-tipo"];
-$cod_operacion=$_GET["codigo-operacion"];
+$cod_operacion=$_GET["cod_operacion"];
 
 $usuario=$_GET["usuario"];
 if (!$conn) {
