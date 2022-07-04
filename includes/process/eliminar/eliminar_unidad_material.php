@@ -26,7 +26,7 @@ if (mysqli_query($conn, $sql)) {
    
 
     echo"<script language ='JavaScript'>";
-      echo "location='../../../operaciones.php?cod_operacion=$codigo_operacion'";
+      echo "location='../../../operaciones.php?codigo_operacion=$codigo_operacion'";
     echo "</script>";
 } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
