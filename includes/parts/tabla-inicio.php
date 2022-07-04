@@ -78,7 +78,7 @@
                             <td>
                                 <div class="row">
                                 <div class="col-sm-12 text-center">
-                                <form action="../../operaciones.php" method="post">
+                                <form action="../../operaciones.php?cod_operacion=<?php echo $codigo ;?>" method="get">
                                     <button type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit" data-nom="<?php echo $codigo; ?>" data-nom2="<?php echo $nombre_proyecto; ?>" data-ape="<?php echo $presupuesto;?>" data-estado="<?php echo $estado;  ?>" data-sub2="<?php echo $extencion;  ?>" >
                                     <i class="fa fa-edit"></i>
                                     </button>
