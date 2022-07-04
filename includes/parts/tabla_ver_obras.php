@@ -22,18 +22,21 @@
                                     
                                 </tr>
                                 </thead>
-                        <?php foreach ($link->query('SELECT m.nombre_material, u.username,o.fecha_agregada,o.cantidad,o.monto,o.cant_monto,o.tipo_operacion,o.estado_operacion,o.descripcion as des_op 
+                        <?php foreach ($link->query('SELECT m.nombre_material, u.username,o.fecha_agregada,o.cantidad,o.monto,o.cant_monto,o.tipo_operacion,o.estado_operacion,
+                        o.descripcion as des_op,du.unidad as nom_unidad 
                          from operaciones o 
                          inner join proyecto p on o.proyecto_operacion=p.codigo
                          inner join materiales m on o.nombre_operacion = m.id_mat
-                         inner join users u on o.usuario_maker_operacion = u.id WHERE proyecto_operacion ="'.$codigo_operacion.'"' ) as $row){ // aca se hace la consulta e iterarla con each. ?> 
+                         inner join users u on o.usuario_maker_operacion = u.id
+                         inner join undad du on m.id_unidad = du.id_uni 
+                         WHERE proyecto_operacion ="'.$codigo_operacion.'"' ) as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
                         $proyecto_operacion=$row['des_op'];
                         $nombre_operacion=$row['nombre_material'];
                         $usuario_maker_operacion=$row['username'];
                         $fecha_agregada=$row['fecha_agregada'];
                         $cantidad=$row['cantidad'];
-                        $unidad=$row['unidad'];
+                        $unidad=$row['nom_unidad'];
                         
                         $monto=$row['monto'];
                         $cant_monto=$row['cant_monto'];
@@ -69,7 +72,7 @@
                                         
                                         echo 'Otro';
                                     }?></td>
-                             <td><?php echo 'S/ '.$unidad;?> </td>
+                             <td><?php echo $unidad;?> </td>
                              <td><?php echo 'S/ '.$cantidad;?> </td>
                              <td><?php echo $monto;?> </td>
                              <td><?php echo 'S/ '.$cant_monto;?> </td>
