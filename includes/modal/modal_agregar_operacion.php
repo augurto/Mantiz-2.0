@@ -25,7 +25,7 @@
       </div>  -->
       <br>  
       <div class="form-floating mb-3">
-               <select class="form-control" name="material" id="material" required="">
+               <select class="form-control" name="material" id="material" required>
                         <option disabled="disabled" value="" selected>Clic para seleccionar </option>
                         <?php 
 
@@ -41,11 +41,11 @@
         <label for="floatingInput">Selecciona <?php echo $valor1.': '; ?></label>
       </div>
       <div class="form-floating mb-3">
-        <input type="number" class="form-control" id="floatingInput" placeholder="precio o monot de operacion" name="monto">
+        <input type="number" class="form-control" id="floatingInput" placeholder="precio o monot de operacion" name="monto" required>
         <label for="floatingInput">Monto :</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="number" class="form-control" id="floatingInput" placeholder="precio o monot de operacion" name="cantidad">
+        <input type="number" class="form-control" id="floatingInput" value="1" name="cantidad" required>
         <label for="floatingInput">Cantidad :</label>
       </div>
       <div class="form-floating mb-3">
