@@ -22,7 +22,7 @@
                                     
                                 </tr>
                                 </thead>
-                        <?php foreach ($link->query('SELECT nombre_material, username,fecha_agregada,cantidad,unidad,monto,cant_monto,tipo_operacion,estado_operacion,o.descripcion as des_op 
+                        <?php foreach ($link->query('SELECT m.nombre_material, u.username,o.fecha_agregada,o.cantidad,o.monto,o.cant_monto,o.tipo_operacion,o.estado_operacion,o.descripcion as des_op 
                          from operaciones o 
                          inner join proyecto p on o.proyecto_operacion=p.codigo
                          inner join materiales m on o.nombre_operacion = m.id_mat
