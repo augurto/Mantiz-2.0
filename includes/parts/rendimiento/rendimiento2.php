@@ -1,10 +1,10 @@
  <!--     inicio de contenido  -->
- <?php foreach ($link->query('SELECT a.id_seg, a.documento, a.a_estado_seguimiento,a.nombre FROM archivos a where id_seg ="'.$id_entregable.'" ') as $row3){ 
+ <?php foreach ($link->query('SELECT a.id_seg, a.documento, a.a_estado_seguimiento FROM archivos a where id_seg ="'.$id_entregable.'" ') as $row3){ 
 
-       $codigo=$row3['codigo'];
+       $codigo=$row3['id_seg'];
        $nombre_documento=$row3['documento'];
        $espacio=trim($nombre_documento);
-       $usuario_asignado_archivo=$row3['usuario_asignado_entregable'];                  
+                       
                                                         ?> 
                                                               
                                                                     <div class="accordion accordion-flush" id="accordionFlushExample">
