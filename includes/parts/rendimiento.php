@@ -1,7 +1,7 @@
 
 <!-- inicio de la tabla -->
 
-  <?php foreach ($link->query('SELECT * from users u inner join archivos a on u.id=a.usuario_asignado_archivo ') as $row){ // aca puedes hacer la consulta e iterarla con each.
+  <?php foreach ($link->query('SELECT * from users u inner join archivos a on u.id=a.usuario_asignado_archivo group by username') as $row){ // aca puedes hacer la consulta e iterarla con each.
     $contador=1; 
     $username=$row['username'];
     $cod_proyecto=$row['a_codigo_proyecto']; ?> 
