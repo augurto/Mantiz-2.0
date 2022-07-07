@@ -16,6 +16,7 @@
                   </h2>
                   <div id="flush-collapse<?php echo $username; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
+
                         <?php foreach ($link->query('SELECT * from archivos') as $row2){ // aca puedes hacer la consulta e iterarla con each.
                             $contador=1; 
                             $id2=$row2['a_id'];
@@ -26,7 +27,7 @@
                                         <div class="accordion-item">
                                           <h2 class="accordion-header" id="flush-headingOne">
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo $id2; ?>" aria-expanded="false" aria-controls="flush-collapseOne">
-                                              <?php echo $username ; ?>
+                                              <?php echo $documento ; ?>
                                             </button>
                                           </h2>
                                           <div id="flush-collapse<?php echo $id2; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
