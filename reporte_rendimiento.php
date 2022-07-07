@@ -60,7 +60,18 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <title>Mantiz-Operaciones</title>
 </head>
-<body  data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+<script>
+  $(function(){
+     $('#work').on('activate.bs.scrollspy')
+  });
+</script>
+<style>
+  body
+  {
+    position: relative;
+  }
+</style>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
 
 
     <?php include 'includes/header.php';?>
@@ -98,7 +109,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
     <script src="datatables/pdfmake-0.1.36/pdfmake.min.js"></script>    
     <script src="datatables/pdfmake-0.1.36/vfs_fonts.js"></script>
     <script src="datatables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
-     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- código JS propìo-->    
     <script type="text/javascript" src="main.js"></script>   
 
