@@ -9,7 +9,7 @@
                           /*  $cod_proyecto=$row['a_codigo_proyecto']; */ ?> 
                               
                                     <div class="accordion accordion-flush" id="accordionFlushExample">
-                                        <div class="accordion-item">
+                                        <div class="accordion-item" style="border: 1px solid #D1CFFC;">
                                           <h2 class="accordion-header" id="flush-headingOne">
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo $codigo; ?>" aria-expanded="false" aria-controls="flush-collapseOne">
                                               <?php echo $extension.' - '.$nombre_proyecto ; ?>
