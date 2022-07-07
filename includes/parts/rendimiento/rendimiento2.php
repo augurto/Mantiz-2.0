@@ -1,16 +1,13 @@
  <!--     inicio de contenido  -->
-                                                        <?php foreach ($link->query('SELECT p.codigo,p.nombre_proyecto,e.id as id_entregable ,e.codigo_proyecto, e.nombre, e.usuario_asignado_entregable 
- FROM entregables e INNER JOIN proyecto p on e.codigo_proyecto=p.id
- WHERE usuario_asignado_entregable ="'.$id_username.'" AND codigo_proyecto ="'.$codigo.'" ') as $row3){ 
+ <?php foreach ($link->query('SELECT a.id_seg, a.documento, a.a_estado_seguimiento FROM archivos a  id_seg ="'.$id_entregable.'" ') as $row3){ 
 
        $codigo=$row3['codigo'];
        $nombre_entregable=$row3['nombre'];
-       $id_entregable=$row3['id_entregable'];  
        $usuario_asignado_entregable=$row3['usuario_asignado_entregable'];                  
                                                         ?> 
                                                               
                                                                     <div class="accordion accordion-flush" id="accordionFlushExample">
-                                                                        <div class="accordion-item" style="border: 1px solid #FF25F8;">
+                                                                        <div class="accordion-item" style="border: 1px solid #FF252C;">
                                                                           <h2 class="accordion-header" id="flush-headingOne">
                                                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo $nombre_entregable; ?>" aria-expanded="false" aria-controls="flush-collapseOne">
                                                                               <?php echo $nombre_entregable ; ?>
