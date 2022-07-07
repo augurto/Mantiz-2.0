@@ -7,6 +7,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login/");
     exit;
 }
+require_once ('config/conexion_tabla.php');
 require_once ("config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
 require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
         $usuario=$_SESSION["username"];
