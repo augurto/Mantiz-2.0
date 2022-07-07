@@ -34,6 +34,8 @@
 <!-- inicio de la tabla -->
 
   <?php foreach ($link->query('SELECT * from users ') as $row){ // aca puedes hacer la consulta e iterarla con each.
+    $contador=1; 
+    $username=$row['username'];
     $username=$row['username']; ?> 
        
             <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -43,7 +45,7 @@
                       <?php echo $username ; ?>
                     </button>
                   </h2>
-                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                  <div id="flush-collapse<?php echo $count++; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">prueba contnido</div>
                   </div>
                   </div>
