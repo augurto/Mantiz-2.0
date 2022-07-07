@@ -1,9 +1,11 @@
  <!--     inicio de contenido  -->
- <?php foreach ($link->query('SELECT * from proyecto ') as $row2){ // aca puedes hacer la consulta e iterarla con each.
-                            $contador=1; 
+ <?php foreach ($link->query('SELECT p.codigo,p.nombre_proyecto,e.codigo_proyecto, e.nombre, e.usuario_asignado_entregable 
+ FROM entregables e INNER JOIN proyecto p on e.codigo_proyecto=p.id
+ WHERE usuario_asignado_entregable ="'.$id_username.'" GROUP by p.nombre_proyecto') as $row2){ // aca puedes hacer la consulta e iterarla con each.
+                            
                             $codigo=$row2['codigo'];
                             $nombre_proyecto=$row2['nombre_proyecto'];
-                            $extension=$row2['extension'];
+                            $extension=$row2['extencion'];
                           /*  $cod_proyecto=$row['a_codigo_proyecto']; */ ?> 
                               
                                     <div class="accordion accordion-flush" id="accordionFlushExample">
