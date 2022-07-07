@@ -2,7 +2,7 @@
  <?php foreach ($link->query('SELECT a.id_seg, a.documento, a.a_estado_seguimiento,a.nombre FROM archivos a  id_seg ="'.$id_entregable.'" ') as $row3){ 
 
        $codigo=$row3['codigo'];
-       $nombre_entregable=$row3['nombre'];
+       $nombre_entregable=$row3['documento'];
        $usuario_asignado_entregable=$row3['usuario_asignado_entregable'];                  
                                                         ?> 
                                                               
