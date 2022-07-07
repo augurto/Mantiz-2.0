@@ -66,9 +66,11 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
     <?php include 'includes/header.php';?>
     <div style="height:50px"></div>
     <!-- Inicio de Graficas -->
-  
-    <?php include 'includes/parts/rendimiento.php'; ?>
- 
+    <div class="container">
+        <div class="row">
+          <?php include 'includes/parts/rendimiento.php'; ?>
+        </div>
+    </div>
     <!-- Fin de graficas -->
     <!-- Boton agregar proyecto -->
     
