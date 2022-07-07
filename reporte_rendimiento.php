@@ -19,7 +19,7 @@
 
 <?php include 'includes/header.php';?>
     <div style="height:50px"></div>
-<?php include 'parts/rendimiento.php';?>
+<?php include 'includes/parts/rendimiento.php';?>
 
 </body>
 </html>
