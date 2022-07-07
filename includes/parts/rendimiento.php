@@ -17,7 +17,7 @@
                   <div id="flush-collapse<?php echo $username; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
 
-                        <?php foreach ($link->query('SELECT * from archivos') as $row2){ // aca puedes hacer la consulta e iterarla con each.
+                        <?php foreach ($link->query('SELECT * from archivos where usuario_asignado_archivo ="'.$id_username.'"') as $row2){ // aca puedes hacer la consulta e iterarla con each.
                             $contador=1; 
                             $id2=$row2['a_id'];
                             $documento=$row2['documento'];
