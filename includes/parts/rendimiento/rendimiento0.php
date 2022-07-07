@@ -1,5 +1,5 @@
  <!--     inicio de contenido  -->
- <?php foreach ($link->query('SELECT * from proyectos ') as $row2){ // aca puedes hacer la consulta e iterarla con each.
+ <?php foreach ($link->query('SELECT * from proyecto ') as $row2){ // aca puedes hacer la consulta e iterarla con each.
                             $contador=1; 
                             $codigo=$row2['codigo'];
                             $nombre_proyecto=$row2['nombre_proyecto'];
