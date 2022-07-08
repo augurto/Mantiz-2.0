@@ -18,6 +18,7 @@
                                                                             <div class="accordion-body"> 
                                                                           
                                                                             <?php include 'rendimiento2.php'; ?>
+                                                                            prueba del ultimo if
                                                                             </div>
                                                                           </div>
                                                                           </div>
