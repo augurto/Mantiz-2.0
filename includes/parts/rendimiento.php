@@ -71,7 +71,7 @@
                                                                                                       
                                                                                         ?> 
                                                                                         <?php echo $nombre_documento.'Estado : '.$a_estado_seguimiento_archivos ; ?>
-                                                                                      
+                                                                                      <br>
                                                                                       
                                                                                          <?php } ?> 
                                                       
