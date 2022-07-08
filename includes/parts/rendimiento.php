@@ -15,10 +15,16 @@
   
   <?php } ?> 
   </div>
+  <?php foreach ($link->query('SELECT * from users group by username') as $row){ // aca puedes hacer la consulta e iterarla con each.
+    $contador=1; 
+    $username=$row['username'];
+    $id_username=$row['id'];
+    ?>
             <div id="<?php echo $username; ?>" class="tabcontent">
               <h3><?php echo $username; ?></h3>
               <p>prueba de contenido</p>
         </div>
+        <?php } ?> 
 
 <script>
 function openCity(evt, cityName) {
