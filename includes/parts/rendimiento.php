@@ -16,7 +16,7 @@
               <h3><?php echo $username; ?></h3>
               <p>prueba de contenido</p>
             </div>
-            <!-- <?php include 'rendimiento/rendimiento0.php'; ?> -->
+  
   <?php } ?> 
 
   
