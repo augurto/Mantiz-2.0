@@ -35,7 +35,7 @@
                                                             </h2>
                                                             <div id="flush-collapseProyecto<?php echo $codigo; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample0">
                                                               <div class="accordion-body"> 
-                                                              <?php include 'rendimiento1.php'; ?>
+                                                              rendi1
 
                                                               </div>
                                                             </div>
