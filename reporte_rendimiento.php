@@ -70,7 +70,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
         border: 1px solid #ccc;
         background-color: #f1f1f1;
         width: 30%;
-        height: 300px;
+        height: auto;
       }
 
       /* Style the buttons inside the tab */
@@ -105,7 +105,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
         border: 1px solid #ccc;
         width: 70%;
         border-left: none;
-        height: 300px;
+        height: auto;
       }
     </style>
 </head>
