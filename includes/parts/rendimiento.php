@@ -34,7 +34,7 @@
                                                               </button>
                                                             </h2>
                                                             <div id="flush-collapseProyecto<?php echo $codigo; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample0">
-                                                              <div class="accordion-body" style="align-content: flex-end;"> 
+                                                              <div class="accordion-body" style="display: flex;align-items: center;justify-content: center;"> 
                                                                <!--     inicio de contenido  -->
                                                               <?php foreach ($link->query('SELECT p.codigo,p.nombre_proyecto,e.id as id_entregable ,
                                                               e.codigo_proyecto, e.nombre, e.usuario_asignado_entregable 
