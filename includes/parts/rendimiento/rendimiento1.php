@@ -19,7 +19,7 @@
                                                                           <div id="flush-collapseEntregable<?php echo $nombre_entregable; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample1">
                                                                             <div class="accordion-body"> 
                                                                           
-                                                                            <?php include 'rendimiento2.php'; ?>
+                                                                            rendi2
                                                                             </div>
                                                                           </div>
                                                                           </div>
