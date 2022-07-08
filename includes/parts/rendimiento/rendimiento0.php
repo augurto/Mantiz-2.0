@@ -7,13 +7,22 @@
                             $nombre_proyecto=$row2['nombre_proyecto'];
                             $extension=$row2['extencion'];
                           /*  $cod_proyecto=$row['a_codigo_proyecto']; */ ?> 
-                                <div class="w-100 p-3" style="border: 1px solid #D1CFFC;">
-                                    
+                              
+                                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                                        <div class="accordion-item" style="border: 1px solid #DDFCCF;">
+                                          <h2 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo $codigo; ?>" aria-expanded="false" aria-controls="flush-collapseOne">
                                               <?php echo $extension.' - '.$nombre_proyecto ; ?>
-                                         
-                                              <br>
-                                <?php include 'rendimiento1.php'; ?>
-                                </div>
+                                            </button>
+                                          </h2>
+                                          <div id="flush-collapse<?php echo $codigo; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body"> 
+                                            <?php include 'rendimiento1.php'; ?>
+
+                                            </div>
+                                          </div>
+                                          </div>
+                                    </div>
                                 
                           <?php } ?> 
                       
