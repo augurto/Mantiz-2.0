@@ -10,7 +10,15 @@
            
 
             
-                       <button class="tablinks" onclick="openCity(event, '<?php echo $username; ?>')"><?php echo $username; ?></button>
+                       <button class="tablinks" onclick="openCity(event, '<?php echo $username; ?>')" 
+                       
+                       <?php 
+                       $topo->query('SELECT id FROM users ORDER BY id LIMIT 1');
+                       if ($id_username==$topo) {
+                        # code...
+                       } ?>
+                       
+                       id="defaultOpen"><?php echo $username.'prueba del topo'.$topo; ?></button>
            
   
   <?php } ?> 
