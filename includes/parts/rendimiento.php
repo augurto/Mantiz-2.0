@@ -47,22 +47,9 @@
                                                                     $usuario_asignado_entregable=$row3['usuario_asignado_entregable'];                  
                                                                                                                       ?> 
                                                                                                                             
-                                                                    <div class="accordion accordion-flush" id="accordionFlushExamplepart">
-                                                                        <div class="accordion-item" style="border: 1px solid #FF25F8;">
-                                                                          <h2 class="accordion-header" id="flush-headingOne2">
-                                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEntregable<?php echo $nombre_entregable; ?>" aria-expanded="false" aria-controls="flush-collapseOne2">
+                                                                   
                                                                               <?php echo $nombre_entregable ; ?>
-                                                                            </button>
-                                                                          </h2>
-                                                                          <div id="flush-collapseEntregable<?php echo $nombre_entregable; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne2" data-bs-parent="#accordionFlushExamplepart">
-                                                                            <div class="accordion-body"> 
                                                                           
-                                                                            rendi2
-                                                                            </div>
-                                                                          </div>
-                                                                          </div>
-                                                                    </div>
-                                                                
                                                           <?php } ?> 
                                                       
                                                   
