@@ -53,11 +53,11 @@
                                                                               <div class="accordion" id="accordionExampleq">
                                                                               <div class="accordion-item">
                                                                                 <h2 class="accordion-header" id="headingTwo">
-                                                                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo<?php echo $codigo2 ; ?>" aria-expanded="false" aria-controls="collapseTwo<?php echo $codigo2 ; ?>">
+                                                                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo<?php echo $id_entregable ; ?>" aria-expanded="false" aria-controls="collapseTwo<?php echo $id_entregable ; ?>">
                                                                                   <?php echo $nombre_entregable ; ?>
                                                                                   </button>
                                                                                 </h2>
-                                                                                <div id="collapseTwo<?php echo $codigo2 ; ?>" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExampleq">
+                                                                                <div id="collapseTwo<?php echo $id_entregable ; ?>" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExampleq">
                                                                                   <div class="accordion-body">
                                                                                     <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                                                                                   </div>
