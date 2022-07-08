@@ -17,7 +17,7 @@
                                                                           <div id="flush-collapse<?php echo $espacio; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                                                             <div class="accordion-body"> 
                                                                           
-                                                                            <?php include 'rendimiento2.php'; ?>
+                                                                         
                                                                             prueba del ultimo if
                                                                             </div>
                                                                           </div>
