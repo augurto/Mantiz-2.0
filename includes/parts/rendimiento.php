@@ -59,7 +59,24 @@
                                                                                 </h2>
                                                                                 <div id="collapseTwo<?php echo $id_entregable ; ?>" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExampleq">
                                                                                   <div class="accordion-body">
-                                                                                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                                                                      <!--     inicio de contenido  -->
+                                                                                        <?php foreach ($link->query('SELECT a.id_seg,a.a_codigo_proyecto,a.a_id , a.documento, a.a_estado_seguimiento FROM archivos a ') as $row4){ 
+
+                                                                                        $id_seg_archivos=$row4['id_seg'];
+                                                                                        $a_codigo_proyecto_archivos=$row4['a_codigo_proyecto'];
+                                                                                        $a_id_archivos=$row4['a_id'];
+                                                                                        $a_estado_seguimiento_archivos=$row4['a_estado_seguimiento'];
+                                                                                        $nombre_documento=$row4['documento'];
+                                                                                        $espacio=trim($nombre_documento);
+                                                                                                      
+                                                                                        ?> 
+                                                                                        <?php echo $nombre_documento ; ?>
+                                                                                        <br>
+                                                                                        <?php echo $a_estado_seguimiento_archivos ; ?>
+                                                                                         <?php } ?> 
+                                                      
+                                                  
+                                                                                      <!-- fin de contenido -->
                                                                                   </div>
                                                                                 </div>
                                                                               </div>
