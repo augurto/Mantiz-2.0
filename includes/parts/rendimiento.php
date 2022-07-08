@@ -10,7 +10,7 @@
            
 
             <div class="tab">
-                       <button class="tablinks" onclick="openCity(event, '<?php echo $username; ?>')"><?php echo $username; ?></button>
+                       <button class="tablinks" onclick="openCity(event, <?php echo $username; ?>)"><?php echo $username; ?></button>
             </div>
             <div id="<?php echo $username; ?>" class="tabcontent">
               <h3><?php echo $username; ?></h3>
