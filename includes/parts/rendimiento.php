@@ -1,6 +1,6 @@
 
 <!-- inicio de la tabla -->
-
+<div class="tab">
   <?php foreach ($link->query('SELECT * from users group by username') as $row){ // aca puedes hacer la consulta e iterarla con each.
     $contador=1; 
     $username=$row['username'];
@@ -9,15 +9,16 @@
        
            
 
-            <div class="tab">
-                       <button class="tablinks" onclick="openCity(event, <?php echo $username; ?>)"><?php echo $username; ?></button>
-            </div>
+            
+                       <button class="tablinks" onclick="openCity(event, '<?php echo $username; ?>')"><?php echo $username; ?></button>
+           
+  
+  <?php } ?> 
+  </div>
             <div id="<?php echo $username; ?>" class="tabcontent">
               <h3><?php echo $username; ?></h3>
               <p>prueba de contenido</p>
-            </div>
-  
-  <?php } ?> 
+        </div>
 
 <script>
 function openCity(evt, cityName) {
