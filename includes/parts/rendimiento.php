@@ -49,7 +49,7 @@
                                                                                                                             
                                                                    
                                                                               
-                                                                              <div class="w-75 p-3" style="background-color: #eee;">
+                                                                              <div class="w-auto  p-3" style="background-color: #eee;">
                                                                               <div class="accordion" id="accordionExampleq">
                                                                               <div class="accordion-item">
                                                                                 <h2 class="accordion-header" id="headingTwo">
@@ -70,7 +70,7 @@
                                                                                         $espacio=trim($nombre_documento);
                                                                                                       
                                                                                         ?> 
-                                                                                        <?php echo $nombre_documento.'Estado : '.$a_estado_seguimiento_archivos ; ?>
+                                                                                        <?php echo $nombre_documento.' Estado : '.$a_estado_seguimiento_archivos ; ?>
                                                                                       <br>
                                                                                       
                                                                                          <?php } ?> 
