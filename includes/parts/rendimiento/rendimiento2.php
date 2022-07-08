@@ -9,23 +9,13 @@
         $espacio=trim($nombre_documento);
                        
 ?> 
-                                                              
-                                                                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                                                                        <div class="accordion-item" style="border: 1px solid #FF252C;">
-                                                                          <h2 class="accordion-header" id="flush-headingOne">
-                                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo 'parte4'.$a_id_archivos; ?>" aria-expanded="false" aria-controls="flush-collapseOne">
+                 <div class="w-50 p-3" style="background-color: #eee;"> 
                                                                               <?php echo $nombre_documento ; ?>
-                                                                            </button>
-                                                                          </h2>
-                                                                          <div id="flush-collapse<?php echo 'parte4'.$a_id_archivos; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                                                            <div class="accordion-body"> 
-                                                                          
+                                                                           <br>
                                                                             <?php echo $a_estado_seguimiento_archivos ; ?>
                                                                            
-                                                                            </div>
-                                                                          </div>
-                                                                          </div>
-                                                                    </div>
+                                                                          
+                </div>
                                                                 
                                                           <?php } ?> 
                                                       

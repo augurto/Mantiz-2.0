@@ -15,9 +15,9 @@
                                                                           <br>
                                                                             <?php include 'rendimiento2.php'; ?>
                                                                       
-                                                                    </div>
+                </div>
                                                                 
                                                           <?php } ?> 
                                                       
-                </div>                                
+                                                
                                                     <!-- fin de contenido -->
