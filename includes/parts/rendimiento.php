@@ -34,14 +34,14 @@
                                                               </button>
                                                             </h2>
                                                             <div id="flush-collapseProyecto<?php echo $codigo; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample0">
-                                                              <div class="accordion-body" style="display: flex;align-items: center;justify-content: center;"> 
+                                                              <div class="accordion-body"> 
                                                                <!--     inicio de contenido  -->
                                                               <?php foreach ($link->query('SELECT p.codigo,p.nombre_proyecto,e.id as id_entregable ,
                                                               e.codigo_proyecto, e.nombre, e.usuario_asignado_entregable 
                                                               FROM entregables e INNER JOIN proyecto p on e.codigo_proyecto=p.id
                                                               WHERE usuario_asignado_entregable ="'.$id_username.'" AND codigo_proyecto ="'.$codigo.'" ') as $row3){ 
 
-                                                                    $codigo=$row3['codigo'];
+                                                                    $codigo2=$row3['codigo'];
                                                                     $nombre_entregable=$row3['nombre'];
                                                                     $id_entregable=$row3['id_entregable'];  
                                                                     $usuario_asignado_entregable=$row3['usuario_asignado_entregable'];                  
@@ -53,11 +53,11 @@
                                                                               <div class="accordion" id="accordionExampleq">
                                                                               <div class="accordion-item">
                                                                                 <h2 class="accordion-header" id="headingTwo">
-                                                                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#<?php echo $codigo2 ; ?>" aria-expanded="false" aria-controls="<?php echo $codigo2 ; ?>">
                                                                                   <?php echo $nombre_entregable ; ?>
                                                                                   </button>
                                                                                 </h2>
-                                                                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExampleq">
+                                                                                <div id="<?php echo $codigo2 ; ?>" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExampleq">
                                                                                   <div class="accordion-body">
                                                                                     <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                                                                                   </div>
