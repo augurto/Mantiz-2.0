@@ -50,6 +50,8 @@
                                                                    
                                                                               <?php echo $nombre_entregable ; ?>
                                                                               <br>
+                                                                              <div class="w-75 p-3" style="background-color: #eee;">Width 75%</div>
+                                                                              <br>
                                                                           
                                                           <?php } ?> 
                                                       
