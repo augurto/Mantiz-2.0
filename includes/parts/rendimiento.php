@@ -49,6 +49,7 @@
                                                                                                                             
                                                                    
                                                                               <?php echo $nombre_entregable ; ?>
+                                                                              <br>
                                                                           
                                                           <?php } ?> 
                                                       
