@@ -9,12 +9,12 @@
        
             <div class="accordion accordion-flush" id="accordionFlushExamplez">
                 <div class="accordion-item" style="border: 1px solid #DDFCCF;">
-                  <h2 class="accordion-header" id="flush-headingOne">
+                  <h2 class="accordion-header" id="flush-headingOne<?php echo $username; ?>">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo $username; ?>" aria-expanded="false" aria-controls="flush-collapse<?php echo $username; ?>">
                       <?php echo $username ; ?>
                     </button>
                   </h2>
-                  <div id="flush-collapse<?php echo $username; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExamplez">
+                  <div id="flush-collapse<?php echo $username; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne<?php echo $username; ?>" data-bs-parent="#accordionFlushExamplez">
                     <div class="accordion-body">
                    <?php include 'rendimiento/rendimiento0.php'; ?>
                     </div>
