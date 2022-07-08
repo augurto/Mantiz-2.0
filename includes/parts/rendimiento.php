@@ -50,8 +50,10 @@
                                                                    
                                                                               <?php echo $nombre_entregable ; ?>
                                                                               <br>
+                                                                              <div class="position-relative">
                                                                               <div class="position-absolute top-0 start-100 translate-middle">
                                                                               <div class="w-75 p-3" style="background-color: #eee;">Width 75%</div>
+                                                                              </div>
                                                                               </div>
                                                                               <br>
                                                                           
