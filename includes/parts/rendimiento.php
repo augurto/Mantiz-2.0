@@ -63,11 +63,11 @@
                                                                                   </div>
                                                                                 </div>
                                                                               </div>
-                                                                              <br>
+                                                                             
                                                                                 </div>
-                                                                                <br>
+                                                                              
                                                                                 </div>
-                                                                              <br>
+                                                                           
                                                                           
                                                           <?php } ?> 
                                                       
@@ -75,6 +75,7 @@
                                                             <!-- fin de contenido -->
 
                                                               </div>
+                                                              <br>
                                                             </div>
                                                             </div>
                                                       </div>
