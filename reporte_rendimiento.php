@@ -60,54 +60,6 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <title>Mantiz-Operaciones</title>
-    <style>
-      * {box-sizing: border-box}
-      body {font-family: "Lato", sans-serif;}
-
-      /* Style the tab */
-      .tab {
-        float: left;
-        border: 1px solid #ccc;
-        background-color: #f1f1f1;
-        width: 30%;
-        height: auto;
-      }
-
-      /* Style the buttons inside the tab */
-      .tab button {
-        display: block;
-        background-color: inherit;
-        color: black;
-        padding: 22px 16px;
-        width: 100%;
-        border: none;
-        outline: none;
-        text-align: left;
-        cursor: pointer;
-        transition: 0.3s;
-        font-size: 17px;
-      }
-
-      /* Change background color of buttons on hover */
-      .tab button:hover {
-        background-color: #ddd;
-      }
-
-      /* Create an active/current "tab button" class */
-      .tab button.active {
-        background-color: #ccc;
-      }
-
-      /* Style the tab content */
-      .tabcontent {
-        float: left;
-        padding: 0px 12px;
-        border: 1px solid #ccc;
-        width: 70%;
-        border-left: none;
-        height: auto;
-      }
-    </style>
 </head>
 <body  data-spy="scroll" data-target="#myScrollspy" data-offset="15">
 
