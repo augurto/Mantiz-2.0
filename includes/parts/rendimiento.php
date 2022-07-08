@@ -60,7 +60,7 @@
                                                                                 <div id="collapseTwo<?php echo $id_entregable ; ?>" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExampleq">
                                                                                   <div class="accordion-body">
                                                                                       <!--     inicio de contenido  -->
-                                                                                        <?php foreach ($link->query('SELECT a.id_seg,a.a_codigo_proyecto,a.a_id , a.documento, a.a_estado_seguimiento FROM archivos a ') as $row4){ 
+                                                                                        <?php foreach ($link->query('SELECT a.id_seg,a.a_codigo_proyecto,a.a_id , a.documento, a.a_estado_seguimiento FROM archivos a WHERE id_seg= "'.$id_entregable.'"') as $row4){ 
 
                                                                                         $id_seg_archivos=$row4['id_seg'];
                                                                                         $a_codigo_proyecto_archivos=$row4['a_codigo_proyecto'];
@@ -70,9 +70,9 @@
                                                                                         $espacio=trim($nombre_documento);
                                                                                                       
                                                                                         ?> 
-                                                                                        <?php echo $nombre_documento ; ?>
-                                                                                        <br>
-                                                                                        <?php echo $a_estado_seguimiento_archivos ; ?>
+                                                                                        <?php echo $nombre_documento.'Estado : '.$a_estado_seguimiento_archivos ; ?>
+                                                                                      
+                                                                                      
                                                                                          <?php } ?> 
                                                       
                                                   
