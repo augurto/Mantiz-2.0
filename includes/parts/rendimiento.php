@@ -7,21 +7,16 @@
     $id_username=$row['id'];
    /*  $cod_proyecto=$row['a_codigo_proyecto']; */ ?> 
        
-            <div class="accordion accordion-flush" id="accordionFlushExample">
-                <div class="accordion-item" style="border: 1px solid #DDFCCF;">
-                  <h2 class="accordion-header" id="flush-headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo $username; ?>" aria-expanded="false" aria-controls="flush-collapseOne">
-                      <?php echo $username ; ?>
-                    </button>
-                  </h2>
-                  <div id="flush-collapse<?php echo $username; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                   <?php include 'rendimiento/rendimiento0.php'; ?>
-                    </div>
-                  </div>
-                  </div>
+           
+
+            <div class="tab">
+                       <button class="tablinks" onclick="openCity(event, '<?php echo $username; ?>')"><?php echo $username; ?></button>
             </div>
-         
+            <div id="<?php echo $username; ?>" class="tabcontent">
+              <h3><?php echo $username; ?></h3>
+              <p>prueba de contenido</p>
+            </div>
+            <!-- <?php include 'rendimiento/rendimiento0.php'; ?> -->
   <?php } ?> 
 
   
@@ -29,7 +24,7 @@
 <p>Click on the buttons inside the tabbed menu:</p>
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
+  <!-- <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button> -->
   <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
   <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
 </div>
