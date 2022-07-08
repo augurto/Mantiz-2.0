@@ -11,12 +11,10 @@
                                     
                                               <?php echo $extension.' - '.$nombre_proyecto ; ?>
                                          
-                                            
-
-                                           
-                                </div>
-                                <br>
+                                              <br>
                                 <?php include 'rendimiento1.php'; ?>
+                                </div>
+                                
                           <?php } ?> 
                       
                   
