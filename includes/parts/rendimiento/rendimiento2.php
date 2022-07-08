@@ -1,5 +1,5 @@
  <!--     inicio de contenido  -->
- <?php foreach ($link->query('SELECT a.id_seg, a.documento, a.a_estado_seguimiento FROM archivos a  WHERE usuario_asignado_entregable =8 ') as $row4){ 
+ <?php foreach ($link->query('SELECT a.id_seg, a.documento, a.a_estado_seguimiento FROM archivos a ') as $row4){ 
 
        $codigo=$row4['id_seg'];
        $nombre_documento=$row4['documento'];
