@@ -10,12 +10,16 @@
             <div class="accordion accordion-flush" id="accordionFlushExamplez">
                 <div class="accordion-item" style="border: 1px solid #DDFCCF;">
                   <h2 class="accordion-header" id="flush-headingOne<?php echo $username; ?>">
-                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    99+
-                    <span class="visually-hidden">unread messages</span>
-                  </span>
+                  
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo $username; ?>" aria-expanded="false" aria-controls="flush-collapse<?php echo $username; ?>">
                       <?php echo $username ; ?>
+                    </button>
+                    <button type="button"  class="btn btn-outline-primary" >
+                      Inbox
+                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        99+
+                        <span class="visually-hidden">unread messages</span>
+                      </span>
                     </button>
                   </h2>
                   <div id="flush-collapse<?php echo $username; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne<?php echo $username; ?>" data-bs-parent="#accordionFlushExamplez">
