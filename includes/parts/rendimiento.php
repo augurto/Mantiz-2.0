@@ -14,7 +14,7 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo $username; ?>" aria-expanded="false" aria-controls="flush-collapse<?php echo $username; ?>">
                       <?php echo $username ; ?>
                     </button>
-                    <button type="button"  class="btn btn-outline-primary" >
+                    <button type="button"  class="btn btn-outline-primary position-relative" >
                       Inbox
                       <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         99+
