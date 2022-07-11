@@ -9,7 +9,7 @@
        
             <div class="accordion accordion-flush" id="accordionFlushExamplez" >
                 <div class="accordion-item" style="border-top: 1px solid #DDFCCF;border-bottom: 1px solid #DDFCCF;">
-                  <h2 class="accordion-header" id="flush-headingOne<?php echo $username; ?>">
+                  <h2 class="accordion-header" id="flush-headingOne<?php echo $username; ?>" style="width:50px ;">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo $username; ?>" aria-expanded="false" aria-controls="flush-collapse<?php echo $username; ?>">
                       <?php echo $username ; ?> 
                       <span class="badge text-bg-secondary">Secondary</span>
