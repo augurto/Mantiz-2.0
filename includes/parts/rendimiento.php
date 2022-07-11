@@ -8,10 +8,10 @@
    /*  $cod_proyecto=$row['a_codigo_proyecto']; */ ?> 
        
             <div class="accordion accordion-flush" id="accordionFlushExamplez" >
-                <div class="accordion-item" style="border-top: 1px solid #DDFCCF;">
+                <div class="accordion-item" style="border-top: 1px solid #DDFCCF;border-bottom: 1px solid #DDFCCF;">
                   <h2 class="accordion-header" id="flush-headingOne<?php echo $username; ?>">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo $username; ?>" aria-expanded="false" aria-controls="flush-collapse<?php echo $username; ?>">
-                      <?php echo $username ; ?>
+                      <?php echo $username ; ?> 
                     </button>
                   </h2>
                   <div id="flush-collapse<?php echo $username; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne<?php echo $username; ?>" data-bs-parent="#accordionFlushExamplez">
