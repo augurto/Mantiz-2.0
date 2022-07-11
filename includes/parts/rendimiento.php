@@ -15,7 +15,7 @@
                       <span class="badge text-bg-secondary">Secondary</span>
                     </button>
                   </h2>
-                  <button type="button" class="btn btn-primary position-relative">
+                  <button type="button" class="btn btn-primary position-relative" style="width:60% ;">
                     Inbox
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                       99+
