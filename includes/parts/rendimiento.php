@@ -104,9 +104,10 @@
                     </div>
                   </div>
                   </div>
+                  <br>
             </div>
 
-            <br>
+  
          
   <?php } ?> 
 
