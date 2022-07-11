@@ -27,7 +27,7 @@
                                             /*  $cod_proyecto=$row['a_codigo_proyecto']; */ ?> 
                                                 
                                                       <div class="accordion accordion-flush" id="accordionFlushExample0">
-                                                          <div class="accordion-item" style="border-bottom-right-radius: 40px 40px;border-top: 1px solid #DDFCCF;border-right: 1px solid #DDFCCF;border-bottom: 1px solid #DDFCCF;">
+                                                          <div class="accordion-item" style="border-bottom-right-radius: 40px 40px;border-top: 1px solid #331fed;border-right: 1px solid #331fed;border-bottom: 1px solid #331fed;">
                                                             <h2 class="accordion-header" id="flush-headingOne">
                                                               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseProyecto<?php echo $codigo; ?>" aria-expanded="false" aria-controls="flush-collapseOne">
                                                                 <?php echo $extension.' - '.$nombre_proyecto ; ?>
@@ -84,7 +84,7 @@
                                                                                 </div>
                                                                               
                                                                                 </div>
-                                                                           <br>
+                                                                         
                                                                           
                                                           <?php } ?> 
                                                       
