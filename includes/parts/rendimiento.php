@@ -9,12 +9,19 @@
        
             <div class="accordion accordion-flush" id="accordionFlushExamplez" >
                 <div class="accordion-item" style="border-top: 1px solid #DDFCCF;border-bottom: 1px solid #DDFCCF;">
-                  <h2 class="accordion-header" id="flush-headingOne<?php echo $username; ?>" style="width:50px ;">
+                  <h2 class="accordion-header" id="flush-headingOne<?php echo $username; ?>" style="width:20% ;">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo $username; ?>" aria-expanded="false" aria-controls="flush-collapse<?php echo $username; ?>">
                       <?php echo $username ; ?> 
                       <span class="badge text-bg-secondary">Secondary</span>
                     </button>
                   </h2>
+                  <button type="button" class="btn btn-primary position-relative">
+                    Inbox
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      99+
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                  </button>
                   <div id="flush-collapse<?php echo $username; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne<?php echo $username; ?>" data-bs-parent="#accordionFlushExamplez">
                     <div class="accordion-body">
                        <!--     inicio de contenido  -->
