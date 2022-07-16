@@ -27,6 +27,7 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- incluyendo script para editar en tiempo realpat -->
@@ -69,6 +70,12 @@ require_once ("config/conexion.php");//Contiene funcion que conecta a la base de
     <!-- Inicio de Graficas -->
     <div class="container">
         <div class="row">
+        <a class="fancy" href="#">
+          <span class="top-key"></span>
+          <span class="text">Boton Pendiente</span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+        </a>
           <?php include 'includes/parts/rendimiento.php'; ?>
         </div>
     </div>
