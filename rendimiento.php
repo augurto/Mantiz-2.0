@@ -81,7 +81,7 @@
                 <div class="panel">
                         <button class="accordion2">Section 1.2</button>
                             <div class="panel2">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <?php include 'includes/rendimiento.php';?>
                             </div>
                 </div>
 
@@ -124,7 +124,7 @@
             } 
         });
         }
-        
+
         </script>
     
 </body>

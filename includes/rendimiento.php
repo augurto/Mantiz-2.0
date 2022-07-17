@@ -1,57 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-                .accordion {
-                background-color: #eee;
-                color: #444;
-                cursor: pointer;
-                padding: 18px;
-                width: 100%;
-                border: none;
-                text-align: left;
-                outline: none;
-                font-size: 15px;
-                transition: 0.4s;
-                }
-
-                .active, .accordion:hover {
-                background-color: #ccc;
-                }
-
-                .accordion:after {
-                content: '\002B';
-                color: #777;
-                font-weight: bold;
-                float: right;
-                margin-left: 5px;
-                }
-
-                .active:after {
-                content: "\2212";
-                }
-
-                .panel {
-                padding: 0 18px;
-                background-color: white;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.2s ease-out;
-                }
-        </style>
-    <title>Document</title>
-</head>
-<body>
-        <h2>Accordion with symbols</h2>
+<h2>Accordion with symbols</h2>
         <p>In this example we have added a "plus" sign to each button. When the user clicks on the button, the "plus" sign is replaced with a "minus" sign.</p>
-        <button class="accordion">Section 10</button>
+        <button class="accordion">Section 1.120</button>
                 <div class="panel">
-                        <button class="accordion2">Section 1.2</button>
+                        <button class="accordion2">Section 1.5</button>
                             <div class="panel2">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>Lorem ipsum dolor sit amet, sdfsdfsdfsdf adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             </div>
                 </div>
 
@@ -65,7 +18,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
 
-        <script>
+                <script>
         var acc = document.getElementsByClassName("accordion");
         var i;
 
@@ -80,21 +33,7 @@
             } 
         });
         }
-        var acc2 = document.getElementsByClassName("accordion2");
-        var i2;
+     
 
-        for (i2 = 0; i2 < acc.length; i2++) {
-        acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel2 = this.nextElementSibling;
-            if (panel2.style.maxHeight) {
-            panel2.style.maxHeight = null;
-            } else {
-            panel2.style.maxHeight = panel2.scrollHeight + "px";
-            } 
-        });
-        }
+        
         </script>
-    
-</body>
-</html>
