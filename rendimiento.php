@@ -113,8 +113,8 @@
         var acc2 = document.getElementsByClassName("accordion2");
         var i2;
 
-        for (i2 = 0; i2 < acc.length; i2++) {
-        acc[i].addEventListener("click", function() {
+        for (i2 = 0; i2 < acc2.length; i2++) {
+        acc2[i].addEventListener("click", function() {
             this.classList.toggle("active");
             var panel2 = this.nextElementSibling;
             if (panel2.style.maxHeight) {
