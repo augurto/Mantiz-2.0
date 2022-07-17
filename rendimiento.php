@@ -111,9 +111,9 @@
         });
         }
         var acc2 = document.getElementsByClassName("accordion2");
-        var i2;
+        var ia;
 
-        for (i2 = 0; i2 < acc2.length; i2++) {
+        for (ia = 0; ia < acc2.length; ia++) {
         acc2[i].addEventListener("click", function() {
             this.classList.toggle("active");
             var panel2 = this.nextElementSibling;
