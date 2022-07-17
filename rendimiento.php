@@ -47,20 +47,23 @@
 <body>
         <h2>Accordion with symbols</h2>
         <p>In this example we have added a "plus" sign to each button. When the user clicks on the button, the "plus" sign is replaced with a "minus" sign.</p>
-        <button class="accordion">Section 1</button>
-        <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
+        <button class="accordion">Section 10</button>
+                <div class="panel">
+                        <button class="accordion2">Section 1.2</button>
+                            <div class="panel2">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                </div>
 
         <button class="accordion">Section 2</button>
-        <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
+                <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
 
         <button class="accordion">Section 3</button>
-        <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
+                <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
 
         <script>
         var acc = document.getElementsByClassName("accordion");
@@ -74,6 +77,20 @@
             panel.style.maxHeight = null;
             } else {
             panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        });
+        }
+        var acc2 = document.getElementsByClassName("accordion2");
+        var i2;
+
+        for (i2 = 0; i2 < acc.length; i2++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel2 = this.nextElementSibling;
+            if (panel2.style.maxHeight) {
+            panel2.style.maxHeight = null;
+            } else {
+            panel2.style.maxHeight = panel2.scrollHeight + "px";
             } 
         });
         }
