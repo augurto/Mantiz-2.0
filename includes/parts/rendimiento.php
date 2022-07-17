@@ -12,10 +12,10 @@
                   <h2 class="accordion-header" id="flush-headingOne<?php echo $username; ?>" style="width:20% ;">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo $username; ?>" aria-expanded="false" aria-controls="flush-collapse<?php echo $username; ?>">
                       <?php echo $username ; ?> 
-                     
+                      <span class="badge rounded-pill text-bg-secondary">15</span>
                     </button>
                   </h2>
-                  <span class="badge rounded-pill text-bg-secondary">15</span>
+                  
                   <div id="flush-collapse<?php echo $username; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne<?php echo $username; ?>" data-bs-parent="#accordionFlushExamplez">
                     <div class="accordion-body">
                        <!--     inicio de contenido  -->
