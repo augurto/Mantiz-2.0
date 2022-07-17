@@ -110,20 +110,7 @@
             } 
         });
         }
-        var acc2 = document.getElementsByClassName("accordion2");
-        var ia;
-
-        for (ia = 0; ia < acc2.length; ia++) {
-        acc2[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel2 = this.nextElementSibling;
-            if (panel2.style.maxHeight) {
-            panel2.style.maxHeight = null;
-            } else {
-            panel2.style.maxHeight = panel2.scrollHeight + "px";
-            } 
-        });
-        }
+        
 
         </script>
     

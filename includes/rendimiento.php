@@ -1,5 +1,4 @@
-<h2>Accordion with symbols</h2>
-        <p>In this example we have added a "plus" sign to each button. When the user clicks on the button, the "plus" sign is replaced with a "minus" sign.</p>
+
         <button class="accordion">Section 1.120</button>
                 <div class="panel">
                         <button class="accordion2">Section 1.5</button>
@@ -19,21 +18,20 @@
                 </div>
 
                 <script>
-        var acc = document.getElementsByClassName("accordion");
-        var i;
+        var acc2 = document.getElementsByClassName("accordion2");
+        var ia;
 
-        for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
+        for (ia = 0; ia < acc2.length; ia++) {
+        acc2[i].addEventListener("click", function() {
             this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
+            var panel2 = this.nextElementSibling;
+            if (panel2.style.maxHeight) {
+            panel2.style.maxHeight = null;
             } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
+            panel2.style.maxHeight = panel2.scrollHeight + "px";
             } 
         });
         }
-     
 
         
         </script>
