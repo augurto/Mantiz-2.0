@@ -79,10 +79,9 @@
         <p>In this example we have added a "plus" sign to each button. When the user clicks on the button, the "plus" sign is replaced with a "minus" sign.</p>
         <button class="accordion">Section 10.2</button>
                 <div class="panel">
-                        <button class="accordion2">Section 1.2.3</button>
-                            <div class="panel2">
+                        
                             <?php include 'includes/rendimiento.php';?>
-                            </div>
+                 
                 </div>
 
         <button class="accordion">Section 2</button>
