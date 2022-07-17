@@ -15,7 +15,7 @@
                      
                     </button>
                   </h2>
-
+                  <span class="badge rounded-pill text-bg-secondary">15</span>
                   <div id="flush-collapse<?php echo $username; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne<?php echo $username; ?>" data-bs-parent="#accordionFlushExamplez">
                     <div class="accordion-body">
                        <!--     inicio de contenido  -->
