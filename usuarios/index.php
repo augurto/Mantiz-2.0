@@ -74,7 +74,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 <div class="container mt-5" style="background-color: #f9f9f9;">
   <br>
   <h1 class="text-center">
-    <strong>Campos dinamicos para asignar usuarios</strong>
+    <strong>Campos dinamicos para asignar Usuarios a Proyectos</strong>
   </h1>
   <hr /><br>
 
@@ -89,23 +89,46 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
   <div class="form-row">
     <div class="col-md-3">
       <label>Proyecto</label>
-      <select name="PRODUCTO[]" class="form-control">
-        <option value="Pan">Proyecto1</option>
-        <option value="Harina">Proyecto2</option>
-        <option value="Pasta">Proyecto3</option>
-      </select>
+      
+              <select class="form-control" name="PRODUCTO[]" id="PRODUCTO[]" required="">
+                        <option disabled="disabled" value="" selected>Clic para ver los Proyectos</option>
+                        <?php 
+
+                        $sss2=mysqli_query($con,"SELECT * FROM proyecto");
+                                while($f2=mysqli_fetch_assoc($sss2)){    
+
+                                    echo '<option value="'.$f2['id'].'">'.$f2['username'].'</option>';
+
+                        }
+                        
+                        ?>
+              </select>
     </div>
 
     <div class="col-md-3">
-      <label># ORDEN</label>
+      <label>Usuarios</label>
       <input type="number" name="NUMERO_ORDEN[]" class="form-control">
+               <select class="form-control" name="PRODUCTO[]" id="PRODUCTO[]" required="">
+                        <option disabled="disabled" value="" selected>Clic para ver usuarios</option>
+                        <?php 
+
+                        $sss3=mysqli_query($con,"SELECT * FROM users");
+                                while($f3=mysqli_fetch_assoc($sss3)){    
+
+                                    echo '<option value="'.$f3['id'].'">'.$f3['username'].'</option>';
+
+                        }
+                        
+                        ?>
+              </select>
     </div>
 
     <div class="col-md-3">
       <label>Rol</label>
       <select name="ESTADO[]" class="form-control">
-        <option value="ACTIVO">Colaborador</option>
-        <option value="INACTIVO">Jefe de Proyecto</option>
+        
+        <option value="0">Colaborador</option>
+        <option value="1">Cordinador</option>
       </select>
     </div>
 </div>
