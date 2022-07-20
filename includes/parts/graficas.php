@@ -1,6 +1,6 @@
 <?php
 
-     $tp=mysqli_query($con,"SELECT count(*) as tp FROM proyectowhere estado='0'");
+     $tp=mysqli_query($con,"SELECT count(*) as tp FROM proyecto where estado='0'");
       $rwp=mysqli_fetch_array($tp);
       $tps=$rwp["tp"];
 
