@@ -107,8 +107,8 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 
     <div class="col-md-3">
       <label>Usuarios</label>
-      <input type="number" name="NUMERO_ORDEN[]" class="form-control">
-               <select class="form-control" name="PRODUCTO[]" id="PRODUCTO[]" required="">
+      
+               <select class="form-control" name="NUMERO_ORDEN[]" id="NUMERO_ORDEN[]" required="">
                         <option disabled="disabled" value="" selected>Clic para ver usuarios</option>
                         <?php 
 
