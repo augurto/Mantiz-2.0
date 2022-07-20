@@ -26,6 +26,11 @@
                                 </thead>
                         <?php 
                         $count=1;
+                        foreach ($link->query('SELECT count(*) from proyecto where estado=2 order') as $row_a){ 
+                        
+
+                        }// aca se hace la consulta e iterarla con each. ?> 
+                        <?php 
                         foreach ($link->query('SELECT * from proyecto where estado=2 order by codigo desc') as $row){ // aca se hace la consulta e iterarla con each. ?> 
                         <?php
                         
