@@ -4,11 +4,11 @@
       $rwp=mysqli_fetch_array($tp);
       $tps=$rwp["tp"];
 
-      $te=mysqli_query($con,"SELECT count(*) te FROM users where tipo_user='0'");
+      $te=mysqli_query($con,"SELECT count(*) te FROM proyecto where estado='1'");
       $rwe=mysqli_fetch_array($te);
       $tes=$rwe["te"];
 
-      $ti=mysqli_query($con,"SELECT count(*) ti FROM users  where tipo_user='2'");
+      $ti=mysqli_query($con,"SELECT count(*) ti FROM proyecto  where estado='2'");
       $rwi=mysqli_fetch_array($ti);
       $tin=$rwi["ti"];
 
@@ -65,7 +65,7 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Proyectos Terminados</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tps;?></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tes;?></div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
@@ -86,7 +86,7 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Proyectos Inactivos</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $row_a;?></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tin;?></div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
