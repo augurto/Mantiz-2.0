@@ -156,7 +156,20 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
         
             +'<div class="col-md-6">'
               +'<label># ORDEN</label>'
-              +'<input type="number" name="NUMERO_ORDEN[]" value="'+i+'" class="form-control">'
+              
+              +'<select class="form-control" name="NUMERO_ORDEN[]" id="NUMERO_ORDEN[]" required="">'
+                        +'<option disabled="disabled" value="" selected>Clic para ver usuarios</option>'
+                        <?php 
+
+                        $sss3=mysqli_query($con,"SELECT * FROM users");
+                                while($f3=mysqli_fetch_assoc($sss3)){    
+
+                                    echo '<option value="'.$f3['id'].'">'.$f3['username'].'</option>';
+
+                        }
+                        
+                        ?>
+              +'</select>'
             +'</div>'
             +'<div class="col-md-6">'
               +'<label>Rol</label>'
