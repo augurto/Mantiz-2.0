@@ -38,20 +38,15 @@
                         $usuario2=$row['usuario_maker'];
                         $fecha_ini=$row['fecha_ini'];
                         $fecha_fin=$row['fecha_fin'];
-
+                        $fecha_actual=strtotime(date("Y-m-d",time()));
+                        $fecha2=strtotime($fecha_fin);   
                         $estado=$row['estado'];
-                         if ($estado==0) { ?>
+                         if ($fecha_actual<$fecha2) { ?>
                              
-                             <tr style="background-color: #F0FFFF !important;">
+                             <tr style="background-color: red !important;">
 
-                             <?php  }elseif ($estado==1) { ?>
-                             <tr style="background-color: #F0FFF0 !important;">
-
-                             <?php  }elseif ($estado==2) { ?>
-                             <tr style="background-color: #FFE4E1 !important;">
-                       
-                             <?php } else{?>
-                             <tr style="background-color: #FDF5E6 !important;">
+                             <?php  } else{?>
+                             <tr style="background-color: blue !important;">
                              <?php }?>   
                              <td><?php echo $count++; ?></td>
                              
