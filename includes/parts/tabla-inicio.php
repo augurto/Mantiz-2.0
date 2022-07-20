@@ -43,10 +43,10 @@
                         $estado=$row['estado'];
                          if ($fecha_actual>$fecha2) { ?>
                              
-                             <tr style="background-color: FF0000 !important;">
+                             <tr style="background-color: red !important;">
 
                              <?php  } else{?>
-                             <tr style="background-color: 0026FF !important;">
+                             <tr style="background-color: blue !important;">
                              <?php }?>   
                              <td><?php echo $count++; ?></td>
                              
