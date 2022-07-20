@@ -36,9 +36,10 @@
             </div>
 
             <!-- Earnings (Monthly) Card Example -->
-            <a href="../../index.php">
+            
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-success shadow h-100 py-2">
+              <a href="../../index.php">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -50,14 +51,16 @@
                     </div>
                   </div>
                 </div>
+                </a>
               </div>
             </div>
-            </a>
+            
 
             <!-- Earnings (Monthly) Card Example -->
-            <a href="../../proyectos_terminados.php">
+            
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-success shadow h-100 py-2">
+              <a href="../../proyectos_terminados.php">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -69,14 +72,16 @@
                     </div>
                   </div>
                 </div>
+                </a>
               </div>
             </div>
-            </a>
+            
 
             <!-- Earnings (Monthly) Card Example -->
-            <a href="../../proyectos_inactivos.php">
+            
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-success shadow h-100 py-2">
+              <a href="../../proyectos_inactivos.php">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -88,9 +93,10 @@
                     </div>
                   </div>
                 </div>
+                </a>
               </div>
             </div>
-            </a>
+            
 
 
 
