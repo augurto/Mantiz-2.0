@@ -12,6 +12,10 @@
       $rwi=mysqli_fetch_array($ti);
       $tin=$rwi["ti"];
 
+      $sol=mysqli_query($con,"SELECT sum(presupuesto) sol FROM proyecto  where estado='1'");
+      $sole=mysqli_fetch_array($sol);
+      $soles=$sole["sol"];
+
 		$sql="SELECT * FROM  proyecto order by id desc";
 		$query = mysqli_query($con, $sql);         
 			?>
@@ -25,7 +29,7 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Saldo</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">S/<?php echo number_format($saldo,2);?></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">S/<?php echo number_format($soles,2);?></div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-dollar-sign  fa-2x text-gray-300"></i>
