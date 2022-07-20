@@ -46,7 +46,7 @@
                              <tr style="background-color: FF0000 !important;">
 
                              <?php  } else{?>
-                             <tr style="background-color: 0026FF !important; opacity:0.1;">
+                             <tr style="background-color: 0026FF !important;">
                              <?php }?>   
                              <td><?php echo $count++; ?></td>
                              
