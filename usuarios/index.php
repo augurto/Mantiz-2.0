@@ -97,7 +97,7 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
                         $sss2=mysqli_query($con,"SELECT * FROM proyecto");
                                 while($f2=mysqli_fetch_assoc($sss2)){    
 
-                                    echo '<option value="'.$f2['id'].'">'.$f2['username'].'</option>';
+                                    echo '<option value="'.$f2['id'].'">'.$f2['nombre_proyecto'].'</option>';
 
                         }
                         
