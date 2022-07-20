@@ -41,12 +41,12 @@
                         $fecha_actual=strtotime(date("Y-m-d",time()));
                         $fecha2=strtotime($fecha_fin);   
                         $estado=$row['estado'];
-                         if ($fecha_actual<$fecha2) { ?>
+                         if ($fecha_actual>$fecha2) { ?>
                              
-                             <tr style="background-color: red !important;">
+                             <tr style="background-color: FF0000 !important;">
 
                              <?php  } else{?>
-                             <tr style="background-color: blue !important; opacity:0.1;">
+                             <tr style="background-color: 0026FF !important; opacity:0.1;">
                              <?php }?>   
                              <td><?php echo $count++; ?></td>
                              
