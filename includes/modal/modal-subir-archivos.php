@@ -44,6 +44,7 @@ $hoy = date("Y-m-d H:i:s");
       <div class="input-group mb-3">
       <input type="hidden" value="<?php echo $_GET["id_p"]; ?>" id="codigo" name="codigo" >
       <input type="hidden" value="<?php echo $nombre_proyecto; ?>" id="nombre_proyecto" name="nombre_proyecto" >
+      <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
       <input type="hidden" value="<?php echo $usuario; ?>" id="usuario" name="usuario" >
       <input type="hidden" value="<?php echo $hoy; ?>" id="hoy_dia" name="hoy_dia" >
       <input type="hidden" value="<?php echo $id_usuario;?>" id="id_user" name="id_user">
