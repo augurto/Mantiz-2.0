@@ -1,16 +1,42 @@
 <?php
+
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login/");
+    exit;
+}
+require_once ('config/conexion_tabla.php');
 require_once ("config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
 require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
+
+foreach ($link->query('SELECT * from proyecto') as $rowp){ // aca se hace la consulta e iterarla con each. ?> 
+ <?php  
+    
+    $id=$rowp['id'];
+    $estado_proyecto=$rowp['estado'];
+
+ }
 $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where estado='terminado'");
         $rwt=mysqli_fetch_array($sald);
         $saldo=$rwt['saldo'];
-
+        $usuario=$_SESSION["username"];
+        $id_usuario=$_SESSION["id"];
 
 /* requiere para la extraer la informacion */
         $id_p=$_GET['id_p'];
         $sql=mysqli_query($con,"SELECT * FROM proyecto WHERE codigo='".$id_p."'");
          $rws=mysqli_fetch_array($sql);
          $nombre=$rws["nombre_proyecto"];
+        
+
+         $gd2=mysqli_query($con,"SELECT * FROM entregables WHERE  codigo_proyecto='".$id_p."'");
+            $rwd2=mysqli_fetch_array($gd2);
+            $nom2=$rwd2["nombre"];
+            
+            $id_ent2=$rwd2["id"];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -47,33 +73,67 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <?php include 'includes/header.php';?>
     <div style="height:50px"></div>
     <!-- Inicio de Graficas -->
-
+   
     <?php include 'includes/parts/graficas_entregables.php'; ?>
+    <?php include 'includes/modal-eliminar/eliminar_entregable.php'; ?>
+    <?php include 'includes/modal-editar/editar_entregable.php'; ?>
     <!-- Fin de graficas -->
     <!-- Boton agregar proyecto -->
-    <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-6">
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-entregable">
-                <span class="icon text-white-50">
-                            <i class="fas fa-plus"></i>
-                </span>Entregables
-                </button>
-            </div>    
-            <div class="col-6">
-                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-subir-archivos">
-                <span class="icon text-white-50">
-                            <i class="fas fa-plus"></i>
-                </span>Archivos
-                </button>
 
-                <?php include 'includes/modal/modal_entregable.php' ?>
-                <?php include 'includes/modal/modal-subir-archivos.php' ?>
-            <!-- Fin Boton agregar proyecto -->
-            </div>     
-        </div>    
+    
+    <?php if ($_GET['mensaje']==1) {
+        echo 'Ya existe un entregable con ese nombre';
+    }?>
+    
+          <br>
+          <div class="row">
+        <div class="col-sm-12 text-center">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-entregable">
+                            <span class="icon text-white-50">
+                                        <i class="fas fa-plus"></i>
+                                        
+                            </span>Entregables
+                            </button>
+                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-subir-archivos">
+                            <span class="icon text-white-50">
+                                        <i class="fas fa-plus"></i>
+                            </span>Archivos
+                            </button>
+        </div>
     </div>
+   
+          <div class="container">
+          <div class="row">
+        <div class="col-sm-12 text-center">
+                      <!-- Button trigger modal -->
+                      
+                           <!--  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-entregable">
+                            <span class="icon text-white-50">
+                                        <i class="fas fa-plus"></i>
+                                        
+                            </span>Entregables
+                            </button> -->
+               
+                    
+                  </div>    
+                  <div class="col-6">
+                      <!-- <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-subir-archivos">
+                      <span class="icon text-white-50">
+                                  <i class="fas fa-plus"></i>
+                      </span>Archivos
+                      </button> -->
+                    
+                            <?php include 'includes/modal/modal_entregable.php' ?>
+                            <?php include 'includes/modal/modal-subir-archivos.php' ?>
+                       
+                  <!-- Fin Boton agregar proyecto -->
+                  </div>     
+              </div>    
+          </div>
+  
+       
+          
+    
     <br>
     <!-- Contenido de la tabla -->
     <?php include 'includes/parts/contenido_entregable.php'; ?>

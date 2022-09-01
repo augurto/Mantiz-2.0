@@ -1,9 +1,22 @@
 <?php
+
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login/");
+    exit;
+}
+
 require_once ("config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
 require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
 $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where estado='terminado'");
         $rwt=mysqli_fetch_array($sald);
         $saldo=$rwt['saldo'];
+        $usuario=$_SESSION["username"];
+        $id_usuario=$_SESSION["id"];
+        
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -11,6 +24,10 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- incluyendo script para editar en tiempo realpat -->
+
+    
+    <!-- fin -->
     <!-- incluyendo bootstrap -->
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
     <script src="js/bootstrap.min.js"></script>
@@ -41,9 +58,15 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <title>Mantiz</title>
 </head>
 <body>
+  <!-- datos de sesion -->
+  <input type="hidden" value="<?php echo $usuario;?>">
+  <input type="hidden" value="<?php echo $id_usuario;?>">
+  <!-- fin de datos sesion -->
     <!-- procesos de modal -->
+    
     <?php include 'includes/modal-eliminar/eliminar_proyecto.php'; ?>
     <?php include 'includes/modal-editar/editar_proyecto.php'; ?>
+    
     <!-- fin de procesos de modal -->
 
     <?php include 'includes/header.php';?>
@@ -52,8 +75,23 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
 
     <?php include 'includes/parts/graficas.php'; ?>
     <!-- Fin de graficas -->
+
     <!-- Boton agregar proyecto -->
+    <div class="row">
+        <div class="col-sm-12 text-center">
+                     <button type="button" class="btn btn-primary" id="boton_proyecto" data-toggle="modal" data-target="#exampleModalCenter">
+                     <i class="fa fa-plus" aria-hidden="true"></i> Nuevo Proyecto
+                      </button>
+                      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#compromisos">
+                      <i class="fa fa-plus" aria-hidden="true"></i> sub tipo de Proyecto
+                      </button>
+        </div>
+    </div>
     <?php include 'includes/parts/agregar_proyecto_modal.php' ?>
+    <?php include 'includes/parts/agregar_sub_tipo_proyecto.php' ?>
+    <?php include 'includes/parts/agregar_variante_tipo.php' ?>
+
+
     <!-- Fin Boton agregar proyecto -->
     <br>
     <!-- Contenido de la tabla -->
@@ -84,7 +122,9 @@ $sald=mysqli_query($con,"SELECT Sum(presupuesto) as saldo FROM proyecto where es
     <!-- código JS propìo-->    
     <script type="text/javascript" src="main.js"></script>   
 
+
     <!-- Fin de Script para datatables -->
     <script src="js/proyecto.js"></script>
+
 </body>
 </html>

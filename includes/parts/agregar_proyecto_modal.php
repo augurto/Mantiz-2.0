@@ -1,15 +1,14 @@
-<div class="container">
-        <div class="row">
-          <div class="col-lg-12">
 
-            <div class="table-responsive"> 
                     
                     <!-- Button trigger modal -->
+              <!--       <div class="col-sm-12 text-center">
                     <div class="col text-center">
                       <button type="button" class="btn btn-primary" id="boton_proyecto" data-toggle="modal" data-target="#exampleModalCenter">
                       Nuevo Proyecto
                       </button>
                     </div>
+                    </div> -->
+                    
 
                   <!-- Modal -->
                   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -32,13 +31,17 @@
                           </div>
                           <input type="text" class="form-control" placeholder="Nombre del Proyecto" id="nombre-proyecto" name="nombre-proyecto" >
                           
+                          
                         </div>
 
                       <!--   mostrar el ultimo codigo de todos los proyectos -->
+                      
+                       
+
                       <label for="inputProyec">Codigo del Proyecto</label>
                         <div class="input-group">
 
-                                <select class="form-control" id="extension" name="extension" required>
+                                <!-- <select class="form-control" id="extension" name="extension" required>
                                   <option value="0">--Ext. del codigo--</option>
                                       <?php
                                         $programas=mysqli_query($con,"select * from codigo_generado_proyecto");
@@ -51,20 +54,42 @@
                                   <?php
                                         }
                                   ?>
-                                </select>
+                                </select> -->
                             <div class="input-group-prepend">
                               <span class="input-group-text"><span class="fa fa-qrcode"></span></span>
                             </div>
                    
 
-                              <?php $rs = mysqli_query($con, "SELECT MAX(codigo) AS id FROM proyecto");
+                              <?php $rs = mysqli_query($con, "SELECT MAX(id) AS id FROM proyecto");
                               if ($row = mysqli_fetch_row($rs)) {
                               $codigo_proyecto = trim($row[0]);
-                              } ?>
+                              $id_codigo=++$codigo_proyecto;
+                              } 
+                              
+                              ?>
 
-                             <input type="number" class="form-control" id="codigo"  name="codigo"  value="<?php echo ++$codigo_proyecto ?>" readonly>
+                             <input type="number" class="form-control" id="codigo"  name="codigo"  value="<?php echo $id_codigo ?>" readonly>
+                             
                        </div>
                        <br>
+                       <label for="inputProyec">Sub tipo del Proyecto</label>
+                       <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">Extension</label>
+                                <select class="form-control" name="id_extension" id="id_extension" required="">
+                                            <option disabled="disabled" value="" selected>Clic para ver.</option>
+                                            <?php 
+
+                                            $sss=mysqli_query($con,"SELECT * FROM codigo_generado_proyecto");
+                                                    while($f=mysqli_fetch_assoc($sss)){    
+
+                                                        echo '<option value="'.$f['variable'].'">'.$f['variable'].'</option>';
+
+                                            }
+                                            
+                                            ?>
+                                </select>
+                                        
+                        </div>
                        <label for="inputProyec">Presupuesto</label>
                        
                         <div class="input-group mb-3">
@@ -99,7 +124,7 @@
                             <div class="input-group-prepend">
                               <span class="input-group-text"><span class="fas fa-calendar"></span></span>
                             </div>
-                            <input type="date" class="form-control" name="fecha_ini" id="fecha_ini" title="Fecha inicio" required>
+                            <input type="date" class="form-control" name="fecha_ini" id="fecha_ini" title="Fecha inicio"  value="<?php echo date('d-m-Y'); ?>" required>
                           </div>
                           <!-- /input-group -->
                         </div>
@@ -111,20 +136,20 @@
                               <span class="input-group-text"><span class="fas fa-calendar"></span></span>
                             </div>
                             <input type="date" class="form-control" name="fecha_fin"  id="fecha_fin"  title="Fecha fin" required>
-                            <input type="text" value="Ego" class="form-control" name="usuario"  id="usuario"  title="usuario" required>
+                            <input type="hidden" value="Ego" class="form-control" name="usuario"  id="usuario"  title="usuario" required>
                           </div>
                           <!-- /input-group -->
                         </div>
                           <br>
                         <!-- /.col-lg-6 -->
                       </div>
-
+                                              
 
 
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                          <button type="submit" class="btn btn-primary">Submit</button>
+                          <button type="submit" class="btn btn-primary">Agregar</button>
                         </div>
                         
                         
@@ -151,9 +176,4 @@
                     </div>
                   </div>
                   
-                  </div>
-
-                  
-          </div>
-      </div>
-  </div>
+           

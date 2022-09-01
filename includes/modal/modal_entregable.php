@@ -1,5 +1,16 @@
 
 <!-- Modal -->
+<?php 
+
+                        $sss2=mysqli_query($con,"SELECT * FROM proyecto where id=$id_p");
+                                while($f2=mysqli_fetch_assoc($sss2)){    
+
+                                  $nombre_proyecto=$f2['nombre_proyecto'];
+
+                        }
+                        
+                        ?>
+
 <form action="../../includes/process/insert/insertar_entregable.php" >
 <div class="modal fade" id="modal-entregable" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -13,14 +24,36 @@
       <div class="modal-body">
         <div class="input-group">
             <span class="input-group-text"><i class="fa fa-plus" aria-hidden="true"></i></span>
-            <input type="text" aria-label="First name" class="form-control" placeholder="nombre del entregable" id="nombre" name="nombre">
+            <input type="text" aria-label="First name" class="form-control" placeholder="Nombre del entregable" id="nombre" name="nombre" required>
+            <input type="hidden" value="<?php echo $_GET["id_p"]; ?>" id="codigo" name="codigo" >
+            <input type="hidden" value="<?php echo $usuario; ?>" id="usuario" name="usuario" >
+            <input type="hidden" value="<?php echo $nombre_proyecto; ?>" id="nombre_proyecto" name="nombre_proyecto" >
+            
             
         </div>
         <br>
+        <div class="input-group mb-3">
+              <label class="input-group-text" for="inputGroupSelect01">Asignar a Usuario</label>
+              <select class="form-control" name="usuario_asignado" id="usuario_asignado" required="">
+                        <option disabled="disabled" value="" selected>Clic para ver usuarios</option>
+                        <?php 
+
+                        $sss2=mysqli_query($con,"SELECT * FROM users");
+                                while($f2=mysqli_fetch_assoc($sss2)){    
+
+                                    echo '<option value="'.$f2['id'].'">'.$f2['username'].'</option>';
+
+                        }
+                        
+                        ?>
+              </select>
+                       
+            </div>
         <div class="input-group">
             
             <span class="input-group-text">Fecha de entrega</span>
-            <input type="date" aria-label="Last name" class="form-control" id="fecha" name="fecha">
+            <input type="date" aria-label="Last name" class="form-control" id="fecha" name="fecha" required>
+            
         </div>
       </div>
       <div class="modal-footer">
